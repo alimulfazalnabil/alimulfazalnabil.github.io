@@ -322,7 +322,15 @@
       .section-summary {
         list-style: none;
         cursor: pointer;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 0.45rem 0.5rem 0.55rem;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.02);
+        margin-bottom: 0.6rem;
       }
 
       .section-summary::-webkit-details-marker {
@@ -330,23 +338,28 @@
       }
 
       .section-summary .section-heading {
-        margin-bottom: 0.5rem;
-        padding-bottom: 0.35rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        flex: 1;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .section-summary .section-heading h2 {
+        font-size: clamp(1rem, 1.7vw, 1.2rem);
       }
 
       .section-toggle {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 1.75rem;
-        height: 1.75rem;
+        flex-shrink: 0;
+        width: 1.8rem;
+        height: 1.8rem;
         border-radius: 999px;
         border: 1px solid var(--border);
         color: var(--accent-2);
-        font-size: 1rem;
+        font-size: 1.05rem;
         font-weight: 700;
-        margin-left: 0.75rem;
       }
 
       .section-toggle::before {
