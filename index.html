@@ -315,6 +315,52 @@
         margin: 0;
       }
 
+      .section-panel {
+        display: block;
+      }
+
+      .section-summary {
+        list-style: none;
+        cursor: pointer;
+        display: block;
+      }
+
+      .section-summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .section-summary .section-heading {
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.35rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .section-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        color: var(--accent-2);
+        font-size: 1rem;
+        font-weight: 700;
+        margin-left: 0.75rem;
+      }
+
+      .section-toggle::before {
+        content: "+";
+      }
+
+      .section-panel[open] .section-toggle::before {
+        content: "−";
+      }
+
+      .section-content {
+        display: block;
+      }
+
       .about-grid,
       .projects-grid {
         display: grid;
@@ -2146,6 +2192,37 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Wrap each content section in a collapsible panel with a visible toggle.
+      const sectionContainers = Array.from(document.querySelectorAll("main > section.container, main > section.hero"));
+      sectionContainers.forEach((section) => {
+        if (section.querySelector(".section-panel") || !section.querySelector(".section-heading")) {
+          return;
+        }
+
+        const heading = section.querySelector(".section-heading");
+        const details = document.createElement("details");
+        details.className = "section-panel";
+        details.open = false;
+
+        const summary = document.createElement("summary");
+        summary.className = "section-summary";
+        summary.innerHTML = heading.innerHTML + '<span class="section-toggle" aria-hidden="true"></span>';
+
+        const content = document.createElement("div");
+        content.className = "section-content";
+
+        Array.from(section.childNodes).forEach((node) => {
+          if (node !== heading) {
+            content.appendChild(node);
+          }
+        });
+
+        details.appendChild(summary);
+        details.appendChild(content);
+        section.innerHTML = "";
+        section.appendChild(details);
+      });
 
       // Recruiter-first section flow requested by the portfolio owner.
       const sectionOrder = [
