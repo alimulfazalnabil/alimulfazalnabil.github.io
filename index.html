@@ -3,30 +3,710 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>alimulnabil.github.io</title>
+    <meta
+      name="description"
+      content="Professional engineering portfolio for Alimul Fazal Nabil, spanning cloud, DevOps, AI, data, robotics, and leadership."
+    />
+    <title>Alimul Fazal Nabil | Engineering Portfolio</title>
     <style>
+      :root {
+        --bg: #07111f;
+        --surface: #101c2f;
+        --surface-2: #16263d;
+        --text: #f5f7fb;
+        --muted: #9eb0c7;
+        --accent: #4f8cff;
+        --accent-2: #6ee7f9;
+        --border: rgba(255, 255, 255, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: Arial, sans-serif;
         margin: 0;
-        padding: 2rem;
-        background: #f7f9fc;
-        color: #1f2937;
+        font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(135deg, #07111f 0%, #0d1b2e 100%);
+        color: var(--text);
       }
-      main {
-        max-width: 700px;
+
+      a {
+        color: var(--accent-2);
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 2rem));
         margin: 0 auto;
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
       }
-      h1 { margin-top: 0; }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(16px);
+        background: rgba(7, 17, 31, 0.85);
+        border-bottom: 1px solid var(--border);
+      }
+
+      nav {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text);
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.95rem;
+      }
+
+      .nav-links a {
+        color: var(--muted);
+      }
+
+      .nav-links a:hover {
+        color: var(--text);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 1.2rem;
+        border-radius: 999px;
+        font-weight: 600;
+        transition: transform 180ms ease, background 180ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #03111f;
+      }
+
+      .btn-secondary {
+        border: 1px solid var(--border);
+        color: var(--text);
+      }
+
+      section {
+        padding: 5rem 0;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 2rem;
+        align-items: center;
+        padding-top: 4rem;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: var(--accent-2);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-size: 0.78rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        line-height: 1.12;
+        margin: 0 0 1rem;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 4vw, 3.8rem);
+      }
+
+      h2 {
+        font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+        color: var(--muted);
+        max-width: 700px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .stat-card,
+      .card,
+      .timeline-item,
+      .project-card,
+      .contact-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+      }
+
+      .stat-card {
+        padding: 1rem;
+      }
+
+      .stat-card strong {
+        display: block;
+        font-size: 1.35rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .card {
+        padding: 1.4rem;
+      }
+
+      .domain-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.1rem;
+        margin-top: 2rem;
+      }
+
+      .domain-grid .card h3 {
+        margin-bottom: 0.45rem;
+      }
+
+      .domain-grid .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-heading p {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .about-grid,
+      .projects-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1.3fr 0.7fr;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 1rem;
+      }
+
+      .pill {
+        padding: 0.45rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(79, 140, 255, 0.14);
+        color: var(--accent-2);
+        font-size: 0.9rem;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .timeline-item {
+        padding: 1.25rem 1.3rem;
+      }
+
+      .timeline-item .meta {
+        color: var(--accent-2);
+        font-size: 0.92rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .timeline-item ul {
+        padding-left: 1.15rem;
+        color: var(--muted);
+        margin: 0.7rem 0 0;
+      }
+
+      .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .expertise-grid .card ul {
+        padding-left: 1.1rem;
+        color: var(--muted);
+        margin: 0.7rem 0 0;
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .project-card {
+        padding: 1.3rem;
+      }
+
+      .project-card .tag {
+        color: var(--accent-2);
+        font-size: 0.85rem;
+        margin-bottom: 0.4rem;
+        display: block;
+      }
+
+      .leadership-grid,
+      .cert-grid,
+      .contact-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .leadership-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cert-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      form {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.8rem 0.95rem;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+      }
+
+      textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+
+      footer {
+        padding: 2rem 0 3rem;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .hero,
+        .about-grid,
+        .contact-grid,
+        .projects-grid,
+        .expertise-grid,
+        .leadership-grid,
+        .cert-grid,
+        .domain-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        section {
+          padding: 3.5rem 0;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
-    <main>
-      <h1>Welcome to alimulnabil.github.io</h1>
-      <p>Your site is now being served locally.</p>
+    <header>
+      <div class="container">
+        <nav>
+          <a class="brand" href="#home">Alimul Fazal Nabil</a>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#projects">Projects</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="container hero">
+        <div>
+          <span class="eyebrow">Professional Engineering Portfolio</span>
+          <h1>I design, build, automate, and lead technology solutions across infrastructure, cloud, DevOps, AI, data, robotics, and digital products.</h1>
+          <p>
+            I bring a multidisciplinary engineering background to solving complex business and technical problems with reliable systems, scalable automation, and thoughtful delivery.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore My Work</a>
+            <a class="btn btn-secondary" href="#contact">Download CV</a>
+          </div>
+          <div class="stats">
+            <div class="stat-card">
+              <strong>7+ Years</strong>
+              <span>Engineering and delivery experience</span>
+            </div>
+            <div class="stat-card">
+              <strong>99.9%</strong>
+              <span>Reliability-minded systems approach</span>
+            </div>
+            <div class="stat-card">
+              <strong>45%</strong>
+              <span>Manual work reduction through automation</span>
+            </div>
+            <div class="stat-card">
+              <strong>Cloud + AI + Robotics</strong>
+              <span>Cross-domain capability</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>What I Build</h3>
+          <div class="domain-grid" style="grid-template-columns: 1fr; margin-top: 1rem;">
+            <div class="card">
+              <h3>Cloud & Infrastructure</h3>
+              <p>Azure, networking, hybrid environments, secure platform design.</p>
+            </div>
+            <div class="card">
+              <h3>DevOps & Platform</h3>
+              <p>Terraform, CI/CD, Kubernetes, observability, automation.</p>
+            </div>
+            <div class="card">
+              <h3>AI & Data</h3>
+              <p>Machine learning, generative AI, analytics, and intelligent systems.</p>
+            </div>
+            <div class="card">
+              <h3>Robotics & IoT</h3>
+              <p>ROS 2, simulation, sensors, perception, embedded environments.</p>
+            </div>
+            <div class="card">
+              <h3>Digital Products</h3>
+              <p>Architecture, MVP delivery, product-minded engineering.</p>
+            </div>
+            <div class="card">
+              <h3>Leadership</h3>
+              <p>Technical direction, coordination, stakeholder alignment, delivery.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">About</span>
+            <h2>Engineering with business context and long-term reliability.</h2>
+          </div>
+        </div>
+        <div class="about-grid">
+          <div class="card">
+            <h3>Professional Summary</h3>
+            <p>
+              I approach technology from both an engineering and business perspective. My work focuses on building systems that are reliable, scalable, secure, automated, and useful in real-world operations.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Problem solving</span>
+              <span class="pill">Architecture</span>
+              <span class="pill">Automation</span>
+              <span class="pill">Delivery</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Engineering Philosophy</h3>
+            <p>
+              Requirements → Architecture → Implementation → Automation → Testing → Deployment → Monitoring → Continuous Improvement.
+            </p>
+            <p>
+              This mindset is central to how I design solutions and influence delivery across technical and organizational boundaries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Experience</span>
+            <h2>Cross-functional roles across engineering, infrastructure, and technical leadership.</h2>
+          </div>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="meta">2024 — Present</div>
+            <h3>System Support Engineer</h3>
+            <p>International remote support and engineering delivery with a focus on resilient operations and modern tooling.</p>
+            <ul>
+              <li>Led support and operations across distributed technical environments.</li>
+              <li>Improved reliability and response processes through automation and documentation.</li>
+              <li>Collaborated across internal teams to strengthen service quality and continuity.</li>
+            </ul>
+          </article>
+          <article class="timeline-item">
+            <div class="meta">2019 — 2024</div>
+            <h3>Infrastructure & Cloud Engineering</h3>
+            <p>Built and maintained platform services with cloud-native and automation-driven practices.</p>
+            <ul>
+              <li>Delivered infrastructure and operating environments for production systems.</li>
+              <li>Applied infrastructure as code, monitoring, and deployment workflows.</li>
+              <li>Supported technical modernization and organizational process maturity.</li>
+            </ul>
+          </article>
+          <article class="timeline-item">
+            <div class="meta">2017 — 2019</div>
+            <h3>IT & Technical Operations</h3>
+            <p>Developed a solid foundation in systems, networking, support, and technical problem solving.</p>
+            <ul>
+              <li>Worked across practical operational environments with varied infrastructure needs.</li>
+              <li>Developed troubleshooting discipline and service-oriented delivery habits.</li>
+              <li>Built confidence in hands-on implementation and continuous improvement.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="expertise" class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Expertise</span>
+            <h2>A multidisciplinary engineering toolbox spanning platform, AI, and delivery.</h2>
+          </div>
+        </div>
+        <div class="expertise-grid">
+          <div class="card">
+            <h3>Cloud & Infrastructure</h3>
+            <ul>
+              <li>Azure environments and hybrid systems</li>
+              <li>Networking, DNS, VPN, security boundaries</li>
+              <li>Windows Server, Linux, and operating model design</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>DevOps & Platform</h3>
+            <ul>
+              <li>Terraform and infrastructure as code</li>
+              <li>Docker, Kubernetes, and CI/CD pipelines</li>
+              <li>Monitoring, observability, and automation</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>AI & Data</h3>
+            <ul>
+              <li>Python, ML, and data workflows</li>
+              <li>Generative AI, RAG, and assistant systems</li>
+              <li>Computer vision and analytics-driven solutions</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Robotics & IoT</h3>
+            <ul>
+              <li>ROS 2 and embedded systems</li>
+              <li>Sensor integration and autonomous workflows</li>
+              <li>Simulation, perception, and real-world testing</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Security</h3>
+            <ul>
+              <li>Identity, RBAC, and zero-trust principles</li>
+              <li>Cloud security and monitoring</li>
+              <li>Secure architecture and operational hygiene</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Leadership & Delivery</h3>
+            <ul>
+              <li>Technical leadership and solution architecture</li>
+              <li>Stakeholder communication and delivery planning</li>
+              <li>Product-minded implementation and execution</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Projects</span>
+            <h2>Featured work positioned around real business problems and engineering outcomes.</h2>
+          </div>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <span class="tag">AI / Mobility / Data</span>
+            <h3>MoviSabio</h3>
+            <p>An AI-driven urban mobility and traffic optimization platform combining computer vision, data, and intelligent decision support.</p>
+          </article>
+          <article class="project-card">
+            <span class="tag">AI / Automation / Cloud</span>
+            <h3>Enterprise AI Operations Assistant</h3>
+            <p>A generative AI assistant experience designed to improve operational efficiency with RAG-based knowledge access and automation.</p>
+          </article>
+          <article class="project-card">
+            <span class="tag">Cloud / DevOps / Security</span>
+            <h3>Azure Hybrid Infrastructure Platform</h3>
+            <p>Infrastructure designed with automation, monitoring, and platform reliability at the core.</p>
+          </article>
+          <article class="project-card">
+            <span class="tag">DevOps / Kubernetes / Automation</span>
+            <h3>Kubernetes Platform Delivery</h3>
+            <p>A containerized platform approach using CI/CD, observability, and infrastructure automation practices.</p>
+          </article>
+          <article class="project-card">
+            <span class="tag">Robotics / Vision</span>
+            <h3>Computer Vision Vehicle Detection</h3>
+            <p>Real-time object detection and perception workflows developed around YOLO and computer vision tooling.</p>
+          </article>
+          <article class="project-card">
+            <span class="tag">Robotics / Simulation</span>
+            <h3>ROS 2 and Autonomous Systems</h3>
+            <p>Autonomous navigation and robotic experimentation using ROS 2, simulation, and sensor-driven workflows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="leadership" class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Leadership</span>
+            <h2>Delivery leadership that connects technical execution to business outcomes.</h2>
+          </div>
+        </div>
+        <div class="leadership-grid">
+          <div class="card">
+            <h3>Technical Direction</h3>
+            <p>I help shape solutions from initial idea through architecture, implementation, and deployment while keeping complexity manageable.</p>
+          </div>
+          <div class="card">
+            <h3>Team Coordination</h3>
+            <p>My approach supports collaboration across technical and non-technical stakeholders to keep delivery focused and transparent.</p>
+          </div>
+          <div class="card">
+            <h3>Strategic Delivery</h3>
+            <p>Projects are approached with feasibility, scalability, testing, and long-term maintainability in mind.</p>
+          </div>
+          <div class="card">
+            <h3>Product Alignment</h3>
+            <p>I connect engineering work to user value, operational impact, and product thinking rather than treating implementation as an isolated task.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="certifications" class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Certifications</span>
+            <h2>Professional development organized around cloud, AI, DevOps, and engineering practice.</h2>
+          </div>
+        </div>
+        <div class="cert-grid">
+          <div class="card">
+            <h3>Microsoft</h3>
+            <p>Azure-focused foundation and platform learning paths.</p>
+          </div>
+          <div class="card">
+            <h3>AI & Data</h3>
+            <p>Machine learning, data engineering, and AI systems study.</p>
+          </div>
+          <div class="card">
+            <h3>Programming</h3>
+            <p>Python, SQL, and applied engineering practice.</p>
+          </div>
+          <div class="card">
+            <h3>DevOps</h3>
+            <p>Docker, Kubernetes, CI/CD, and automation workflows.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Contact</span>
+            <h2>Let’s build something meaningful together.</h2>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card card">
+            <h3>Available for</h3>
+            <p>Cloud engineering, AI solutions, DevOps, data engineering, robotics, technical leadership, and consulting.</p>
+            <div class="pill-row">
+              <span class="pill">LinkedIn</span>
+              <span class="pill">GitHub</span>
+              <span class="pill">Email</span>
+            </div>
+          </div>
+          <div class="contact-card card">
+            <form>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <input type="text" placeholder="Company" />
+              <textarea placeholder="Message"></textarea>
+              <a class="btn btn-primary" href="mailto:hello@example.com">Send Message</a>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> Alimul Fazal Nabil. Engineering portfolio.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
