@@ -275,7 +275,8 @@
         border-color: transparent;
       }
       .card {
-        padding: 1.4rem;
+        padding: 1.1rem 1.15rem;
+        border-radius: 16px;
       }
 
       .domain-grid {
@@ -299,7 +300,12 @@
         justify-content: space-between;
         align-items: end;
         gap: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.85rem;
+      }
+
+      .section-heading h2 {
+        margin: 0.2rem 0 0;
+        font-size: clamp(1.15rem, 2vw, 1.45rem);
       }
 
       .section-heading p {
@@ -385,6 +391,7 @@
         display: block;
         margin-bottom: 1rem;
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+        background: linear-gradient(135deg, rgba(79, 140, 255, 0.22), rgba(110, 231, 249, 0.16));
       }
 
       .timeline {
@@ -593,23 +600,23 @@
       }
 
       .project-card {
-        padding: 0.95rem;
+        padding: 0.9rem 0.95rem;
         width: 100%;
         text-align: left;
         color: inherit;
         font: inherit;
         border: 1px solid var(--border);
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.04);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
         cursor: pointer;
         transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
       }
 
       .project-card:hover {
-        transform: translateY(-2px);
-        border-color: rgba(110, 231, 249, 0.4);
-        box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+        transform: translateY(-1px);
+        border-color: rgba(110, 231, 249, 0.35);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
       }
 
       .project-card:focus-visible {
@@ -619,14 +626,16 @@
 
       .project-card .tag {
         color: var(--accent-2);
-        font-size: 0.85rem;
-        margin-bottom: 0.4rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.35rem;
         display: block;
+        letter-spacing: 0.03em;
       }
 
       .project-card .card-meta {
         color: var(--muted);
-        margin: 0.2rem 0 0.75rem;
+        margin: 0.15rem 0 0.55rem;
+        font-size: 0.93rem;
       }
 
       .project-card .card-preview {
@@ -1224,17 +1233,8 @@
         </div>
         <div class="about-grid">
           <div class="card">
-            <img class="profile-inline" src="profile.jpg" alt="Alimul Fazal Nabil profile" />
-            <h3>Professional Summary</h3>
-            <p>
-              I approach technology as a business enabler. My work focuses on building systems that are reliable, scalable, secure, automated, and directly useful to the organization.
-            </p>
-            <div class="pill-row">
-              <span class="pill">Business value</span>
-              <span class="pill">Architecture</span>
-              <span class="pill">Automation</span>
-              <span class="pill">Delivery</span>
-            </div>
+            <img class="profile-inline" src="/profile.jpg?v=20260808" alt="Alimul Fazal Nabil profile" loading="eager" />
+            <h3>Experience</h3>
           </div>
           <div class="card">
             <h3>Engineering Philosophy</h3>
@@ -1260,35 +1260,19 @@
             <span class="tag">Since 03/2026</span>
             <h3>AI and Machine Learning Instructor</h3>
             <p class="card-meta">ReDI School of Digital Integration · Remote · Berlin, Germany</p>
-            <ul class="feature-list">
-              <li>Facilitate vocational digital skills training sessions according to structured modules, ensuring effective delivery of technical content to adult learners from diverse backgrounds.</li>
-              <li>Contribute to curriculum development and refinement of training materials for AI, data science, and digital freelancing preparation.</li>
-              <li>Conduct both formal and non-formal assessments to evaluate learner progress and training effectiveness, providing technical guidance to fellow trainers.</li>
-              <li>Monitor learner attendance, follow up individually on progress, and provide mentorship to support job-market readiness.</li>
-              <li>Ensure proper use and maintenance of training centre equipment, creating a safe and inclusive learning environment in line with organisational safeguarding policies.</li>
-            </ul>
+            <p>Teaching AI, data, and digital skills to diverse learners while shaping practical training content and assessment approaches.</p>
           </article>
           <article class="project-card">
             <span class="tag">Feb 2019 – Present</span>
             <h3>IT Support Engineer</h3>
             <p class="card-meta">Energy Crown Bangladesh · Full Time · Cox's Bazar</p>
-            <ul class="feature-list">
-              <li>Coordinated the day-to-day operation of IT labs and training facilities, overseeing the safe use, routine maintenance, and troubleshooting of all equipment.</li>
-              <li>Assisted in delivering basic digital skills training to non-technical users, employing effective communication and facilitation techniques.</li>
-              <li>Maintained accurate learner attendance logs, equipment usage records, and activity summaries; prepared regular internal reports for management.</li>
-              <li>Led community-level technology awareness sessions, contributing to community engagement and promoting digital skills for livelihoods.</li>
-              <li>Collaborated with procurement and logistics teams to ensure timely supply of training materials and equipment.</li>
-              <li>Practised and promoted safeguarding policies, ensuring the safety of programme participants from harm, abuse, and exploitation.</li>
-            </ul>
+            <p>Supported IT operations, training facilities, and community technology programs with a strong focus on reliability and service delivery.</p>
           </article>
           <article class="project-card">
             <span class="tag">Feb 2021 – Present</span>
             <h3>AutoCAD Operator & Designer</h3>
             <p class="card-meta">Building Engineers and Architects · Contract · Cox's Bazar</p>
-            <ul class="feature-list">
-              <li>Maintain accurate records, prepare brief reports, and coordinate with multiple stakeholders — reinforcing strong organisational and documentation skills.</li>
-              <li>Support project planning and execution, demonstrating the ability to manage tasks, meet deadlines, and operate both independently and as part of a team.</li>
-            </ul>
+            <p>Handled design coordination, documentation, and project support tasks with a practical and organised approach.</p>
           </article>
         </div>
       </section>
