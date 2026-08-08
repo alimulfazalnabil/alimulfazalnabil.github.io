@@ -604,6 +604,37 @@
         color: var(--muted);
       }
 
+      .proficiency-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin: 0.8rem 0 1.2rem;
+      }
+
+      .proficiency-pill {
+        padding: 0.42rem 0.72rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        font-size: 0.84rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+
+      .proficiency-pill.production {
+        background: rgba(46, 182, 125, 0.18);
+        color: #99f0c8;
+      }
+
+      .proficiency-pill.hands-on {
+        background: rgba(79, 140, 255, 0.2);
+        color: #b7d0ff;
+      }
+
+      .proficiency-pill.focus {
+        background: rgba(236, 178, 46, 0.2);
+        color: #ffe0a3;
+      }
+
       form {
         display: grid;
         gap: 0.8rem;
@@ -980,6 +1011,11 @@
           Portfolio hierarchy: Cloud & Infrastructure, DevOps & Automation, AI & Machine Learning, Data Engineering & Analytics,
           Cybersecurity & Identity, Robotics/IoT/Computer Vision, Software & Solution Architecture, and Project/Product/Technical Leadership.
         </p>
+        <div class="proficiency-legend" aria-label="Proficiency legend">
+          <span class="proficiency-pill production">Production: delivered in real operations</span>
+          <span class="proficiency-pill hands-on">Hands-on: built and applied in projects</span>
+          <span class="proficiency-pill focus">Current Focus: actively deepening</span>
+        </div>
         <div class="stack-hierarchy">
           <div class="stack-step"><strong>01</strong><span>Cloud & Infrastructure</span></div>
           <div class="stack-step"><strong>02</strong><span>DevOps & Automation</span></div>
@@ -1015,7 +1051,7 @@
         <div class="stack-domain-grid">
           <div class="stack-domain">
             <details>
-              <summary>1. Cloud Computing & Cloud Architecture</summary>
+              <summary>1. Cloud Computing & Cloud Architecture (Production)</summary>
               <ul>
                 <li>Azure: Virtual Machines, VNet, Load Balancer, Storage, App Services, Entra ID, RBAC, PIM, Monitor, Sentinel, Key Vault, Data Factory, Synapse, ML, AI Services, OpenAI, Container Apps, AKS, DevOps, Functions.</li>
                 <li>AWS: EC2, S3, Lambda, SageMaker, Redshift, networking fundamentals, cloud architecture.</li>
@@ -1025,7 +1061,7 @@
           </div>
           <div class="stack-domain">
             <details>
-              <summary>2. Infrastructure Engineering</summary>
+              <summary>2. Infrastructure Engineering (Production)</summary>
               <ul>
                 <li>Systems Administration: Windows Server, Linux, Ubuntu, CentOS, Active Directory, Entra ID, Group Policy, DNS, DHCP, virtualization, Hyper-V, VMware.</li>
                 <li>Enterprise Infrastructure: Server deployment, monitoring, backup, disaster recovery, patching, capacity planning, performance optimization, incident/problem/change operations.</li>
@@ -1035,7 +1071,7 @@
           </div>
           <div class="stack-domain">
             <details>
-              <summary>3. Networking</summary>
+              <summary>3. Networking (Production)</summary>
               <ul>
                 <li>Network Technologies: TCP/IP, IPv4/IPv6, DNS, DHCP, VLAN, routing, switching, NAT, VPN, firewall, load balancing, RADIUS, NAC, monitoring.</li>
                 <li>Cloud Networking: Azure VNet, subnets, NSG, VPN Gateway, VNet peering, hub-and-spoke, private endpoints, hybrid connectivity.</li>
@@ -1045,7 +1081,7 @@
           </div>
           <div class="stack-domain">
             <details>
-              <summary>4. DevOps & Platform Engineering</summary>
+              <summary>4. DevOps & Platform Engineering (Production)</summary>
               <ul>
                 <li>IaC: Terraform, ARM Templates, Bicep, Ansible.</li>
                 <li>CI/CD: GitHub Actions, Azure DevOps, Jenkins, Azure Pipelines, automated testing/build/release/deployment.</li>
@@ -1055,7 +1091,7 @@
           </div>
           <div class="stack-domain">
             <details>
-              <summary>5. Programming & Scripting</summary>
+              <summary>5. Programming & Scripting (Production + Hands-on)</summary>
               <ul>
                 <li>Python: OOP, automation, APIs, data processing, ML, ETL, infrastructure automation.</li>
                 <li>PowerShell: Windows/Azure automation, AD automation, infrastructure management, reporting, scheduled tasks.</li>
@@ -1065,7 +1101,7 @@
           </div>
           <div class="stack-domain">
             <details>
-              <summary>6. AI, ML & Generative AI</summary>
+              <summary>6. AI, ML & Generative AI (Hands-on + Current Focus)</summary>
               <ul>
                 <li>ML and Deep Learning: supervised/unsupervised learning, classification, regression, clustering, feature engineering, model evaluation, forecasting, CNN/RNN/LSTM/GRU.</li>
                 <li>Frameworks: TensorFlow, PyTorch, Scikit-learn, Keras, NumPy, Pandas.</li>
@@ -1076,7 +1112,7 @@
           </div>
           <div class="stack-domain">
             <details>
-              <summary>7. Computer Vision, Robotics & UAV</summary>
+              <summary>7. Computer Vision, Robotics & UAV (Hands-on)</summary>
               <ul>
                 <li>Computer Vision: OpenCV, YOLO, YOLOv8, object detection/tracking, image classification/processing, lane and traffic analysis, real-time video analytics.</li>
                 <li>Robotics: ROS 2 nodes/topics/services/actions, navigation, sensor integration, LiDAR, IMU, GPS, SLAM, sensor fusion, autonomous navigation, path planning, CARLA, Gazebo.</li>
@@ -1086,7 +1122,7 @@
           </div>
           <div class="stack-domain">
             <details>
-              <summary>8. Data, Databases, GIS & Geospatial</summary>
+              <summary>8. Data, Databases, GIS & Geospatial (Production + Hands-on)</summary>
               <ul>
                 <li>Data Science and Analytics: statistical analysis, data cleaning, EDA, predictive modeling, KPI and dashboard work with Matplotlib, Seaborn, Power BI, Tableau, Plotly.</li>
                 <li>Data Engineering: ETL/ELT, data pipelines, Airflow, transformation, quality, warehousing, lakes, PostgreSQL, MySQL, Redshift, Synapse, Spark, Hadoop.</li>
@@ -1096,7 +1132,7 @@
           </div>
           <div class="stack-domain">
             <details>
-              <summary>9. Security, Identity, Monitoring & Automation</summary>
+              <summary>9. Security, Identity, Monitoring & Automation (Production)</summary>
               <ul>
                 <li>Identity and Security: Entra ID/Azure AD, RBAC, PIM, IAM, conditional access, MFA, identity governance, zero trust, Defender, Sentinel, secure cloud architecture.</li>
                 <li>Observability: Azure Monitor, Log Analytics, Prometheus, Grafana, alerting, incident detection, performance monitoring.</li>
@@ -1106,7 +1142,7 @@
           </div>
           <div class="stack-domain">
             <details>
-              <summary>10. Software, Architecture, Product & Enterprise Leadership</summary>
+              <summary>10. Software, Architecture, Product & Enterprise Leadership (Production)</summary>
               <ul>
                 <li>Software and API Development: REST APIs, FastAPI, Flask, React, TypeScript, JavaScript, Node.js fundamentals, microservices, JWT, OAuth 2.0.</li>
                 <li>Architecture: solution, cloud, hybrid, microservices, distributed systems, event-driven, security, integration, and data architecture.</li>
