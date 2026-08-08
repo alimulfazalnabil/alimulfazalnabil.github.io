@@ -1196,299 +1196,41 @@
         color: var(--muted);
       }
 
-      .service-hero {
-        display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 1rem;
-        align-items: start;
-        margin-bottom: 1rem;
-      }
-
-      .service-hero-copy,
-      .service-hero-panel {
-        padding: 1.15rem 1.2rem;
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: linear-gradient(135deg, rgba(9, 21, 36, 0.95), rgba(11, 24, 39, 0.88));
-        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .service-hero-copy::before,
-      .service-hero-panel::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(120deg, rgba(104, 227, 255, 0.08), transparent 40%, rgba(62, 124, 255, 0.08));
-        pointer-events: none;
-      }
-
-      .service-status {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        margin: 0.9rem 0 1rem;
-        color: var(--accent-2);
-        font-size: 0.8rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-      }
-
-      .service-metrics {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.7rem;
-        margin-top: 1rem;
-      }
-
-      .service-metric {
-        padding: 0.8rem;
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .service-metric span {
-        display: block;
-        color: var(--accent-2);
-        font-size: 0.78rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        margin-bottom: 0.28rem;
-      }
-
-      .service-metric strong {
-        display: block;
-        margin-bottom: 0.25rem;
-        color: var(--text);
-      }
-
-      .service-metric p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-
-      .service-hero-panel h3 {
-        margin: 0 0 0.75rem;
-      }
-
-      .problem-selector {
-        display: grid;
-        gap: 0.55rem;
-      }
-
-      .problem-chip {
-        width: 100%;
-        text-align: left;
-        padding: 0.72rem 0.8rem;
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: rgba(255, 255, 255, 0.04);
-        color: var(--text);
-        cursor: pointer;
-        transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
-      }
-
-      .problem-chip:hover,
-      .problem-chip.active {
-        border-color: rgba(104, 227, 255, 0.26);
-        background: rgba(104, 227, 255, 0.1);
-        transform: translateY(-1px);
-      }
-
-      .service-category-grid {
-        display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 0.7rem;
-        margin: 1rem 0 1.1rem;
-      }
-
-      .service-category-card {
-        padding: 0.8rem 0.82rem;
-        border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.04);
-        transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
-      }
-
-      .service-category-card strong {
-        display: block;
-        color: var(--text);
-        margin-bottom: 0.24rem;
-      }
-
-      .service-category-card span {
-        color: var(--muted);
-        font-size: 0.84rem;
-      }
-
-      .service-category-card.active {
-        border-color: rgba(104, 227, 255, 0.28);
-        background: rgba(104, 227, 255, 0.1);
-        transform: translateY(-2px);
-      }
-
       .services-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 1rem;
       }
 
       .service-card {
-        position: relative;
-        padding: 1.1rem 1.1rem 1rem;
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.2rem;
+        border-radius: 16px;
+        border: 1px solid var(--border);
         background: rgba(255, 255, 255, 0.04);
-        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
-        transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background 220ms ease;
-        overflow: hidden;
-      }
-
-      .service-card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(120deg, transparent 0%, rgba(104, 227, 255, 0.08) 45%, transparent 100%);
-        transform: translateX(-120%);
-        transition: transform 260ms ease;
-        pointer-events: none;
-      }
-
-      .service-card:hover,
-      .service-card.is-active {
-        transform: translateY(-3px);
-        border-color: rgba(104, 227, 255, 0.28);
-        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22);
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(104, 227, 255, 0.06));
-      }
-
-      .service-card:hover::before,
-      .service-card.is-active::before {
-        transform: translateX(120%);
-      }
-
-      .service-card.featured {
-        grid-column: span 2;
-        border-color: rgba(104, 227, 255, 0.24);
-        background: linear-gradient(135deg, rgba(8, 22, 37, 0.95), rgba(14, 28, 46, 0.94));
       }
 
       .service-card .service-number {
         color: var(--accent-2);
-        font-size: 0.8rem;
-        letter-spacing: 0.12em;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
-      }
-
-      .service-card .service-head {
-        display: flex;
-        align-items: center;
-        gap: 0.55rem;
-        margin-bottom: 0.55rem;
-      }
-
-      .service-card .service-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 1.7rem;
-        height: 1.7rem;
-        border-radius: 50%;
-        border: 1px solid rgba(104, 227, 255, 0.2);
-        background: rgba(104, 227, 255, 0.08);
-        font-size: 0.92rem;
       }
 
       .service-card h3 {
-        margin: 0;
-        font-size: 1.08rem;
+        margin: 0.35rem 0 0.5rem;
+        font-size: 1.15rem;
       }
 
-      .service-card .service-claim {
-        display: inline-block;
-        margin: 0.45rem 0 0.55rem;
-        color: var(--accent-2);
-        font-size: 0.9rem;
-        font-weight: 700;
-      }
-
-      .service-card p {
-        margin: 0;
+      .service-card ul {
+        margin: 0.8rem 0 0;
+        padding-left: 1.15rem;
         color: var(--muted);
       }
 
-      .service-card .service-tech {
+      .service-tech {
         margin-top: 0.75rem;
-        font-size: 0.86rem;
+        font-size: 0.88rem;
         color: var(--accent-2);
-        line-height: 1.55;
-      }
-
-      .service-card .service-deliverables,
-      .service-card .service-outcome,
-      .service-card .service-problem,
-      .service-card .service-solution {
-        margin-top: 0.7rem;
-        padding: 0.78rem 0.84rem;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.03);
-      }
-
-      .service-card .service-deliverables strong,
-      .service-card .service-outcome strong,
-      .service-card .service-problem strong,
-      .service-card .service-solution strong {
-        display: block;
-        margin-bottom: 0.2rem;
-        color: var(--text);
-        font-size: 0.82rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      .service-card > summary {
-        list-style: none;
-        cursor: pointer;
-      }
-
-      .service-card > summary::-webkit-details-marker {
-        display: none;
-      }
-
-      .service-card .service-toggle {
-        margin-top: 0.8rem;
-        color: var(--accent-2);
-        font-weight: 700;
-        letter-spacing: 0.04em;
-      }
-
-      .service-card .service-details {
-        display: none;
-        margin-top: 0.8rem;
-      }
-
-      .service-card[open] .service-details {
-        display: block;
-      }
-
-      .service-card .service-link {
-        display: inline-flex;
-        margin-top: 0.8rem;
-        color: var(--text);
-        font-weight: 700;
-      }
-
-      .service-card .service-link:hover,
-      .service-card .service-link:focus-visible {
-        color: var(--accent-2);
-      }
-
-      .service-card.is-muted {
-        opacity: 0.6;
       }
 
       .service-flow,
@@ -1496,30 +1238,9 @@
       .service-cta {
         margin-top: 1rem;
         padding: 1.1rem 1.2rem;
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        border: 1px solid var(--border);
         background: rgba(255, 255, 255, 0.04);
-        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
-      }
-
-      .service-impact-strip {
-        display: grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-        gap: 0.7rem;
-        margin: 1rem 0;
-      }
-
-      .service-impact {
-        padding: 0.8rem;
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .service-impact strong {
-        display: block;
-        color: var(--accent-2);
-        margin-bottom: 0.2rem;
       }
 
       .process-grid {
@@ -1531,8 +1252,8 @@
 
       .process-step {
         padding: 0.8rem;
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        border: 1px solid var(--border);
         background: rgba(255, 255, 255, 0.03);
       }
 
@@ -1551,8 +1272,8 @@
 
       .proof-kpi {
         padding: 0.85rem;
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        border: 1px solid var(--border);
         background: rgba(255, 255, 255, 0.03);
       }
 
@@ -1560,70 +1281,6 @@
         display: block;
         color: var(--accent-2);
         margin-bottom: 0.22rem;
-      }
-
-      .use-case-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.75rem;
-        margin-top: 0.8rem;
-      }
-
-      .use-case-card {
-        padding: 0.85rem;
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .use-case-card strong {
-        display: block;
-        color: var(--accent-2);
-        margin-bottom: 0.22rem;
-      }
-
-      .service-journey-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.75rem;
-        margin-top: 0.8rem;
-      }
-
-      .service-journey-card {
-        padding: 0.9rem;
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .service-journey-card strong {
-        display: block;
-        color: var(--accent-2);
-        margin-bottom: 0.25rem;
-      }
-
-      .service-conversion {
-        margin-top: 1rem;
-        padding: 1.2rem;
-        border-radius: 24px;
-        border: 1px solid rgba(104, 227, 255, 0.22);
-        background: linear-gradient(135deg, rgba(9, 21, 36, 0.95), rgba(14, 27, 43, 0.9));
-        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
-      }
-
-      .service-conversion .service-cta-actions {
-        margin-top: 1rem;
-      }
-
-      .reveal-on-scroll {
-        opacity: 0;
-        transform: translateY(18px);
-        transition: opacity 400ms ease, transform 400ms ease;
-      }
-
-      .reveal-on-scroll.is-visible {
-        opacity: 1;
-        transform: translateY(0);
       }
 
       .service-cta-actions {
@@ -1659,26 +1316,12 @@
       }
 
       footer {
-        position: relative;
-        padding: 2.8rem 0 1.4rem;
+        padding: 2.4rem 0 2.6rem;
         color: var(--muted);
         border-top: 1px solid rgba(110, 231, 249, 0.22);
         background:
-          radial-gradient(1200px 420px at 100% 0%, rgba(79, 140, 255, 0.14), transparent 55%),
-          linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
-        overflow: hidden;
-      }
-
-      footer::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image:
-          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-        background-size: 56px 56px;
-        opacity: 0.25;
-        pointer-events: none;
+          radial-gradient(1200px 420px at 100% 0%, rgba(79, 140, 255, 0.13), transparent 55%),
+          rgba(255, 255, 255, 0.02);
       }
 
       .footer-grid {
@@ -1688,28 +1331,11 @@
         align-items: start;
       }
 
-      .footer-columns {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        margin-top: 1rem;
-        gap: 0.8rem;
-      }
-
       .footer-panel {
-        position: relative;
-        padding: 1.2rem 1.25rem;
-        border-radius: 18px;
+        padding: 1.1rem 1.2rem;
+        border-radius: 16px;
         border: 1px solid var(--border);
         background: rgba(255, 255, 255, 0.04);
-        box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
-      }
-
-      .footer-panel::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        pointer-events: none;
-        border: 1px solid rgba(110, 231, 249, 0.12);
       }
 
       .footer-brand {
@@ -1729,7 +1355,7 @@
       }
 
       .footer-meta {
-        margin-top: 0.9rem;
+        margin-top: 0.8rem;
         font-size: 0.88rem;
       }
 
@@ -1737,7 +1363,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
-        margin-top: 0.9rem;
+        margin-top: 0.85rem;
       }
 
       .footer-kpis span {
@@ -1763,7 +1389,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 0.6rem;
-        margin-top: 0.95rem;
+        margin-top: 0.9rem;
       }
 
       .footer-link-list {
@@ -1781,14 +1407,11 @@
         color: var(--text);
         font-size: 0.88rem;
         font-weight: 600;
-        transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
       }
 
-      .footer-link-list a:hover,
-      .footer-link-list a:focus-visible {
+      .footer-link-list a:hover {
         border-color: rgba(110, 231, 249, 0.6);
         color: var(--accent-2);
-        transform: translateY(-1px);
       }
 
       .footer-cta {
@@ -1797,13 +1420,6 @@
         font-size: 0.88rem;
         font-weight: 700;
         border: 1px solid var(--border);
-        transition: transform 180ms ease, box-shadow 180ms ease;
-      }
-
-      .footer-cta:hover,
-      .footer-cta:focus-visible {
-        transform: translateY(-1px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
       }
 
       .footer-cta.primary {
@@ -1815,87 +1431,6 @@
       .footer-cta.secondary {
         color: var(--text);
         background: rgba(255, 255, 255, 0.03);
-      }
-
-      .footer-contact-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.8rem;
-        margin-top: 0.95rem;
-      }
-
-      .footer-contact-item {
-        padding: 0.8rem 0.9rem;
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.03);
-      }
-
-      .footer-contact-item strong {
-        display: block;
-        color: var(--accent-2);
-        font-size: 0.8rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        margin-bottom: 0.25rem;
-      }
-
-      .footer-contact-item a {
-        color: var(--text);
-      }
-
-      .footer-contact-item a:hover,
-      .footer-contact-item a:focus-visible {
-        color: var(--accent-2);
-      }
-
-      .footer-tech-strip {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-
-      .footer-tech-chip {
-        padding: 0.36rem 0.62rem;
-        border-radius: 999px;
-        border: 1px solid rgba(110, 231, 249, 0.2);
-        color: var(--accent-2);
-        font-size: 0.77rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .footer-status {
-        margin-top: 1rem;
-        padding: 0.8rem 0.9rem;
-        border-radius: 12px;
-        border: 1px solid rgba(110, 231, 249, 0.18);
-        background: rgba(110, 231, 249, 0.06);
-      }
-
-      .footer-status strong {
-        color: var(--text);
-      }
-
-      .footer-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        margin-top: 1.2rem;
-        padding-top: 1rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        font-size: 0.86rem;
-      }
-
-      .footer-bottom a {
-        color: var(--muted);
-      }
-
-      .footer-bottom a:hover,
-      .footer-bottom a:focus-visible {
-        color: var(--accent-2);
       }
 
       @media (max-width: 900px) {
@@ -1919,10 +1454,6 @@
         }
 
         .footer-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .footer-columns {
           grid-template-columns: 1fr;
         }
 
@@ -3678,354 +3209,229 @@
       
 
 <section id="services" class="container no-collapse">
-      <div class="section-heading reveal-on-scroll">
+      <div class="section-heading">
         <div>
-          <span class="eyebrow">Technology Services</span>
-          <h2>Turn Complex Technology Into Working Solutions.</h2>
+          <span class="eyebrow">Services</span>
+          <h2>From Strategy to Production</h2>
         </div>
       </div>
-      <p class="section-note reveal-on-scroll">From infrastructure and cloud architecture to AI, automation, software, data and intelligent systems — I design and build technology around real business problems.</p>
-
-      <div class="service-hero">
-        <div class="service-hero-copy reveal-on-scroll">
-          <div class="service-status">● AVAILABLE FOR SELECTED PROJECTS</div>
-          <h3>What can I help you solve?</h3>
-          <p>I work across engineering, architecture, software delivery, automation, AI, data, and robotics to turn complex technology into practical outcomes.</p>
-          <div class="service-metrics">
-            <div class="service-metric"><span>01</span><strong>Architect</strong><p>Design scalable technology systems.</p></div>
-            <div class="service-metric"><span>02</span><strong>Build</strong><p>Turn ideas into production-ready solutions.</p></div>
-            <div class="service-metric"><span>03</span><strong>Optimize</strong><p>Automate, monitor and continuously improve.</p></div>
-          </div>
-        </div>
-        <div class="service-hero-panel reveal-on-scroll">
-          <h3>What are you trying to solve?</h3>
-          <div class="problem-selector" role="listbox" aria-label="Service problem selector">
-            <button class="problem-chip active" type="button" data-problem="modernize">☁️ I need to modernize my infrastructure</button>
-            <button class="problem-chip" type="button" data-problem="automation">⚙️ I want to automate operations</button>
-            <button class="problem-chip" type="button" data-problem="ai">🤖 I want to integrate AI into my business</button>
-            <button class="problem-chip" type="button" data-problem="product">💻 I need a web application or digital platform</button>
-            <button class="problem-chip" type="button" data-problem="data">📊 I need better data and analytics</button>
-            <button class="problem-chip" type="button" data-problem="idea">🚀 I want to turn an idea into a product</button>
-            <button class="problem-chip" type="button" data-problem="consulting">🔧 I need technical architecture or consulting</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-category-grid reveal-on-scroll">
-        <div class="service-category-card active" data-category="build"><strong>BUILD</strong><span>Full-Stack Development · Digital Product Development</span></div>
-        <div class="service-category-card active" data-category="modernize"><strong>MODERNIZE</strong><span>Cloud & Infrastructure · DevOps & Automation</span></div>
-        <div class="service-category-card active" data-category="intelligence"><strong>INTELLIGENCE</strong><span>AI · Data Engineering & Analytics</span></div>
-        <div class="service-category-card active" data-category="engineer"><strong>ENGINEER</strong><span>Computer Vision · Robotics & IoT</span></div>
-        <div class="service-category-card active" data-category="guide"><strong>GUIDE</strong><span>Technical Consulting · Leadership</span></div>
-      </div>
+      <p class="section-note">I help organizations design, build, automate, and modernize technology solutions across cloud infrastructure, software, AI, data, DevOps, and robotics.</p>
 
       <div class="services-grid">
-        <details class="service-card reveal-on-scroll" data-association="modernize cloud infrastructure architecture reliability security" data-category="modernize" open>
-          <summary class="service-head service-toggle">
-            <span class="service-number">01</span>
-            <span class="service-icon">☁️</span>
-            <h3>Cloud & Infrastructure</h3>
-          </summary>
-          <div class="service-claim">Build secure, scalable and reliable technology foundations.</div>
-          <p>Design resilient cloud and infrastructure platforms with strong security, network architecture, observability, and operational stability.</p>
-          <p class="service-tech">Azure · AWS · Linux · Networking · Entra ID · Azure Monitor</p>
-          <div class="service-details">
-            <div class="service-problem"><strong>Problem</strong><p>Legacy infrastructure, scalability constraints, security concerns, or unreliable operations.</p></div>
-            <div class="service-solution"><strong>Solution</strong><p>Architecture, migration, modernization, automation, monitoring, and optimization.</p></div>
-            <div class="service-outcome"><strong>Outcome</strong><p>More reliable operations, stronger security and improved scalability.</p></div>
-            <a class="service-link" href="#contact">Discuss this service →</a>
-          </div>
-        </details>
+        <article class="service-card">
+          <span class="service-number">01</span>
+          <h3>Cloud & Infrastructure</h3>
+          <p>Design and modernize reliable, secure, and scalable IT infrastructure.</p>
+          <ul>
+            <li>Azure cloud architecture, hybrid infrastructure, migration</li>
+            <li>Identity and access management, network architecture, security</li>
+            <li>Monitoring, observability, disaster recovery, optimization</li>
+          </ul>
+          <p class="service-tech">Technologies: Azure · AWS · Windows Server · Linux · Entra ID · Networking · Azure Monitor</p>
+        </article>
 
-        <details class="service-card reveal-on-scroll" data-association="automation modernize devops operations deployment" data-category="modernize">
-          <summary class="service-head service-toggle">
-            <span class="service-number">02</span>
-            <span class="service-icon">⚙️</span>
-            <h3>DevOps & Automation</h3>
-          </summary>
-          <div class="service-claim">Turn repeatable work into reliable, efficient delivery.</div>
-          <p>Automate infrastructure, deployment, testing, and operational workflows to reduce manual effort and improve consistency.</p>
-          <p class="service-tech">Terraform · Ansible · PowerShell · Python · Docker · Kubernetes · GitHub Actions</p>
-          <div class="service-details">
-            <div class="service-problem"><strong>Problem</strong><p>Slow releases, inconsistent environments, and too much manual operational effort.</p></div>
-            <div class="service-solution"><strong>Solution</strong><p>CI/CD pipelines, IaC, configuration automation, observability, and deployment workflows.</p></div>
-            <div class="service-outcome"><strong>Outcome</strong><p>Faster delivery, fewer handoffs and more dependable operations.</p></div>
-            <a class="service-link" href="#contact">Discuss this service →</a>
-          </div>
-        </details>
+        <article class="service-card">
+          <span class="service-number">02</span>
+          <h3>DevOps & Infrastructure Automation</h3>
+          <p>Automate infrastructure and software delivery to improve reliability and reduce operational effort.</p>
+          <ul>
+            <li>Infrastructure as code and cloud/server automation</li>
+            <li>CI/CD pipelines, deployment automation, configuration management</li>
+            <li>Kubernetes infrastructure and observability</li>
+          </ul>
+          <p class="service-tech">Technologies: Terraform · Ansible · PowerShell · Python · Docker · Kubernetes · GitHub Actions · Jenkins · Azure DevOps</p>
+        </article>
 
-        <details class="service-card reveal-on-scroll" data-association="product build software platform ui" data-category="build">
-          <summary class="service-head service-toggle">
-            <span class="service-number">03</span>
-            <span class="service-icon">💻</span>
-            <h3>Full-Stack Development</h3>
-          </summary>
-          <div class="service-claim">Build complete digital platforms from idea to production.</div>
-          <p>Develop web applications and operational platforms from front-end experiences to API, data layer, and deployment.</p>
-          <p class="service-tech">React · Next.js · TypeScript · FastAPI · Flask · Node.js · PostgreSQL</p>
-          <div class="service-details">
-            <div class="service-problem"><strong>Problem</strong><p>Business ideas need a working, usable product with strong engineering foundations.</p></div>
-            <div class="service-solution"><strong>Solution</strong><p>UI, backend architecture, APIs, data design, testing, deployment, and maintenance.</p></div>
-            <div class="service-outcome"><strong>Outcome</strong><p>A product that is usable, reliable and ready for growth.</p></div>
-            <a class="service-link" href="#contact">Discuss this service →</a>
-          </div>
-        </details>
+        <article class="service-card">
+          <span class="service-number">03</span>
+          <h3>Full-Stack Development</h3>
+          <p>Build complete web applications from user interface to API, database, and cloud deployment.</p>
+          <ul>
+            <li>Frontend: React, Next.js, TypeScript, responsive UI, admin dashboards</li>
+            <li>Backend: Python/FastAPI/Flask, Node.js, REST APIs, auth, microservices</li>
+            <li>Delivery model: Idea → UI/UX → Frontend → Backend → Database → Testing → CI/CD → Cloud</li>
+          </ul>
+          <p class="service-tech">Technologies: PostgreSQL · MySQL · SQL Server · MongoDB · Redis · Docker · Kubernetes · Azure · AWS</p>
+        </article>
 
-        <details class="service-card featured reveal-on-scroll" data-association="ai intelligence automation data business" data-category="intelligence" open>
-          <summary class="service-head service-toggle">
-            <span class="service-number">04</span>
-            <span class="service-icon">🤖</span>
-            <h3>AI & Intelligent Solutions</h3>
-          </summary>
-          <div class="service-claim">AI that solves real business problems.</div>
-          <p>Practical AI, automation, and intelligent systems that strengthen operations, accelerate decision-making, and support product value.</p>
-          <p class="service-tech">Generative AI · AI Agents · RAG · Computer Vision · Predictive Analytics · Machine Learning</p>
-          <div class="service-details">
-            <div class="service-problem"><strong>Problem</strong><p>Manual effort, unclear automation opportunities, or a need to use data and AI more effectively.</p></div>
-            <div class="service-solution"><strong>Solution</strong><p>AI assessment, model integration, intelligent workflows, RAG systems, agents, and analytics pipelines.</p></div>
-            <div class="service-outcome"><strong>Outcome</strong><p>Better workflows, faster insight and more useful automation.</p></div>
-            <a class="service-link" href="#contact">Explore AI Solutions →</a>
-          </div>
-        </details>
+        <article class="service-card">
+          <span class="service-number">04</span>
+          <h3>AI & Intelligent Solutions</h3>
+          <p>Integrate AI into practical business workflows and digital products.</p>
+          <ul>
+            <li>Generative AI, LLM integration, RAG applications, assistants and agents</li>
+            <li>Computer vision and machine learning solutions</li>
+            <li>AI proof of concepts and MLOps pathways</li>
+          </ul>
+          <p class="service-tech">Technologies: Python · OpenAI API · Azure OpenAI · LangChain · LangGraph · TensorFlow · PyTorch · Scikit-learn · OpenCV · YOLO</p>
+        </article>
 
-        <details class="service-card reveal-on-scroll" data-association="data analytics intelligence reporting" data-category="intelligence">
-          <summary class="service-head service-toggle">
-            <span class="service-number">05</span>
-            <span class="service-icon">📊</span>
-            <h3>Data Engineering & Analytics</h3>
-          </summary>
-          <div class="service-claim">Turn data into useful operational insight.</div>
-          <p>Build reliable data pipelines and analytics systems that support decision-making, reporting, and intelligent workflows.</p>
-          <p class="service-tech">Python · SQL · Airflow · PostgreSQL · Power BI · Tableau · Pandas</p>
-          <div class="service-details">
-            <div class="service-problem"><strong>Problem</strong><p>Fragmented data, inconsistent reporting, or weak visibility into operational performance.</p></div>
-            <div class="service-solution"><strong>Solution</strong><p>ETL/ELT pipelines, warehousing, dashboards, analytics engineering, and decision-support workflows.</p></div>
-            <div class="service-outcome"><strong>Outcome</strong><p>Better visibility, stronger decisions and more dependable data products.</p></div>
-            <a class="service-link" href="#contact">Discuss this service →</a>
-          </div>
-        </details>
+        <article class="service-card">
+          <span class="service-number">05</span>
+          <h3>Data Engineering & Analytics</h3>
+          <p>Turn operational data into reliable pipelines, insights, and decision-support systems.</p>
+          <ul>
+            <li>ETL/ELT pipelines, warehousing, analytics engineering</li>
+            <li>Data cleaning, BI, dashboard development, predictive analytics</li>
+            <li>Decision support workflows for operational teams</li>
+          </ul>
+          <p class="service-tech">Technologies: Python · SQL · Pandas · NumPy · Airflow · PostgreSQL · PostGIS · Spark · Power BI · Tableau</p>
+        </article>
 
-        <details class="service-card reveal-on-scroll" data-association="robotics vision iot engineering automation" data-category="engineer">
-          <summary class="service-head service-toggle">
-            <span class="service-number">06</span>
-            <span class="service-icon">🔧</span>
-            <h3>Computer Vision, Robotics & IoT</h3>
-          </summary>
-          <div class="service-claim">Connect software with the physical world.</div>
-          <p>Develop perception, control, sensing, and real-world automation solutions for robotics and intelligent systems.</p>
-          <p class="service-tech">ROS 2 · C++ · Python · OpenCV · YOLO · LiDAR · IMU · Raspberry Pi</p>
-          <div class="service-details">
-            <div class="service-problem"><strong>Problem</strong><p>Physical systems need sensing, automation, perception, or intelligent decision-making.</p></div>
-            <div class="service-solution"><strong>Solution</strong><p>Vision systems, robotic software, sensor integration, autonomous workflows, and IoT connectivity.</p></div>
-            <div class="service-outcome"><strong>Outcome</strong><p>Smarter operations and more capable real-world technology.</p></div>
-            <a class="service-link" href="#contact">Discuss this service →</a>
-          </div>
-        </details>
+        <article class="service-card">
+          <span class="service-number">06</span>
+          <h3>Computer Vision, Robotics & IoT</h3>
+          <p>Build intelligent systems that connect software with the physical world.</p>
+          <ul>
+            <li>Computer vision, object detection/tracking, ROS 2 development</li>
+            <li>IoT and UAV/drone solutions with sensor integration</li>
+            <li>Autonomous systems and robotics simulation</li>
+          </ul>
+          <p class="service-tech">Technologies: ROS 2 · C++ · Python · OpenCV · YOLO · LiDAR · IMU · GPS · SLAM · CARLA · ArduPilot · Raspberry Pi · Arduino</p>
+        </article>
 
-        <details class="service-card reveal-on-scroll" data-association="product idea build discovery architecture mvp" data-category="build">
-          <summary class="service-head service-toggle">
-            <span class="service-number">07</span>
-            <span class="service-icon">🚀</span>
-            <h3>Digital Product Development</h3>
-          </summary>
-          <div class="service-claim">Turn an idea into a technically viable product.</div>
-          <p>Guide product concepts from discovery to architecture, MVP planning, delivery, and implementation.</p>
-          <p class="service-tech">Discovery · Requirements · Architecture · MVP · Deployment · Monitoring</p>
-          <div class="service-details">
-            <div class="service-problem"><strong>Problem</strong><p>An idea needs structure, feasibility, and a practical path to delivery.</p></div>
-            <div class="service-solution"><strong>Solution</strong><p>MVP planning, workflow design, architecture, implementation, and launch support.</p></div>
-            <div class="service-outcome"><strong>Outcome</strong><p>A clearer path from idea to working product with less execution risk.</p></div>
-            <a class="service-link" href="#contact">Discuss this service →</a>
-          </div>
-        </details>
+        <article class="service-card">
+          <span class="service-number">07</span>
+          <h3>Digital Product Development</h3>
+          <p>Turn an idea into a technically viable and deployable digital product.</p>
+          <ul>
+            <li>Ideation, feasibility, architecture, MVP planning</li>
+            <li>API and platform design, technology selection, cloud deployment</li>
+            <li>Scaling strategy and delivery governance</li>
+          </ul>
+          <p class="service-tech">Delivery approach: Idea → Discovery → Requirements → Architecture → MVP → Testing → Deployment → Monitoring → Scale</p>
+        </article>
 
-        <details class="service-card reveal-on-scroll" data-association="consulting architecture guidance strategy roadmap" data-category="guide">
-          <summary class="service-head service-toggle">
-            <span class="service-number">08</span>
-            <span class="service-icon">🧭</span>
-            <h3>Technical Consulting</h3>
-          </summary>
-          <div class="service-claim">Translate complexity into clear technical direction.</div>
-          <p>Provide strategic technical guidance for architecture decisions, modernization planning, and practical implementation roadmaps.</p>
-          <p class="service-tech">Architecture Reviews · Roadmaps · Migration Planning · Feasibility Assessment</p>
-          <div class="service-details">
-            <div class="service-problem"><strong>Problem</strong><p>Leadership needs clear technical direction without overcommitting to the wrong path.</p></div>
-            <div class="service-solution"><strong>Solution</strong><p>Architecture review, feasibility analysis, maturity assessment, and implementation guidance.</p></div>
-            <div class="service-outcome"><strong>Outcome</strong><p>More confident decisions, better prioritization and safer delivery.</p></div>
-            <a class="service-link" href="#contact">Discuss this service →</a>
-          </div>
-        </details>
+        <article class="service-card">
+          <span class="service-number">08</span>
+          <h3>Technical Consulting</h3>
+          <p>Independent technical guidance for complex technology decisions.</p>
+          <ul>
+            <li>Cloud and infrastructure reviews with maturity assessment</li>
+            <li>DevOps and AI feasibility assessments</li>
+            <li>Cost optimization, migration planning, roadmaps, architecture documentation</li>
+          </ul>
+          <p class="service-tech">Outcome: clear, actionable direction with realistic implementation paths</p>
+        </article>
 
-        <details class="service-card reveal-on-scroll" data-association="leadership consulting delivery project strategy" data-category="guide">
-          <summary class="service-head service-toggle">
-            <span class="service-number">09</span>
-            <span class="service-icon">🧠</span>
-            <h3>Project & Technology Leadership</h3>
-          </summary>
-          <div class="service-claim">Bring execution and technical direction together.</div>
-          <p>Lead projects, align stakeholders, and keep engineering execution connected to business outcomes and delivery quality.</p>
-          <p class="service-tech">Delivery Leadership · Stakeholder Alignment · Technical Strategy · Execution Oversight</p>
-          <div class="service-details">
-            <div class="service-problem"><strong>Problem</strong><p>Projects need strong technical ownership and clear coordination across teams and priorities.</p></div>
-            <div class="service-solution"><strong>Solution</strong><p>Solution design, roadmap alignment, implementation oversight, vendor coordination, and delivery management.</p></div>
-            <div class="service-outcome"><strong>Outcome</strong><p>Better delivery confidence, clearer priorities and smoother execution.</p></div>
-            <a class="service-link" href="#contact">Discuss this service →</a>
-          </div>
-        </details>
+        <article class="service-card">
+          <span class="service-number">09</span>
+          <h3>Project & Technology Leadership</h3>
+          <p>Delivery ownership beyond implementation engineering.</p>
+          <ul>
+            <li>Technical project management, requirements, and solution design</li>
+            <li>Stakeholder and vendor coordination, decision-making, process improvement</li>
+            <li>Product strategy and delivery management</li>
+          </ul>
+          <p class="service-tech">Focus: align technical execution with business outcomes</p>
+        </article>
       </div>
 
-      <div class="service-flow reveal-on-scroll">
-        <h3>What You Get</h3>
-        <div class="service-impact-strip">
-          <div class="service-impact"><strong>Reliability</strong><span>Systems designed for stable operation.</span></div>
-          <div class="service-impact"><strong>Automation</strong><span>Less repetitive manual work.</span></div>
-          <div class="service-impact"><strong>Scalability</strong><span>Architecture prepared for growth.</span></div>
-          <div class="service-impact"><strong>Visibility</strong><span>Monitoring, analytics and operational insight.</span></div>
-          <div class="service-impact"><strong>Security</strong><span>Security considered throughout the architecture.</span></div>
-          <div class="service-impact"><strong>Delivery</strong><span>From concept to implementation.</span></div>
-        </div>
-      </div>
-
-      <div class="service-proof reveal-on-scroll">
-        <h3>From Idea To Production</h3>
+      <div class="service-flow">
+        <h3>How I Work</h3>
         <div class="process-grid">
-          <div class="process-step"><strong>01 — Discover</strong><span>Understand your problem and requirements.</span></div>
-          <div class="process-step"><strong>02 — Architect</strong><span>Design the technical solution.</span></div>
-          <div class="process-step"><strong>03 — Build</strong><span>Develop and integrate the system.</span></div>
-          <div class="process-step"><strong>04 — Automate</strong><span>Implement CI/CD and operational automation.</span></div>
-          <div class="process-step"><strong>05 — Validate</strong><span>Test security, performance and reliability.</span></div>
-          <div class="process-step"><strong>06 — Deploy</strong><span>Move the solution into production.</span></div>
-          <div class="process-step"><strong>07 — Improve</strong><span>Monitor, optimize and scale.</span></div>
+          <div class="process-step"><strong>01 — Discover</strong><span>Understand the problem, constraints, and desired outcome.</span></div>
+          <div class="process-step"><strong>02 — Design</strong><span>Define architecture, stack, implementation strategy, and roadmap.</span></div>
+          <div class="process-step"><strong>03 — Build</strong><span>Develop the solution with strong engineering and delivery practices.</span></div>
+          <div class="process-step"><strong>04 — Automate</strong><span>Automate infrastructure, testing, deployment, and operational workflows.</span></div>
+          <div class="process-step"><strong>05 — Validate</strong><span>Test functionality, security, performance, reliability, and scalability.</span></div>
+          <div class="process-step"><strong>06 — Deploy</strong><span>Release to production infrastructure or cloud platforms.</span></div>
+          <div class="process-step"><strong>07 — Improve</strong><span>Monitor, optimize, document, and continuously improve the system.</span></div>
         </div>
       </div>
 
-      <div class="service-proof reveal-on-scroll">
-        <h3>What I Can Build</h3>
-        <div class="use-case-grid">
-          <div class="use-case-card"><strong>SMART CITY</strong><span>AI traffic optimization and intelligent transportation.</span></div>
-          <div class="use-case-card"><strong>BUSINESS AUTOMATION</strong><span>Automated workflows and operational systems.</span></div>
-          <div class="use-case-card"><strong>CLOUD MODERNIZATION</strong><span>Migration and modernization of infrastructure.</span></div>
-          <div class="use-case-card"><strong>AI KNOWLEDGE SYSTEMS</strong><span>RAG-based internal knowledge platforms.</span></div>
-          <div class="use-case-card"><strong>COMPUTER VISION</strong><span>Detection, tracking and intelligent visual analytics.</span></div>
-          <div class="use-case-card"><strong>DIGITAL PRODUCTS</strong><span>Business platforms, dashboards and web applications.</span></div>
-          <div class="use-case-card"><strong>ROBOTICS</strong><span>ROS 2, perception, automation and intelligent systems.</span></div>
+      <div class="service-proof">
+        <h3>Why Work With Me?</h3>
+        <p>Engineering across the full technology lifecycle: Infrastructure → Cloud → Software → Data → AI → Automation → Production.</p>
+        <div class="proof-kpis">
+          <div class="proof-kpi"><strong>7+ years</strong><span>professional technology experience</span></div>
+          <div class="proof-kpi"><strong>99.9%</strong><span>infrastructure availability experience</span></div>
+          <div class="proof-kpi"><strong>45%</strong><span>manual operational work reduced through automation</span></div>
         </div>
+        <ul class="feature-list">
+          <li>Hands-on delivery across Azure, DevOps, AI, Data, Robotics, and Software Engineering.</li>
+          <li>Ability to work from concept to production and lead projects to completion.</li>
+          <li>Strong combination of engineering execution and project leadership.</li>
+        </ul>
       </div>
 
-      <div class="service-proof reveal-on-scroll">
-        <h3>Choose Your Path</h3>
-        <div class="service-journey-grid">
-          <div class="service-journey-card"><strong>I HAVE AN IDEA</strong><span>Digital Product Development · Architecture · MVP</span></div>
-          <div class="service-journey-card"><strong>I HAVE A SYSTEM</strong><span>Cloud · DevOps · Security · Optimization</span></div>
-          <div class="service-journey-card"><strong>I HAVE DATA</strong><span>Data Engineering · Analytics · AI</span></div>
-          <div class="service-journey-card"><strong>I WANT AI</strong><span>AI Assessment · RAG · AI Agents · Computer Vision</span></div>
-          <div class="service-journey-card"><strong>I NEED GUIDANCE</strong><span>Technical Consulting · Architecture · Strategy</span></div>
-        </div>
-      </div>
-
-      <div class="service-conversion reveal-on-scroll">
-        <h3>Not sure which solution you need?</h3>
-        <p>Tell me what you're trying to achieve. I'll help translate the business problem into a practical technology approach.</p>
+      <div class="service-cta">
+        <h3>Have a technology challenge?</h3>
+        <p>Whether you need to modernize infrastructure, automate operations, develop a full-stack application, integrate AI, build a data platform, or turn an idea into a working product, let’s discuss the problem and identify the right technical solution.</p>
+        <p class="service-cta-note"><strong>Email:</strong> alimul.nabil@gmail.com · <strong>WhatsApp:</strong> +8801829687813</p>
         <div class="service-cta-actions">
           <a class="btn btn-primary" href="#contact">Start a Conversation</a>
-          <a class="btn btn-secondary" href="https://wa.me/8801829687813" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a class="btn btn-secondary" href="mailto:alimul.nabil@gmail.com">Email</a>
+          <a class="btn btn-secondary" href="https://wa.me/8801829687813" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
+          <a class="btn btn-secondary" href="mailto:alimul.nabil@gmail.com">Send an Email</a>
+        </div>
+      </div>
+    </section>  
+
+    
+
+<section id="contact" class="container">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h2>Let’s discuss how I can add value to your team and business.</h2>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card card">
+          <h3>Value I Bring</h3>
+          <p>Cloud engineering, AI solutions, DevOps, data engineering, robotics, technical leadership, and consulting that improve outcomes.</p>
+          <div class="pill-row">
+            <span class="pill">LinkedIn</span>
+            <span class="pill">GitHub</span>
+            <span class="pill">Email</span>
+          </div>
+        </div>
+        <div class="contact-card card">
+          <form>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="text" placeholder="Company" />
+            <textarea placeholder="Message"></textarea>
+            <a class="btn btn-primary" href="mailto:alimul.nabil@gmail.com">Send Message</a>
+          </form>
+        </div>
       </div>
     </section>
 
+    
+
 </main>
 
-    <footer id="contact">
+    <footer>
       <div class="container">
         <div class="footer-grid">
           <div class="footer-panel">
-            <span class="eyebrow">LET'S BUILD SOMETHING VALUABLE</span>
-            <h4>Have a technology challenge?</h4>
-            <p>Let’s discuss the architecture, technology, and execution path.</p>
-            <p class="footer-value" style="margin-top: 0.6rem;">From cloud infrastructure and DevOps to AI, data, robotics, full-stack development, and digital products.</p>
-            <div class="footer-actions">
-              <a class="footer-cta primary" href="mailto:alimul.nabil@gmail.com">Start a Conversation</a>
-              <a class="footer-cta secondary" href="cv.html">Download CV</a>
+            <p class="footer-brand">Alimul Fazal Nabil</p>
+            <p class="footer-role">Senior Technology Leader · Cloud, DevOps, AI, Data, Robotics</p>
+            <p class="footer-value">Building reliable platforms, automation-first operations, and intelligent systems aligned with business outcomes.</p>
+            <div class="footer-kpis">
+              <span>Cloud + Platform</span>
+              <span>AI + Data</span>
+              <span>Leadership + Delivery</span>
             </div>
-            <div class="footer-contact-grid">
-              <div class="footer-contact-item">
-                <strong>Email</strong>
-                <a href="mailto:alimul.nabil@gmail.com">alimul.nabil@gmail.com</a>
-              </div>
-              <div class="footer-contact-item">
-                <strong>WhatsApp</strong>
-                <a href="https://wa.me/8801829687813" target="_blank" rel="noopener noreferrer">+8801829687813</a>
-              </div>
-              <div class="footer-contact-item">
-                <strong>LinkedIn</strong>
-                <a href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">alimul-fazal-nabil</a>
-              </div>
-              <div class="footer-contact-item">
-                <strong>GitHub</strong>
-                <a href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">alimulfazalnabil</a>
-              </div>
-            </div>
-            <div class="footer-tech-strip">
-              <span class="footer-tech-chip">Infrastructure</span>
-              <span class="footer-tech-chip">Cloud</span>
-              <span class="footer-tech-chip">DevOps</span>
-              <span class="footer-tech-chip">AI</span>
-              <span class="footer-tech-chip">Data</span>
-              <span class="footer-tech-chip">Full Stack</span>
-              <span class="footer-tech-chip">Robotics</span>
-              <span class="footer-tech-chip">Automation</span>
-              <span class="footer-tech-chip">Architecture</span>
-              <span class="footer-tech-chip">Leadership</span>
-            </div>
-            <div class="footer-status">
-              <strong>System Status</strong>
-              <p>● Opportunities open for engineering, infrastructure, platform, AI, and leadership collaboration.</p>
-            </div>
+            <p class="footer-meta">© <span id="year"></span> Alimul Fazal Nabil. All rights reserved.</p>
           </div>
           <div class="footer-panel">
-            <p class="footer-brand">Alimul Fazal Nabil</p>
-            <p class="footer-role">Infrastructure & Cloud Systems Engineer · AI · DevOps · Robotics</p>
-            <p class="footer-value">Building reliable systems, automating operations, and turning complex technology into practical solutions.</p>
-            <div class="footer-grid footer-columns">
-              <div>
-                <h4>Explore</h4>
-                <div class="footer-link-list" style="flex-direction: column; align-items: flex-start; gap: 0.45rem; margin-top: 0.55rem;">
-                  <a href="#about">About</a>
-                  <a href="#expertise">Expertise</a>
-                  <a href="#experience">Experience</a>
-                  <a href="#projects">Projects</a>
-                  <a href="#leadership">Leadership</a>
-                  <a href="#services">Services</a>
-                </div>
-              </div>
-              <div>
-                <h4>Knowledge</h4>
-                <div class="footer-link-list" style="flex-direction: column; align-items: flex-start; gap: 0.45rem; margin-top: 0.55rem;">
-                  <a href="#tech-stack">Tech Stack</a>
-                  <a href="#publications">Publications</a>
-                  <a href="#certifications">Certifications</a>
-                  <a href="#education">Education</a>
-                  <a href="#recommendations">Recommendations</a>
-                  <a href="#languages">Languages</a>
-                </div>
-              </div>
+            <h4>Let’s Build Something Valuable</h4>
+            <p>Open to infrastructure, platform engineering, and AI-enabled product opportunities.</p>
+            <div class="footer-actions">
+              <a class="footer-cta primary" href="#contact">Start a Conversation</a>
+              <a class="footer-cta secondary" href="mailto:alimul.nabil@gmail.com">Email Directly</a>
             </div>
-            <div style="margin-top: 1rem;">
-              <h4>Services</h4>
-              <div class="footer-link-list" style="flex-direction: column; align-items: flex-start; gap: 0.45rem; margin-top: 0.55rem;">
-                <a href="#services">Cloud & Infrastructure</a>
-                <a href="#services">DevOps & Automation</a>
-                <a href="#services">Full-Stack Development</a>
-                <a href="#services">AI & Intelligent Solutions</a>
-                <a href="#services">Data Engineering & Analytics</a>
-                <a href="#services">Computer Vision & Robotics</a>
-                <a href="#services">Technical Consulting</a>
-                <a href="#services">Technology Leadership</a>
-              </div>
-            </div>
-            <div class="footer-bottom">
-              <span>© 2026 Alimul Fazal Nabil</span>
-              <span>Infrastructure · Cloud · AI · DevOps · Robotics</span>
+            <div class="footer-link-list">
+              <a href="#about">About</a>
+              <a href="#expertise">Expertise</a>
+              <a href="#experience">Experience</a>
+              <a href="#projects">Projects</a>
+              <a href="#services">Services</a>
+              <a href="#contact">Contact</a>
+              <a href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
           </div>
         </div>
@@ -4049,7 +3455,8 @@
         education: "11 / EDUCATION",
         languages: "12 / LANGUAGES",
         value: "13 / VALUE",
-        services: "14 / SERVICES"
+        services: "14 / SERVICES",
+        contact: "15 / CONTACT"
       };
 
       const sectionContainers = Array.from(document.querySelectorAll("main > section.container, main > section.hero"));
@@ -4142,55 +3549,6 @@
           });
         });
       });
-
-      const problemButtons = Array.from(document.querySelectorAll(".problem-chip"));
-      const categoryCards = Array.from(document.querySelectorAll(".service-category-card"));
-      const serviceCards = Array.from(document.querySelectorAll(".service-card"));
-      const problemMap = {
-        modernize: { categories: ["modernize"], terms: ["modernize", "cloud", "infrastructure", "automation", "devops"] },
-        automation: { categories: ["modernize"], terms: ["automation", "devops", "modernize"] },
-        ai: { categories: ["intelligence"], terms: ["ai", "intelligence", "data", "automation", "business"] },
-        product: { categories: ["build"], terms: ["product", "build", "software", "platform", "idea"] },
-        data: { categories: ["intelligence"], terms: ["data", "analytics", "intelligence", "reporting"] },
-        idea: { categories: ["build"], terms: ["idea", "product", "build", "architecture", "mvp"] },
-        consulting: { categories: ["guide"], terms: ["consulting", "architecture", "guidance", "strategy", "leadership", "delivery"] }
-      };
-
-      const applyServiceFocus = (problem) => {
-        const config = problemMap[problem] || problemMap.modernize;
-        const matches = config.terms;
-        serviceCards.forEach((card) => {
-          const associations = (card.dataset.association || "").toLowerCase();
-          const active = matches.some((term) => associations.includes(term));
-          card.classList.toggle("is-active", active);
-          card.classList.toggle("is-muted", !active);
-        });
-        categoryCards.forEach((card) => {
-          const category = card.dataset.category || "";
-          const active = config.categories.includes(category);
-          card.classList.toggle("active", active);
-        });
-      };
-
-      problemButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          problemButtons.forEach((item) => item.classList.remove("active"));
-          button.classList.add("active");
-          applyServiceFocus(button.dataset.problem || "modernize");
-        });
-      });
-      applyServiceFocus("modernize");
-
-      const revealTargets = Array.from(document.querySelectorAll(".reveal-on-scroll"));
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      revealTargets.forEach((item) => revealObserver.observe(item));
     </script>
     </div>
   </body>
