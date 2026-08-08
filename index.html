@@ -323,6 +323,26 @@
         color: var(--muted);
       }
 
+      .arch-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .arch-step {
+        padding: 0.95rem;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--border);
+      }
+
+      .arch-step strong {
+        display: block;
+        margin-bottom: 0.3rem;
+        color: var(--accent-2);
+      }
+
       .project-card {
         padding: 1.3rem;
       }
@@ -634,6 +654,20 @@
               <li>Supports smarter traffic coordination, environmental monitoring, and operational planning.</li>
               <li>Designed as a scalable SaaS platform with pilot regions in Campinas and Montevideo.</li>
             </ul>
+            <div class="arch-grid">
+              <div class="arch-step">
+                <strong>1. Data Ingestion</strong>
+                <span>OpenStreetMap, sensors, video feeds, and operational data.</span>
+              </div>
+              <div class="arch-step">
+                <strong>2. Intelligence Layer</strong>
+                <span>AI models, digital twins, analytics, and decision support.</span>
+              </div>
+              <div class="arch-step">
+                <strong>3. Delivery Layer</strong>
+                <span>Cloud dashboard, APIs, reporting, and stakeholder workflows.</span>
+              </div>
+            </div>
           </div>
           <div class="featured-panel">
             <h3>What it demonstrates</h3>
@@ -655,6 +689,16 @@
                 <span>SaaS, DaaS, consulting, and smart hardware</span>
               </div>
             </div>
+            <div class="metric-grid" style="margin-top: 0.9rem;">
+              <div class="metric">
+                <strong>Value Proposition</strong>
+                <span>Turns fragmented data into operational decisions</span>
+              </div>
+              <div class="metric">
+                <strong>Scalability</strong>
+                <span>Built for repeatable pilots and multi-city growth</span>
+              </div>
+            </div>
           </div>
         </div>
         <div class="projects-grid">
@@ -662,31 +706,55 @@
             <span class="tag">AI / Mobility / Territorial Intelligence</span>
             <h3>MoviSabio</h3>
             <p>An AI-driven mobility platform designed to improve traffic flow, support smarter decisions, and turn territorial data into operational insight.</p>
+            <ul class="feature-list">
+              <li>Priority outcome: faster movement, better planning, and reduced congestion.</li>
+              <li>Best fit: smart-city operations, mobility planning, and sustainability programs.</li>
+            </ul>
           </article>
           <article class="project-card">
             <span class="tag">AI / Automation / Cloud</span>
             <h3>Enterprise AI Operations Assistant</h3>
             <p>A generative AI assistant that reduces information friction, improves internal response speed, and automates routine knowledge access.</p>
+            <ul class="feature-list">
+              <li>Priority outcome: lower support load and faster internal answers.</li>
+              <li>Best fit: shared services, operations, and knowledge-heavy teams.</li>
+            </ul>
           </article>
           <article class="project-card">
             <span class="tag">Cloud / DevOps / Security</span>
             <h3>Azure Hybrid Infrastructure Platform</h3>
             <p>A hybrid cloud foundation built for resilience, secure operations, and predictable delivery at scale.</p>
+            <ul class="feature-list">
+              <li>Priority outcome: stronger uptime, governance, and deployment reliability.</li>
+              <li>Best fit: enterprise platforms and regulated environments.</li>
+            </ul>
           </article>
           <article class="project-card">
             <span class="tag">DevOps / Kubernetes / Automation</span>
             <h3>Kubernetes Platform Delivery</h3>
             <p>A container platform approach that accelerates deployments, improves consistency, and reduces operational overhead.</p>
+            <ul class="feature-list">
+              <li>Priority outcome: repeatable delivery and lower release risk.</li>
+              <li>Best fit: product teams scaling cloud-native workloads.</li>
+            </ul>
           </article>
           <article class="project-card">
             <span class="tag">Robotics / Vision</span>
             <h3>Computer Vision Vehicle Detection</h3>
             <p>Real-time perception workflows built to detect vehicles accurately and support intelligent automation in dynamic environments.</p>
+            <ul class="feature-list">
+              <li>Priority outcome: structured visual data for automation and decision support.</li>
+              <li>Best fit: transport, surveillance, and edge-AI use cases.</li>
+            </ul>
           </article>
           <article class="project-card">
             <span class="tag">Robotics / Simulation</span>
             <h3>ROS 2 and Autonomous Systems</h3>
             <p>Robotics and simulation work focused on experimentation, autonomy, and practical testing before real-world deployment.</p>
+            <ul class="feature-list">
+              <li>Priority outcome: safer experimentation before physical rollout.</li>
+              <li>Best fit: robotics R&D, autonomy, and sensor-driven systems.</li>
+            </ul>
           </article>
         </div>
       </section>
