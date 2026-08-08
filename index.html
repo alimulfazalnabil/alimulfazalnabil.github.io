@@ -1741,6 +1741,28 @@
         margin-bottom: 0.8rem;
       }
 
+      .hero-flow {
+        display: grid;
+        gap: 0.5rem;
+        margin-top: 0.8rem;
+      }
+
+      .hero-flow-step {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        padding: 0.6rem 0.7rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--muted);
+      }
+
+      .hero-flow-step strong {
+        color: var(--accent-2);
+        min-width: 3.6rem;
+      }
+
       .section-heading {
         display: flex;
         justify-content: space-between;
@@ -1994,7 +2016,19 @@
           gap: 1rem;
         }
 
+        nav {
+          flex-wrap: wrap;
+        }
+
         .nav-links {
+          order: 3;
+          width: 100%;
+          overflow-x: auto;
+          padding-bottom: 0.2rem;
+          scrollbar-width: none;
+        }
+
+        .nav-links::-webkit-scrollbar {
           display: none;
         }
       }
