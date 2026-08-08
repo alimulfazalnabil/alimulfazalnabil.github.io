@@ -358,11 +358,11 @@
         align-items: center;
         justify-content: space-between;
         gap: 0.75rem;
-        padding: 0.45rem 0.5rem 0.55rem;
-        border: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 0.5rem 0.65rem 0.6rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 14px;
-        background: rgba(255, 255, 255, 0.02);
-        margin-bottom: 0.6rem;
+        background: linear-gradient(135deg, rgba(79, 140, 255, 0.06), rgba(110, 231, 249, 0.03));
+        margin-bottom: 0.7rem;
       }
 
       .section-summary::-webkit-details-marker {
@@ -385,13 +385,14 @@
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 1.9rem;
+        height: 1.9rem;
         border-radius: 999px;
-        border: 1px solid var(--border);
+        border: 1px solid rgba(110, 231, 249, 0.28);
         color: var(--accent-2);
         font-size: 1.05rem;
         font-weight: 700;
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
       }
 
       .section-toggle::before {
@@ -2617,7 +2618,7 @@
         const heading = section.querySelector(".section-heading");
         const details = document.createElement("details");
         details.className = "section-panel";
-        details.open = section.id === "about";
+        details.open = section.id === "about" || section.id === "experience";
 
         const summary = document.createElement("summary");
         summary.className = "section-summary";
