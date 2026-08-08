@@ -544,6 +544,66 @@
         grid-template-columns: 1fr 1fr;
       }
 
+      .stack-hierarchy {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin: 1rem 0 1.4rem;
+      }
+
+      .stack-step {
+        padding: 0.9rem;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .stack-step strong {
+        display: block;
+        color: var(--accent-2);
+        margin-bottom: 0.2rem;
+      }
+
+      .stack-matrix {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .stack-matrix .metric {
+        padding: 0.8rem;
+      }
+
+      .stack-matrix .metric span {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .stack-domain-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .stack-domain details {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 0.85rem 0.95rem;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .stack-domain summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .stack-domain ul {
+        margin: 0.75rem 0 0;
+        padding-left: 1.15rem;
+        color: var(--muted);
+      }
+
       form {
         display: grid;
         gap: 0.8rem;
@@ -579,7 +639,10 @@
         .expertise-grid,
         .leadership-grid,
         .cert-grid,
-        .domain-grid {
+        .domain-grid,
+        .stack-hierarchy,
+        .stack-matrix,
+        .stack-domain-grid {
           grid-template-columns: 1fr;
         }
       }
@@ -613,6 +676,7 @@
             <a href="#experience">Experience</a>
             <a href="#volunteering">Volunteering</a>
             <a href="#expertise">Expertise</a>
+            <a href="#stack">Tech Stack</a>
             <a href="#projects">Projects</a>
             <a href="#leadership">Leadership</a>
             <a href="#contact">Contact</a>
@@ -808,7 +872,6 @@
         </div>
       </section>
 
-      <section id="expertise" class="container">
       <section id="volunteering" class="container">
         <div class="section-heading">
           <div>
@@ -902,6 +965,156 @@
               <li>Stakeholder communication and delivery planning</li>
               <li>Product-minded implementation and execution</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Complete Technology Stack & Skills</span>
+            <h2>A broad engineering stack for enterprise delivery, not an AI-only profile.</h2>
+          </div>
+        </div>
+        <p class="section-note">
+          Portfolio hierarchy: Cloud & Infrastructure, DevOps & Automation, AI & Machine Learning, Data Engineering & Analytics,
+          Cybersecurity & Identity, Robotics/IoT/Computer Vision, Software & Solution Architecture, and Project/Product/Technical Leadership.
+        </p>
+        <div class="stack-hierarchy">
+          <div class="stack-step"><strong>01</strong><span>Cloud & Infrastructure</span></div>
+          <div class="stack-step"><strong>02</strong><span>DevOps & Automation</span></div>
+          <div class="stack-step"><strong>03</strong><span>AI & Machine Learning</span></div>
+          <div class="stack-step"><strong>04</strong><span>Data Engineering & Analytics</span></div>
+          <div class="stack-step"><strong>05</strong><span>Cybersecurity & Identity</span></div>
+          <div class="stack-step"><strong>06</strong><span>Robotics, IoT & Computer Vision</span></div>
+          <div class="stack-step"><strong>07</strong><span>Software & Solution Architecture</span></div>
+          <div class="stack-step"><strong>08</strong><span>Project, Product & Technical Leadership</span></div>
+        </div>
+        <div class="stack-matrix">
+          <div class="metric"><strong>Cloud</strong><span>Azure, AWS</span></div>
+          <div class="metric"><strong>Infrastructure</strong><span>Windows Server, Linux, VMware, Hyper-V</span></div>
+          <div class="metric"><strong>Networking</strong><span>TCP/IP, DNS, DHCP, VPN, VLAN, Routing, Firewalls</span></div>
+          <div class="metric"><strong>DevOps</strong><span>Terraform, Ansible, Docker, Kubernetes, Helm</span></div>
+          <div class="metric"><strong>CI/CD</strong><span>GitHub Actions, Jenkins, Azure DevOps</span></div>
+          <div class="metric"><strong>Programming</strong><span>Python, PowerShell, C++, Bash, SQL, JavaScript, TypeScript, MATLAB</span></div>
+          <div class="metric"><strong>AI/ML</strong><span>TensorFlow, PyTorch, Scikit-learn, Generative AI, LLMs</span></div>
+          <div class="metric"><strong>Computer Vision</strong><span>OpenCV, YOLO, Object Detection, Tracking</span></div>
+          <div class="metric"><strong>Data</strong><span>Pandas, NumPy, Airflow, Spark, Hadoop</span></div>
+          <div class="metric"><strong>Databases</strong><span>PostgreSQL, MySQL, SQL Server, PostGIS, Redshift</span></div>
+          <div class="metric"><strong>MLOps</strong><span>Azure ML, Docker, Kubernetes, CI/CD, Monitoring</span></div>
+          <div class="metric"><strong>GenAI</strong><span>Azure OpenAI, OpenAI API, RAG, AI Agents, Vector DB</span></div>
+          <div class="metric"><strong>Robotics</strong><span>ROS 2, C++, SLAM, LiDAR, IMU, CARLA</span></div>
+          <div class="metric"><strong>UAV</strong><span>ArduPilot, QGroundControl, GPS, IMU</span></div>
+          <div class="metric"><strong>GIS</strong><span>QGIS, ArcGIS, GeoPandas, PostGIS</span></div>
+          <div class="metric"><strong>Security</strong><span>Entra ID, RBAC, PIM, Zero Trust, Sentinel, Defender</span></div>
+          <div class="metric"><strong>Monitoring</strong><span>Azure Monitor, Prometheus, Grafana, Sentinel</span></div>
+          <div class="metric"><strong>Automation</strong><span>Python, PowerShell, Terraform, Ansible</span></div>
+          <div class="metric"><strong>Architecture</strong><span>Cloud, Hybrid, Microservices, API, Event-driven</span></div>
+          <div class="metric"><strong>Product & Leadership</strong><span>MVP, Roadmaps, Project Management, Technical Leadership, Strategy</span></div>
+        </div>
+        <div class="stack-domain-grid">
+          <div class="stack-domain">
+            <details>
+              <summary>1. Cloud Computing & Cloud Architecture</summary>
+              <ul>
+                <li>Azure: Virtual Machines, VNet, Load Balancer, Storage, App Services, Entra ID, RBAC, PIM, Monitor, Sentinel, Key Vault, Data Factory, Synapse, ML, AI Services, OpenAI, Container Apps, AKS, DevOps, Functions.</li>
+                <li>AWS: EC2, S3, Lambda, SageMaker, Redshift, networking fundamentals, cloud architecture.</li>
+                <li>Architecture: Hybrid/Public Cloud, IaaS, PaaS, SaaS, migration, high availability, scalability, disaster recovery, business continuity, security, FinOps.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="stack-domain">
+            <details>
+              <summary>2. Infrastructure Engineering</summary>
+              <ul>
+                <li>Systems Administration: Windows Server, Linux, Ubuntu, CentOS, Active Directory, Entra ID, Group Policy, DNS, DHCP, virtualization, Hyper-V, VMware.</li>
+                <li>Enterprise Infrastructure: Server deployment, monitoring, backup, disaster recovery, patching, capacity planning, performance optimization, incident/problem/change operations.</li>
+                <li>Service Management: IT Support L1/L2/L3, SLA management, troubleshooting, end-user support, documentation.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="stack-domain">
+            <details>
+              <summary>3. Networking</summary>
+              <ul>
+                <li>Network Technologies: TCP/IP, IPv4/IPv6, DNS, DHCP, VLAN, routing, switching, NAT, VPN, firewall, load balancing, RADIUS, NAC, monitoring.</li>
+                <li>Cloud Networking: Azure VNet, subnets, NSG, VPN Gateway, VNet peering, hub-and-spoke, private endpoints, hybrid connectivity.</li>
+                <li>Architecture: Enterprise, hybrid, and cloud network design with zero-trust patterns.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="stack-domain">
+            <details>
+              <summary>4. DevOps & Platform Engineering</summary>
+              <ul>
+                <li>IaC: Terraform, ARM Templates, Bicep, Ansible.</li>
+                <li>CI/CD: GitHub Actions, Azure DevOps, Jenkins, Azure Pipelines, automated testing/build/release/deployment.</li>
+                <li>Containers and Platform: Docker, Kubernetes, AKS, Helm, developer platforms, provisioning, configuration, reliability.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="stack-domain">
+            <details>
+              <summary>5. Programming & Scripting</summary>
+              <ul>
+                <li>Python: OOP, automation, APIs, data processing, ML, ETL, infrastructure automation.</li>
+                <li>PowerShell: Windows/Azure automation, AD automation, infrastructure management, reporting, scheduled tasks.</li>
+                <li>C/C++ and Other: C++17, robotics programming, computer vision, embedded systems, ROS 2, plus Bash, SQL, JavaScript, TypeScript, MATLAB.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="stack-domain">
+            <details>
+              <summary>6. AI, ML & Generative AI</summary>
+              <ul>
+                <li>ML and Deep Learning: supervised/unsupervised learning, classification, regression, clustering, feature engineering, model evaluation, forecasting, CNN/RNN/LSTM/GRU.</li>
+                <li>Frameworks: TensorFlow, PyTorch, Scikit-learn, Keras, NumPy, Pandas.</li>
+                <li>AI Engineering: Generative AI, LLMs, AI automation/copilots, prompt engineering, Azure OpenAI, OpenAI API, model deployment, MLOps, pipelines, monitoring.</li>
+                <li>Current Focus: RAG, AI Agents, Agentic AI, Vector Databases, LangChain, LangGraph, LangSmith, Knowledge Graphs, Multi-Agent Systems, MCP, Composio, LLMOps.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="stack-domain">
+            <details>
+              <summary>7. Computer Vision, Robotics & UAV</summary>
+              <ul>
+                <li>Computer Vision: OpenCV, YOLO, YOLOv8, object detection/tracking, image classification/processing, lane and traffic analysis, real-time video analytics.</li>
+                <li>Robotics: ROS 2 nodes/topics/services/actions, navigation, sensor integration, LiDAR, IMU, GPS, SLAM, sensor fusion, autonomous navigation, path planning, CARLA, Gazebo.</li>
+                <li>UAV: Drone development, ArduPilot, QGroundControl, mission planning, autonomous flight, mapping, geospatial data, UAV computer vision.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="stack-domain">
+            <details>
+              <summary>8. Data, Databases, GIS & Geospatial</summary>
+              <ul>
+                <li>Data Science and Analytics: statistical analysis, data cleaning, EDA, predictive modeling, KPI and dashboard work with Matplotlib, Seaborn, Power BI, Tableau, Plotly.</li>
+                <li>Data Engineering: ETL/ELT, data pipelines, Airflow, transformation, quality, warehousing, lakes, PostgreSQL, MySQL, Redshift, Synapse, Spark, Hadoop.</li>
+                <li>Databases and GIS: SQL Server, PostGIS, QGIS, ArcGIS, GeoPandas, spatial databases, mapping, location intelligence, vector DB, knowledge graphs.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="stack-domain">
+            <details>
+              <summary>9. Security, Identity, Monitoring & Automation</summary>
+              <ul>
+                <li>Identity and Security: Entra ID/Azure AD, RBAC, PIM, IAM, conditional access, MFA, identity governance, zero trust, Defender, Sentinel, secure cloud architecture.</li>
+                <li>Observability: Azure Monitor, Log Analytics, Prometheus, Grafana, alerting, incident detection, performance monitoring.</li>
+                <li>Automation: Infrastructure and IT automation with Terraform, Ansible, PowerShell, Python, Bash including provisioning, reporting, backup, and incident workflows.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="stack-domain">
+            <details>
+              <summary>10. Software, Architecture, Product & Enterprise Leadership</summary>
+              <ul>
+                <li>Software and API Development: REST APIs, FastAPI, Flask, React, TypeScript, JavaScript, Node.js fundamentals, microservices, JWT, OAuth 2.0.</li>
+                <li>Architecture: solution, cloud, hybrid, microservices, distributed systems, event-driven, security, integration, and data architecture.</li>
+                <li>Product and Delivery: project planning, MVP development, requirements, roadmaps, risk and stakeholder management, vendor coordination, business-technology alignment.</li>
+                <li>Enterprise IT and Microsoft 365: IT operations/governance, modernization, transformation, Teams, SharePoint, Exchange Online, Intune, Power Automate, Power Apps.</li>
+                <li>Industry Focus: smart cities, intelligent transportation, automotive/ADAS, IoT, energy technology, geospatial systems, AI-powered enterprise platforms.</li>
+              </ul>
+            </details>
           </div>
         </div>
       </section>
