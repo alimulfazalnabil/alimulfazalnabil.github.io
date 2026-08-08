@@ -912,6 +912,79 @@
         overflow: hidden;
       }
 
+      .experience-card {
+        border-color: rgba(104, 227, 255, 0.18);
+        background: linear-gradient(135deg, rgba(15, 35, 58, 0.95), rgba(8, 20, 34, 0.92));
+      }
+
+      .experience-card summary {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.45rem;
+        padding: 1.1rem 1.2rem;
+      }
+
+      .experience-period {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.38rem;
+        padding: 0.36rem 0.66rem;
+        border-radius: 999px;
+        background: rgba(104, 227, 255, 0.1);
+        color: var(--accent-2);
+        font-size: 0.74rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .experience-title {
+        font-size: 1.06rem;
+        color: var(--text);
+      }
+
+      .experience-org {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .experience-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-top: 0.2rem;
+      }
+
+      .experience-chip {
+        padding: 0.32rem 0.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--accent-2);
+        font-size: 0.78rem;
+      }
+
+      .experience-highlights {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
+        margin-top: 0.8rem;
+      }
+
+      .experience-highlight {
+        padding: 0.75rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .experience-highlight strong {
+        display: block;
+        color: var(--accent-2);
+        margin-bottom: 0.25rem;
+      }
+
       .project-card:hover {
         border-color: rgba(110, 231, 249, 0.35);
         box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
@@ -2404,29 +2477,68 @@
           </div>
         </div>
         <div class="projects-grid">
-          <details class="project-card">
-            <summary><strong>AI and Machine Learning Instructor</strong><span>+</span></summary>
+          <details class="project-card experience-card">
+            <summary>
+              <span class="experience-period">2026 · Berlin, Germany</span>
+              <strong class="experience-title">AI & ML Instructor</strong>
+              <span class="experience-org">ReDI School of Digital Integration</span>
+              <div class="experience-meta">
+                <span class="experience-chip">Teaching</span>
+                <span class="experience-chip">Training Design</span>
+                <span class="experience-chip">Digital Skills</span>
+              </div>
+            </summary>
             <div class="card-body">
-              <span class="tag">Since 03/2026 · ReDI School of Digital Integration · Remote · Berlin, Germany</span>
+              <span class="tag">Remote · Berlin, Germany</span>
               <p class="card-meta">Teaching AI, data, and digital skills to diverse learners while shaping practical training content and assessment approaches.</p>
             </div>
           </details>
-          <details class="project-card">
-            <summary><strong>Infrastructure and Cloud System Engineer</strong><span>+</span></summary>
+          <details class="project-card experience-card">
+            <summary>
+              <span class="experience-period">2019 – Present · Cox's Bazar</span>
+              <strong class="experience-title">Infrastructure & Cloud Systems Engineer</strong>
+              <span class="experience-org">Energy Crown Bangladesh</span>
+              <div class="experience-meta">
+                <span class="experience-chip">Cloud</span>
+                <span class="experience-chip">DevOps</span>
+                <span class="experience-chip">Automation</span>
+              </div>
+            </summary>
             <div class="card-body">
-              <span class="tag">Feb 2019 – Present · Energy Crown Bangladesh · Full Time · Cox's Bazar</span>
-              <p class="card-meta">• Design, provision, and manage complex hybrid cloud infrastructures in Microsoft Azure and on-premises data centers.
-• Implement automated provisioning using Terraform and Azure Resource Manager (ARM) templates to ensure consistency across the environment.
-• Developed and maintained CI/CD pipelines via Azure DevOps and GitHub Actions to enable continuous delivery of microservices.
-• Reduced manual effort by 45% by developing Python scripts and Ansible playbooks for automated configuration and patching.
-• Collaborated with data teams to integrate MLOps workflows, automating the data collection and model deployment lifecycle.
-</p>
+              <span class="tag">Full Time · Hybrid Infrastructure Delivery</span>
+              <div class="experience-highlights">
+                <div class="experience-highlight">
+                  <strong>Infrastructure</strong>
+                  <span>Design, provision, and manage hybrid cloud environments across Azure and on-premises systems.</span>
+                </div>
+                <div class="experience-highlight">
+                  <strong>Automation</strong>
+                  <span>Reduce manual effort through Terraform, Azure Resource Manager, Ansible, and Python-based workflows.</span>
+                </div>
+                <div class="experience-highlight">
+                  <strong>Delivery</strong>
+                  <span>Support CI/CD and MLOps workflows to connect development, deployment, and analytics pipelines.</span>
+                </div>
+                <div class="experience-highlight">
+                  <strong>Impact</strong>
+                  <span>Drive operational reliability and lower repetitive work through automation-first engineering.</span>
+                </div>
+              </div>
             </div>
           </details>
-          <details class="project-card">
-            <summary><strong>AutoCAD Operator & Designer</strong><span>+</span></summary>
+          <details class="project-card experience-card">
+            <summary>
+              <span class="experience-period">2021 – Present · Cox's Bazar</span>
+              <strong class="experience-title">AutoCAD Operator & Designer</strong>
+              <span class="experience-org">Building Engineers and Architects</span>
+              <div class="experience-meta">
+                <span class="experience-chip">Design Coordination</span>
+                <span class="experience-chip">Documentation</span>
+                <span class="experience-chip">Project Support</span>
+              </div>
+            </summary>
             <div class="card-body">
-              <span class="tag">Feb 2021 – Present · Building Engineers and Architects · Contract · Cox's Bazar</span>
+              <span class="tag">Contract · Design & Documentation Support</span>
               <p class="card-meta">Handled design coordination, documentation, and project support tasks with a practical and organised approach.</p>
             </div>
           </details>
@@ -2786,165 +2898,6 @@
         </div>
       </section>
 
-      <section id="services" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Services</span>
-            <h2>From Strategy to Production</h2>
-          </div>
-        </div>
-        <p class="section-note">I help organizations design, build, automate, and modernize technology solutions across cloud infrastructure, software, AI, data, DevOps, and robotics.</p>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <span class="service-number">01</span>
-            <h3>Cloud & Infrastructure</h3>
-            <p>Design and modernize reliable, secure, and scalable IT infrastructure.</p>
-            <ul>
-              <li>Azure cloud architecture, hybrid infrastructure, migration</li>
-              <li>Identity and access management, network architecture, security</li>
-              <li>Monitoring, observability, disaster recovery, optimization</li>
-            </ul>
-            <p class="service-tech">Technologies: Azure · AWS · Windows Server · Linux · Entra ID · Networking · Azure Monitor</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">02</span>
-            <h3>DevOps & Infrastructure Automation</h3>
-            <p>Automate infrastructure and software delivery to improve reliability and reduce operational effort.</p>
-            <ul>
-              <li>Infrastructure as code and cloud/server automation</li>
-              <li>CI/CD pipelines, deployment automation, configuration management</li>
-              <li>Kubernetes infrastructure and observability</li>
-            </ul>
-            <p class="service-tech">Technologies: Terraform · Ansible · PowerShell · Python · Docker · Kubernetes · GitHub Actions · Jenkins · Azure DevOps</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">03</span>
-            <h3>Full-Stack Development</h3>
-            <p>Build complete web applications from user interface to API, database, and cloud deployment.</p>
-            <ul>
-              <li>Frontend: React, Next.js, TypeScript, responsive UI, admin dashboards</li>
-              <li>Backend: Python/FastAPI/Flask, Node.js, REST APIs, auth, microservices</li>
-              <li>Delivery model: Idea → UI/UX → Frontend → Backend → Database → Testing → CI/CD → Cloud</li>
-            </ul>
-            <p class="service-tech">Technologies: PostgreSQL · MySQL · SQL Server · MongoDB · Redis · Docker · Kubernetes · Azure · AWS</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">04</span>
-            <h3>AI & Intelligent Solutions</h3>
-            <p>Integrate AI into practical business workflows and digital products.</p>
-            <ul>
-              <li>Generative AI, LLM integration, RAG applications, assistants and agents</li>
-              <li>Computer vision and machine learning solutions</li>
-              <li>AI proof of concepts and MLOps pathways</li>
-            </ul>
-            <p class="service-tech">Technologies: Python · OpenAI API · Azure OpenAI · LangChain · LangGraph · TensorFlow · PyTorch · Scikit-learn · OpenCV · YOLO</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">05</span>
-            <h3>Data Engineering & Analytics</h3>
-            <p>Turn operational data into reliable pipelines, insights, and decision-support systems.</p>
-            <ul>
-              <li>ETL/ELT pipelines, warehousing, analytics engineering</li>
-              <li>Data cleaning, BI, dashboard development, predictive analytics</li>
-              <li>Decision support workflows for operational teams</li>
-            </ul>
-            <p class="service-tech">Technologies: Python · SQL · Pandas · NumPy · Airflow · PostgreSQL · PostGIS · Spark · Power BI · Tableau</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">06</span>
-            <h3>Computer Vision, Robotics & IoT</h3>
-            <p>Build intelligent systems that connect software with the physical world.</p>
-            <ul>
-              <li>Computer vision, object detection/tracking, ROS 2 development</li>
-              <li>IoT and UAV/drone solutions with sensor integration</li>
-              <li>Autonomous systems and robotics simulation</li>
-            </ul>
-            <p class="service-tech">Technologies: ROS 2 · C++ · Python · OpenCV · YOLO · LiDAR · IMU · GPS · SLAM · CARLA · ArduPilot · Raspberry Pi · Arduino</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">07</span>
-            <h3>Digital Product Development</h3>
-            <p>Turn an idea into a technically viable and deployable digital product.</p>
-            <ul>
-              <li>Ideation, feasibility, architecture, MVP planning</li>
-              <li>API and platform design, technology selection, cloud deployment</li>
-              <li>Scaling strategy and delivery governance</li>
-            </ul>
-            <p class="service-tech">Delivery approach: Idea → Discovery → Requirements → Architecture → MVP → Testing → Deployment → Monitoring → Scale</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">08</span>
-            <h3>Technical Consulting</h3>
-            <p>Independent technical guidance for complex technology decisions.</p>
-            <ul>
-              <li>Cloud and infrastructure reviews with maturity assessment</li>
-              <li>DevOps and AI feasibility assessments</li>
-              <li>Cost optimization, migration planning, roadmaps, architecture documentation</li>
-            </ul>
-            <p class="service-tech">Outcome: clear, actionable direction with realistic implementation paths</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">09</span>
-            <h3>Project & Technology Leadership</h3>
-            <p>Delivery ownership beyond implementation engineering.</p>
-            <ul>
-              <li>Technical project management, requirements, and solution design</li>
-              <li>Stakeholder and vendor coordination, decision-making, process improvement</li>
-              <li>Product strategy and delivery management</li>
-            </ul>
-            <p class="service-tech">Focus: align technical execution with business outcomes</p>
-          </article>
-        </div>
-
-        <div class="service-flow">
-          <h3>How I Work</h3>
-          <div class="process-grid">
-            <div class="process-step"><strong>01 — Discover</strong><span>Understand the problem, constraints, and desired outcome.</span></div>
-            <div class="process-step"><strong>02 — Design</strong><span>Define architecture, stack, implementation strategy, and roadmap.</span></div>
-            <div class="process-step"><strong>03 — Build</strong><span>Develop the solution with strong engineering and delivery practices.</span></div>
-            <div class="process-step"><strong>04 — Automate</strong><span>Automate infrastructure, testing, deployment, and operational workflows.</span></div>
-            <div class="process-step"><strong>05 — Validate</strong><span>Test functionality, security, performance, reliability, and scalability.</span></div>
-            <div class="process-step"><strong>06 — Deploy</strong><span>Release to production infrastructure or cloud platforms.</span></div>
-            <div class="process-step"><strong>07 — Improve</strong><span>Monitor, optimize, document, and continuously improve the system.</span></div>
-          </div>
-        </div>
-
-        <div class="service-proof">
-          <h3>Why Work With Me?</h3>
-          <p>Engineering across the full technology lifecycle: Infrastructure → Cloud → Software → Data → AI → Automation → Production.</p>
-          <div class="proof-kpis">
-            <div class="proof-kpi"><strong>7+ years</strong><span>professional technology experience</span></div>
-            <div class="proof-kpi"><strong>99.9%</strong><span>infrastructure availability experience</span></div>
-            <div class="proof-kpi"><strong>45%</strong><span>manual operational work reduced through automation</span></div>
-          </div>
-          <ul class="feature-list">
-            <li>Hands-on delivery across Azure, DevOps, AI, Data, Robotics, and Software Engineering.</li>
-            <li>Ability to work from concept to production and lead projects to completion.</li>
-            <li>Strong combination of engineering execution and project leadership.</li>
-          </ul>
-        </div>
-
-        <div class="service-cta">
-          <h3>Have a technology challenge?</h3>
-          <p>Whether you need to modernize infrastructure, automate operations, develop a full-stack application, integrate AI, build a data platform, or turn an idea into a working product, let’s discuss the problem and identify the right technical solution.</p>
-          <p class="service-cta-note"><strong>Email:</strong> alimul.nabil@gmail.com · <strong>WhatsApp:</strong> +8801829687813</p>
-          <div class="service-cta-actions">
-            <a class="btn btn-primary" href="#contact">Start a Conversation</a>
-            <a class="btn btn-secondary" href="https://wa.me/8801829687813" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
-            <a class="btn btn-secondary" href="mailto:alimul.nabil@gmail.com">Send an Email</a>
-          </div>
-        </div>
-      </section>
-
       <section id="leadership" class="container">
         <div class="section-heading">
           <div>
@@ -3254,6 +3207,165 @@
           </div>
         </div>
       </section>
+
+      <section id="services" class="container no-collapse">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Services</span>
+            <h2>From Strategy to Production</h2>
+          </div>
+        </div>
+        <p class="section-note">I help organizations design, build, automate, and modernize technology solutions across cloud infrastructure, software, AI, data, DevOps, and robotics.</p>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <h3>Cloud & Infrastructure</h3>
+            <p>Design and modernize reliable, secure, and scalable IT infrastructure.</p>
+            <ul>
+              <li>Azure cloud architecture, hybrid infrastructure, migration</li>
+              <li>Identity and access management, network architecture, security</li>
+              <li>Monitoring, observability, disaster recovery, optimization</li>
+            </ul>
+            <p class="service-tech">Technologies: Azure · AWS · Windows Server · Linux · Entra ID · Networking · Azure Monitor</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <h3>DevOps & Infrastructure Automation</h3>
+            <p>Automate infrastructure and software delivery to improve reliability and reduce operational effort.</p>
+            <ul>
+              <li>Infrastructure as code and cloud/server automation</li>
+              <li>CI/CD pipelines, deployment automation, configuration management</li>
+              <li>Kubernetes infrastructure and observability</li>
+            </ul>
+            <p class="service-tech">Technologies: Terraform · Ansible · PowerShell · Python · Docker · Kubernetes · GitHub Actions · Jenkins · Azure DevOps</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <h3>Full-Stack Development</h3>
+            <p>Build complete web applications from user interface to API, database, and cloud deployment.</p>
+            <ul>
+              <li>Frontend: React, Next.js, TypeScript, responsive UI, admin dashboards</li>
+              <li>Backend: Python/FastAPI/Flask, Node.js, REST APIs, auth, microservices</li>
+              <li>Delivery model: Idea → UI/UX → Frontend → Backend → Database → Testing → CI/CD → Cloud</li>
+            </ul>
+            <p class="service-tech">Technologies: PostgreSQL · MySQL · SQL Server · MongoDB · Redis · Docker · Kubernetes · Azure · AWS</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">04</span>
+            <h3>AI & Intelligent Solutions</h3>
+            <p>Integrate AI into practical business workflows and digital products.</p>
+            <ul>
+              <li>Generative AI, LLM integration, RAG applications, assistants and agents</li>
+              <li>Computer vision and machine learning solutions</li>
+              <li>AI proof of concepts and MLOps pathways</li>
+            </ul>
+            <p class="service-tech">Technologies: Python · OpenAI API · Azure OpenAI · LangChain · LangGraph · TensorFlow · PyTorch · Scikit-learn · OpenCV · YOLO</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">05</span>
+            <h3>Data Engineering & Analytics</h3>
+            <p>Turn operational data into reliable pipelines, insights, and decision-support systems.</p>
+            <ul>
+              <li>ETL/ELT pipelines, warehousing, analytics engineering</li>
+              <li>Data cleaning, BI, dashboard development, predictive analytics</li>
+              <li>Decision support workflows for operational teams</li>
+            </ul>
+            <p class="service-tech">Technologies: Python · SQL · Pandas · NumPy · Airflow · PostgreSQL · PostGIS · Spark · Power BI · Tableau</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">06</span>
+            <h3>Computer Vision, Robotics & IoT</h3>
+            <p>Build intelligent systems that connect software with the physical world.</p>
+            <ul>
+              <li>Computer vision, object detection/tracking, ROS 2 development</li>
+              <li>IoT and UAV/drone solutions with sensor integration</li>
+              <li>Autonomous systems and robotics simulation</li>
+            </ul>
+            <p class="service-tech">Technologies: ROS 2 · C++ · Python · OpenCV · YOLO · LiDAR · IMU · GPS · SLAM · CARLA · ArduPilot · Raspberry Pi · Arduino</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">07</span>
+            <h3>Digital Product Development</h3>
+            <p>Turn an idea into a technically viable and deployable digital product.</p>
+            <ul>
+              <li>Ideation, feasibility, architecture, MVP planning</li>
+              <li>API and platform design, technology selection, cloud deployment</li>
+              <li>Scaling strategy and delivery governance</li>
+            </ul>
+            <p class="service-tech">Delivery approach: Idea → Discovery → Requirements → Architecture → MVP → Testing → Deployment → Monitoring → Scale</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">08</span>
+            <h3>Technical Consulting</h3>
+            <p>Independent technical guidance for complex technology decisions.</p>
+            <ul>
+              <li>Cloud and infrastructure reviews with maturity assessment</li>
+              <li>DevOps and AI feasibility assessments</li>
+              <li>Cost optimization, migration planning, roadmaps, architecture documentation</li>
+            </ul>
+            <p class="service-tech">Outcome: clear, actionable direction with realistic implementation paths</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">09</span>
+            <h3>Project & Technology Leadership</h3>
+            <p>Delivery ownership beyond implementation engineering.</p>
+            <ul>
+              <li>Technical project management, requirements, and solution design</li>
+              <li>Stakeholder and vendor coordination, decision-making, process improvement</li>
+              <li>Product strategy and delivery management</li>
+            </ul>
+            <p class="service-tech">Focus: align technical execution with business outcomes</p>
+          </article>
+        </div>
+
+        <div class="service-flow">
+          <h3>How I Work</h3>
+          <div class="process-grid">
+            <div class="process-step"><strong>01 — Discover</strong><span>Understand the problem, constraints, and desired outcome.</span></div>
+            <div class="process-step"><strong>02 — Design</strong><span>Define architecture, stack, implementation strategy, and roadmap.</span></div>
+            <div class="process-step"><strong>03 — Build</strong><span>Develop the solution with strong engineering and delivery practices.</span></div>
+            <div class="process-step"><strong>04 — Automate</strong><span>Automate infrastructure, testing, deployment, and operational workflows.</span></div>
+            <div class="process-step"><strong>05 — Validate</strong><span>Test functionality, security, performance, reliability, and scalability.</span></div>
+            <div class="process-step"><strong>06 — Deploy</strong><span>Release to production infrastructure or cloud platforms.</span></div>
+            <div class="process-step"><strong>07 — Improve</strong><span>Monitor, optimize, document, and continuously improve the system.</span></div>
+          </div>
+        </div>
+
+        <div class="service-proof">
+          <h3>Why Work With Me?</h3>
+          <p>Engineering across the full technology lifecycle: Infrastructure → Cloud → Software → Data → AI → Automation → Production.</p>
+          <div class="proof-kpis">
+            <div class="proof-kpi"><strong>7+ years</strong><span>professional technology experience</span></div>
+            <div class="proof-kpi"><strong>99.9%</strong><span>infrastructure availability experience</span></div>
+            <div class="proof-kpi"><strong>45%</strong><span>manual operational work reduced through automation</span></div>
+          </div>
+          <ul class="feature-list">
+            <li>Hands-on delivery across Azure, DevOps, AI, Data, Robotics, and Software Engineering.</li>
+            <li>Ability to work from concept to production and lead projects to completion.</li>
+            <li>Strong combination of engineering execution and project leadership.</li>
+          </ul>
+        </div>
+
+        <div class="service-cta">
+          <h3>Have a technology challenge?</h3>
+          <p>Whether you need to modernize infrastructure, automate operations, develop a full-stack application, integrate AI, build a data platform, or turn an idea into a working product, let’s discuss the problem and identify the right technical solution.</p>
+          <p class="service-cta-note"><strong>Email:</strong> alimul.nabil@gmail.com · <strong>WhatsApp:</strong> +8801829687813</p>
+          <div class="service-cta-actions">
+            <a class="btn btn-primary" href="#contact">Start a Conversation</a>
+            <a class="btn btn-secondary" href="https://wa.me/8801829687813" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
+            <a class="btn btn-secondary" href="mailto:alimul.nabil@gmail.com">Send an Email</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -3312,7 +3424,7 @@
 
       const sectionContainers = Array.from(document.querySelectorAll("main > section.container, main > section.hero"));
       sectionContainers.forEach((section) => {
-        if (section.querySelector(".section-panel") || !section.querySelector(".section-heading")) {
+        if (section.classList.contains("no-collapse") || section.querySelector(".section-panel") || !section.querySelector(".section-heading")) {
           return;
         }
 
@@ -3356,7 +3468,8 @@
         "languages",
         "education",
         "value",
-        "contact"
+        "contact",
+        "services"
       ];
 
       const main = document.getElementById("home");
