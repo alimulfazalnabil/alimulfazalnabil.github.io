@@ -323,6 +323,88 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .section-note {
+        max-width: 760px;
+        margin: 0.5rem auto 1.5rem;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .project-photo-card {
+        overflow: hidden;
+        padding: 0;
+      }
+
+      .project-cover {
+        min-height: 160px;
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: var(--white);
+        background: linear-gradient(135deg, rgba(79, 140, 255, 0.95), rgba(110, 231, 249, 0.72));
+      }
+
+      .project-cover.alt {
+        background: linear-gradient(135deg, rgba(22, 38, 61, 0.95), rgba(79, 140, 255, 0.72));
+      }
+
+      .project-cover.green {
+        background: linear-gradient(135deg, rgba(46, 182, 125, 0.95), rgba(110, 231, 249, 0.68));
+      }
+
+      .project-cover.gold {
+        background: linear-gradient(135deg, rgba(236, 178, 46, 0.95), rgba(79, 140, 255, 0.65));
+      }
+
+      .project-cover strong {
+        font-size: 1.4rem;
+        line-height: 1.1;
+      }
+
+      .project-cover span {
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0.9;
+      }
+
+      .project-cover em {
+        font-style: normal;
+        opacity: 0.88;
+        font-size: 0.95rem;
+      }
+
+      .project-card-body {
+        padding: 1.2rem 1.3rem 1.35rem;
+      }
+
+      .project-links {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.65rem 0.9rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        color: var(--text);
+        font-weight: 600;
+        font-size: 0.92rem;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .project-link.primary {
+        background: linear-gradient(135deg, var(--accent-blue), var(--accent-2));
+        color: #03111f;
+        border-color: transparent;
+      }
+
       .featured-project {
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
@@ -744,145 +826,65 @@
         <div class="section-heading">
           <div>
             <span class="eyebrow">Projects</span>
-            <h2>Featured work framed around business problems, technical execution, and measurable outcomes.</h2>
+            <h2>Selected GitHub projects that show how I deliver value.</h2>
           </div>
         </div>
-        <div class="featured-project">
-          <div class="featured-panel">
-            <span class="tag">Flagship Project</span>
-            <h3>MoviSabio</h3>
-            <p>
-              A territorial intelligence platform that turns fragmented urban and rural data into actionable insight for mobility, sustainability, and operations.
-            </p>
-            <ul class="feature-list">
-              <li>Combines AI, IoT, GIS, digital twins, and cloud infrastructure into one decision layer.</li>
-              <li>Supports smarter traffic coordination, environmental monitoring, and operational planning.</li>
-              <li>Designed as a scalable SaaS platform with pilot regions in Campinas and Montevideo.</li>
-            </ul>
-            <div class="arch-grid">
-              <div class="arch-step">
-                <strong>1. Data Ingestion</strong>
-                <span>OpenStreetMap, sensors, video feeds, and operational data.</span>
-              </div>
-              <div class="arch-step">
-                <strong>2. Intelligence Layer</strong>
-                <span>AI models, digital twins, analytics, and decision support.</span>
-              </div>
-              <div class="arch-step">
-                <strong>3. Delivery Layer</strong>
-                <span>Cloud dashboard, APIs, reporting, and stakeholder workflows.</span>
-              </div>
-            </div>
-          </div>
-          <div class="featured-panel">
-            <h3>What it demonstrates</h3>
-            <div class="metric-grid">
-              <div class="metric">
-                <strong>Smart Mobility</strong>
-                <span>Traffic flow optimization and signal coordination</span>
-              </div>
-              <div class="metric">
-                <strong>Digital Twins</strong>
-                <span>Simulation-first planning before live rollout</span>
-              </div>
-              <div class="metric">
-                <strong>Data Integration</strong>
-                <span>OpenStreetMap, sensors, and operational data</span>
-              </div>
-              <div class="metric">
-                <strong>Business Model</strong>
-                <span>SaaS, DaaS, consulting, and smart hardware</span>
-              </div>
-            </div>
-            <div class="metric-grid" style="margin-top: 0.9rem;">
-              <div class="metric">
-                <strong>Value Proposition</strong>
-                <span>Turns fragmented data into operational decisions</span>
-              </div>
-              <div class="metric">
-                <strong>Scalability</strong>
-                <span>Built for repeatable pilots and multi-city growth</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="section-note">Short, visual snapshots of the most relevant projects. Each card links to my GitHub profile for source and repository access.</p>
         <div class="projects-grid">
-          <article class="project-card">
-            <span class="tag">AI / Mobility / Territorial Intelligence</span>
-            <h3>MoviSabio</h3>
-            <p>An AI-driven mobility platform designed to improve traffic flow, support smarter decisions, and turn territorial data into operational insight.</p>
-            <ul class="feature-list">
-              <li>Priority outcome: faster movement, better planning, and reduced congestion.</li>
-              <li>Best fit: smart-city operations, mobility planning, and sustainability programs.</li>
-            </ul>
-            <div class="impact-chip" style="margin-top: 1rem;">
-              <strong>Business Impact</strong>
-              <span>Turns city data into a productized platform for planning, operations, and ESG value.</span>
+          <article class="project-card project-photo-card">
+            <div class="project-cover">
+              <span>01 • Flagship Project</span>
+              <strong>MoviSabio</strong>
+              <em>Territorial Intelligence Platform</em>
+            </div>
+            <div class="project-card-body">
+              <span class="tag">AI / Mobility / ESG</span>
+              <p>A territorial intelligence platform that turns fragmented urban and rural data into actionable insight for mobility, sustainability, and operations.</p>
+              <div class="project-links">
+                <a class="project-link primary" href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
             </div>
           </article>
-          <article class="project-card">
-            <span class="tag">AI / Automation / Cloud</span>
-            <h3>Enterprise AI Operations Assistant</h3>
-            <p>A generative AI assistant that reduces information friction, improves internal response speed, and automates routine knowledge access.</p>
-            <ul class="feature-list">
-              <li>Priority outcome: lower support load and faster internal answers.</li>
-              <li>Best fit: shared services, operations, and knowledge-heavy teams.</li>
-            </ul>
-            <div class="impact-chip" style="margin-top: 1rem;">
-              <strong>Business Impact</strong>
-              <span>Reduces time spent searching, asking, and repeating information.</span>
+          <article class="project-card project-photo-card">
+            <div class="project-cover alt">
+              <span>02 • Automation</span>
+              <strong>Enterprise AI Assistant</strong>
+              <em>Knowledge Ops & Productivity</em>
+            </div>
+            <div class="project-card-body">
+              <span class="tag">AI / Cloud / Automation</span>
+              <p>A generative AI assistant that reduces information friction, improves internal response speed, and automates routine knowledge access.</p>
+              <div class="project-links">
+                <a class="project-link primary" href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
             </div>
           </article>
-          <article class="project-card">
-            <span class="tag">Cloud / DevOps / Security</span>
-            <h3>Azure Hybrid Infrastructure Platform</h3>
-            <p>A hybrid cloud foundation built for resilience, secure operations, and predictable delivery at scale.</p>
-            <ul class="feature-list">
-              <li>Priority outcome: stronger uptime, governance, and deployment reliability.</li>
-              <li>Best fit: enterprise platforms and regulated environments.</li>
-            </ul>
-            <div class="impact-chip" style="margin-top: 1rem;">
-              <strong>Business Impact</strong>
-              <span>Supports dependable operations and fewer delivery disruptions.</span>
+          <article class="project-card project-photo-card">
+            <div class="project-cover green">
+              <span>03 • Infrastructure</span>
+              <strong>Azure Hybrid Platform</strong>
+              <em>Reliability & Governance</em>
+            </div>
+            <div class="project-card-body">
+              <span class="tag">Cloud / DevOps / Security</span>
+              <p>A hybrid cloud foundation built for resilience, secure operations, and predictable delivery at scale.</p>
+              <div class="project-links">
+                <a class="project-link primary" href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
             </div>
           </article>
-          <article class="project-card">
-            <span class="tag">DevOps / Kubernetes / Automation</span>
-            <h3>Kubernetes Platform Delivery</h3>
-            <p>A container platform approach that accelerates deployments, improves consistency, and reduces operational overhead.</p>
-            <ul class="feature-list">
-              <li>Priority outcome: repeatable delivery and lower release risk.</li>
-              <li>Best fit: product teams scaling cloud-native workloads.</li>
-            </ul>
-            <div class="impact-chip" style="margin-top: 1rem;">
-              <strong>Business Impact</strong>
-              <span>Improves speed to market while keeping deployment quality consistent.</span>
+          <article class="project-card project-photo-card">
+            <div class="project-cover gold">
+              <span>04 • Delivery</span>
+              <strong>Kubernetes Platform</strong>
+              <em>CI/CD & Scale</em>
             </div>
-          </article>
-          <article class="project-card">
-            <span class="tag">Robotics / Vision</span>
-            <h3>Computer Vision Vehicle Detection</h3>
-            <p>Real-time perception workflows built to detect vehicles accurately and support intelligent automation in dynamic environments.</p>
-            <ul class="feature-list">
-              <li>Priority outcome: structured visual data for automation and decision support.</li>
-              <li>Best fit: transport, surveillance, and edge-AI use cases.</li>
-            </ul>
-            <div class="impact-chip" style="margin-top: 1rem;">
-              <strong>Business Impact</strong>
-              <span>Creates usable machine perception data for operational decision-making.</span>
-            </div>
-          </article>
-          <article class="project-card">
-            <span class="tag">Robotics / Simulation</span>
-            <h3>ROS 2 and Autonomous Systems</h3>
-            <p>Robotics and simulation work focused on experimentation, autonomy, and practical testing before real-world deployment.</p>
-            <ul class="feature-list">
-              <li>Priority outcome: safer experimentation before physical rollout.</li>
-              <li>Best fit: robotics R&D, autonomy, and sensor-driven systems.</li>
-            </ul>
-            <div class="impact-chip" style="margin-top: 1rem;">
-              <strong>Business Impact</strong>
-              <span>Reduces risk by validating robotic systems before deployment.</span>
+            <div class="project-card-body">
+              <span class="tag">DevOps / Kubernetes / Automation</span>
+              <p>A container platform approach that accelerates deployments, improves consistency, and reduces operational overhead.</p>
+              <div class="project-links">
+                <a class="project-link primary" href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
             </div>
           </article>
         </div>
