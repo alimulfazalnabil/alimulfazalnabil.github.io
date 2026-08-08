@@ -1785,14 +1785,15 @@
       header {
         position: sticky;
         top: 0;
+        z-index: 20;
         backdrop-filter: blur(16px);
-        background: rgba(4, 11, 22, 0.72);
+        background: rgba(4, 11, 22, 0.82);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
       }
 
-      nav {
-        min-height: 74px;
+      .top-nav {
+        min-height: 72px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1805,49 +1806,102 @@
         text-transform: uppercase;
         font-weight: 700;
         color: var(--text);
+        white-space: nowrap;
       }
 
-      .nav-links {
+      .nav-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+
+      .desktop-nav {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 0.55rem;
+        gap: 0.45rem;
       }
 
-      .nav-links a,
-      .nav-links summary {
-        padding: 0.5rem 0.75rem;
+      .nav-link,
+      .nav-more-toggle {
+        padding: 0.54rem 0.8rem;
         border-radius: 999px;
         color: var(--muted);
         border: 1px solid transparent;
+        background: transparent;
+        font-size: 0.92rem;
+        font-weight: 600;
         transition: all 180ms ease;
+        cursor: pointer;
       }
 
-      .nav-links a:hover,
-      .nav-links a.active,
-      .nav-links summary:hover,
-      .nav-more[open] summary {
+      .nav-link:hover,
+      .nav-link:focus-visible,
+      .nav-link.active,
+      .nav-more-toggle:hover,
+      .nav-more-toggle:focus-visible,
+      .nav-more.is-open .nav-more-toggle {
         color: var(--text);
         background: rgba(62, 124, 255, 0.12);
         border-color: rgba(104, 227, 255, 0.24);
+        outline: none;
+      }
+
+      .nav-link.featured {
+        color: #03111f;
+        background: linear-gradient(135deg, rgba(62, 124, 255, 0.95), rgba(104, 227, 255, 0.82));
+        border-color: transparent;
+        box-shadow: 0 8px 22px rgba(62, 124, 255, 0.18);
+      }
+
+      .nav-link.featured:hover,
+      .nav-link.featured.active {
+        color: #03111f;
       }
 
       .nav-more {
         position: relative;
       }
 
+      .nav-more-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+
       .nav-more-menu {
         position: absolute;
-        top: 2.3rem;
+        top: calc(100% + 0.45rem);
         right: 0;
         min-width: 220px;
         display: grid;
-        gap: 0.45rem;
-        padding: 0.7rem;
+        gap: 0.35rem;
+        padding: 0.68rem;
         border: 1px solid var(--border);
         border-radius: 16px;
-        background: rgba(4, 11, 22, 0.95);
-        box-shadow: var(--shadow);
+        background: rgba(4, 11, 22, 0.96);
+        box-shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
+        opacity: 0;
+        transform: translateY(-6px);
+        pointer-events: none;
+        transition: all 180ms ease;
+      }
+
+      .nav-more.is-open .nav-more-menu {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .nav-more-menu a {
+        padding: 0.38rem 0.35rem;
+        border-radius: 10px;
+        color: var(--muted);
+      }
+
+      .nav-more-menu a:hover {
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.04);
       }
 
       .nav-cta {
@@ -1856,6 +1910,65 @@
         background: linear-gradient(135deg, rgba(62, 124, 255, 0.95), rgba(104, 227, 255, 0.82));
         color: #041220;
         font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .nav-toggle {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        cursor: pointer;
+      }
+
+      .nav-toggle span {
+        display: block;
+        width: 1rem;
+        height: 2px;
+        background: currentColor;
+        margin: 2px 0;
+      }
+
+      .mobile-nav-panel {
+        display: none;
+        padding: 0 0 0.85rem;
+      }
+
+      .mobile-nav-panel.is-open {
+        display: block;
+      }
+
+      .mobile-nav-links {
+        display: grid;
+        gap: 0.4rem;
+        padding-top: 0.6rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .mobile-nav-links .nav-link,
+      .mobile-nav-links .nav-more-toggle {
+        width: 100%;
+        text-align: left;
+      }
+
+      .mobile-nav-links .nav-more-menu {
+        position: static;
+        margin-top: 0.4rem;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        box-shadow: none;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      body.menu-open {
+        overflow: hidden;
       }
 
       .section-toolbar {
@@ -1878,6 +1991,11 @@
       .toolbar-btn:hover {
         border-color: rgba(104, 227, 255, 0.38);
         color: var(--accent-2);
+      }
+
+      section,
+      footer {
+        scroll-margin-top: 96px;
       }
 
       section {
@@ -2297,20 +2415,29 @@
           gap: 1rem;
         }
 
-        nav {
+        .top-nav {
           flex-wrap: wrap;
         }
 
-        .nav-links {
-          order: 3;
-          width: 100%;
-          overflow-x: auto;
-          padding-bottom: 0.2rem;
-          scrollbar-width: none;
+        .desktop-nav {
+          display: none;
         }
 
-        .nav-links::-webkit-scrollbar {
+        .nav-cta {
           display: none;
+        }
+
+        .nav-toggle {
+          display: inline-flex;
+          flex-direction: column;
+        }
+
+        .mobile-nav-panel {
+          display: none;
+        }
+
+        .mobile-nav-panel.is-open {
+          display: block;
         }
       }
 
@@ -2342,32 +2469,19 @@
     <div class="page-shell">
       <header>
       <div class="container">
-        <nav>
+        <nav class="top-nav">
           <a class="brand" href="#home">Alimul Fazal Nabil</a>
-          <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#leadership">Leadership</a>
-            <a href="#services">Services</a>
-            <details class="nav-more">
-              <summary>More</summary>
-              <div class="nav-more-menu">
-                <a href="#tech-stack">Tech Stack</a>
-                <a href="#volunteering">Volunteering</a>
-                <a href="#recommendations">Recommendations</a>
-                <a href="#publications">Publications</a>
-                <a href="#certifications">Certifications</a>
-                <a href="#education">Education</a>
-                <a href="#languages">Languages</a>
-                <a href="#value">Value</a>
-              </div>
-            </details>
-            <a href="#contact">Contact</a>
+          <div class="nav-controls">
+            <div class="desktop-nav" id="desktop-nav"></div>
+            <a class="nav-cta" href="cv.html">Download CV</a>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav-panel" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
-          <a class="nav-cta" href="cv.html">Download CV</a>
         </nav>
+        <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true"></div>
       </div>
     </header>
 
@@ -3831,17 +3945,141 @@
         });
       });
 
-      const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
-      const sectionIds = Array.from(document.querySelectorAll("main section[id]"));
+      const primaryNavigation = [
+        { label: "About", href: "#about" },
+        { label: "Expertise", href: "#expertise" },
+        { label: "Experience", href: "#experience" },
+        { label: "Projects", href: "#projects" },
+        { label: "Leadership", href: "#leadership" },
+        { label: "Services", href: "#services", featured: true },
+        { label: "Contact", href: "#contact" }
+      ];
+
+      const secondaryNavigation = [
+        { label: "Tech Stack", href: "#tech-stack" },
+        { label: "Volunteering", href: "#volunteering" },
+        { label: "Recommendations", href: "#recommendations" },
+        { label: "Publications", href: "#publications" },
+        { label: "Certifications", href: "#certifications" },
+        { label: "Education", href: "#education" },
+        { label: "Languages", href: "#languages" },
+        { label: "Value", href: "#value" }
+      ];
+
+      const desktopNav = document.getElementById("desktop-nav");
+      const mobileNavPanel = document.getElementById("mobile-nav-panel");
+      const navToggle = document.getElementById("nav-toggle");
+
+      const renderNavigation = () => {
+        if (!desktopNav || !mobileNavPanel) return;
+
+        const primaryMarkup = primaryNavigation
+          .map((item) => `<a class="nav-link${item.featured ? " featured" : ""}" href="${item.href}" data-nav-link="primary">${item.label}</a>`)
+          .join("");
+
+        const moreMarkup = `
+          <div class="nav-more">
+            <button class="nav-more-toggle" type="button" aria-expanded="false" aria-controls="desktop-more-menu">MORE ▾</button>
+            <div class="nav-more-menu" id="desktop-more-menu" aria-hidden="true">
+              ${secondaryNavigation.map((item) => `<a class="nav-link" href="${item.href}" data-nav-link="secondary">${item.label}</a>`).join("")}
+            </div>
+          </div>
+        `;
+
+        desktopNav.innerHTML = `${primaryMarkup}${moreMarkup}`;
+
+        mobileNavPanel.innerHTML = `
+          <div class="mobile-nav-links">
+            ${primaryNavigation.map((item) => `<a class="nav-link${item.featured ? " featured" : ""}" href="${item.href}" data-nav-link="primary">${item.label}</a>`).join("")}
+            <div class="nav-more">
+              <button class="nav-more-toggle" type="button" aria-expanded="false" aria-controls="mobile-more-menu">MORE ▾</button>
+              <div class="nav-more-menu" id="mobile-more-menu" aria-hidden="true">
+                ${secondaryNavigation.map((item) => `<a class="nav-link" href="${item.href}" data-nav-link="secondary">${item.label}</a>`).join("")}
+              </div>
+            </div>
+          </div>
+        `;
+      };
+
+      const closeMoreMenus = () => {
+        document.querySelectorAll(".nav-more").forEach((wrapper) => {
+          wrapper.classList.remove("is-open");
+          const toggle = wrapper.querySelector(".nav-more-toggle");
+          toggle?.setAttribute("aria-expanded", "false");
+          const menu = wrapper.querySelector(".nav-more-menu");
+          menu?.setAttribute("aria-hidden", "true");
+        });
+      };
+
+      const closeMobileMenu = () => {
+        if (!mobileNavPanel) return;
+        mobileNavPanel.classList.remove("is-open");
+        mobileNavPanel.setAttribute("aria-hidden", "true");
+        navToggle?.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
+      };
+
+      const toggleMobileMenu = () => {
+        if (!mobileNavPanel || !navToggle) return;
+        const isOpen = mobileNavPanel.classList.toggle("is-open");
+        mobileNavPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        document.body.classList.toggle("menu-open", isOpen);
+      };
+
+      renderNavigation();
+
+      document.querySelectorAll(".nav-more-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", (event) => {
+          event.stopPropagation();
+          const wrapper = toggle.closest(".nav-more");
+          if (!wrapper) return;
+          const shouldOpen = !wrapper.classList.contains("is-open");
+          closeMoreMenus();
+          if (shouldOpen) {
+            wrapper.classList.add("is-open");
+            toggle.setAttribute("aria-expanded", "true");
+            const menu = wrapper.querySelector(".nav-more-menu");
+            menu?.setAttribute("aria-hidden", "false");
+          }
+        });
+      });
+
+      document.querySelectorAll("[data-nav-link]").forEach((link) => {
+        link.addEventListener("click", () => {
+          closeMoreMenus();
+          closeMobileMenu();
+        });
+      });
+
+      navToggle?.addEventListener("click", toggleMobileMenu);
+
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest(".nav-more") && !event.target.closest(".nav-toggle")) {
+          closeMoreMenus();
+        }
+        if (!event.target.closest(".nav-controls") && !event.target.closest(".mobile-nav-panel") && !event.target.closest(".nav-toggle")) {
+          closeMobileMenu();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMoreMenus();
+          closeMobileMenu();
+        }
+      });
+
+      const sectionIds = Array.from(document.querySelectorAll("main section[id], footer[id]"));
       const updateActiveLink = () => {
-        const scrollY = window.scrollY + 130;
+        const scrollY = window.scrollY + 140;
         let activeId = "home";
         sectionIds.forEach((section) => {
           if (scrollY >= section.offsetTop) {
             activeId = section.id;
           }
         });
-        navLinks.forEach((link) => {
+        document.querySelectorAll("[data-nav-link='primary']").forEach((link) => {
           const href = link.getAttribute("href");
           link.classList.toggle("active", href === `#${activeId}`);
         });
