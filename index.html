@@ -3179,7 +3179,7 @@
         </div>
       </section>
 
-      <section id="services" class="container no-collapse">
+    <section id="services" class="container no-collapse">
       <div class="section-heading">
         <div>
           <span class="eyebrow">Services</span>
@@ -3336,7 +3336,7 @@
           <a class="btn btn-secondary" href="mailto:alimul.nabil@gmail.com">Send an Email</a>
         </div>
       </div>
-    </section>
+    </section>  
 
     <section id="contact" class="container">
       <div class="section-heading">
@@ -3366,6 +3366,8 @@
         </div>
       </div>
     </section>
+
+    </main>
 
     <footer>
       <div class="container">
@@ -3451,39 +3453,6 @@
         section.innerHTML = "";
         section.appendChild(details);
       });
-
-      const sectionOrder = [
-        "about",
-        "expertise",
-        "experience",
-        "stack",
-        "projects",
-        "leadership",
-        "publications",
-        "certifications",
-        "education",
-        "volunteering",
-        "recommendations",
-        "languages",
-        "services",
-        "contact"
-      ];
-
-      const main = document.getElementById("home");
-      const sections = Array.from(main.querySelectorAll("section[id]"));
-      const byId = new Map(sections.map((section) => [section.id, section]));
-
-      for (const id of sectionOrder) {
-        const section = byId.get(id);
-        if (section) {
-          main.appendChild(section);
-          byId.delete(id);
-        }
-      }
-
-      for (const section of byId.values()) {
-        main.appendChild(section);
-      }
 
       const detailsList = Array.from(document.querySelectorAll(".section-panel"));
       detailsList.forEach((panel) => {
