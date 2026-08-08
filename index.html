@@ -250,6 +250,26 @@
         grid-template-columns: 1.3fr 0.7fr;
       }
 
+      .value-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .value-card {
+        padding: 1.25rem;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+      }
+
+      .value-card strong {
+        display: block;
+        margin-bottom: 0.45rem;
+        color: var(--accent-2);
+      }
+
       .pill-row {
         display: flex;
         flex-wrap: wrap;
@@ -445,6 +465,10 @@
         .impact-strip {
           grid-template-columns: 1fr;
         }
+
+        .value-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -545,11 +569,38 @@
         </div>
       </section>
 
+      <section id="value" class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Value</span>
+            <h2>Why I add value to a company</h2>
+          </div>
+        </div>
+        <div class="value-grid">
+          <div class="value-card">
+            <strong>1. I improve operational reliability</strong>
+            <p>I build stable systems, automate repeatable work, and reduce friction in day-to-day operations.</p>
+          </div>
+          <div class="value-card">
+            <strong>2. I connect technology to outcomes</strong>
+            <p>I focus on delivery that improves speed, quality, and business continuity rather than shipping features in isolation.</p>
+          </div>
+          <div class="value-card">
+            <strong>3. I bridge execution and strategy</strong>
+            <p>I can move between infrastructure, product, AI, and leadership conversations without losing business context.</p>
+          </div>
+          <div class="value-card">
+            <strong>4. I make teams more effective</strong>
+            <p>I use automation, clear architecture, and pragmatic decision-making to help teams deliver with less waste.</p>
+          </div>
+        </div>
+      </section>
+
       <section id="about" class="container">
         <div class="section-heading">
           <div>
             <span class="eyebrow">About</span>
-            <h2>Engineering with business context, reliability, and delivery focus.</h2>
+            <h2>Engineering with business context, reliability, and measurable delivery focus.</h2>
           </div>
         </div>
         <div class="about-grid">
