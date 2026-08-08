@@ -207,6 +207,31 @@
         margin-bottom: 0.25rem;
       }
 
+      .repo-chip-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+        margin-top: 0.95rem;
+      }
+
+      .repo-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.52rem 0.78rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--border);
+        color: var(--text);
+        font-size: 0.88rem;
+        font-weight: 600;
+      }
+
+      .repo-chip.primary {
+        background: linear-gradient(135deg, var(--accent-blue), var(--accent-2));
+        color: #03111f;
+        border-color: transparent;
+      }
       .card {
         padding: 1.4rem;
       }
@@ -860,26 +885,26 @@
               <span>01 • Flagship</span>
               <strong>MoviSabio</strong>
               <em>Territorial Intelligence Platform</em>
-              <small>One card, one flagship story: the projects below show the AI, cloud, data, and robotics work that supports MoviSabio.</small>
+              <small>One flagship story that connects the AI, cloud, data, and robotics work behind MoviSabio.</small>
             </div>
             <div class="project-card-body">
               <span class="tag">AI / Cloud / Data / Robotics</span>
-              <p>A flagship ecosystem that combines the projects most relevant to MoviSabio and shows how I turn data, automation, and intelligent systems into practical value.</p>
+              <p>A flagship ecosystem that combines the most relevant repositories and shows how I turn data, automation, and intelligent systems into practical value.</p>
               <div class="feature-stack">
                 <div class="metric"><strong>Computer Vision</strong><span>Detection and tracking</span></div>
                 <div class="metric"><strong>YOLO</strong><span>Real-time object recognition</span></div>
                 <div class="metric"><strong>Azure Cloud</strong><span>Platform delivery</span></div>
                 <div class="metric"><strong>Data / Python</strong><span>Pipelines and logic</span></div>
               </div>
-              <div class="project-links">
-                <a class="project-link primary" href="https://github.com/alimulfazalnabil/Computer-Vision-Projects" target="_blank" rel="noopener noreferrer">Computer Vision</a>
-                <a class="project-link" href="https://github.com/alimulfazalnabil/YOLO_Projects" target="_blank" rel="noopener noreferrer">YOLO</a>
-                <a class="project-link" href="https://github.com/alimulfazalnabil/Azure-Cloud-Projects" target="_blank" rel="noopener noreferrer">Azure Cloud</a>
-                <a class="project-link" href="https://github.com/alimulfazalnabil/API-projects-" target="_blank" rel="noopener noreferrer">API</a>
-                <a class="project-link" href="https://github.com/alimulfazalnabil/Data-Engineering-Projects" target="_blank" rel="noopener noreferrer">Data Engineering</a>
-                <a class="project-link" href="https://github.com/alimulfazalnabil/Robotics-projects" target="_blank" rel="noopener noreferrer">Robotics</a>
-                <a class="project-link" href="https://github.com/alimulfazalnabil/Python-Projects" target="_blank" rel="noopener noreferrer">Python</a>
-                <a class="project-link" href="https://github.com/alimulfazalnabil/Doctors-CoPilot-Ai" target="_blank" rel="noopener noreferrer">Doctor’s Copilot</a>
+              <div class="repo-chip-grid">
+                <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Computer-Vision-Projects" target="_blank" rel="noopener noreferrer">Computer Vision</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/YOLO_Projects" target="_blank" rel="noopener noreferrer">YOLO</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Azure-Cloud-Projects" target="_blank" rel="noopener noreferrer">Azure Cloud</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/API-projects-" target="_blank" rel="noopener noreferrer">API</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Data-Engineering-Projects" target="_blank" rel="noopener noreferrer">Data Engineering</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Robotics-projects" target="_blank" rel="noopener noreferrer">Robotics</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Python-Projects" target="_blank" rel="noopener noreferrer">Python</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Doctors-CoPilot-Ai" target="_blank" rel="noopener noreferrer">Doctor’s Copilot</a>
               </div>
             </div>
           </article>
