@@ -700,39 +700,88 @@
       }
 
       footer {
-        padding: 2.2rem 0 2.4rem;
+        padding: 2.4rem 0 2.6rem;
         color: var(--muted);
-        border-top: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.02);
+        border-top: 1px solid rgba(110, 231, 249, 0.22);
+        background:
+          radial-gradient(1200px 420px at 100% 0%, rgba(79, 140, 255, 0.13), transparent 55%),
+          rgba(255, 255, 255, 0.02);
       }
 
       .footer-grid {
         display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 1rem;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 1.1rem;
         align-items: start;
+      }
+
+      .footer-panel {
+        padding: 1.1rem 1.2rem;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
       }
 
       .footer-brand {
         margin: 0;
         color: var(--text);
-        font-size: 1.05rem;
+        font-size: 1.12rem;
+        font-weight: 700;
       }
 
       .footer-role {
-        margin: 0.2rem 0 0.75rem;
+        margin: 0.25rem 0 0.6rem;
+      }
+
+      .footer-value {
+        margin: 0;
+        color: var(--muted);
       }
 
       .footer-meta {
+        margin-top: 0.8rem;
+        font-size: 0.88rem;
+      }
+
+      .footer-kpis {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.85rem;
+      }
+
+      .footer-kpis span {
+        padding: 0.36rem 0.62rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        color: var(--accent-2);
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .footer-panel h4 {
+        margin: 0 0 0.5rem;
+        color: var(--text);
+        font-size: 0.96rem;
+      }
+
+      .footer-panel p {
+        margin: 0;
+      }
+
+      .footer-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
         margin-top: 0.9rem;
-        font-size: 0.9rem;
       }
 
       .footer-link-list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-end;
+        justify-content: flex-start;
         gap: 0.55rem;
+        margin-top: 1rem;
       }
 
       .footer-link-list a {
@@ -747,6 +796,25 @@
       .footer-link-list a:hover {
         border-color: rgba(110, 231, 249, 0.6);
         color: var(--accent-2);
+      }
+
+      .footer-cta {
+        padding: 0.56rem 0.86rem;
+        border-radius: 10px;
+        font-size: 0.88rem;
+        font-weight: 700;
+        border: 1px solid var(--border);
+      }
+
+      .footer-cta.primary {
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #03111f;
+        border-color: transparent;
+      }
+
+      .footer-cta.secondary {
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.03);
       }
 
       @media (max-width: 900px) {
@@ -1656,17 +1724,31 @@
     <footer>
       <div class="container">
         <div class="footer-grid">
-          <div>
+          <div class="footer-panel">
             <p class="footer-brand">Alimul Fazal Nabil</p>
             <p class="footer-role">Senior Technology Leader · Cloud, DevOps, AI, Data, Robotics</p>
+            <p class="footer-value">Building reliable platforms, automation-first operations, and intelligent systems aligned with business outcomes.</p>
+            <div class="footer-kpis">
+              <span>Cloud + Platform</span>
+              <span>AI + Data</span>
+              <span>Leadership + Delivery</span>
+            </div>
             <p class="footer-meta">© <span id="year"></span> Alimul Fazal Nabil. All rights reserved.</p>
           </div>
-          <div class="footer-link-list">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="mailto:hello@example.com">Email</a>
+          <div class="footer-panel">
+            <h4>Let’s Build Something Valuable</h4>
+            <p>Open to infrastructure, platform engineering, and AI-enabled product opportunities.</p>
+            <div class="footer-actions">
+              <a class="footer-cta primary" href="#contact">Start a Conversation</a>
+              <a class="footer-cta secondary" href="mailto:hello@example.com">Email Directly</a>
+            </div>
+            <div class="footer-link-list">
+              <a href="#about">About</a>
+              <a href="#projects">Projects</a>
+              <a href="#publications">Publications</a>
+              <a href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
           </div>
         </div>
       </div>
