@@ -1498,107 +1498,53 @@
       }
 
       footer {
-        padding: 2.4rem 0 2.6rem;
+        padding: 2.4rem 0 1.8rem;
         color: var(--muted);
-        border-top: 1px solid rgba(110, 231, 249, 0.22);
+        border-top: 1px solid rgba(110, 231, 249, 0.2);
         background:
-          radial-gradient(1200px 420px at 100% 0%, rgba(79, 140, 255, 0.13), transparent 55%),
+          radial-gradient(900px 320px at 100% 0%, rgba(79, 140, 255, 0.12), transparent 60%),
           rgba(255, 255, 255, 0.02);
       }
 
-      .footer-grid {
+      .footer-shell {
         display: grid;
-        grid-template-columns: 1.05fr 0.95fr;
-        gap: 1.1rem;
-        align-items: start;
+        gap: 1rem;
       }
 
-      .footer-panel {
-        padding: 1.1rem 1.2rem;
-        border-radius: 16px;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .footer-brand {
-        margin: 0;
-        color: var(--text);
-        font-size: 1.12rem;
-        font-weight: 700;
-      }
-
-      .footer-role {
-        margin: 0.25rem 0 0.6rem;
-      }
-
-      .footer-value {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .footer-meta {
-        margin-top: 0.8rem;
-        font-size: 0.88rem;
-      }
-
-      .footer-kpis {
+      .footer-hero {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 0.85rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
       }
 
-      .footer-kpis span {
-        padding: 0.36rem 0.62rem;
-        border-radius: 999px;
-        border: 1px solid var(--border);
-        color: var(--accent-2);
-        font-size: 0.8rem;
-        font-weight: 600;
-      }
-
-      .footer-panel h4 {
-        margin: 0 0 0.5rem;
+      .footer-hero h3 {
+        margin: 0.25rem 0 0;
         color: var(--text);
-        font-size: 0.96rem;
+        font-size: 1.18rem;
       }
 
-      .footer-panel p {
-        margin: 0;
+      .footer-hero p {
+        margin: 0.4rem 0 0;
+        max-width: 640px;
+        color: var(--muted);
       }
 
       .footer-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 0.6rem;
-        margin-top: 0.9rem;
-      }
-
-      .footer-link-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 0.55rem;
-        margin-top: 1rem;
-      }
-
-      .footer-link-list a {
-        padding: 0.42rem 0.75rem;
-        border-radius: 999px;
-        border: 1px solid var(--border);
-        color: var(--text);
-        font-size: 0.88rem;
-        font-weight: 600;
-      }
-
-      .footer-link-list a:hover {
-        border-color: rgba(110, 231, 249, 0.6);
-        color: var(--accent-2);
       }
 
       .footer-cta {
-        padding: 0.56rem 0.86rem;
-        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.58rem 0.9rem;
+        border-radius: 999px;
         font-size: 0.88rem;
         font-weight: 700;
         border: 1px solid var(--border);
@@ -1613,6 +1559,73 @@
       .footer-cta.secondary {
         color: var(--text);
         background: rgba(255, 255, 255, 0.03);
+      }
+
+      .footer-nav {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .footer-nav-group {
+        padding: 0.2rem 0;
+      }
+
+      .footer-nav-group h4 {
+        margin: 0 0 0.55rem;
+        color: var(--accent-2);
+        font-size: 0.8rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .footer-nav-group a {
+        display: block;
+        padding: 0.28rem 0;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .footer-nav-group a:hover {
+        color: var(--text);
+      }
+
+      .footer-identity {
+        display: grid;
+        gap: 0.3rem;
+        padding-top: 0.35rem;
+      }
+
+      .footer-brand {
+        margin: 0;
+        color: var(--text);
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .footer-role {
+        margin: 0;
+        color: var(--accent-2);
+        font-size: 0.92rem;
+      }
+
+      .footer-value {
+        margin: 0;
+        color: var(--muted);
+        max-width: 560px;
+      }
+
+      .footer-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.8rem;
+        padding-top: 0.9rem;
+        border-top: 1px solid var(--border);
+        font-size: 0.85rem;
+        color: var(--muted);
       }
 
       @media (max-width: 900px) {
@@ -1635,18 +1648,31 @@
           grid-template-columns: 1fr;
         }
 
-        .footer-grid {
+        .footer-nav {
           grid-template-columns: 1fr;
-        }
-
-        .footer-link-list {
-          justify-content: flex-start;
         }
       }
 
       @media (max-width: 640px) {
         section {
           padding: 3.5rem 0;
+        }
+
+        .footer-hero {
+          flex-direction: column;
+        }
+
+        .footer-actions {
+          width: 100%;
+        }
+
+        .footer-actions .footer-cta {
+          flex: 1 1 auto;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          align-items: flex-start;
         }
 
         .stats {
@@ -3676,71 +3702,57 @@
 
     
 
-<section id="contact" class="container">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">Contact</span>
-          <h2>Let’s discuss how I can add value to your team and business.</h2>
-        </div>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card card">
-          <h3>Value I Bring</h3>
-          <p>Cloud engineering, AI solutions, DevOps, data engineering, robotics, technical leadership, and consulting that improve outcomes.</p>
-          <div class="pill-row">
-            <span class="pill">LinkedIn</span>
-            <span class="pill">GitHub</span>
-            <span class="pill">Email</span>
-          </div>
-        </div>
-        <div class="contact-card card">
-          <form>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="text" placeholder="Company" />
-            <textarea placeholder="Message"></textarea>
-            <a class="btn btn-primary" href="mailto:alimul.nabil@gmail.com">Send Message</a>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    
-
 </main>
 
-    <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-panel">
-            <p class="footer-brand">Alimul Fazal Nabil</p>
-            <p class="footer-role">Senior Technology Leader · Cloud, DevOps, AI, Data, Robotics</p>
-            <p class="footer-value">Building reliable platforms, automation-first operations, and intelligent systems aligned with business outcomes.</p>
-            <div class="footer-kpis">
-              <span>Cloud + Platform</span>
-              <span>AI + Data</span>
-              <span>Leadership + Delivery</span>
-            </div>
-            <p class="footer-meta">© <span id="year"></span> Alimul Fazal Nabil. All rights reserved.</p>
+    <footer id="contact">
+      <div class="container footer-shell">
+        <div class="footer-hero">
+          <div>
+            <p class="eyebrow">LET'S CONNECT</p>
+            <h3>Have a technology project, business challenge, or collaboration idea? Let's discuss it.</h3>
           </div>
-          <div class="footer-panel">
-            <h4>Let’s Build Something Valuable</h4>
-            <p>Open to infrastructure, platform engineering, and AI-enabled product opportunities.</p>
-            <div class="footer-actions">
-              <a class="footer-cta primary" href="#contact">Start a Conversation</a>
-              <a class="footer-cta secondary" href="mailto:alimul.nabil@gmail.com">Email Directly</a>
-            </div>
-            <div class="footer-link-list">
-              <a href="#about">About</a>
-              <a href="#expertise">Expertise</a>
-              <a href="#experience">Experience</a>
-              <a href="#projects">Projects</a>
-              <a href="#services">Services</a>
-              <a href="#contact">Contact</a>
-              <a href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
+          <div class="footer-actions">
+            <a class="footer-cta primary" href="mailto:alimul.nabil@gmail.com">Email Me</a>
+            <a class="footer-cta secondary" href="https://wa.me/8801829687813" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-nav-group">
+            <h4>EXPLORE</h4>
+            <a href="#about">About</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+          </div>
+          <div class="footer-nav-group">
+            <h4>TECHNOLOGY</h4>
+            <a href="#services">Cloud</a>
+            <a href="#services">DevOps</a>
+            <a href="#services">AI / ML</a>
+            <a href="#services">Data</a>
+            <a href="#services">Full-Stack</a>
+            <a href="#services">Robotics</a>
+          </div>
+          <div class="footer-nav-group">
+            <h4>CONNECT</h4>
+            <a href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:alimul.nabil@gmail.com">Email</a>
+            <a href="https://wa.me/8801829687813" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="footer-identity">
+          <p class="footer-brand">ALIMUL FAZAL NABIL</p>
+          <p class="footer-role">Infrastructure · Cloud · DevOps · AI · Robotics</p>
+          <p class="footer-value">Building reliable systems and practical technology solutions.</p>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© <span id="year"></span> Alimul Fazal Nabil</span>
+          <span>Infrastructure · Cloud · AI · DevOps · Robotics</span>
         </div>
       </div>
     </footer>
