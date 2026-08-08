@@ -194,6 +194,38 @@
         max-width: 700px;
       }
 
+      .hero-profile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        padding: 0.9rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.03);
+        width: fit-content;
+      }
+
+      .hero-avatar {
+        width: 72px;
+        height: 72px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      }
+
+      .hero-name {
+        margin: 0 0 0.2rem;
+        font-size: 1.2rem;
+      }
+
+      .hero-role {
+        margin: 0;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
@@ -1201,6 +1233,13 @@
     <main id="home">
       <section class="container hero">
         <div>
+          <div class="hero-profile">
+            <img class="hero-avatar" src="/profile.jpg?v=20260808" alt="Alimul Fazal Nabil" loading="eager" />
+            <div>
+              <h2 class="hero-name">Alimul Fazal Nabil</h2>
+              <p class="hero-role">Senior Technology Leader · Cloud, DevOps, AI, Data & Robotics</p>
+            </div>
+          </div>
           <span class="eyebrow">Senior Technology Leader</span>
           <h1>I design, automate, and deliver technology solutions that improve reliability, accelerate execution, and create business value.</h1>
           <p>
