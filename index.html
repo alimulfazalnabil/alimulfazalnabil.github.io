@@ -11,7 +11,7 @@
     <meta property="og:title" content="Alimul Fazal Nabil | Infrastructure & Cloud Systems Engineer" />
     <meta property="og:description" content="Engineering portfolio spanning cloud, DevOps, AI, data, robotics, and technology leadership." />
     <meta property="og:type" content="profile" />
-    <meta property="og:image" content="profile.jpg" />
+    <meta property="og:image" content="https://alimulfazalnabil.github.io/assets/images/profile.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Alimul Fazal Nabil | Infrastructure & Cloud Systems Engineer" />
     <meta name="twitter:description" content="Engineering portfolio spanning cloud, DevOps, AI, data, robotics, and technology leadership." />
@@ -226,15 +226,6 @@
         border-radius: 18px;
         background: rgba(255, 255, 255, 0.03);
         width: fit-content;
-      }
-
-      .hero-avatar {
-        width: 72px;
-        height: 72px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 2px solid rgba(255, 255, 255, 0.12);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
       }
 
       .hero-name {
@@ -2336,7 +2327,9 @@
       .hero-avatar {
         width: 74px;
         height: 74px;
+        display: block;
         object-fit: cover;
+        object-position: center;
         border-radius: 50%;
         border: 1px solid rgba(255, 255, 255, 0.16);
         box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
@@ -2744,7 +2737,7 @@
     <main id="home"><section class="container hero">
         <div class="hero-main">
           <div class="hero-profile">
-            <img class="hero-avatar" src="profile.jpg" alt="Alimul Fazal Nabil" loading="eager" />
+            <img class="hero-avatar" src="./assets/images/profile.jpg" alt="Alimul Fazal Nabil" loading="eager" onerror="console.error('Profile image failed to load:', this.src)" />
             <div>
               <h2 class="hero-name">Alimul Fazal Nabil</h2>
               <p class="hero-role">Infrastructure & Cloud Systems Engineer · AI Solutions · DevOps · Robotics</p>
@@ -2833,9 +2826,10 @@
           <div class="card about-profile-card">
             <img
               class="profile-inline"
-              src="profile.jpg"
+              src="./assets/images/profile.jpg"
               alt="Alimul Fazal Nabil"
-              loading="eager"
+              loading="lazy"
+              onerror="console.error('Profile image failed to load:', this.src)"
             />
 
             <h3>Alimul Fazal Nabil</h3>
