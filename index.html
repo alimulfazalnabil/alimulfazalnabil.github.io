@@ -7,7 +7,29 @@
       name="description"
       content="Professional engineering portfolio for Alimul Fazal Nabil, focused on business value through cloud, DevOps, AI, data, robotics, and leadership."
     />
-    <title>Alimul Fazal Nabil | Business-Driven Engineering Portfolio</title>
+    <meta name="theme-color" content="#040b16" />
+    <meta property="og:title" content="Alimul Fazal Nabil | Infrastructure & Cloud Systems Engineer" />
+    <meta property="og:description" content="Engineering portfolio spanning cloud, DevOps, AI, data, robotics, and technology leadership." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:image" content="https://alimulfazalnabil.github.io/profile.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Alimul Fazal Nabil | Infrastructure & Cloud Systems Engineer" />
+    <meta name="twitter:description" content="Engineering portfolio spanning cloud, DevOps, AI, data, robotics, and technology leadership." />
+    <title>Alimul Fazal Nabil | Infrastructure & Cloud Systems Engineer</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alimul Fazal Nabil",
+        "jobTitle": "Infrastructure & Cloud Systems Engineer",
+        "url": "https://alimulfazalnabil.github.io",
+        "sameAs": [
+          "https://www.linkedin.com/in/alimul-fazal-nabil/",
+          "https://github.com/alimulfazalnabil"
+        ],
+        "description": "Multidisciplinary technology engineer focused on cloud infrastructure, DevOps, AI, data, robotics, and technical leadership."
+      }
+    </script>
     <style>
       :root {
         --bg: #07111f;
@@ -1385,9 +1407,625 @@
         }
       }
     </style>
+    <style>
+      :root {
+        --bg: #040b16;
+        --bg-2: #07111f;
+        --surface: rgba(9, 21, 36, 0.92);
+        --surface-2: rgba(15, 31, 50, 0.88);
+        --text: #f5f8ff;
+        --muted: #93a8c2;
+        --accent: #3e7cff;
+        --accent-2: #68e3ff;
+        --accent-violet: #8f7dff;
+        --border: rgba(255, 255, 255, 0.12);
+        --shadow: 0 18px 45px rgba(0, 0, 0, 0.24);
+      }
+
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(62, 124, 255, 0.16), transparent 30%),
+          radial-gradient(circle at 85% 0%, rgba(104, 227, 255, 0.12), transparent 24%),
+          linear-gradient(135deg, var(--bg) 0%, var(--bg-2) 100%);
+        color: var(--text);
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+        background-size: 72px 72px;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.92), transparent);
+        pointer-events: none;
+        opacity: 0.34;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: auto -15% 3% auto;
+        width: 28rem;
+        height: 28rem;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(104, 227, 255, 0.16), transparent 70%);
+        filter: blur(40px);
+        pointer-events: none;
+      }
+
+      .page-shell {
+        position: relative;
+        z-index: 1;
+      }
+
+      #cursor-glow {
+        position: fixed;
+        width: 18rem;
+        height: 18rem;
+        border-radius: 50%;
+        pointer-events: none;
+        background: radial-gradient(circle, rgba(104, 227, 255, 0.16), transparent 70%);
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        filter: blur(16px);
+        opacity: 0.75;
+      }
+
+      .ambient {
+        position: fixed;
+        border-radius: 50%;
+        pointer-events: none;
+        filter: blur(70px);
+        opacity: 0.22;
+        z-index: 0;
+      }
+
+      .ambient-one {
+        inset: auto auto 8% -8%;
+        width: 18rem;
+        height: 18rem;
+        background: rgba(62, 124, 255, 0.28);
+        animation: drift 18s ease-in-out infinite alternate;
+      }
+
+      .ambient-two {
+        inset: 9% 0 auto auto;
+        width: 14rem;
+        height: 14rem;
+        background: rgba(143, 125, 255, 0.2);
+        animation: drift 16s ease-in-out infinite alternate-reverse;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(16px);
+        background: rgba(4, 11, 22, 0.72);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      nav {
+        min-height: 74px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .brand {
+        font-size: 0.95rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+      }
+
+      .nav-links a,
+      .nav-links summary {
+        padding: 0.5rem 0.75rem;
+        border-radius: 999px;
+        color: var(--muted);
+        border: 1px solid transparent;
+        transition: all 180ms ease;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active,
+      .nav-links summary:hover,
+      .nav-more[open] summary {
+        color: var(--text);
+        background: rgba(62, 124, 255, 0.12);
+        border-color: rgba(104, 227, 255, 0.24);
+      }
+
+      .nav-more {
+        position: relative;
+      }
+
+      .nav-more-menu {
+        position: absolute;
+        top: 2.3rem;
+        right: 0;
+        min-width: 220px;
+        display: grid;
+        gap: 0.45rem;
+        padding: 0.7rem;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: rgba(4, 11, 22, 0.95);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-cta {
+        padding: 0.7rem 0.95rem;
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(62, 124, 255, 0.95), rgba(104, 227, 255, 0.82));
+        color: #041220;
+        font-weight: 700;
+      }
+
+      .section-toolbar {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.7rem;
+        padding-top: 1rem;
+      }
+
+      .toolbar-btn {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 0.55rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        cursor: pointer;
+        font-size: 0.88rem;
+      }
+
+      .toolbar-btn:hover {
+        border-color: rgba(104, 227, 255, 0.38);
+        color: var(--accent-2);
+      }
+
+      section {
+        position: relative;
+        padding: 2.2rem 0 2.5rem;
+      }
+
+      section::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(104, 227, 255, 0.25), transparent);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 1.3rem;
+        align-items: start;
+        padding-top: 1.2rem;
+      }
+
+      .hero-main {
+        position: relative;
+        padding: 1.2rem 1.25rem;
+        border-radius: 28px;
+        background: linear-gradient(135deg, rgba(9, 21, 36, 0.95), rgba(11, 23, 39, 0.85));
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-main::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, rgba(104, 227, 255, 0.06), transparent 40%, rgba(62, 124, 255, 0.08));
+        pointer-events: none;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.45rem 0.75rem;
+        border-radius: 999px;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(104, 227, 255, 0.2);
+        background: rgba(104, 227, 255, 0.08);
+        color: var(--accent-2);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+      }
+
+      .hero-profile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.1rem;
+      }
+
+      .hero-avatar {
+        width: 74px;
+        height: 74px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-name {
+        margin: 0 0 0.2rem;
+        font-size: 1.25rem;
+      }
+
+      .hero-role {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 3.4vw, 3.1rem);
+        margin: 0 0 1rem;
+        line-height: 1.08;
+      }
+
+      .hero p {
+        color: var(--muted);
+        max-width: 760px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 1.2rem;
+      }
+
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: 0.9rem;
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+
+      .hero-metrics {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
+        margin-top: 1rem;
+      }
+
+      .metric-card {
+        padding: 0.95rem 1rem;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .metric-card strong {
+        display: block;
+        color: var(--accent-2);
+        font-size: 1.12rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .hero-panel {
+        padding: 1.1rem;
+        border-radius: 24px;
+        background: linear-gradient(135deg, rgba(9, 21, 36, 0.95), rgba(12, 27, 43, 0.9));
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-panel h3 {
+        margin-bottom: 0.8rem;
+      }
+
+      .section-heading {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: end;
+        margin-bottom: 1rem;
+      }
+
+      .section-heading h2 {
+        margin: 0.25rem 0 0;
+        font-size: clamp(1.16rem, 2.2vw, 1.44rem);
+      }
+
+      .section-summary {
+        list-style: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 1rem 1.1rem;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: linear-gradient(135deg, rgba(58, 96, 154, 0.16), rgba(104, 227, 255, 0.06));
+        margin-bottom: 0.8rem;
+      }
+
+      .section-summary:hover {
+        border-color: rgba(104, 227, 255, 0.25);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+      }
+
+      .section-summary::before {
+        content: attr(data-label);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 3.2rem;
+        padding: 0.34rem 0.56rem;
+        border-radius: 999px;
+        border: 1px solid rgba(104, 227, 255, 0.18);
+        color: var(--accent-2);
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        margin-right: 0.6rem;
+      }
+
+      .section-summary .section-heading {
+        flex: 1;
+        margin-bottom: 0;
+      }
+
+      .section-summary .section-heading h2 {
+        font-size: clamp(0.96rem, 1.6vw, 1.14rem);
+      }
+
+      .section-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.95rem;
+        height: 1.95rem;
+        border-radius: 999px;
+        border: 1px solid rgba(104, 227, 255, 0.18);
+        color: var(--accent-2);
+        font-size: 1.05rem;
+        flex-shrink: 0;
+      }
+
+      .section-panel[open] .section-toggle {
+        transform: rotate(45deg);
+      }
+
+      .section-content {
+        padding: 0.2rem 0 0.6rem;
+      }
+
+      .card,
+      .stat-card,
+      .timeline-item,
+      .project-card,
+      .service-card,
+      .contact-card,
+      .recommendation-card,
+      .value-card,
+      .metric,
+      .stack-step,
+      .stack-domain,
+      .proof-kpi,
+      .process-step,
+      .about-profile-card,
+      .about-professional-card,
+      .about-philosophy-card,
+      .engineering-step,
+      .about-focus {
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+      }
+
+      .project-card {
+        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(104, 227, 255, 0.24);
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.2);
+      }
+
+      .project-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-filter {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 999px;
+        padding: 0.48rem 0.76rem;
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 0.9rem;
+      }
+
+      .project-filter.active {
+        color: var(--text);
+        border-color: rgba(104, 227, 255, 0.3);
+        background: rgba(104, 227, 255, 0.1);
+      }
+
+      .project-card[data-hidden="true"] {
+        display: none;
+      }
+
+      .project-case-study {
+        margin-top: 0.95rem;
+        padding: 0.95rem 1rem;
+        border-radius: 14px;
+        border: 1px solid rgba(104, 227, 255, 0.18);
+        background: rgba(104, 227, 255, 0.08);
+      }
+
+      .project-case-study strong {
+        display: block;
+        color: var(--accent-2);
+        margin-bottom: 0.35rem;
+      }
+
+      .about-direction,
+      .about-philosophy-card,
+      .service-flow,
+      .service-proof,
+      .service-cta,
+      .contact-card {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
+      }
+
+      .about-engineering-flow {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 0.65rem;
+      }
+
+      .engineering-step {
+        padding: 0.9rem;
+      }
+
+      .about-focus-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      .about-focus {
+        padding: 0.95rem;
+      }
+
+      .pill,
+      .repo-chip,
+      .proficiency-pill {
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.78rem 1.08rem;
+        border-radius: 999px;
+        font-weight: 700;
+        transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #03111f;
+      }
+
+      .btn-secondary {
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: var(--text);
+      }
+
+      .filter-pill {
+        font-size: 0.84rem;
+        padding: 0.38rem 0.66rem;
+      }
+
+      @keyframes drift {
+        from { transform: translate3d(0, 0, 0) scale(1); }
+        to { transform: translate3d(16px, -20px, 0) scale(1.08); }
+      }
+
+      @media (max-width: 900px) {
+        .hero,
+        .about-grid,
+        .featured-project,
+        .projects-grid,
+        .expertise-grid,
+        .services-grid,
+        .leadership-grid,
+        .cert-grid,
+        .contact-grid,
+        .stack-hierarchy,
+        .stack-matrix,
+        .stack-domain-grid,
+        .recommendation-grid,
+        .process-grid,
+        .proof-kpis,
+        .hero-metrics,
+        .about-focus-grid,
+        .about-engineering-flow {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          gap: 1rem;
+        }
+
+        .nav-links {
+          display: none;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .section-toolbar {
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
+
+        .hero-main,
+        .hero-panel {
+          padding: 1rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header>
+    <div id="cursor-glow" aria-hidden="true"></div>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="page-shell">
+      <header>
       <div class="container">
         <nav>
           <a class="brand" href="#home">Alimul Fazal Nabil</a>
@@ -1411,80 +2049,75 @@
             </details>
             <a href="#contact">Contact</a>
           </div>
+          <a class="nav-cta" href="cv.html">Download CV</a>
         </nav>
       </div>
     </header>
 
+    <div class="section-toolbar container" aria-label="Section controls">
+      <button class="toolbar-btn" type="button" data-action="expand">Expand All</button>
+      <button class="toolbar-btn" type="button" data-action="collapse">Collapse All</button>
+    </div>
+
     <main id="home">
       <section class="container hero">
-        <div>
+        <div class="hero-main">
           <div class="hero-profile">
             <img class="hero-avatar" src="https://alimulfazalnabil.github.io/profile.jpg" alt="Alimul Fazal Nabil" loading="eager" />
             <div>
               <h2 class="hero-name">Alimul Fazal Nabil</h2>
-              <p class="hero-role">Senior Technology Leader · Cloud, DevOps, AI, Data & Robotics</p>
+              <p class="hero-role">Infrastructure & Cloud Systems Engineer · AI Solutions · DevOps · Robotics</p>
             </div>
           </div>
-          <span class="eyebrow">Senior Technology Leader</span>
-          <h1>I design, automate, and deliver technology solutions that improve reliability, accelerate execution, and create business value.</h1>
+          <span class="hero-badge">Engineering Command Center</span>
+          <h1>Designing the infrastructure, intelligence, and automation behind modern technology.</h1>
           <p>
-            I bridge cloud, DevOps, AI, data, robotics, and product delivery to turn complex business and technical challenges into dependable systems and measurable outcomes.
+            I design, build, automate, and lead technology solutions across cloud infrastructure, DevOps, AI, data, robotics, and digital products.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://alimulfazalnabil.github.io/#projects">Explore My Work</a>
-            <a class="btn btn-secondary" href="https://alimulfazalnabil.github.io/#contact">Download CV</a>
+            <a class="btn btn-primary" href="#projects">Explore My Work</a>
+            <a class="btn btn-secondary" href="cv.html">Download CV</a>
           </div>
-          <div class="stats">
-            <div class="stat-card">
-              <strong>Operational Reliability</strong>
-              <span>Systems designed to keep services stable and support continuity</span>
-            </div>
-            <div class="stat-card">
-              <strong>Automation-First Delivery</strong>
-              <span>Workflows that reduce repetition and improve execution speed</span>
-            </div>
-            <div class="stat-card">
-              <strong>Cross-Functional Scope</strong>
-              <span>Cloud, DevOps, AI, data, robotics, and product thinking</span>
-            </div>
-            <div class="stat-card">
-              <strong>Business Alignment</strong>
-              <span>Solutions tied to cost, speed, quality, and growth outcomes</span>
-            </div>
+          <div class="hero-meta">
+            <a href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span>·</span>
+            <a href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span>·</span>
+            <a href="mailto:alimul.nabil@gmail.com">Email</a>
           </div>
-          <div class="impact-strip">
-            <div class="impact-chip">
-              <strong>Faster Delivery</strong>
-              <span>Automation and repeatable workflows that shorten release cycles.</span>
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <strong>7+ YEARS</strong>
+              <span>Technology Experience</span>
             </div>
-            <div class="impact-chip">
-              <strong>Lower Friction</strong>
-              <span>Systems and assistants that remove manual steps and wasted effort.</span>
+            <div class="metric-card">
+              <strong>99.9%</strong>
+              <span>Infrastructure Availability Experience</span>
             </div>
-            <div class="impact-chip">
-              <strong>Better Decisions</strong>
-              <span>Data, AI, and dashboards that make operations easier to act on.</span>
+            <div class="metric-card">
+              <strong>45%</strong>
+              <span>Manual Work Reduction</span>
             </div>
-            <div class="impact-chip">
-              <strong>Business Alignment</strong>
-              <span>Architecture and delivery tied to outcomes, not just features.</span>
+            <div class="metric-card">
+              <strong>END-TO-END</strong>
+              <span>Engineering & Delivery</span>
             </div>
           </div>
         </div>
-        <div class="card">
-          <h3>How I Create Value</h3>
+        <div class="hero-panel">
+          <h3>System Profile</h3>
           <div class="domain-grid" style="grid-template-columns: 1fr; margin-top: 1rem;">
             <div class="card">
               <h3>Cloud & Infrastructure</h3>
-              <p>Stable platforms that improve uptime, security, and scalability.</p>
+              <p>Resilient platforms that improve uptime, security, and scalability.</p>
             </div>
             <div class="card">
               <h3>DevOps & Platform</h3>
-              <p>Automation and delivery pipelines that reduce risk and speed up releases.</p>
+              <p>Automation and delivery pipelines that reduce risk and accelerate release cycles.</p>
             </div>
             <div class="card">
               <h3>AI & Data</h3>
-              <p>Insights and intelligent systems that support better decisions.</p>
+              <p>Intelligent systems that support operational decision-making and product value.</p>
             </div>
             <div class="card">
               <h3>Robotics & IoT</h3>
@@ -1492,11 +2125,11 @@
             </div>
             <div class="card">
               <h3>Digital Products</h3>
-              <p>Practical product delivery that turns ideas into usable solutions.</p>
+              <p>Practical delivery from concept to product, platform, and operations.</p>
             </div>
             <div class="card">
               <h3>Leadership</h3>
-              <p>Clear technical direction that keeps teams aligned and moving forward.</p>
+              <p>Technical direction that keeps teams aligned and execution moving.</p>
             </div>
           </div>
         </div>
@@ -2025,9 +2658,19 @@
             <h2>Selected GitHub projects that show how I deliver value.</h2>
           </div>
         </div>
-        <p class="section-note">Short, visual snapshots of the most relevant projects. The flagship MoviSabio card groups the repositories that best demonstrate your AI, cloud, data, and robotics skillset.</p>
+        <p class="section-note">Short, visual snapshots of the most relevant projects. The flagship MoviSabio card groups the repositories that best demonstrate the AI, cloud, data, and robotics capability set.</p>
+        <div class="project-filters" role="tablist" aria-label="Project filters">
+          <button class="project-filter active" type="button" data-filter="all">All</button>
+          <button class="project-filter" type="button" data-filter="cloud">Cloud</button>
+          <button class="project-filter" type="button" data-filter="devops">DevOps</button>
+          <button class="project-filter" type="button" data-filter="ai">AI</button>
+          <button class="project-filter" type="button" data-filter="data">Data</button>
+          <button class="project-filter" type="button" data-filter="robotics">Robotics</button>
+          <button class="project-filter" type="button" data-filter="fullstack">Full Stack</button>
+          <button class="project-filter" type="button" data-filter="automation">Automation</button>
+        </div>
         <div class="projects-grid">
-          <article class="project-card project-photo-card featured">
+          <article class="project-card project-photo-card featured" data-category="ai cloud data robotics">
             <div class="project-cover">
               <span>01 • Flagship</span>
               <strong>MoviSabio</strong>
@@ -2043,6 +2686,10 @@
                 <div class="metric"><strong>Azure Cloud</strong><span>Platform delivery</span></div>
                 <div class="metric"><strong>Data / Python</strong><span>Pipelines and logic</span></div>
               </div>
+              <div class="project-case-study">
+                <strong>Case Study</strong>
+                <span>Business problem → system requirements → architecture → implementation → deployment → monitoring → impact.</span>
+              </div>
               <div class="repo-chip-grid">
                 <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Computer-Vision-Projects" target="_blank" rel="noopener noreferrer">Computer Vision</a>
                 <a class="repo-chip" href="https://github.com/alimulfazalnabil/YOLO_Projects" target="_blank" rel="noopener noreferrer">YOLO</a>
@@ -2055,7 +2702,7 @@
               </div>
             </div>
           </article>
-          <article class="project-card project-photo-card">
+          <article class="project-card project-photo-card" data-category="automation fullstack">
             <div class="project-cover alt">
               <span>02 • Automation</span>
               <strong>Automation & Python</strong>
@@ -2070,7 +2717,7 @@
               </div>
             </div>
           </article>
-          <article class="project-card project-photo-card">
+          <article class="project-card project-photo-card" data-category="cloud devops fullstack">
             <div class="project-cover green">
               <span>03 • Cloud</span>
               <strong>Azure & API Systems</strong>
@@ -2086,7 +2733,7 @@
               </div>
             </div>
           </article>
-          <article class="project-card project-photo-card">
+          <article class="project-card project-photo-card" data-category="data robotics">
             <div class="project-cover gold">
               <span>04 • Data & Robotics</span>
               <strong>Data, IoT & Robotics</strong>
@@ -2611,7 +3258,24 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Wrap each content section in a collapsible panel with a visible toggle.
+      const sectionLabels = {
+        about: "01 / ABOUT",
+        expertise: "02 / EXPERTISE",
+        experience: "03 / EXPERIENCE",
+        projects: "04 / PROJECTS",
+        services: "05 / SERVICES",
+        leadership: "06 / LEADERSHIP",
+        publications: "07 / PUBLICATIONS",
+        stack: "08 / TECH STACK",
+        certifications: "09 / CERTIFICATIONS",
+        volunteering: "10 / VOLUNTEERING",
+        recommendations: "11 / RECOMMENDATIONS",
+        languages: "12 / LANGUAGES",
+        education: "13 / EDUCATION",
+        value: "14 / VALUE",
+        contact: "15 / CONTACT"
+      };
+
       const sectionContainers = Array.from(document.querySelectorAll("main > section.container, main > section.hero"));
       sectionContainers.forEach((section) => {
         if (section.querySelector(".section-panel") || !section.querySelector(".section-heading")) {
@@ -2625,7 +3289,8 @@
 
         const summary = document.createElement("summary");
         summary.className = "section-summary";
-        summary.innerHTML = heading.innerHTML + '<span class="section-toggle" aria-hidden="true"></span>';
+        summary.dataset.label = sectionLabels[section.id] || "SECTION";
+        summary.innerHTML = '<div class="section-heading">' + heading.innerHTML + '</div><span class="section-toggle" aria-hidden="true"></span>';
 
         const content = document.createElement("div");
         content.className = "section-content";
@@ -2642,7 +3307,6 @@
         section.appendChild(details);
       });
 
-      // Recruiter-first section flow requested by the portfolio owner.
       const sectionOrder = [
         "about",
         "expertise",
@@ -2673,10 +3337,70 @@
         }
       }
 
-      // Keep any future sections that are not listed above.
       for (const section of byId.values()) {
         main.appendChild(section);
       }
+
+      const detailsList = Array.from(document.querySelectorAll(".section-panel"));
+      detailsList.forEach((panel) => {
+        const summary = panel.querySelector("summary");
+        if (!summary) return;
+        summary.setAttribute("role", "button");
+        summary.setAttribute("aria-expanded", panel.open ? "true" : "false");
+        summary.setAttribute("aria-controls", `${panel.id || "section"}`);
+        panel.addEventListener("toggle", () => {
+          summary.setAttribute("aria-expanded", panel.open ? "true" : "false");
+        });
+      });
+
+      document.querySelectorAll("[data-action]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const expand = button.dataset.action === "expand";
+          detailsList.forEach((panel) => {
+            panel.open = expand;
+            panel.querySelector("summary")?.setAttribute("aria-expanded", expand ? "true" : "false");
+          });
+        });
+      });
+
+      const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
+      const sectionIds = Array.from(document.querySelectorAll("main section[id]"));
+      const updateActiveLink = () => {
+        const scrollY = window.scrollY + 130;
+        let activeId = "home";
+        sectionIds.forEach((section) => {
+          if (scrollY >= section.offsetTop) {
+            activeId = section.id;
+          }
+        });
+        navLinks.forEach((link) => {
+          const href = link.getAttribute("href");
+          link.classList.toggle("active", href === `#${activeId}`);
+        });
+      };
+      window.addEventListener("scroll", updateActiveLink, { passive: true });
+      updateActiveLink();
+
+      const glow = document.getElementById("cursor-glow");
+      document.addEventListener("mousemove", (event) => {
+        glow.style.left = `${event.clientX}px`;
+        glow.style.top = `${event.clientY}px`;
+      });
+
+      const projectFilters = Array.from(document.querySelectorAll(".project-filter"));
+      projectFilters.forEach((button) => {
+        button.addEventListener("click", () => {
+          projectFilters.forEach((item) => item.classList.remove("active"));
+          button.classList.add("active");
+          const filter = button.dataset.filter || "all";
+          document.querySelectorAll(".project-card").forEach((card) => {
+            const categories = card.dataset.category || "";
+            const visible = filter === "all" || categories.includes(filter);
+            card.setAttribute("data-hidden", visible ? "false" : "true");
+          });
+        });
+      });
     </script>
+    </div>
   </body>
 </html>
