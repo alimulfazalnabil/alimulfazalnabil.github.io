@@ -283,6 +283,46 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .featured-project {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .featured-panel {
+        padding: 1.4rem;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+      }
+
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .metric {
+        padding: 0.9rem;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--border);
+      }
+
+      .metric strong {
+        display: block;
+        margin-bottom: 0.25rem;
+        color: var(--accent-2);
+      }
+
+      .feature-list {
+        margin: 0.9rem 0 0;
+        padding-left: 1.15rem;
+        color: var(--muted);
+      }
+
       .project-card {
         padding: 1.3rem;
       }
@@ -344,6 +384,7 @@
         .about-grid,
         .contact-grid,
         .projects-grid,
+        .featured-project,
         .expertise-grid,
         .leadership-grid,
         .cert-grid,
@@ -581,11 +622,46 @@
             <h2>Featured work framed around business problems, technical execution, and measurable outcomes.</h2>
           </div>
         </div>
+        <div class="featured-project">
+          <div class="featured-panel">
+            <span class="tag">Flagship Project</span>
+            <h3>MoviSabio</h3>
+            <p>
+              A territorial intelligence platform that turns fragmented urban and rural data into actionable insight for mobility, sustainability, and operations.
+            </p>
+            <ul class="feature-list">
+              <li>Combines AI, IoT, GIS, digital twins, and cloud infrastructure into one decision layer.</li>
+              <li>Supports smarter traffic coordination, environmental monitoring, and operational planning.</li>
+              <li>Designed as a scalable SaaS platform with pilot regions in Campinas and Montevideo.</li>
+            </ul>
+          </div>
+          <div class="featured-panel">
+            <h3>What it demonstrates</h3>
+            <div class="metric-grid">
+              <div class="metric">
+                <strong>Smart Mobility</strong>
+                <span>Traffic flow optimization and signal coordination</span>
+              </div>
+              <div class="metric">
+                <strong>Digital Twins</strong>
+                <span>Simulation-first planning before live rollout</span>
+              </div>
+              <div class="metric">
+                <strong>Data Integration</strong>
+                <span>OpenStreetMap, sensors, and operational data</span>
+              </div>
+              <div class="metric">
+                <strong>Business Model</strong>
+                <span>SaaS, DaaS, consulting, and smart hardware</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="projects-grid">
           <article class="project-card">
-            <span class="tag">AI / Mobility / Data</span>
+            <span class="tag">AI / Mobility / Territorial Intelligence</span>
             <h3>MoviSabio</h3>
-            <p>An AI-driven mobility platform designed to improve traffic flow, support smarter decisions, and turn urban data into operational insight.</p>
+            <p>An AI-driven mobility platform designed to improve traffic flow, support smarter decisions, and turn territorial data into operational insight.</p>
           </article>
           <article class="project-card">
             <span class="tag">AI / Automation / Cloud</span>
