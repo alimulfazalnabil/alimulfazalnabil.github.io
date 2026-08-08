@@ -352,6 +352,30 @@
         font-size: 0.9rem;
       }
 
+      .profile-photo-card {
+        overflow: hidden;
+      }
+
+      .profile-photo-wrap {
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .profile-photo {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .profile-photo-note {
+        margin-top: 0.55rem;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
       .timeline {
         display: grid;
         gap: 1rem;
@@ -1162,7 +1186,16 @@
               <span class="pill">Delivery</span>
             </div>
           </div>
-          <div class="card">
+          <div class="card profile-photo-card">
+            <div class="profile-photo-wrap">
+              <img
+                class="profile-photo"
+                src="https://ui-avatars.com/api/?name=Alimul+Fazal+Nabil&size=900&background=0d1b2e&color=6ee7f9&bold=true"
+                alt="Alimul Fazal Nabil profile photo"
+                loading="lazy"
+              />
+            </div>
+            <p class="profile-photo-note">Add your direct image URL or local image path here to replace the current profile placeholder.</p>
             <h3>Engineering Philosophy</h3>
             <p>
               Requirements → Architecture → Implementation → Automation → Testing → Deployment → Monitoring → Continuous Improvement.
