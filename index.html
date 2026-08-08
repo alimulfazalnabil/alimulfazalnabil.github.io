@@ -602,7 +602,7 @@
       }
 
       .project-card {
-        padding: 0.8rem 0.9rem;
+        padding: 0;
         width: 100%;
         text-align: left;
         color: inherit;
@@ -611,43 +611,63 @@
         border-radius: 16px;
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
-        cursor: pointer;
-        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+        overflow: hidden;
       }
 
       .project-card:hover {
-        transform: translateY(-1px);
         border-color: rgba(110, 231, 249, 0.35);
         box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
       }
 
-      .project-card:focus-visible {
-        outline: 2px solid var(--accent-2);
-        outline-offset: 3px;
+      .project-card summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 0.9rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.8rem;
+        font-weight: 700;
+      }
+
+      .project-card summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .project-card summary strong {
+        font-size: 1.02rem;
+        color: var(--text);
+      }
+
+      .project-card summary span:last-child {
+        color: var(--accent-2);
+        font-size: 1.1rem;
+        font-weight: 700;
+        min-width: 1.2rem;
+        text-align: center;
+      }
+
+      .project-card[open] summary span:last-child {
+        content: "−";
+      }
+
+      .project-card .card-meta {
+        color: var(--muted);
+        margin: 0.25rem 0 0;
+        font-size: 0.9rem;
+      }
+
+      .project-card .card-body {
+        padding: 0 1rem 1rem;
+        color: var(--muted);
       }
 
       .project-card .tag {
         color: var(--accent-2);
         font-size: 0.78rem;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.25rem;
         display: block;
         letter-spacing: 0.03em;
-      }
-
-      .project-card .card-meta {
-        color: var(--muted);
-        margin: 0.1rem 0 0.45rem;
-        font-size: 0.9rem;
-      }
-
-      .project-card .card-preview {
-        color: var(--accent-2);
-        font-weight: 600;
-        margin-top: 0.9rem;
-      }
-
-      .card-details {
-        display: none;
       }
 
 
@@ -1258,24 +1278,27 @@
           </div>
         </div>
         <div class="projects-grid">
-          <article class="project-card">
-            <span class="tag">Since 03/2026</span>
-            <h3>AI and Machine Learning Instructor</h3>
-            <p class="card-meta">ReDI School of Digital Integration · Remote · Berlin, Germany</p>
-            <p>Teaching AI, data, and digital skills to diverse learners while shaping practical training content and assessment approaches.</p>
-          </article>
-          <article class="project-card">
-            <span class="tag">Feb 2019 – Present</span>
-            <h3>IT Support Engineer</h3>
-            <p class="card-meta">Energy Crown Bangladesh · Full Time · Cox's Bazar</p>
-            <p>Supported IT operations, training facilities, and community technology programs with a strong focus on reliability and service delivery.</p>
-          </article>
-          <article class="project-card">
-            <span class="tag">Feb 2021 – Present</span>
-            <h3>AutoCAD Operator & Designer</h3>
-            <p class="card-meta">Building Engineers and Architects · Contract · Cox's Bazar</p>
-            <p>Handled design coordination, documentation, and project support tasks with a practical and organised approach.</p>
-          </article>
+          <details class="project-card">
+            <summary><strong>AI and Machine Learning Instructor</strong><span>+</span></summary>
+            <div class="card-body">
+              <span class="tag">Since 03/2026 · ReDI School of Digital Integration · Remote · Berlin, Germany</span>
+              <p class="card-meta">Teaching AI, data, and digital skills to diverse learners while shaping practical training content and assessment approaches.</p>
+            </div>
+          </details>
+          <details class="project-card">
+            <summary><strong>IT Support Engineer</strong><span>+</span></summary>
+            <div class="card-body">
+              <span class="tag">Feb 2019 – Present · Energy Crown Bangladesh · Full Time · Cox's Bazar</span>
+              <p class="card-meta">Supported IT operations, training facilities, and community technology programs with a strong focus on reliability and service delivery.</p>
+            </div>
+          </details>
+          <details class="project-card">
+            <summary><strong>AutoCAD Operator & Designer</strong><span>+</span></summary>
+            <div class="card-body">
+              <span class="tag">Feb 2021 – Present · Building Engineers and Architects · Contract · Cox's Bazar</span>
+              <p class="card-meta">Handled design coordination, documentation, and project support tasks with a practical and organised approach.</p>
+            </div>
+          </details>
         </div>
       </section>
 
