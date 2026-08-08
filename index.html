@@ -2737,7 +2737,7 @@
     <main id="home"><section class="container hero">
         <div class="hero-main">
           <div class="hero-profile">
-            <img class="hero-avatar" src="./assets/images/profile.jpg" alt="Alimul Fazal Nabil" loading="eager" onerror="console.error('Profile image failed to load:', this.src)" />
+            <img class="hero-avatar" src="./assets/images/profile.jpg" alt="Alimul Fazal Nabil" loading="eager" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='https://alimulfazalnabil.github.io/assets/images/profile.jpg';} console.error('Profile image failed to load:', this.src)" />
             <div>
               <h2 class="hero-name">Alimul Fazal Nabil</h2>
               <p class="hero-role">Infrastructure & Cloud Systems Engineer · AI Solutions · DevOps · Robotics</p>
@@ -2829,7 +2829,7 @@
               src="./assets/images/profile.jpg"
               alt="Alimul Fazal Nabil"
               loading="lazy"
-              onerror="console.error('Profile image failed to load:', this.src)"
+              onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='https://alimulfazalnabil.github.io/assets/images/profile.jpg';} console.error('Profile image failed to load:', this.src)"
             />
 
             <h3>Alimul Fazal Nabil</h3>
