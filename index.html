@@ -635,6 +635,50 @@
         color: #ffe0a3;
       }
 
+      .recommendation-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .recommendation-card {
+        padding: 1.2rem;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .recommendation-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .recommendation-meta {
+        display: block;
+        margin-top: 0.7rem;
+        color: var(--accent-2);
+        font-size: 0.86rem;
+      }
+
+      .recommendation-list details {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.04);
+        padding: 0.9rem 1rem;
+      }
+
+      .recommendation-list summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .recommendation-list ul {
+        margin: 0.85rem 0 0;
+        padding-left: 1.15rem;
+        color: var(--muted);
+      }
+
       form {
         display: grid;
         gap: 0.8rem;
@@ -673,7 +717,8 @@
         .domain-grid,
         .stack-hierarchy,
         .stack-matrix,
-        .stack-domain-grid {
+        .stack-domain-grid,
+        .recommendation-grid {
           grid-template-columns: 1fr;
         }
       }
@@ -710,6 +755,7 @@
             <a href="#stack">Tech Stack</a>
             <a href="#projects">Projects</a>
             <a href="#leadership">Leadership</a>
+            <a href="#recommendations">Recommendations</a>
             <a href="#contact">Contact</a>
           </div>
         </nav>
@@ -1266,6 +1312,53 @@
             <h3>Product Alignment</h3>
             <p>I connect engineering work to user value, operational impact, and product thinking rather than treating implementation as an isolated task.</p>
           </div>
+        </div>
+      </section>
+
+      <section id="recommendations" class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Recommendations</span>
+            <h2>Peer and leadership endorsements from LinkedIn.</h2>
+          </div>
+        </div>
+        <p class="section-note">10 public recommendations highlighting cross-border strategy, cloud infrastructure delivery, and collaborative leadership.</p>
+        <div class="recommendation-grid">
+          <article class="recommendation-card">
+            <p>
+              "A forward-thinking catalyst for cross-border innovation with strategic clarity and proactive leadership across international technology ecosystems."
+            </p>
+            <span class="recommendation-meta">Douglas Amante · Entrepreneurial Diplomat · August 2026</span>
+          </article>
+          <article class="recommendation-card">
+            <p>
+              "Strong expertise in Azure cloud and infrastructure engineering with hands-on high-availability systems, Terraform, Python, PowerShell automation, and hybrid cloud delivery."
+            </p>
+            <span class="recommendation-meta">Md Fajle Rabbe · Data and Humanitarian Operations · April 2026</span>
+          </article>
+          <article class="recommendation-card">
+            <p>
+              "Productive in engineering projects, eager to explore knowledge, and actively engaged in social impact with dependable teamwork."
+            </p>
+            <span class="recommendation-meta">Sayed Bin Osman · Research and Robotics Mentor · July 2020</span>
+          </article>
+        </div>
+        <div class="recommendation-list">
+          <details>
+            <summary>View all recommendations</summary>
+            <ul>
+              <li>Douglas Amante: Recognized cross-border innovation leadership and ability to adapt high-potential technology models across Europe and LATAM markets.</li>
+              <li>Md Fajle Rabbe: Highlighted disciplined execution, real-world implementation focus, and strong cloud/infrastructure capabilities.</li>
+              <li>Anas Azmayeen Zamee: Endorsed self-driven robotics work, scratch-built projects, and practical design/controller skills.</li>
+              <li>Engr. Saeydul Amin: Noted system and network administration strength, IoT capability, and operational troubleshooting excellence.</li>
+              <li>MD Nezam: Recognized quick learning ability with professional and collaborative conduct.</li>
+              <li>Salamate Ullah: Praised data engineering fundamentals (SQL, Python, Spark, Hadoop) and strong data-driven problem solving.</li>
+              <li>Md. Asadullahil Galib: Commended critical thinking, learning commitment, leadership traits, and collaborative influence.</li>
+              <li>Abu Talha Bin Dil Chowdhury: Highlighted adaptability, communication, pressure-handling, and consistent delivery quality.</li>
+              <li>Md. Mohi Uddin: Shared professional encouragement from direct team collaboration.</li>
+              <li>Sayed Bin Osman: Endorsed productivity, technical curiosity, and active contribution to both engineering and social work.</li>
+            </ul>
+          </details>
         </div>
       </section>
 
