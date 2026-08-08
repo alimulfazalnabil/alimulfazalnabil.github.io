@@ -700,9 +700,53 @@
       }
 
       footer {
-        padding: 2rem 0 3rem;
+        padding: 2.2rem 0 2.4rem;
         color: var(--muted);
-        text-align: center;
+        border-top: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 1rem;
+        align-items: start;
+      }
+
+      .footer-brand {
+        margin: 0;
+        color: var(--text);
+        font-size: 1.05rem;
+      }
+
+      .footer-role {
+        margin: 0.2rem 0 0.75rem;
+      }
+
+      .footer-meta {
+        margin-top: 0.9rem;
+        font-size: 0.9rem;
+      }
+
+      .footer-link-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.55rem;
+      }
+
+      .footer-link-list a {
+        padding: 0.42rem 0.75rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        color: var(--text);
+        font-size: 0.88rem;
+        font-weight: 600;
+      }
+
+      .footer-link-list a:hover {
+        border-color: rgba(110, 231, 249, 0.6);
+        color: var(--accent-2);
       }
 
       @media (max-width: 900px) {
@@ -720,6 +764,14 @@
         .stack-domain-grid,
         .recommendation-grid {
           grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-link-list {
+          justify-content: flex-start;
         }
       }
 
@@ -1603,7 +1655,20 @@
 
     <footer>
       <div class="container">
-        <p>© <span id="year"></span> Alimul Fazal Nabil. Engineering portfolio.</p>
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">Alimul Fazal Nabil</p>
+            <p class="footer-role">Senior Technology Leader · Cloud, DevOps, AI, Data, Robotics</p>
+            <p class="footer-meta">© <span id="year"></span> Alimul Fazal Nabil. All rights reserved.</p>
+          </div>
+          <div class="footer-link-list">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:hello@example.com">Email</a>
+          </div>
+        </div>
       </div>
     </footer>
 
