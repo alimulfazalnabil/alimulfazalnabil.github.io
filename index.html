@@ -2612,7 +2612,7 @@
         const heading = section.querySelector(".section-heading");
         const details = document.createElement("details");
         details.className = "section-panel";
-        details.open = false;
+        details.open = section.id === "about";
 
         const summary = document.createElement("summary");
         summary.className = "section-summary";
