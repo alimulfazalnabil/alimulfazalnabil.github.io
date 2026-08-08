@@ -413,7 +413,188 @@
       }
 
       .about-grid {
-        grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+        grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.35fr);
+        align-items: stretch;
+      }
+
+      .about-profile-card,
+      .about-professional-card,
+      .about-philosophy-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-profile-card {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .about-profile-card h3 {
+        margin: 1rem 0 0.25rem;
+        font-size: 1.35rem;
+      }
+
+      .about-profile-card p {
+        color: var(--muted);
+      }
+
+      .about-profile-card .card-meta {
+        margin-top: 0;
+        color: var(--accent-2);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .about-highlights {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+        margin-top: auto;
+        padding-top: 1.25rem;
+      }
+
+      .about-highlight {
+        padding: 0.85rem;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.025);
+      }
+
+      .about-highlight strong {
+        display: block;
+        color: var(--accent-2);
+        font-size: 1.05rem;
+      }
+
+      .about-highlight span {
+        display: block;
+        margin-top: 0.15rem;
+        color: var(--muted);
+        font-size: 0.75rem;
+        line-height: 1.35;
+      }
+
+      .about-professional-card > p {
+        color: var(--muted);
+      }
+
+      .about-focus-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+        margin-top: 1.25rem;
+      }
+
+      .about-focus {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.7rem;
+        padding: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.025);
+      }
+
+      .about-focus-number {
+        display: grid;
+        place-items: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: rgba(79, 140, 255, 0.12);
+        color: var(--accent-2);
+        font-size: 0.75rem;
+        font-weight: 800;
+      }
+
+      .about-focus h4 {
+        margin: 0 0 0.25rem;
+        font-size: 0.95rem;
+      }
+
+      .about-focus p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.5;
+      }
+
+      .about-philosophy-card {
+        margin-top: 1.25rem;
+      }
+
+      .about-philosophy-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: end;
+      }
+
+      .about-philosophy-header h3 {
+        margin: 0.35rem 0 0;
+        font-size: 1.35rem;
+      }
+
+      .about-philosophy-header > p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .about-engineering-flow {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0.65rem;
+        margin-top: 1.5rem;
+      }
+
+      .engineering-step {
+        min-height: 150px;
+        padding: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.025);
+      }
+
+      .engineering-step > span {
+        display: block;
+        margin-bottom: 1rem;
+        color: var(--accent-2);
+        font-size: 0.75rem;
+        font-weight: 800;
+      }
+
+      .engineering-step strong {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-size: 0.9rem;
+      }
+
+      .engineering-step small {
+        display: block;
+        color: var(--muted);
+        font-size: 0.76rem;
+        line-height: 1.45;
+      }
+
+      .about-direction {
+        display: grid;
+        grid-template-columns: 0.9fr 1.5fr;
+        gap: 1.25rem;
+        margin-top: 1.25rem;
+        padding: 1.5rem;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(79, 140, 255, 0.08), rgba(110, 231, 249, 0.025));
+      }
+
+      .about-direction h3 {
+        margin: 0.35rem 0 0;
+        font-size: 1.2rem;
+      }
+
+      .about-direction p {
+        margin: 0;
+        color: var(--muted);
       }
 
       .value-grid {
@@ -1348,23 +1529,199 @@
         <div class="section-heading">
           <div>
             <span class="eyebrow">About</span>
-            <h2>Engineering with business context, operational discipline, and measurable delivery focus.</h2>
+            <h2>
+              Infrastructure, Cloud, DevOps, AI, and Robotics engineering
+              focused on building reliable systems and measurable business value.
+            </h2>
           </div>
         </div>
+
         <div class="about-grid">
-          <div class="card">
-            <img class="profile-inline" src="https://alimulfazalnabil.github.io/profile.jpg?v=20260808" alt="Alimul Fazal Nabil profile" loading="eager" />
-            <h3>Experience</h3>
-          </div>
-          <div class="card">
-            <h3>Engineering Philosophy</h3>
-            <p>
-              Requirements → Architecture → Implementation → Automation → Testing → Deployment → Monitoring → Continuous Improvement.
+          <div class="card about-profile-card">
+            <img
+              class="profile-inline"
+              src="https://alimulfazalnabil.github.io/profile.jpg?v=20260808"
+              alt="Alimul Fazal Nabil"
+              loading="eager"
+            />
+
+            <h3>Alimul Fazal Nabil</h3>
+
+            <p class="card-meta">
+              Infrastructure & Cloud Engineer · DevOps · AI & Data · Robotics
             </p>
+
             <p>
-              This mindset keeps the focus on quality, resilience, and business impact from planning through delivery and operations.
+              I am an engineering professional with 7+ years of experience
+              working across infrastructure, cloud platforms, IT operations,
+              automation, data, artificial intelligence, and robotics.
+            </p>
+
+            <p>
+              My work combines hands-on engineering with systems thinking:
+              designing reliable infrastructure, automating operational
+              processes, developing intelligent applications, and translating
+              technical requirements into practical solutions.
+            </p>
+
+            <div class="about-highlights">
+              <div class="about-highlight">
+                <strong>7+ Years</strong>
+                <span>Technology Experience</span>
+              </div>
+
+              <div class="about-highlight">
+                <strong>99.9%</strong>
+                <span>Infrastructure Availability Experience</span>
+              </div>
+
+              <div class="about-highlight">
+                <strong>45%</strong>
+                <span>Manual Work Reduced Through Automation</span>
+              </div>
+
+              <div class="about-highlight">
+                <strong>End-to-End</strong>
+                <span>Engineering & Delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card about-professional-card">
+            <h3>Professional Profile</h3>
+
+            <p>
+              I specialise in connecting infrastructure, software, data, and
+              intelligent systems into dependable technology platforms. My
+              experience spans cloud infrastructure, system administration,
+              DevOps automation, CI/CD, data engineering, machine learning,
+              computer vision, and robotics.
+            </p>
+
+            <p>
+              I approach engineering from both operational and architectural
+              perspectives. A solution should not only work—it should be
+              secure, observable, maintainable, scalable, and aligned with
+              the organisation's operational and business objectives.
+            </p>
+
+            <div class="about-focus-grid">
+              <div class="about-focus">
+                <span class="about-focus-number">01</span>
+                <div>
+                  <h4>Cloud & Infrastructure</h4>
+                  <p>
+                    Design and operate resilient infrastructure with a strong
+                    focus on availability, security, scalability, monitoring,
+                    and operational efficiency.
+                  </p>
+                </div>
+              </div>
+
+              <div class="about-focus">
+                <span class="about-focus-number">02</span>
+                <div>
+                  <h4>DevOps & Automation</h4>
+                  <p>
+                    Automate infrastructure, deployment, testing, monitoring,
+                    and operational workflows using modern DevOps practices.
+                  </p>
+                </div>
+              </div>
+
+              <div class="about-focus">
+                <span class="about-focus-number">03</span>
+                <div>
+                  <h4>AI, Data & Intelligent Systems</h4>
+                  <p>
+                    Build practical data and AI solutions spanning analytics,
+                    machine learning, computer vision, prediction, and
+                    intelligent decision systems.
+                  </p>
+                </div>
+              </div>
+
+              <div class="about-focus">
+                <span class="about-focus-number">04</span>
+                <div>
+                  <h4>Robotics & IoT</h4>
+                  <p>
+                    Apply software, sensors, computer vision, robotics, and
+                    automation to solve real-world engineering problems.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card about-philosophy-card">
+          <div class="about-philosophy-header">
+            <div>
+              <span class="eyebrow">Engineering Philosophy</span>
+              <h3>From problem definition to reliable production systems.</h3>
+            </div>
+
+            <p>
+              I follow a structured engineering lifecycle that keeps technical
+              execution connected to reliability, security, maintainability,
+              and measurable outcomes.
             </p>
           </div>
+
+          <div class="about-engineering-flow">
+            <div class="engineering-step">
+              <span>01</span>
+              <strong>Understand</strong>
+              <small>Requirements, constraints, risks, and desired outcomes</small>
+            </div>
+
+            <div class="engineering-step">
+              <span>02</span>
+              <strong>Architect</strong>
+              <small>Architecture, technology selection, security, and scalability</small>
+            </div>
+
+            <div class="engineering-step">
+              <span>03</span>
+              <strong>Build</strong>
+              <small>Clean implementation with engineering and delivery discipline</small>
+            </div>
+
+            <div class="engineering-step">
+              <span>04</span>
+              <strong>Automate</strong>
+              <small>Infrastructure, testing, deployment, and operational workflows</small>
+            </div>
+
+            <div class="engineering-step">
+              <span>05</span>
+              <strong>Validate</strong>
+              <small>Security, performance, reliability, quality, and scalability</small>
+            </div>
+
+            <div class="engineering-step">
+              <span>06</span>
+              <strong>Operate</strong>
+              <small>Monitoring, incident response, optimisation, and continuous improvement</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-direction">
+          <div>
+            <span class="eyebrow">Engineering Direction</span>
+            <h3>Building toward intelligent, cloud-native technology platforms.</h3>
+          </div>
+
+          <p>
+            My long-term engineering focus is at the intersection of
+            <strong>Cloud Infrastructure, DevOps, Data Engineering,
+            Artificial Intelligence, Computer Vision, and Robotics</strong>.
+            I am particularly interested in systems where reliable
+            infrastructure and intelligent software work together to solve
+            complex real-world problems.
+          </p>
         </div>
       </section>
 
