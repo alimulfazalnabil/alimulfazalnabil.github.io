@@ -75,6 +75,7 @@
         flex-wrap: wrap;
         gap: 1rem;
         font-size: 0.95rem;
+        align-items: center;
       }
 
       .nav-links a {
@@ -82,6 +83,47 @@
       }
 
       .nav-links a:hover {
+        color: var(--text);
+      }
+
+      .nav-more {
+        position: relative;
+      }
+
+      .nav-more summary {
+        list-style: none;
+        cursor: pointer;
+        color: var(--muted);
+      }
+
+      .nav-more summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .nav-more[open] summary,
+      .nav-more summary:hover {
+        color: var(--text);
+      }
+
+      .nav-more-menu {
+        position: absolute;
+        top: 1.45rem;
+        right: 0;
+        min-width: 220px;
+        display: grid;
+        gap: 0.45rem;
+        padding: 0.65rem;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: rgba(7, 17, 31, 0.97);
+      }
+
+      .nav-more-menu a {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .nav-more-menu a:hover {
         color: var(--text);
       }
 
@@ -679,6 +721,105 @@
         color: var(--muted);
       }
 
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .service-card {
+        padding: 1.2rem;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .service-card .service-number {
+        color: var(--accent-2);
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .service-card h3 {
+        margin: 0.35rem 0 0.5rem;
+        font-size: 1.15rem;
+      }
+
+      .service-card ul {
+        margin: 0.8rem 0 0;
+        padding-left: 1.15rem;
+        color: var(--muted);
+      }
+
+      .service-tech {
+        margin-top: 0.75rem;
+        font-size: 0.88rem;
+        color: var(--accent-2);
+      }
+
+      .service-flow,
+      .service-proof,
+      .service-cta {
+        margin-top: 1rem;
+        padding: 1.1rem 1.2rem;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin-top: 0.8rem;
+      }
+
+      .process-step {
+        padding: 0.8rem;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .process-step strong {
+        display: block;
+        color: var(--accent-2);
+        margin-bottom: 0.2rem;
+      }
+
+      .proof-kpis {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin-top: 0.8rem;
+      }
+
+      .proof-kpi {
+        padding: 0.85rem;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .proof-kpi strong {
+        display: block;
+        color: var(--accent-2);
+        margin-bottom: 0.22rem;
+      }
+
+      .service-cta-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: 0.85rem;
+      }
+
+      .service-cta-note {
+        margin-top: 0.7rem;
+        color: var(--muted);
+      }
+
       form {
         display: grid;
         gap: 0.8rem;
@@ -830,7 +971,10 @@
         .stack-hierarchy,
         .stack-matrix,
         .stack-domain-grid,
-        .recommendation-grid {
+        .recommendation-grid,
+        .services-grid,
+        .process-grid,
+        .proof-kpis {
           grid-template-columns: 1fr;
         }
 
@@ -870,14 +1014,21 @@
           <div class="nav-links">
             <a href="#about">About</a>
             <a href="#expertise">Expertise</a>
-            <a href="#stack">Tech Stack</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
             <a href="#leadership">Leadership</a>
             <a href="#publications">Publications</a>
-            <a href="#volunteering">Volunteering</a>
-            <a href="#recommendations">Recommendations</a>
-            <a href="#languages">Languages</a>
+            <details class="nav-more">
+              <summary>More</summary>
+              <div class="nav-more-menu">
+                <a href="#stack">Tech Stack</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#volunteering">Volunteering</a>
+                <a href="#recommendations">Recommendations</a>
+                <a href="#languages">Languages</a>
+              </div>
+            </details>
             <a href="#contact">Contact</a>
           </div>
         </nav>
@@ -1410,6 +1561,165 @@
         </div>
       </section>
 
+      <section id="services" class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Services</span>
+            <h2>From Strategy to Production</h2>
+          </div>
+        </div>
+        <p class="section-note">I help organizations design, build, automate, and modernize technology solutions across cloud infrastructure, software, AI, data, DevOps, and robotics.</p>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <h3>Cloud & Infrastructure</h3>
+            <p>Design and modernize reliable, secure, and scalable IT infrastructure.</p>
+            <ul>
+              <li>Azure cloud architecture, hybrid infrastructure, migration</li>
+              <li>Identity and access management, network architecture, security</li>
+              <li>Monitoring, observability, disaster recovery, optimization</li>
+            </ul>
+            <p class="service-tech">Technologies: Azure · AWS · Windows Server · Linux · Entra ID · Networking · Azure Monitor</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <h3>DevOps & Infrastructure Automation</h3>
+            <p>Automate infrastructure and software delivery to improve reliability and reduce operational effort.</p>
+            <ul>
+              <li>Infrastructure as code and cloud/server automation</li>
+              <li>CI/CD pipelines, deployment automation, configuration management</li>
+              <li>Kubernetes infrastructure and observability</li>
+            </ul>
+            <p class="service-tech">Technologies: Terraform · Ansible · PowerShell · Python · Docker · Kubernetes · GitHub Actions · Jenkins · Azure DevOps</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <h3>Full-Stack Development</h3>
+            <p>Build complete web applications from user interface to API, database, and cloud deployment.</p>
+            <ul>
+              <li>Frontend: React, Next.js, TypeScript, responsive UI, admin dashboards</li>
+              <li>Backend: Python/FastAPI/Flask, Node.js, REST APIs, auth, microservices</li>
+              <li>Delivery model: Idea → UI/UX → Frontend → Backend → Database → Testing → CI/CD → Cloud</li>
+            </ul>
+            <p class="service-tech">Technologies: PostgreSQL · MySQL · SQL Server · MongoDB · Redis · Docker · Kubernetes · Azure · AWS</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">04</span>
+            <h3>AI & Intelligent Solutions</h3>
+            <p>Integrate AI into practical business workflows and digital products.</p>
+            <ul>
+              <li>Generative AI, LLM integration, RAG applications, assistants and agents</li>
+              <li>Computer vision and machine learning solutions</li>
+              <li>AI proof of concepts and MLOps pathways</li>
+            </ul>
+            <p class="service-tech">Technologies: Python · OpenAI API · Azure OpenAI · LangChain · LangGraph · TensorFlow · PyTorch · Scikit-learn · OpenCV · YOLO</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">05</span>
+            <h3>Data Engineering & Analytics</h3>
+            <p>Turn operational data into reliable pipelines, insights, and decision-support systems.</p>
+            <ul>
+              <li>ETL/ELT pipelines, warehousing, analytics engineering</li>
+              <li>Data cleaning, BI, dashboard development, predictive analytics</li>
+              <li>Decision support workflows for operational teams</li>
+            </ul>
+            <p class="service-tech">Technologies: Python · SQL · Pandas · NumPy · Airflow · PostgreSQL · PostGIS · Spark · Power BI · Tableau</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">06</span>
+            <h3>Computer Vision, Robotics & IoT</h3>
+            <p>Build intelligent systems that connect software with the physical world.</p>
+            <ul>
+              <li>Computer vision, object detection/tracking, ROS 2 development</li>
+              <li>IoT and UAV/drone solutions with sensor integration</li>
+              <li>Autonomous systems and robotics simulation</li>
+            </ul>
+            <p class="service-tech">Technologies: ROS 2 · C++ · Python · OpenCV · YOLO · LiDAR · IMU · GPS · SLAM · CARLA · ArduPilot · Raspberry Pi · Arduino</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">07</span>
+            <h3>Digital Product Development</h3>
+            <p>Turn an idea into a technically viable and deployable digital product.</p>
+            <ul>
+              <li>Ideation, feasibility, architecture, MVP planning</li>
+              <li>API and platform design, technology selection, cloud deployment</li>
+              <li>Scaling strategy and delivery governance</li>
+            </ul>
+            <p class="service-tech">Delivery approach: Idea → Discovery → Requirements → Architecture → MVP → Testing → Deployment → Monitoring → Scale</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">08</span>
+            <h3>Technical Consulting</h3>
+            <p>Independent technical guidance for complex technology decisions.</p>
+            <ul>
+              <li>Cloud and infrastructure reviews with maturity assessment</li>
+              <li>DevOps and AI feasibility assessments</li>
+              <li>Cost optimization, migration planning, roadmaps, architecture documentation</li>
+            </ul>
+            <p class="service-tech">Outcome: clear, actionable direction with realistic implementation paths</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">09</span>
+            <h3>Project & Technology Leadership</h3>
+            <p>Delivery ownership beyond implementation engineering.</p>
+            <ul>
+              <li>Technical project management, requirements, and solution design</li>
+              <li>Stakeholder and vendor coordination, decision-making, process improvement</li>
+              <li>Product strategy and delivery management</li>
+            </ul>
+            <p class="service-tech">Focus: align technical execution with business outcomes</p>
+          </article>
+        </div>
+
+        <div class="service-flow">
+          <h3>How I Work</h3>
+          <div class="process-grid">
+            <div class="process-step"><strong>01 — Discover</strong><span>Understand the problem, constraints, and desired outcome.</span></div>
+            <div class="process-step"><strong>02 — Design</strong><span>Define architecture, stack, implementation strategy, and roadmap.</span></div>
+            <div class="process-step"><strong>03 — Build</strong><span>Develop the solution with strong engineering and delivery practices.</span></div>
+            <div class="process-step"><strong>04 — Automate</strong><span>Automate infrastructure, testing, deployment, and operational workflows.</span></div>
+            <div class="process-step"><strong>05 — Validate</strong><span>Test functionality, security, performance, reliability, and scalability.</span></div>
+            <div class="process-step"><strong>06 — Deploy</strong><span>Release to production infrastructure or cloud platforms.</span></div>
+            <div class="process-step"><strong>07 — Improve</strong><span>Monitor, optimize, document, and continuously improve the system.</span></div>
+          </div>
+        </div>
+
+        <div class="service-proof">
+          <h3>Why Work With Me?</h3>
+          <p>Engineering across the full technology lifecycle: Infrastructure → Cloud → Software → Data → AI → Automation → Production.</p>
+          <div class="proof-kpis">
+            <div class="proof-kpi"><strong>7+ years</strong><span>professional technology experience</span></div>
+            <div class="proof-kpi"><strong>99.9%</strong><span>infrastructure availability experience</span></div>
+            <div class="proof-kpi"><strong>45%</strong><span>manual operational work reduced through automation</span></div>
+          </div>
+          <ul class="feature-list">
+            <li>Hands-on delivery across Azure, DevOps, AI, Data, Robotics, and Software Engineering.</li>
+            <li>Ability to work from concept to production and lead projects to completion.</li>
+            <li>Strong combination of engineering execution and project leadership.</li>
+          </ul>
+        </div>
+
+        <div class="service-cta">
+          <h3>Have a technology challenge?</h3>
+          <p>Whether you need to modernize infrastructure, automate operations, develop a full-stack application, integrate AI, build a data platform, or turn an idea into a working product, let’s discuss the problem and identify the right technical solution.</p>
+          <p class="service-cta-note"><strong>Email:</strong> alimul.nabil@gmail.com · <strong>WhatsApp:</strong> +8801829687813</p>
+          <div class="service-cta-actions">
+            <a class="btn btn-primary" href="#contact">Start a Conversation</a>
+            <a class="btn btn-secondary" href="https://wa.me/8801829687813" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
+            <a class="btn btn-secondary" href="mailto:alimul.nabil@gmail.com">Send an Email</a>
+          </div>
+        </div>
+      </section>
+
       <section id="leadership" class="container">
         <div class="section-heading">
           <div>
@@ -1714,7 +2024,7 @@
               <input type="email" placeholder="Email" />
               <input type="text" placeholder="Company" />
               <textarea placeholder="Message"></textarea>
-              <a class="btn btn-primary" href="mailto:hello@example.com">Send Message</a>
+              <a class="btn btn-primary" href="mailto:alimul.nabil@gmail.com">Send Message</a>
             </form>
           </div>
         </div>
@@ -1740,7 +2050,7 @@
             <p>Open to infrastructure, platform engineering, and AI-enabled product opportunities.</p>
             <div class="footer-actions">
               <a class="footer-cta primary" href="#contact">Start a Conversation</a>
-              <a class="footer-cta secondary" href="mailto:hello@example.com">Email Directly</a>
+              <a class="footer-cta secondary" href="mailto:alimul.nabil@gmail.com">Email Directly</a>
             </div>
             <div class="footer-link-list">
               <a href="#about">About</a>
@@ -1761,17 +2071,18 @@
       const sectionOrder = [
         "about",
         "expertise",
-        "stack",
         "experience",
         "projects",
+        "services",
         "leadership",
         "publications",
+        "stack",
+        "certifications",
         "volunteering",
         "recommendations",
-        "certifications",
+        "languages",
         "education",
         "value",
-        "languages",
         "contact"
       ];
 
