@@ -152,15 +152,15 @@
       }
 
       section {
-        padding: 5rem 0;
+        padding: 2rem 0;
       }
 
       .hero {
         display: grid;
         grid-template-columns: 1.2fr 0.8fr;
-        gap: 2rem;
+        gap: 1.5rem;
         align-items: center;
-        padding-top: 4rem;
+        padding-top: 1.25rem;
       }
 
       .eyebrow {
@@ -204,15 +204,15 @@
       .stats {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-        margin-top: 2rem;
+        gap: 0.8rem;
+        margin-top: 1.2rem;
       }
 
       .impact-strip {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 0.85rem;
-        margin-top: 1rem;
+        gap: 0.7rem;
+        margin-top: 0.8rem;
       }
 
       .impact-chip {
@@ -299,7 +299,7 @@
         justify-content: space-between;
         align-items: end;
         gap: 1rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
       }
 
       .section-heading p {
@@ -320,8 +320,8 @@
       .value-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 1rem;
-        margin-top: 1rem;
+        gap: 0.85rem;
+        margin-top: 0.75rem;
       }
 
       .value-card {
@@ -374,6 +374,17 @@
         margin-top: 0.55rem;
         color: var(--muted);
         font-size: 0.86rem;
+      }
+
+      .profile-inline {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        display: block;
+        margin-bottom: 1rem;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
       }
 
       .timeline {
@@ -501,6 +512,42 @@
         flex-wrap: wrap;
       }
 
+      .publication-toggle {
+        width: 100%;
+        text-align: left;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        padding: 0;
+        cursor: pointer;
+        font: inherit;
+      }
+
+      .publication-toggle:focus-visible {
+        outline: 2px solid var(--accent-2);
+        outline-offset: 4px;
+        border-radius: 8px;
+      }
+
+      .publication-toggle .tag {
+        margin-bottom: 0.35rem;
+      }
+
+      .publication-toggle .card-preview {
+        color: var(--accent-2);
+        font-weight: 600;
+        margin-top: 0.4rem;
+      }
+
+      .publication-details {
+        margin-top: 0.8rem;
+        display: none;
+      }
+
+      .publication-details[open] {
+        display: block;
+      }
+
       .project-link {
         display: inline-flex;
         align-items: center;
@@ -581,7 +628,28 @@
       }
 
       .project-card {
-        padding: 1.3rem;
+        padding: 0.95rem;
+        width: 100%;
+        text-align: left;
+        color: inherit;
+        font: inherit;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+        cursor: pointer;
+        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(110, 231, 249, 0.4);
+        box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+      }
+
+      .project-card:focus-visible {
+        outline: 2px solid var(--accent-2);
+        outline-offset: 3px;
       }
 
       .project-card .tag {
@@ -589,6 +657,66 @@
         font-size: 0.85rem;
         margin-bottom: 0.4rem;
         display: block;
+      }
+
+      .project-card .card-meta {
+        color: var(--muted);
+        margin: 0.2rem 0 0.75rem;
+      }
+
+      .project-card .card-preview {
+        color: var(--accent-2);
+        font-weight: 600;
+        margin-top: 0.9rem;
+      }
+
+      .card-details {
+        display: none;
+      }
+
+      .modal-open {
+        overflow: hidden;
+      }
+
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background: rgba(3, 12, 24, 0.82);
+      }
+
+      .modal-card {
+        position: relative;
+        width: min(720px, 100%);
+        max-height: 85vh;
+        overflow: auto;
+        padding: 1.4rem 1.5rem;
+        border-radius: 22px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 0.85rem;
+        right: 0.85rem;
+        border: 0;
+        border-radius: 999px;
+        width: 2.2rem;
+        height: 2.2rem;
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--text);
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      .modal-card .feature-list {
+        margin-top: 0.8rem;
       }
 
       .leadership-grid,
@@ -1175,6 +1303,7 @@
         </div>
         <div class="about-grid">
           <div class="card">
+            <img class="profile-inline" src="profile.jpg" alt="Alimul Fazal Nabil profile" />
             <h3>Professional Summary</h3>
             <p>
               I approach technology as a business enabler. My work focuses on building systems that are reliable, scalable, secure, automated, and directly useful to the organization.
@@ -1186,16 +1315,7 @@
               <span class="pill">Delivery</span>
             </div>
           </div>
-          <div class="card profile-photo-card">
-            <div class="profile-photo-wrap">
-              <img
-                class="profile-photo"
-                src="https://ui-avatars.com/api/?name=Alimul+Fazal+Nabil&size=900&background=0d1b2e&color=6ee7f9&bold=true"
-                alt="Alimul Fazal Nabil profile photo"
-                loading="lazy"
-              />
-            </div>
-            <p class="profile-photo-note">Add your direct image URL or local image path here to replace the current profile placeholder.</p>
+          <div class="card">
             <h3>Engineering Philosophy</h3>
             <p>
               Requirements → Architecture → Implementation → Automation → Testing → Deployment → Monitoring → Continuous Improvement.
@@ -1211,47 +1331,53 @@
         <div class="section-heading">
           <div>
             <span class="eyebrow">Experience</span>
-            <h2>Experience that shows engineering, leadership, and delivery across cloud, AI, and applied technology.</h2>
+            <h2>Experience that reflects teaching, technical support, design coordination, and professional delivery.</h2>
           </div>
         </div>
         <div class="projects-grid">
-          <article class="project-card">
-            <span class="tag">2026 • Present</span>
-            <h3>AI & ML Instructor</h3>
-            <p>ReDI School of Digital Integration · Part-time · Berlin, Germany · Remote</p>
-            <ul class="feature-list">
-              <li>Teaches practical machine learning and AI concepts with an applied, learner-focused approach.</li>
-              <li>Supports skill development in AI, data thinking, and project-based problem solving.</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <span class="tag">2026 • Present</span>
-            <h3>Chief Technology Officer and Co-founder</h3>
-            <p>MoviSabio · Self-employed</p>
-            <ul class="feature-list">
-              <li>Leads the product and technical direction for a territorial intelligence platform.</li>
-              <li>Connects AI, cloud, data, and robotics work into one market-facing solution.</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <span class="tag">2023 • Present</span>
-            <h3>Infrastructure & Cloud Systems Engineer</h3>
-            <p>Energy Crown Bangladesh · Full-time · Cox's Bazar District, Chattogram, Bangladesh · Hybrid</p>
-            <ul class="feature-list">
-              <li>Operated Azure hybrid cloud with 99.9% uptime and secure production support.</li>
-              <li>Automated provisioning with Terraform and Ansible, improving efficiency by 45%.</li>
-              <li>Built CI/CD pipelines, reduced alert noise by 30%, and supported <30-minute MTTR.</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <span class="tag">2022 • 2022</span>
-            <h3>Graduate Student Researcher</h3>
-            <p>Cox’s Bazar International University · Part-time · Remote</p>
-            <ul class="feature-list">
-              <li>Conducted applied research across robotics, mechatronics, and related engineering topics.</li>
-              <li>Published research work and contributed to technical documentation and academic outputs.</li>
-            </ul>
-          </article>
+          <button type="button" class="project-card project-card-button">
+            <span class="tag">Since 03/2026</span>
+            <h3>AI and Machine Learning Instructor</h3>
+            <p class="card-meta">ReDI School of Digital Integration · Remote · Berlin, Germany</p>
+            <p class="card-preview">Click to view full experience details</p>
+            <div class="card-details" hidden>
+              <ul class="feature-list">
+                <li>Facilitate vocational digital skills training sessions according to structured modules, ensuring effective delivery of technical content to adult learners from diverse backgrounds.</li>
+                <li>Contribute to curriculum development and refinement of training materials for AI, data science, and digital freelancing preparation.</li>
+                <li>Conduct both formal and non-formal assessments to evaluate learner progress and training effectiveness, providing technical guidance to fellow trainers.</li>
+                <li>Monitor learner attendance, follow up individually on progress, and provide mentorship to support job-market readiness.</li>
+                <li>Ensure proper use and maintenance of training centre equipment, creating a safe and inclusive learning environment in line with organisational safeguarding policies.</li>
+              </ul>
+            </div>
+          </button>
+          <button type="button" class="project-card project-card-button">
+            <span class="tag">Feb 2019 – Present</span>
+            <h3>IT Support Engineer</h3>
+            <p class="card-meta">Energy Crown Bangladesh · Full Time · Cox's Bazar</p>
+            <p class="card-preview">Click to view full experience details</p>
+            <div class="card-details" hidden>
+              <ul class="feature-list">
+                <li>Coordinated the day-to-day operation of IT labs and training facilities, overseeing the safe use, routine maintenance, and troubleshooting of all equipment.</li>
+                <li>Assisted in delivering basic digital skills training to non-technical users, employing effective communication and facilitation techniques.</li>
+                <li>Maintained accurate learner attendance logs, equipment usage records, and activity summaries; prepared regular internal reports for management.</li>
+                <li>Led community-level technology awareness sessions, contributing to community engagement and promoting digital skills for livelihoods.</li>
+                <li>Collaborated with procurement and logistics teams to ensure timely supply of training materials and equipment.</li>
+                <li>Practised and promoted safeguarding policies, ensuring the safety of programme participants from harm, abuse, and exploitation.</li>
+              </ul>
+            </div>
+          </button>
+          <button type="button" class="project-card project-card-button">
+            <span class="tag">Feb 2021 – Present</span>
+            <h3>AutoCAD Operator & Designer</h3>
+            <p class="card-meta">Building Engineers and Architects · Contract · Cox's Bazar</p>
+            <p class="card-preview">Click to view full experience details</p>
+            <div class="card-details" hidden>
+              <ul class="feature-list">
+                <li>Maintain accurate records, prepare brief reports, and coordinate with multiple stakeholders — reinforcing strong organisational and documentation skills.</li>
+                <li>Support project planning and execution, demonstrating the ability to manage tasks, meet deadlines, and operate both independently and as part of a team.</li>
+              </ul>
+            </div>
+          </button>
         </div>
       </section>
 
@@ -1263,33 +1389,42 @@
           </div>
         </div>
         <div class="projects-grid">
-          <article class="project-card">
+          <button type="button" class="project-card project-card-button">
             <span class="tag">Jan 2021 – Feb 2021</span>
             <h3>Field Supervisor</h3>
-            <p>World Food Programme · Disaster and Humanitarian Relief</p>
-            <ul class="feature-list">
-              <li>Volunteered during the 2021 fire breakout emergency supporting Rohingya communities.</li>
-              <li>Helped distribute food and assisted emergency relief coordination activities.</li>
-            </ul>
-          </article>
-          <article class="project-card">
+            <p class="card-meta">World Food Programme · Disaster and Humanitarian Relief</p>
+            <p class="card-preview">Click to view full volunteering details</p>
+            <div class="card-details" hidden>
+              <ul class="feature-list">
+                <li>Volunteered during the 2021 fire breakout emergency supporting Rohingya communities.</li>
+                <li>Helped distribute food and assisted emergency relief coordination activities.</li>
+              </ul>
+            </div>
+          </button>
+          <button type="button" class="project-card project-card-button">
             <span class="tag">Jan 2020 – Dec 2025</span>
             <h3>Blood Donor and Collector</h3>
-            <p>Cox's Bazar Blood Donor Society · Health</p>
-            <ul class="feature-list">
-              <li>Supported blood donation drives and community coordination for urgent medical needs.</li>
-              <li>Raised awareness on regular blood donations for local hospitals and patients.</li>
-            </ul>
-          </article>
-          <article class="project-card">
+            <p class="card-meta">Cox's Bazar Blood Donor Society · Health</p>
+            <p class="card-preview">Click to view full volunteering details</p>
+            <div class="card-details" hidden>
+              <ul class="feature-list">
+                <li>Supported blood donation drives and community coordination for urgent medical needs.</li>
+                <li>Raised awareness on regular blood donations for local hospitals and patients.</li>
+              </ul>
+            </div>
+          </button>
+          <button type="button" class="project-card project-card-button">
             <span class="tag">Jan 2019 – May 2021</span>
             <h3>Volunteer</h3>
-            <p>Rotary International (Rotary Cox's Bazar) · Social Services</p>
-            <ul class="feature-list">
-              <li>Contributed to health campaigns, education programs, and support for underprivileged communities.</li>
-              <li>Participated in community development initiatives with local cross-functional volunteer teams.</li>
-            </ul>
-          </article>
+            <p class="card-meta">Rotary International (Rotary Cox's Bazar) · Social Services</p>
+            <p class="card-preview">Click to view full volunteering details</p>
+            <div class="card-details" hidden>
+              <ul class="feature-list">
+                <li>Contributed to health campaigns, education programs, and support for underprivileged communities.</li>
+                <li>Participated in community development initiatives with local cross-functional volunteer teams.</li>
+              </ul>
+            </div>
+          </button>
         </div>
       </section>
 
@@ -1836,32 +1971,42 @@
         </div>
         <div class="projects-grid">
           <article class="project-card">
-            <span class="tag">International Research Journal of Modernization in Engineering Technology and Science · Nov 23, 2022</span>
-            <h3>Implementation of IoT Based Notice Board</h3>
-            <p>IoT e-notice board architecture using connected display systems and remote admin control for near real-time communication.</p>
-            <ul class="feature-list">
-              <li>Focus areas: IoT communication, Raspberry Pi integration, remote content publishing, and operational messaging workflows.</li>
-              <li>Supported multi-format information flow such as text, image, PDF, and real-time communication concepts.</li>
-              <li>Keywords: IoT, Raspberry Pi, GSM, MIC, LCD monitor, smart notice board, advertising board.</li>
-              <li>Co-authors: collaborative publication team (+3).</li>
-            </ul>
-            <div class="project-links">
-              <a class="project-link primary" href="https://www.irjmets.com/uploadedfiles/paper/issue_11_november_2022/31134/final/fin_irjmets1668848416.pdf" target="_blank" rel="noopener noreferrer">Read Publication</a>
-            </div>
+            <button class="publication-toggle" type="button" aria-expanded="false">
+              <span class="tag">International Research Journal of Modernization in Engineering Technology and Science · Nov 23, 2022</span>
+              <h3>Implementation of IoT Based Notice Board</h3>
+              <p>IoT e-notice board architecture using connected display systems and remote admin control for near real-time communication.</p>
+              <p class="card-preview">Click to view full details</p>
+            </button>
+            <details class="publication-details">
+              <ul class="feature-list">
+                <li>Focus areas: IoT communication, Raspberry Pi integration, remote content publishing, and operational messaging workflows.</li>
+                <li>Supported multi-format information flow such as text, image, PDF, and real-time communication concepts.</li>
+                <li>Keywords: IoT, Raspberry Pi, GSM, MIC, LCD monitor, smart notice board, advertising board.</li>
+                <li>Co-authors: collaborative publication team (+3).</li>
+              </ul>
+              <div class="project-links">
+                <a class="project-link primary" href="https://www.irjmets.com/uploadedfiles/paper/issue_11_november_2022/31134/final/fin_irjmets1668848416.pdf" target="_blank" rel="noopener noreferrer">Read Publication</a>
+              </div>
+            </details>
           </article>
           <article class="project-card">
-            <span class="tag">International Research Journal of Engineering and Technology · Nov 11, 2022</span>
-            <h3>Implementation of Online Shopping and Auction System (SPAROO)</h3>
-            <p>Designed an application model for online shopping and live auction workflows to reduce offline friction and improve buyer-seller interaction.</p>
-            <ul class="feature-list">
-              <li>Combined product discovery, online shopping, and auction participation inside one digital experience.</li>
-              <li>Included multi-bidder live auction flow aligned with practical marketplace scenarios.</li>
-              <li>Demonstrated system thinking across user experience, transaction flow, and scalable digital operations.</li>
-              <li>Co-authors: collaborative publication team (+4).</li>
-            </ul>
-            <div class="project-links">
-              <a class="project-link primary" href="https://www.irjet.net/archives/V9/i11/IRJET-V9I1123.pdf" target="_blank" rel="noopener noreferrer">Read Publication</a>
-            </div>
+            <button class="publication-toggle" type="button" aria-expanded="false">
+              <span class="tag">International Research Journal of Engineering and Technology · Nov 11, 2022</span>
+              <h3>Implementation of Online Shopping and Auction System (SPAROO)</h3>
+              <p>Designed an application model for online shopping and live auction workflows to reduce offline friction and improve buyer-seller interaction.</p>
+              <p class="card-preview">Click to view full details</p>
+            </button>
+            <details class="publication-details">
+              <ul class="feature-list">
+                <li>Combined product discovery, online shopping, and auction participation inside one digital experience.</li>
+                <li>Included multi-bidder live auction flow aligned with practical marketplace scenarios.</li>
+                <li>Demonstrated system thinking across user experience, transaction flow, and scalable digital operations.</li>
+                <li>Co-authors: collaborative publication team (+4).</li>
+              </ul>
+              <div class="project-links">
+                <a class="project-link primary" href="https://www.irjet.net/archives/V9/i11/IRJET-V9I1123.pdf" target="_blank" rel="noopener noreferrer">Read Publication</a>
+              </div>
+            </details>
           </article>
         </div>
       </section>
@@ -2097,8 +2242,51 @@
       </div>
     </footer>
 
+    <div class="modal-backdrop" id="detailModal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" aria-label="Close">×</button>
+        <p class="tag" id="modalTag"></p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalMeta"></p>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      const modal = document.getElementById("detailModal");
+      const modalTag = document.getElementById("modalTag");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalMeta = document.getElementById("modalMeta");
+      const modalBody = document.getElementById("modalBody");
+      const closeModal = () => {
+        modal.hidden = true;
+        document.body.classList.remove("modal-open");
+      };
+
+      document.querySelectorAll(".project-card-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          modalTag.textContent = button.querySelector(".tag")?.textContent || "";
+          modalTitle.textContent = button.querySelector("h3")?.textContent || "";
+          modalMeta.textContent = button.querySelector(".card-meta")?.textContent || "";
+          modalBody.innerHTML = button.querySelector(".card-details")?.innerHTML || "";
+          modal.hidden = false;
+          document.body.classList.add("modal-open");
+        });
+      });
+
+      modal.querySelector(".modal-close").addEventListener("click", closeModal);
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeModal();
+        }
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden) {
+          closeModal();
+        }
+      });
 
       // Recruiter-first section flow requested by the portfolio owner.
       const sectionOrder = [
