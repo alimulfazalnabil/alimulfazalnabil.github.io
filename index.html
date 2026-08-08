@@ -1203,10 +1203,22 @@
       }
 
       .service-card {
-        padding: 1.2rem;
-        border-radius: 16px;
+        border-radius: 18px;
         border: 1px solid var(--border);
         background: rgba(255, 255, 255, 0.04);
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .service-card > summary {
+        list-style: none;
+        display: block;
+        cursor: pointer;
+        padding: 1.2rem;
+      }
+
+      .service-card > summary::-webkit-details-marker {
+        display: none;
       }
 
       .service-card .service-number {
@@ -1221,6 +1233,10 @@
         font-size: 1.15rem;
       }
 
+      .service-card .service-card-body {
+        padding: 0 1.2rem 1.2rem;
+      }
+
       .service-card ul {
         margin: 0.8rem 0 0;
         padding-left: 1.15rem;
@@ -1231,6 +1247,172 @@
         margin-top: 0.75rem;
         font-size: 0.88rem;
         color: var(--accent-2);
+      }
+
+      .service-request-btn {
+        margin-top: 0.95rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.72rem 0.95rem;
+        border-radius: 999px;
+        border: 1px solid rgba(110, 231, 249, 0.28);
+        background: rgba(110, 231, 249, 0.08);
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+      }
+
+      .service-request-btn:hover,
+      .service-request-btn:focus-visible {
+        transform: translateY(-1px);
+        border-color: rgba(110, 231, 249, 0.45);
+        background: rgba(110, 231, 249, 0.14);
+      }
+
+      .service-request-btn .service-arrow {
+        transition: transform 180ms ease;
+      }
+
+      .service-request-btn:hover .service-arrow,
+      .service-request-btn:focus-visible .service-arrow {
+        transform: translate(2px, -2px);
+      }
+
+      .service-request-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 30;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background: rgba(2, 7, 14, 0.75);
+        backdrop-filter: blur(8px);
+      }
+
+      .service-request-modal.is-open {
+        display: flex;
+      }
+
+      .service-request-dialog {
+        width: min(680px, 100%);
+        max-height: min(90vh, 860px);
+        overflow: auto;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: linear-gradient(135deg, rgba(8, 18, 32, 0.97), rgba(10, 24, 40, 0.97));
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+        padding: 1.2rem;
+      }
+
+      .service-request-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        margin-bottom: 0.9rem;
+      }
+
+      .service-request-header h3 {
+        margin: 0;
+      }
+
+      .service-request-close {
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+
+      .service-request-note {
+        color: var(--muted);
+        margin-bottom: 1rem;
+      }
+
+      .service-request-form {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .service-request-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
+      }
+
+      .service-request-group {
+        display: grid;
+        gap: 0.35rem;
+      }
+
+      .service-request-group label {
+        color: var(--text);
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .service-request-group input,
+      .service-request-group textarea,
+      .service-request-group select {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.78rem 0.9rem;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+      }
+
+      .service-request-group textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+
+      .service-request-error {
+        color: #ffb7b7;
+        font-size: 0.82rem;
+        min-height: 1rem;
+      }
+
+      .service-request-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: 0.2rem;
+      }
+
+      .service-request-preview {
+        display: none;
+        margin-top: 0.7rem;
+        padding: 0.95rem 1rem;
+        border: 1px solid rgba(110, 231, 249, 0.2);
+        border-radius: 16px;
+        background: rgba(110, 231, 249, 0.06);
+      }
+
+      .service-request-preview.is-visible {
+        display: block;
+      }
+
+      .service-request-preview pre {
+        margin: 0.6rem 0 0;
+        white-space: pre-wrap;
+        word-break: break-word;
+        color: var(--text);
+        font-family: inherit;
+      }
+
+      .service-request-privacy {
+        font-size: 0.84rem;
+        color: var(--muted);
+        margin-top: 0.7rem;
+      }
+
+      .service-request-actions .btn {
+        padding: 0.68rem 1rem;
       }
 
       .service-flow,
@@ -3218,113 +3400,238 @@
       <p class="section-note">I help organizations design, build, automate, and modernize technology solutions across cloud infrastructure, software, AI, data, DevOps, and robotics.</p>
 
       <div class="services-grid">
-        <article class="service-card">
-          <span class="service-number">01</span>
-          <h3>Cloud & Infrastructure</h3>
-          <p>Design and modernize reliable, secure, and scalable IT infrastructure.</p>
-          <ul>
-            <li>Azure cloud architecture, hybrid infrastructure, migration</li>
-            <li>Identity and access management, network architecture, security</li>
-            <li>Monitoring, observability, disaster recovery, optimization</li>
-          </ul>
-          <p class="service-tech">Technologies: Azure · AWS · Windows Server · Linux · Entra ID · Networking · Azure Monitor</p>
-        </article>
+        <details class="service-card" data-service="cloud">
+          <summary>
+            <span class="service-number">01</span>
+            <h3>Cloud & Infrastructure</h3>
+            <p>Design and modernize reliable, secure, and scalable IT infrastructure.</p>
+          </summary>
+          <div class="service-card-body">
+            <ul>
+              <li>Azure cloud architecture, hybrid infrastructure, migration</li>
+              <li>Identity and access management, network architecture, security</li>
+              <li>Monitoring, observability, disaster recovery, optimization</li>
+            </ul>
+            <p class="service-tech">Technologies: Azure · AWS · Windows Server · Linux · Entra ID · Networking · Azure Monitor</p>
+            <button class="service-request-btn" type="button" data-request-service="cloud">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
+          </div>
+        </details>
 
-        <article class="service-card">
-          <span class="service-number">02</span>
-          <h3>DevOps & Infrastructure Automation</h3>
-          <p>Automate infrastructure and software delivery to improve reliability and reduce operational effort.</p>
-          <ul>
-            <li>Infrastructure as code and cloud/server automation</li>
-            <li>CI/CD pipelines, deployment automation, configuration management</li>
-            <li>Kubernetes infrastructure and observability</li>
-          </ul>
-          <p class="service-tech">Technologies: Terraform · Ansible · PowerShell · Python · Docker · Kubernetes · GitHub Actions · Jenkins · Azure DevOps</p>
-        </article>
+        <details class="service-card" data-service="devops">
+          <summary>
+            <span class="service-number">02</span>
+            <h3>DevOps & Infrastructure Automation</h3>
+            <p>Automate infrastructure and software delivery to improve reliability and reduce operational effort.</p>
+          </summary>
+          <div class="service-card-body">
+            <ul>
+              <li>Infrastructure as code and cloud/server automation</li>
+              <li>CI/CD pipelines, deployment automation, configuration management</li>
+              <li>Kubernetes infrastructure and observability</li>
+            </ul>
+            <p class="service-tech">Technologies: Terraform · Ansible · PowerShell · Python · Docker · Kubernetes · GitHub Actions · Jenkins · Azure DevOps</p>
+            <button class="service-request-btn" type="button" data-request-service="devops">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
+          </div>
+        </details>
 
-        <article class="service-card">
-          <span class="service-number">03</span>
-          <h3>Full-Stack Development</h3>
-          <p>Build complete web applications from user interface to API, database, and cloud deployment.</p>
-          <ul>
-            <li>Frontend: React, Next.js, TypeScript, responsive UI, admin dashboards</li>
-            <li>Backend: Python/FastAPI/Flask, Node.js, REST APIs, auth, microservices</li>
-            <li>Delivery model: Idea → UI/UX → Frontend → Backend → Database → Testing → CI/CD → Cloud</li>
-          </ul>
-          <p class="service-tech">Technologies: PostgreSQL · MySQL · SQL Server · MongoDB · Redis · Docker · Kubernetes · Azure · AWS</p>
-        </article>
+        <details class="service-card" data-service="fullstack">
+          <summary>
+            <span class="service-number">03</span>
+            <h3>Full-Stack Development</h3>
+            <p>Build complete web applications from user interface to API, database, and cloud deployment.</p>
+          </summary>
+          <div class="service-card-body">
+            <ul>
+              <li>Frontend: React, Next.js, TypeScript, responsive UI, admin dashboards</li>
+              <li>Backend: Python/FastAPI/Flask, Node.js, REST APIs, auth, microservices</li>
+              <li>Delivery model: Idea → UI/UX → Frontend → Backend → Database → Testing → CI/CD → Cloud</li>
+            </ul>
+            <p class="service-tech">Technologies: PostgreSQL · MySQL · SQL Server · MongoDB · Redis · Docker · Kubernetes · Azure · AWS</p>
+            <button class="service-request-btn" type="button" data-request-service="fullstack">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
+          </div>
+        </details>
 
-        <article class="service-card">
-          <span class="service-number">04</span>
-          <h3>AI & Intelligent Solutions</h3>
-          <p>Integrate AI into practical business workflows and digital products.</p>
-          <ul>
-            <li>Generative AI, LLM integration, RAG applications, assistants and agents</li>
-            <li>Computer vision and machine learning solutions</li>
-            <li>AI proof of concepts and MLOps pathways</li>
-          </ul>
-          <p class="service-tech">Technologies: Python · OpenAI API · Azure OpenAI · LangChain · LangGraph · TensorFlow · PyTorch · Scikit-learn · OpenCV · YOLO</p>
-        </article>
+        <details class="service-card" data-service="ai">
+          <summary>
+            <span class="service-number">04</span>
+            <h3>AI & Intelligent Solutions</h3>
+            <p>Integrate AI into practical business workflows and digital products.</p>
+          </summary>
+          <div class="service-card-body">
+            <ul>
+              <li>Generative AI, LLM integration, RAG applications, assistants and agents</li>
+              <li>Computer vision and machine learning solutions</li>
+              <li>AI proof of concepts and MLOps pathways</li>
+            </ul>
+            <p class="service-tech">Technologies: Python · OpenAI API · Azure OpenAI · LangChain · LangGraph · TensorFlow · PyTorch · Scikit-learn · OpenCV · YOLO</p>
+            <button class="service-request-btn" type="button" data-request-service="ai">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
+          </div>
+        </details>
 
-        <article class="service-card">
-          <span class="service-number">05</span>
-          <h3>Data Engineering & Analytics</h3>
-          <p>Turn operational data into reliable pipelines, insights, and decision-support systems.</p>
-          <ul>
-            <li>ETL/ELT pipelines, warehousing, analytics engineering</li>
-            <li>Data cleaning, BI, dashboard development, predictive analytics</li>
-            <li>Decision support workflows for operational teams</li>
-          </ul>
-          <p class="service-tech">Technologies: Python · SQL · Pandas · NumPy · Airflow · PostgreSQL · PostGIS · Spark · Power BI · Tableau</p>
-        </article>
+        <details class="service-card" data-service="data">
+          <summary>
+            <span class="service-number">05</span>
+            <h3>Data Engineering & Analytics</h3>
+            <p>Turn operational data into reliable pipelines, insights, and decision-support systems.</p>
+          </summary>
+          <div class="service-card-body">
+            <ul>
+              <li>ETL/ELT pipelines, warehousing, analytics engineering</li>
+              <li>Data cleaning, BI, dashboard development, predictive analytics</li>
+              <li>Decision support workflows for operational teams</li>
+            </ul>
+            <p class="service-tech">Technologies: Python · SQL · Pandas · NumPy · Airflow · PostgreSQL · PostGIS · Spark · Power BI · Tableau</p>
+            <button class="service-request-btn" type="button" data-request-service="data">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
+          </div>
+        </details>
 
-        <article class="service-card">
-          <span class="service-number">06</span>
-          <h3>Computer Vision, Robotics & IoT</h3>
-          <p>Build intelligent systems that connect software with the physical world.</p>
-          <ul>
-            <li>Computer vision, object detection/tracking, ROS 2 development</li>
-            <li>IoT and UAV/drone solutions with sensor integration</li>
-            <li>Autonomous systems and robotics simulation</li>
-          </ul>
-          <p class="service-tech">Technologies: ROS 2 · C++ · Python · OpenCV · YOLO · LiDAR · IMU · GPS · SLAM · CARLA · ArduPilot · Raspberry Pi · Arduino</p>
-        </article>
+        <details class="service-card" data-service="vision">
+          <summary>
+            <span class="service-number">06</span>
+            <h3>Computer Vision, Robotics & IoT</h3>
+            <p>Build intelligent systems that connect software with the physical world.</p>
+          </summary>
+          <div class="service-card-body">
+            <ul>
+              <li>Computer vision, object detection/tracking, ROS 2 development</li>
+              <li>IoT and UAV/drone solutions with sensor integration</li>
+              <li>Autonomous systems and robotics simulation</li>
+            </ul>
+            <p class="service-tech">Technologies: ROS 2 · C++ · Python · OpenCV · YOLO · LiDAR · IMU · GPS · SLAM · CARLA · ArduPilot · Raspberry Pi · Arduino</p>
+            <button class="service-request-btn" type="button" data-request-service="vision">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
+          </div>
+        </details>
 
-        <article class="service-card">
-          <span class="service-number">07</span>
-          <h3>Digital Product Development</h3>
-          <p>Turn an idea into a technically viable and deployable digital product.</p>
-          <ul>
-            <li>Ideation, feasibility, architecture, MVP planning</li>
-            <li>API and platform design, technology selection, cloud deployment</li>
-            <li>Scaling strategy and delivery governance</li>
-          </ul>
-          <p class="service-tech">Delivery approach: Idea → Discovery → Requirements → Architecture → MVP → Testing → Deployment → Monitoring → Scale</p>
-        </article>
+        <details class="service-card" data-service="product">
+          <summary>
+            <span class="service-number">07</span>
+            <h3>Digital Product Development</h3>
+            <p>Turn an idea into a technically viable and deployable digital product.</p>
+          </summary>
+          <div class="service-card-body">
+            <ul>
+              <li>Ideation, feasibility, architecture, MVP planning</li>
+              <li>API and platform design, technology selection, cloud deployment</li>
+              <li>Scaling strategy and delivery governance</li>
+            </ul>
+            <p class="service-tech">Delivery approach: Idea → Discovery → Requirements → Architecture → MVP → Testing → Deployment → Monitoring → Scale</p>
+            <button class="service-request-btn" type="button" data-request-service="product">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
+          </div>
+        </details>
 
-        <article class="service-card">
-          <span class="service-number">08</span>
-          <h3>Technical Consulting</h3>
-          <p>Independent technical guidance for complex technology decisions.</p>
-          <ul>
-            <li>Cloud and infrastructure reviews with maturity assessment</li>
-            <li>DevOps and AI feasibility assessments</li>
-            <li>Cost optimization, migration planning, roadmaps, architecture documentation</li>
-          </ul>
-          <p class="service-tech">Outcome: clear, actionable direction with realistic implementation paths</p>
-        </article>
+        <details class="service-card" data-service="consulting">
+          <summary>
+            <span class="service-number">08</span>
+            <h3>Technical Consulting</h3>
+            <p>Independent technical guidance for complex technology decisions.</p>
+          </summary>
+          <div class="service-card-body">
+            <ul>
+              <li>Cloud and infrastructure reviews with maturity assessment</li>
+              <li>DevOps and AI feasibility assessments</li>
+              <li>Cost optimization, migration planning, roadmaps, architecture documentation</li>
+            </ul>
+            <p class="service-tech">Outcome: clear, actionable direction with realistic implementation paths</p>
+            <button class="service-request-btn" type="button" data-request-service="consulting">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
+          </div>
+        </details>
 
-        <article class="service-card">
-          <span class="service-number">09</span>
-          <h3>Project & Technology Leadership</h3>
-          <p>Delivery ownership beyond implementation engineering.</p>
-          <ul>
-            <li>Technical project management, requirements, and solution design</li>
-            <li>Stakeholder and vendor coordination, decision-making, process improvement</li>
-            <li>Product strategy and delivery management</li>
-          </ul>
-          <p class="service-tech">Focus: align technical execution with business outcomes</p>
-        </article>
+        <details class="service-card" data-service="leadership">
+          <summary>
+            <span class="service-number">09</span>
+            <h3>Project & Technology Leadership</h3>
+            <p>Delivery ownership beyond implementation engineering.</p>
+          </summary>
+          <div class="service-card-body">
+            <ul>
+              <li>Technical project management, requirements, and solution design</li>
+              <li>Stakeholder and vendor coordination, decision-making, process improvement</li>
+              <li>Product strategy and delivery management</li>
+            </ul>
+            <p class="service-tech">Focus: align technical execution with business outcomes</p>
+            <button class="service-request-btn" type="button" data-request-service="leadership">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
+          </div>
+        </details>
+      </div>
+
+      <div class="service-request-modal" id="service-request-modal" aria-hidden="true">
+        <div class="service-request-dialog" role="dialog" aria-modal="true" aria-labelledby="service-request-title" aria-describedby="service-request-description">
+          <div class="service-request-header">
+            <div>
+              <span class="eyebrow">REQUEST THIS SERVICE</span>
+              <h3 id="service-request-title">Request a service</h3>
+            </div>
+            <button class="service-request-close" type="button" aria-label="Close request dialog">×</button>
+          </div>
+          <p class="service-request-note" id="service-request-description">Tell me a little about what you are trying to achieve.</p>
+          <form class="service-request-form" id="service-request-form">
+            <div class="service-request-group">
+              <label for="request-service-name">Service</label>
+              <input id="request-service-name" name="serviceName" readonly />
+            </div>
+            <div class="service-request-grid">
+              <div class="service-request-group">
+                <label for="request-name">Name *</label>
+                <input id="request-name" name="name" required />
+              </div>
+              <div class="service-request-group">
+                <label for="request-email">Email *</label>
+                <input id="request-email" name="email" type="email" required />
+              </div>
+            </div>
+            <div class="service-request-grid">
+              <div class="service-request-group">
+                <label for="request-company">Company / Organization</label>
+                <input id="request-company" name="company" />
+              </div>
+              <div class="service-request-group">
+                <label for="request-timeline">Timeline</label>
+                <input id="request-timeline" name="timeline" />
+              </div>
+            </div>
+            <div class="service-request-grid">
+              <div class="service-request-group">
+                <label for="request-budget">Budget Range</label>
+                <input id="request-budget" name="budget" />
+              </div>
+              <div class="service-request-group">
+                <label for="request-contact">Preferred Contact Method</label>
+                <select id="request-contact" name="contact">
+                  <option value="Email">Email</option>
+                  <option value="WhatsApp">WhatsApp</option>
+                </select>
+              </div>
+            </div>
+            <div class="service-request-group">
+              <label for="request-project">Project / Business Need *</label>
+              <textarea id="request-project" name="project" required></textarea>
+            </div>
+            <div class="service-request-group">
+              <label for="request-information">Additional Information</label>
+              <textarea id="request-information" name="information"></textarea>
+            </div>
+            <div class="service-request-group">
+              <label for="request-prompt">Context</label>
+              <textarea id="request-prompt" name="prompt" readonly></textarea>
+            </div>
+            <div class="service-request-error" id="service-request-error" aria-live="polite"></div>
+            <div class="service-request-actions">
+              <button class="btn btn-primary" type="submit">GENERATE REQUEST</button>
+              <button class="btn btn-secondary" type="button" id="service-quick-request">QUICK REQUEST</button>
+              <button class="btn btn-secondary" type="button" id="service-cancel-request">CANCEL</button>
+            </div>
+            <div class="service-request-preview" id="service-request-preview">
+              <strong>REQUEST PREVIEW</strong>
+              <pre id="service-preview-message"></pre>
+              <div class="service-request-actions">
+                <button class="btn btn-secondary" type="button" id="service-edit-request">EDIT REQUEST</button>
+                <button class="btn btn-primary" type="button" id="service-send-email">SEND VIA EMAIL</button>
+                <button class="btn btn-secondary" type="button" id="service-send-whatsapp">SEND VIA WHATSAPP</button>
+              </div>
+            </div>
+            <p class="service-request-privacy">Your information is used only to prepare your request message. Nothing is submitted to this website.</p>
+          </form>
+        </div>
       </div>
 
       <div class="service-flow">
@@ -3548,6 +3855,294 @@
             card.setAttribute("data-hidden", visible ? "false" : "true");
           });
         });
+      });
+
+      const services = {
+        cloud: {
+          name: "Cloud & Infrastructure",
+          question: "What infrastructure, cloud, migration, scalability, or reliability challenge are you trying to solve?",
+          category: "Modernize"
+        },
+        devops: {
+          name: "DevOps & Automation",
+          question: "What deployment, CI/CD, infrastructure automation, monitoring, or operational challenge are you facing?",
+          category: "Modernize"
+        },
+        fullstack: {
+          name: "Full-Stack Development",
+          question: "What application, platform, website, dashboard, or business system would you like to build?",
+          category: "Build"
+        },
+        ai: {
+          name: "AI & Intelligent Solutions",
+          question: "What business process, knowledge workflow, prediction, automation, or AI capability are you looking to implement?",
+          category: "Intelligence"
+        },
+        data: {
+          name: "Data Engineering & Analytics",
+          question: "What data sources, pipelines, analytics, reporting, or data platform challenges do you have?",
+          category: "Intelligence"
+        },
+        vision: {
+          name: "Computer Vision, Robotics & IoT",
+          question: "What vision, robotics, IoT, automation, sensing, or edge-computing problem are you trying to solve?",
+          category: "Engineer"
+        },
+        product: {
+          name: "Digital Product Development",
+          question: "What digital product or platform idea would you like to turn into a working solution?",
+          category: "Build"
+        },
+        consulting: {
+          name: "Technical Consulting",
+          question: "What technology, architecture, infrastructure, or engineering decision would you like help with?",
+          category: "Guide"
+        },
+        leadership: {
+          name: "Project & Technology Leadership",
+          question: "What technology initiative, engineering team, transformation, or project would you like support with?",
+          category: "Guide"
+        }
+      };
+
+      const emailAddress = "alimul.nabil@gmail.com";
+      const whatsappNumber = "+8801829687813";
+      const whatsappUrl = "https://wa.me/8801829687813";
+      const modal = document.getElementById("service-request-modal");
+      const dialog = modal?.querySelector(".service-request-dialog");
+      const form = document.getElementById("service-request-form");
+      const serviceNameField = document.getElementById("request-service-name");
+      const promptField = document.getElementById("request-prompt");
+      const errorField = document.getElementById("service-request-error");
+      const previewBox = document.getElementById("service-request-preview");
+      const previewMessage = document.getElementById("service-preview-message");
+      const closeButton = modal?.querySelector(".service-request-close");
+      const cancelButton = document.getElementById("service-cancel-request");
+      const quickButton = document.getElementById("service-quick-request");
+      const editButton = document.getElementById("service-edit-request");
+      const emailButton = document.getElementById("service-send-email");
+      const whatsappButton = document.getElementById("service-send-whatsapp");
+      let activeServiceKey = null;
+      let lastTriggerButton = null;
+      let currentPreviewMessage = "";
+
+      const trackServiceEvent = (eventName, detail = {}) => {
+        if (typeof window !== "undefined") {
+          window.dispatchEvent(new CustomEvent("service_request_event", { detail: { eventName, ...detail } }));
+        }
+      };
+
+      const setModalState = (isOpen) => {
+        if (!modal) return;
+        modal.classList.toggle("is-open", isOpen);
+        modal.setAttribute("aria-hidden", isOpen ? "false" : "true");
+        document.body.style.overflow = isOpen ? "hidden" : "";
+        if (isOpen) {
+          const firstField = document.getElementById("request-name");
+          firstField?.focus();
+        } else if (lastTriggerButton) {
+          lastTriggerButton.focus();
+        }
+      };
+
+      const populateServiceFields = (serviceKey) => {
+        const service = services[serviceKey];
+        if (!service || !serviceNameField || !promptField) return;
+        activeServiceKey = serviceKey;
+        serviceNameField.value = service.name;
+        promptField.value = service.question;
+        document.getElementById("service-request-title").textContent = `Request ${service.name}`;
+        document.getElementById("service-request-description").textContent = "Tell me a little about what you are trying to achieve.";
+        form.reset();
+        document.getElementById("request-service-name").value = service.name;
+        document.getElementById("request-contact").value = "Email";
+        errorField.textContent = "";
+        previewBox.classList.remove("is-visible");
+      };
+
+      const buildRequestMessage = (serviceKey, values) => {
+        const service = services[serviceKey];
+        const name = (values.name || "Your Name").trim();
+        const email = (values.email || "").trim();
+        const company = (values.company || "").trim();
+        const project = (values.project || "I would like to discuss a potential project.").trim();
+        const timeline = (values.timeline || "").trim();
+        const budget = (values.budget || "").trim();
+        const contact = (values.contact || "Email").trim();
+        const info = (values.information || "").trim();
+
+        const greeting = [
+          "Hello Alimul,",
+          "",
+          `My name is ${name}${company ? ` from ${company}` : ""}.`,
+          "",
+          `I am interested in your ${service.name} service.`,
+          "",
+          "Project / Business Need:",
+          project,
+          ""
+        ];
+
+        if (timeline) {
+          greeting.push("Timeline:", timeline, "");
+        }
+        if (budget) {
+          greeting.push("Budget:", budget, "");
+        }
+        if (contact) {
+          greeting.push("Preferred Contact:", contact, "");
+        }
+        if (info) {
+          greeting.push("Additional Information:", info, "");
+        }
+
+        greeting.push("I would be interested in discussing the project, possible architecture, implementation approach, and next steps.", "", "Best regards,", name, company, email);
+
+        return greeting.join("\n");
+      };
+
+      const validateForm = () => {
+        const name = document.getElementById("request-name").value.trim();
+        const email = document.getElementById("request-email").value.trim();
+        const project = document.getElementById("request-project").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!name) {
+          errorField.textContent = "Please enter your name.";
+          return false;
+        }
+        if (!email) {
+          errorField.textContent = "Please enter your email address.";
+          return false;
+        }
+        if (!emailPattern.test(email)) {
+          errorField.textContent = "Please enter a valid email address.";
+          return false;
+        }
+        if (!project) {
+          errorField.textContent = "Please tell me what you would like to build.";
+          return false;
+        }
+
+        errorField.textContent = "";
+        return true;
+      };
+
+      const showPreview = (serviceKey) => {
+        if (!activeServiceKey || !validateForm()) return;
+        const values = Object.fromEntries(new FormData(form).entries());
+        currentPreviewMessage = buildRequestMessage(serviceKey || activeServiceKey, values);
+        previewMessage.textContent = currentPreviewMessage;
+        previewBox.classList.add("is-visible");
+        trackServiceEvent("service_request_generated", { service: services[serviceKey || activeServiceKey].name });
+      };
+
+      const openRequestModal = (serviceKey, button) => {
+        lastTriggerButton = button;
+        populateServiceFields(serviceKey);
+        setModalState(true);
+        trackServiceEvent("service_request_opened", { service: services[serviceKey].name });
+      };
+
+      const closeRequestModal = () => {
+        setModalState(false);
+        previewBox.classList.remove("is-visible");
+        errorField.textContent = "";
+      };
+
+      document.querySelectorAll(".service-request-btn").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          const serviceKey = button.dataset.requestService;
+          const details = button.closest(".service-card");
+          if (details) {
+            details.open = true;
+          }
+          openRequestModal(serviceKey, button);
+        });
+      });
+
+      document.querySelectorAll(".service-card").forEach((card) => {
+        card.addEventListener("toggle", () => {
+          if (card.open) {
+            document.querySelectorAll(".service-card").forEach((other) => {
+              if (other !== card) other.open = false;
+            });
+          }
+        });
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        showPreview(activeServiceKey);
+      });
+
+      quickButton?.addEventListener("click", () => {
+        if (!activeServiceKey) return;
+        const fallback = {
+          name: "Your Name",
+          email: emailAddress,
+          company: "",
+          project: "I would like to discuss a potential project.",
+          timeline: "",
+          budget: "",
+          contact: "Email",
+          information: ""
+        };
+        currentPreviewMessage = buildRequestMessage(activeServiceKey, fallback);
+        previewMessage.textContent = currentPreviewMessage;
+        previewBox.classList.add("is-visible");
+        trackServiceEvent("service_request_generated", { service: services[activeServiceKey].name, mode: "quick" });
+      });
+
+      editButton?.addEventListener("click", () => {
+        previewBox.classList.remove("is-visible");
+        document.getElementById("request-name")?.focus();
+      });
+
+      emailButton?.addEventListener("click", () => {
+        if (!currentPreviewMessage) return;
+        const subject = `Service Request - ${services[activeServiceKey]?.name || "Service"}`;
+        const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(currentPreviewMessage)}`;
+        window.open(mailtoUrl, "_blank");
+        trackServiceEvent("service_email_clicked", { service: services[activeServiceKey]?.name || "Service" });
+      });
+
+      whatsappButton?.addEventListener("click", () => {
+        if (!currentPreviewMessage) return;
+        const whatsappLink = `${whatsappUrl}?text=${encodeURIComponent(currentPreviewMessage)}`;
+        window.open(whatsappLink, "_blank", "noopener,noreferrer");
+        trackServiceEvent("service_whatsapp_clicked", { service: services[activeServiceKey]?.name || "Service" });
+      });
+
+      closeButton?.addEventListener("click", closeRequestModal);
+      cancelButton?.addEventListener("click", closeRequestModal);
+      modal?.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeRequestModal();
+        }
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal?.classList.contains("is-open")) {
+          closeRequestModal();
+        }
+      });
+
+      dialog?.addEventListener("keydown", (event) => {
+        if (event.key === "Tab") {
+          const focusable = Array.from(dialog.querySelectorAll("button, input, textarea, select")).filter((el) => !el.disabled);
+          if (!focusable.length) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
       });
     </script>
     </div>
