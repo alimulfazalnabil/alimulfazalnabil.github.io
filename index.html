@@ -2619,6 +2619,15 @@
         padding: 0.2rem 0 0.6rem;
       }
 
+      .section-panel {
+        border: 0;
+        background: transparent;
+      }
+
+      .section-panel:not([open]) > .section-content {
+        display: none;
+      }
+
       .card,
       .stat-card,
       .timeline-item,
