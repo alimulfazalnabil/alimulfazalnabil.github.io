@@ -1500,6 +1500,59 @@
         padding: 0 1.2rem 1.2rem;
       }
 
+      .service-featured-copy {
+        margin: 0 0 1.25rem;
+        padding: 1.1rem 1.2rem;
+        border: 1px solid rgba(104, 227, 255, 0.16);
+        border-radius: 18px;
+        background: rgba(104, 227, 255, 0.05);
+      }
+
+      .service-featured-copy h3 {
+        margin: 0 0 0.55rem;
+        font-size: 1.2rem;
+      }
+
+      .service-featured-copy p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.75;
+      }
+
+      .azure-consulting-list {
+        display: grid;
+        gap: 1rem;
+        margin: 1.2rem 0 1.5rem;
+      }
+
+      .azure-service-item {
+        padding: 1rem 1.1rem;
+        border: 1px solid rgba(104, 227, 255, 0.16);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .azure-service-item h4 {
+        margin: 0 0 0.45rem;
+        font-size: 1.02rem;
+      }
+
+      .azure-service-item p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .azure-service-item strong {
+        color: var(--text);
+      }
+
+      .azure-service-item a {
+        display: inline-block;
+        margin-top: 0.55rem;
+        font-weight: 700;
+      }
+
       .service-card ul {
         margin: 0.8rem 0 0;
         padding-left: 1.15rem;
@@ -4429,20 +4482,72 @@
       </div>
       <p class="section-note">I help organizations design, build, automate, and modernize technology solutions across cloud infrastructure, software, AI, data, DevOps, and robotics.</p>
 
+      <div class="service-featured-copy">
+        <h3>Azure Cloud Architecture &amp; Consulting Services</h3>
+        <p>I help businesses design secure, scalable, and highly automated Azure environments that connect infrastructure, software delivery, and business value. The service model below is grounded in practical reference architectures and open-source implementations for migration, platform delivery, security, DevOps automation, and data/AI modernization.</p>
+      </div>
+
+      <div class="azure-consulting-list">
+        <div class="azure-service-item">
+          <h4>1. Cloud Migration &amp; Hybrid Infrastructure</h4>
+          <p><strong>Overview:</strong> Seamlessly transition on-premises Windows and Linux workloads into a secure, scalable hybrid Azure environment.</p>
+          <p><strong>Core Tech:</strong> Azure Migrate, VNet, Site-to-Site VPN Gateway, Azure VMs, Backup, and Monitor.</p>
+          <p><strong>Client Value:</strong> Eliminates physical hardware maintenance overhead and provides a structured path to cloud adoption.</p>
+          <a href="https://github.com/alimulfazalnabil/azure-hybrid-migration" target="_blank" rel="noopener noreferrer">View Source Repository →</a>
+        </div>
+
+        <div class="azure-service-item">
+          <h4>2. Scalable E-Commerce &amp; Business Web Platform</h4>
+          <p><strong>Overview:</strong> Build and deploy high-availability, high-traffic web applications with edge acceleration and isolated data tiers.</p>
+          <p><strong>Core Tech:</strong> Azure Front Door (WAF/CDN), Linux App Service (P1v3), Azure SQL Database, and Managed Identities.</p>
+          <p><strong>Client Value:</strong> Guarantees 99.9% uptime, global performance optimization, and robust edge-to-database protection.</p>
+          <a href="https://github.com/alimulfazalnabil/azure-scalable-web-platform" target="_blank" rel="noopener noreferrer">View Source Repository →</a>
+        </div>
+
+        <div class="azure-service-item">
+          <h4>3. Azure Security &amp; Zero-Trust Foundation</h4>
+          <p><strong>Overview:</strong> Fortify enterprise environments against modern cyber threats using Microsoft’s strict Zero-Trust framework.</p>
+          <p><strong>Core Tech:</strong> Microsoft Entra ID (Conditional Access/RBAC), Microsoft Defender for Cloud, Private Endpoints, Azure Policy, and Microsoft Sentinel.</p>
+          <p><strong>Client Value:</strong> Mitigates security vulnerabilities, enforces strict compliance policies, and provides unified SIEM monitoring.</p>
+          <a href="https://github.com/alimulfazalnabil/azure-zero-trust-security" target="_blank" rel="noopener noreferrer">View Source Repository →</a>
+        </div>
+
+        <div class="azure-service-item">
+          <h4>4. DevOps &amp; Infrastructure Automation Platform</h4>
+          <p><strong>Overview:</strong> Eliminate manual configuration errors by provisioning infrastructure as code through automated CI/CD pipelines.</p>
+          <p><strong>Core Tech:</strong> Modular Terraform, GitHub Actions, OIDC Passwordless Authentication, and multi-environment isolation (dev/prod).</p>
+          <p><strong>Client Value:</strong> Accelerates deployment cycles, lowers operational risks, and delivers fully auditable infrastructure history.</p>
+          <a href="https://github.com/alimulfazalnabil/azure-terraform-cicd-foundation" target="_blank" rel="noopener noreferrer">View Source Repository →</a>
+        </div>
+
+        <div class="azure-service-item">
+          <h4>5. Business Data &amp; AI Analytics Platform</h4>
+          <p><strong>Overview:</strong> Consolidate siloed operational data into a high-performance business intelligence and AI-driven insights hub.</p>
+          <p><strong>Core Tech:</strong> Azure Data Factory, Data Lake, Synapse Analytics, Power BI, Azure Machine Learning, and Azure OpenAI.</p>
+          <p><strong>Client Value:</strong> Transforms raw data into real-time operational visibility and natural-language query intelligence.</p>
+          <a href="https://github.com/alimulfazalnabil/azure-data-ai-analytics" target="_blank" rel="noopener noreferrer">View Source Repository →</a>
+        </div>
+      </div>
+
       <div class="services-grid">
         <details class="service-card" data-service="cloud">
           <summary>
             <span class="service-number">01</span>
-            <h3>Cloud & Infrastructure</h3>
-            <p>Design and modernize reliable, secure, and scalable IT infrastructure.</p>
+            <h3>Cloud Migration &amp; Hybrid Infrastructure</h3>
+            <p>Seamlessly transition on-premises workloads into a secure, scalable hybrid Azure environment.</p>
           </summary>
           <div class="service-card-body">
             <ul>
-              <li>Azure cloud architecture, hybrid infrastructure, migration</li>
-              <li>Identity and access management, network architecture, security</li>
-              <li>Monitoring, observability, disaster recovery, optimization</li>
+              <li>Azure migration planning, hybrid connectivity, and workload modernization</li>
+              <li>Identity, networking, backup, and cloud operations for resilient environments</li>
+              <li>Performance, observability, and cost-conscious platform optimization</li>
             </ul>
-            <p class="service-tech">Technologies: Azure · AWS · Windows Server · Linux · Entra ID · Networking · Azure Monitor</p>
+            <p class="service-tech">Core Tech: Azure Migrate · VNet · VPN Gateway · Azure VMs · Backup · Monitor</p>
+            <div class="repo-chip-grid">
+              <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/azure-hybrid-migration" target="_blank" rel="noopener noreferrer">Hybrid Migration</a>
+              <a class="repo-chip" href="https://github.com/alimulfazalnabil/azure-scalable-web-platform" target="_blank" rel="noopener noreferrer">Scalable Web Platform</a>
+              <a class="repo-chip" href="https://github.com/alimulfazalnabil/azure-zero-trust-security" target="_blank" rel="noopener noreferrer">Zero-Trust Security</a>
+            </div>
             <button class="service-request-btn" type="button" data-request-service="cloud">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
           </div>
         </details>
@@ -4450,16 +4555,20 @@
         <details class="service-card" data-service="devops">
           <summary>
             <span class="service-number">02</span>
-            <h3>DevOps & Infrastructure Automation</h3>
-            <p>Automate infrastructure and software delivery to improve reliability and reduce operational effort.</p>
+            <h3>DevOps &amp; Infrastructure Automation Platform</h3>
+            <p>Eliminate manual configuration errors by provisioning infrastructure as code through automated CI/CD pipelines.</p>
           </summary>
           <div class="service-card-body">
             <ul>
-              <li>Infrastructure as code and cloud/server automation</li>
-              <li>CI/CD pipelines, deployment automation, configuration management</li>
-              <li>Kubernetes infrastructure and observability</li>
+              <li>Modular Terraform provisioning, multi-environment isolation, and governance</li>
+              <li>GitHub Actions pipelines, OIDC authentication, and secure deployment automation</li>
+              <li>Reusable cloud patterns for predictable, auditable software delivery</li>
             </ul>
-            <p class="service-tech">Technologies: Terraform · Ansible · PowerShell · Python · Docker · Kubernetes · GitHub Actions · Jenkins · Azure DevOps</p>
+            <p class="service-tech">Core Tech: Terraform · GitHub Actions · OIDC · Multi-Environment Dev/Prod · Azure Policy</p>
+            <div class="repo-chip-grid">
+              <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/azure-terraform-cicd-foundation" target="_blank" rel="noopener noreferrer">Terraform + CI/CD</a>
+              <a class="repo-chip" href="https://github.com/alimulfazalnabil/azure-scalable-web-platform" target="_blank" rel="noopener noreferrer">Platform Automation</a>
+            </div>
             <button class="service-request-btn" type="button" data-request-service="devops">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
           </div>
         </details>
@@ -4494,6 +4603,10 @@
               <li>AI proof of concepts and MLOps pathways</li>
             </ul>
             <p class="service-tech">Technologies: Python · OpenAI API · Azure OpenAI · LangChain · LangGraph · TensorFlow · PyTorch · Scikit-learn · OpenCV · YOLO</p>
+            <div class="repo-chip-grid">
+              <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Doctors-CoPilot-Ai" target="_blank" rel="noopener noreferrer">Doctor’s Copilot</a>
+              <a class="repo-chip" href="https://github.com/alimulfazalnabil/Computer-Vision-Projects" target="_blank" rel="noopener noreferrer">Computer Vision</a>
+            </div>
             <button class="service-request-btn" type="button" data-request-service="ai">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
           </div>
         </details>
@@ -4501,16 +4614,20 @@
         <details class="service-card" data-service="data">
           <summary>
             <span class="service-number">05</span>
-            <h3>Data Engineering & Analytics</h3>
-            <p>Turn operational data into reliable pipelines, insights, and decision-support systems.</p>
+            <h3>Business Data &amp; AI Analytics Platform</h3>
+            <p>Consolidate siloed operational data into a high-performance business intelligence and AI-driven insights hub.</p>
           </summary>
           <div class="service-card-body">
             <ul>
-              <li>ETL/ELT pipelines, warehousing, analytics engineering</li>
-              <li>Data cleaning, BI, dashboard development, predictive analytics</li>
-              <li>Decision support workflows for operational teams</li>
+              <li>Data platform design, ETL/ELT pipelines, and business intelligence enablement</li>
+              <li>Operational visibility, forecasting, and natural-language query workflows</li>
+              <li>AI-enabled analytics for smarter decision support and automation</li>
             </ul>
-            <p class="service-tech">Technologies: Python · SQL · Pandas · NumPy · Airflow · PostgreSQL · PostGIS · Spark · Power BI · Tableau</p>
+            <p class="service-tech">Core Tech: Azure Data Factory · Data Lake · Synapse Analytics · Power BI · Azure ML · Azure OpenAI</p>
+            <div class="repo-chip-grid">
+              <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/azure-data-ai-analytics" target="_blank" rel="noopener noreferrer">Data &amp; AI Analytics</a>
+              <a class="repo-chip" href="https://github.com/alimulfazalnabil/Doctors-CoPilot-Ai" target="_blank" rel="noopener noreferrer">Doctor’s Copilot</a>
+            </div>
             <button class="service-request-btn" type="button" data-request-service="data">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
           </div>
         </details>
@@ -4528,6 +4645,10 @@
               <li>Autonomous systems and robotics simulation</li>
             </ul>
             <p class="service-tech">Technologies: ROS 2 · C++ · Python · OpenCV · YOLO · LiDAR · IMU · GPS · SLAM · CARLA · ArduPilot · Raspberry Pi · Arduino</p>
+            <div class="repo-chip-grid">
+              <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Robotics-projects" target="_blank" rel="noopener noreferrer">Robotics Projects</a>
+              <a class="repo-chip" href="https://github.com/alimulfazalnabil/YOLO_Projects" target="_blank" rel="noopener noreferrer">YOLO Projects</a>
+            </div>
             <button class="service-request-btn" type="button" data-request-service="vision">REQUEST THIS SERVICE <span class="service-arrow">→</span></button>
           </div>
         </details>
