@@ -4488,7 +4488,7 @@
 
       
 
-<section id="services" class="container no-collapse">
+<section id="services" class="container">
       <div class="section-heading">
         <div>
           <span class="eyebrow">Services</span>
@@ -4920,7 +4920,7 @@
 
       const sectionContainers = Array.from(document.querySelectorAll("main > section.container, main > section.hero"));
       sectionContainers.forEach((section) => {
-        if (section.classList.contains("no-collapse") || section.querySelector(".section-panel") || !section.querySelector(".section-heading")) {
+        if (section.querySelector(".section-panel") || !section.querySelector(".section-heading")) {
           return;
         }
 
