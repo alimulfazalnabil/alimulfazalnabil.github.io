@@ -2635,6 +2635,62 @@
         margin-bottom: 0.35rem;
       }
 
+      .azure-case-study {
+        margin-top: 1.5rem;
+        padding: 1.4rem 1.25rem;
+        border-radius: 18px;
+        border: 1px solid rgba(104, 227, 255, 0.18);
+        background: rgba(104, 227, 255, 0.06);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+      }
+
+      .azure-case-study .case-study-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .azure-case-study .case-study-header h3 {
+        margin: 0;
+      }
+
+      .azure-case-study .case-study-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .azure-case-study .case-study-grid > div {
+        padding: 1rem;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .azure-case-study .case-study-grid h4 {
+        margin: 0 0 0.5rem;
+        color: var(--accent-2);
+      }
+
+      .azure-case-study .case-study-grid p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      @media (max-width: 700px) {
+        .azure-case-study .case-study-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .azure-case-study .case-study-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
       .about-direction,
       .about-philosophy-card,
       .service-flow,
@@ -2702,6 +2758,291 @@
       .filter-pill {
         font-size: 0.84rem;
         padding: 0.38rem 0.66rem;
+      }
+
+      /* =========================================================
+         AZURE SCALABLE WEB PLATFORM
+         ========================================================= */
+
+      .azure-scalable-project {
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Header */
+
+      .azure-scalable-project .project-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 24px;
+      }
+
+      .azure-scalable-project .project-category {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .azure-scalable-project h3 {
+        margin: 0 0 10px;
+      }
+
+      .azure-scalable-project .project-tagline {
+        margin: 0;
+        max-width: 680px;
+        line-height: 1.6;
+        opacity: 0.78;
+      }
+
+      .azure-scalable-project .project-status {
+        flex-shrink: 0;
+        padding: 6px 12px;
+        border: 1px solid currentColor;
+        border-radius: 999px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      /* Cloud Architecture Visual */
+
+      .azure-cloud-visual {
+        position: relative;
+        min-height: 240px;
+        padding: 30px;
+        margin-bottom: 28px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+
+        border-radius: 18px;
+        overflow: hidden;
+      }
+
+      .azure-cloud-visual::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background:
+            radial-gradient(
+                circle at 50% 30%,
+                rgba(80, 140, 255, 0.15),
+                transparent 55%
+            );
+
+        pointer-events: none;
+      }
+
+      .cloud-node {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        padding: 14px 20px;
+
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 14px;
+
+        backdrop-filter: blur(10px);
+      }
+
+      .cloud-node .node-icon {
+        font-size: 1.4rem;
+      }
+
+      .cloud-node strong {
+        font-size: 1rem;
+      }
+
+      .cloud-node small {
+        opacity: 0.6;
+      }
+
+      .architecture-flow {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .architecture-flow span:not(.flow-arrow) {
+        padding: 8px 12px;
+
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 8px;
+
+        background: rgba(255,255,255,0.04);
+      }
+
+      .flow-arrow {
+        opacity: 0.5;
+      }
+
+      .automation-badge {
+        position: relative;
+        z-index: 1;
+
+        padding: 8px 14px;
+
+        border-radius: 999px;
+
+        font-size: 0.72rem;
+        font-weight: 600;
+
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.1);
+      }
+
+      /* Description */
+
+      .azure-scalable-project .project-description {
+        font-size: 0.95rem;
+        line-height: 1.75;
+        margin-bottom: 28px;
+      }
+
+      /* Features */
+
+      .azure-scalable-project .project-features h4 {
+        margin-bottom: 14px;
+      }
+
+      .azure-scalable-project .project-features ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .azure-scalable-project .project-features li {
+        margin-bottom: 10px;
+        line-height: 1.65;
+      }
+
+      .azure-scalable-project .project-features strong {
+        font-weight: 700;
+      }
+
+      /* Technology Tags */
+
+      .azure-scalable-project .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        margin-top: 26px;
+      }
+
+      .azure-scalable-project .project-tech span {
+        padding: 7px 11px;
+
+        border-radius: 999px;
+
+        font-size: 0.72rem;
+        font-weight: 600;
+
+        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.04);
+      }
+
+      /* Buttons */
+
+      .azure-scalable-project .project-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        margin-top: 28px;
+      }
+
+      .azure-scalable-project .project-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 10px 16px;
+
+        border-radius: 10px;
+
+        text-decoration: none;
+
+        font-size: 0.82rem;
+        font-weight: 700;
+
+        transition:
+            transform 0.25s ease,
+            opacity 0.25s ease,
+            background 0.25s ease;
+      }
+
+      .azure-scalable-project .project-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .azure-scalable-project .project-btn.primary {
+        background: var(--accent, currentColor);
+        color: var(--background, #000);
+      }
+
+      .azure-scalable-project .project-btn.secondary {
+        border: 1px solid rgba(255,255,255,0.12);
+        background: rgba(255,255,255,0.04);
+      }
+
+      /* Responsive */
+
+      @media (max-width: 768px) {
+
+        .azure-scalable-project .project-card-header {
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        .azure-scalable-project .project-status {
+          align-self: flex-start;
+        }
+
+        .azure-cloud-visual {
+          min-height: 280px;
+          padding: 22px 16px;
+        }
+
+        .architecture-flow {
+          gap: 7px;
+        }
+
+        .architecture-flow span:not(.flow-arrow) {
+          font-size: 0.7rem;
+          padding: 7px 9px;
+        }
+
+        .azure-scalable-project .project-actions {
+          flex-direction: column;
+        }
+
+        .azure-scalable-project .project-btn {
+          justify-content: center;
+          width: 100%;
+        }
+
       }
 
       @keyframes drift {
@@ -3507,6 +3848,204 @@
               </div>
             </div>
           </article>
+          <!-- Azure Scalable Web Platform -->
+          <article class="project-card azure-scalable-project" data-category="cloud devops">
+
+            <div class="project-card-header">
+              <div>
+                <span class="project-category">CLOUD ENGINEERING</span>
+
+                <h3>Azure Scalable Web Platform</h3>
+
+                <p class="project-tagline">
+                  Secure, scalable and automated Azure infrastructure
+                  engineered with Terraform and GitHub Actions.
+                </p>
+              </div>
+
+              <span class="project-status">FEATURED</span>
+            </div>
+
+            <!-- Project Visual -->
+            <div class="project-visual azure-cloud-visual">
+
+              <div class="cloud-node">
+                <span class="node-icon">☁</span>
+                <strong>Azure</strong>
+                <small>Cloud Platform</small>
+              </div>
+
+              <div class="architecture-flow">
+                <span>Users</span>
+                <span class="flow-arrow">→</span>
+                <span>Front Door</span>
+                <span class="flow-arrow">→</span>
+                <span>App Service</span>
+                <span class="flow-arrow">→</span>
+                <span>SQL / Blob</span>
+              </div>
+
+              <div class="automation-badge">
+                Terraform + GitHub Actions
+              </div>
+
+            </div>
+
+            <!-- Project Description -->
+            <div class="project-card-body">
+
+              <p class="project-description">
+                An enterprise-style Azure cloud platform designed around
+                scalable infrastructure, secure networking, managed services,
+                Infrastructure as Code, and automated CI/CD delivery.
+              </p>
+
+              <!-- Key Features -->
+              <div class="project-features">
+
+                <h4>Key Engineering Features</h4>
+
+                <ul>
+                  <li>
+                    <strong>Scalable Azure Architecture</strong>
+                    — Designed using managed Azure services for reliable
+                    application delivery.
+                  </li>
+
+                  <li>
+                    <strong>Infrastructure as Code</strong>
+                    — Reusable Terraform modules provide repeatable
+                    infrastructure provisioning.
+                  </li>
+
+                  <li>
+                    <strong>Automated CI/CD</strong>
+                    — GitHub Actions automates infrastructure and
+                    application deployment workflows.
+                  </li>
+
+                  <li>
+                    <strong>Secure Authentication</strong>
+                    — GitHub Actions uses OIDC-based authentication
+                    instead of long-lived Azure credentials.
+                  </li>
+
+                  <li>
+                    <strong>Managed Services</strong>
+                    — Azure App Service, Azure SQL Database and
+                    Blob Storage reduce operational overhead.
+                  </li>
+
+                  <li>
+                    <strong>Production-Oriented Design</strong>
+                    — Architecture considers availability, security,
+                    scalability and maintainability.
+                  </li>
+                </ul>
+
+              </div>
+
+              <!-- Technology Tags -->
+              <div class="project-tech">
+
+                <span>Azure</span>
+                <span>Terraform</span>
+                <span>GitHub Actions</span>
+                <span>Infrastructure as Code</span>
+                <span>CI/CD</span>
+                <span>Cloud Architecture</span>
+                <span>Cloud Security</span>
+                <span>Networking</span>
+
+              </div>
+
+              <!-- Project Actions -->
+              <div class="project-actions">
+
+                <a
+                  href="https://github.com/alimulfazalnabil/Azure-scalable-web-platform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-btn primary"
+                >
+                  View GitHub
+                  <span>↗</span>
+                </a>
+
+                <a
+                  href="#azure-scalable-case-study"
+                  class="project-btn secondary"
+                >
+                  View Case Study
+                  <span>↓</span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <div id="azure-scalable-case-study" class="azure-case-study">
+            <div class="case-study-header">
+              <span class="eyebrow">Case Study</span>
+              <h3>Azure Scalable Web Platform</h3>
+            </div>
+
+            <div class="case-study-grid">
+              <div>
+                <h4>Problem</h4>
+                <p>
+                  Modern web workloads require infrastructure that can scale
+                  reliably while remaining secure, repeatable, and easy to maintain.
+                </p>
+              </div>
+
+              <div>
+                <h4>Solution</h4>
+                <p>
+                  The platform combines managed Azure services with Terraform
+                  Infrastructure as Code and GitHub Actions CI/CD to create an
+                  automated cloud delivery foundation.
+                </p>
+              </div>
+
+              <div>
+                <h4>Architecture</h4>
+                <p>
+                  Azure Front Door provides the edge layer, Linux App Service hosts the
+                  application, Azure SQL provides relational data storage, and Blob
+                  Storage handles object storage.
+                </p>
+              </div>
+
+              <div>
+                <h4>Engineering Decisions</h4>
+                <p>
+                  Terraform was selected for repeatable infrastructure provisioning,
+                  while GitHub Actions provides automated validation and deployment.
+                  OIDC removes the need for long-lived Azure credentials.
+                </p>
+              </div>
+
+              <div>
+                <h4>Business Value</h4>
+                <p>
+                  The architecture improves deployment consistency, infrastructure
+                  repeatability, operational efficiency, scalability, and maintainability.
+                </p>
+              </div>
+
+              <div>
+                <h4>Future Improvements</h4>
+                <p>
+                  Potential production enhancements include Azure Key Vault, WAF
+                  policies, private endpoints, enhanced observability, autoscaling, and
+                  additional governance controls.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
