@@ -8,6 +8,70 @@
 
 const MEDIA_ITEMS = [
   {
+    id: "media-solar-tracking-lab",
+    title: "Dual-Axis Solar Tracker & Microcontroller Engineering Lab",
+    description: "Alimul Fazal Nabil calibrating an automated dual-axis solar tracking prototype with closed-loop light sensor feedback, servo motor actuation, and test telemetry in the university robotics and electronics laboratory.",
+    category: "Engineering & Technical Demonstrations",
+    mediaType: "image",
+    src: "assets/images/solar-tracking-lab.jpg",
+    thumbnail: "assets/images/solar-tracking-lab.jpg",
+    alt: "Alimul Fazal Nabil working on dual-axis solar tracking prototype in robotics engineering lab",
+    caption: "Alimul Fazal Nabil calibrating an automated dual-axis solar tracking prototype in the university robotics and embedded systems laboratory.",
+    date: "2018–2020",
+    relatedUrl: "portfolio.html#projectGrid",
+    relatedLabel: "View Hardware Archive",
+    originalUrl: "assets/images/solar-tracking-lab.jpg",
+    featured: true
+  },
+  {
+    id: "media-autonomous-path-planning",
+    title: "Autonomous Obstacle Avoidance & Trajectory Path Planning",
+    description: "Autonomous ground vehicle (UGV) executing real-time spatial path planning and dynamic obstacle avoidance across an indoor obstacle environment using multi-sensor fusion.",
+    category: "AI & Computer Vision",
+    mediaType: "image",
+    src: "assets/images/autonomous-path-planning.jpg",
+    thumbnail: "assets/images/autonomous-path-planning.jpg",
+    alt: "Autonomous mobile robot navigating obstacle course with glowing trajectory path planning line",
+    caption: "Real-time autonomous trajectory path planning and reactive obstacle avoidance navigation on a ground robotic vehicle.",
+    date: "2021–2022",
+    relatedUrl: "portfolio.html#projectGrid",
+    relatedLabel: "Explore Robotics Project",
+    originalUrl: "assets/images/autonomous-path-planning.jpg",
+    featured: true
+  },
+  {
+    id: "media-sensor-fusion-architecture",
+    title: "Raspberry Pi + Sensor Fusion Perception Architecture",
+    description: "Comprehensive perception schematic and system architecture bridging Raspberry Pi high-level vision computation with multi-directional ultrasonic sensor arrays and Arduino actuation.",
+    category: "Robotics & Hardware",
+    mediaType: "image",
+    src: "assets/images/robot-sensor-fusion-architecture.jpg",
+    thumbnail: "assets/images/robot-sensor-fusion-architecture.jpg",
+    alt: "Architectural blueprint showing Raspberry Pi and sensor fusion architecture with ultrasonic sensing cones",
+    caption: "Raspberry Pi + multi-sensor fusion architecture combining forward computer vision with panoramic ultrasonic telemetry.",
+    date: "2021–2022",
+    relatedUrl: "portfolio.html#projectGrid",
+    relatedLabel: "View System Architecture",
+    originalUrl: "assets/images/robot-sensor-fusion-architecture.jpg",
+    featured: true
+  },
+  {
+    id: "media-robot-hardware-prototype",
+    title: "Autonomous Mobile Ground Robot Hardware Prototype",
+    description: "Custom-fabricated mobile robot platform featuring multi-tiered acrylic chassis, Raspberry Pi compute board, Arduino Uno low-level controller, 4-array ultrasonic distance sensors, and illuminated LED headlights.",
+    category: "Robotics & Hardware",
+    mediaType: "image",
+    src: "assets/images/autonomous-robot-hardware.jpg",
+    thumbnail: "assets/images/autonomous-robot-hardware.jpg",
+    alt: "High-angle view of custom autonomous robot prototype with illuminated LED headlights and multi-sensor array",
+    caption: "Custom autonomous ground vehicle hardware build with Raspberry Pi, Arduino, multi-sonar array, and active headlight illumination.",
+    date: "2021–2022",
+    relatedUrl: "portfolio.html#projectGrid",
+    relatedLabel: "View Hardware Specs",
+    originalUrl: "assets/images/autonomous-robot-hardware.jpg",
+    featured: true
+  },
+  {
     id: "media-eng-field",
     title: "Engineering Leadership & Applied AI Solutions",
     description: "Alimul Fazal Nabil leading enterprise AI architecture, retrieval systems, and intelligent multi-agent orchestration across production and cloud environments.",
@@ -21,7 +85,7 @@ const MEDIA_ITEMS = [
     relatedUrl: "#about",
     relatedLabel: "About Engineering Journey",
     originalUrl: "assets/images/profile.jpg",
-    featured: true
+    featured: false
   },
   {
     id: "media-cv-lane",
