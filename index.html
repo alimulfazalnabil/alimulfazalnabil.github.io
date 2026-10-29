@@ -3,10 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Technical portfolio of Alimul Fazal Nabil, focused on software and systems engineering, robotics, embedded projects, computer vision, automation, and cloud infrastructure." />
-    <title>Alimul Fazal Nabil | Software, Robotics &amp; Computer Vision</title>
+    <meta
+      name="description"
+      content="Professional engineering portfolio for Alimul Fazal Nabil, focused on business value through cloud, DevOps, AI, data, robotics, and leadership."
+    />
+    <title>Alimul Fazal Nabil | Business-Driven Engineering Portfolio</title>
     <style>
-      :root { --bg: #07111f; --surface: #101c2f; --surface-2: #16263d; --text: #f5f7fb; --white: #f5f7fb; --muted: #9eb0c7; --accent: #4f8cff; --accent-blue: #4f8cff; --accent-2: #6ee7f9; --border: rgba(255, 255, 255, 0.12); }
+      :root {
+        --bg: #07111f;
+        --surface: #101c2f;
+        --surface-2: #16263d;
+        --text: #f5f7fb;
+        --muted: #9eb0c7;
+        --accent: #4f8cff;
+        --accent-2: #6ee7f9;
+        --border: rgba(255, 255, 255, 0.12);
+      }
 
       * {
         box-sizing: border-box;
@@ -338,6 +350,20 @@
         background: rgba(79, 140, 255, 0.14);
         color: var(--accent-2);
         font-size: 0.9rem;
+      }
+
+      a.pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        text-decoration: none;
+        transition: all 180ms ease;
+      }
+
+      a.pill:hover {
+        background: rgba(79, 140, 255, 0.28);
+        color: #fff;
+        transform: translateY(-1px);
       }
 
       .profile-photo-card {
@@ -1015,6 +1041,30 @@
         .value-grid {
           grid-template-columns: 1fr;
         }
+
+        .nav-links {
+          gap: 0.6rem 0.85rem;
+          font-size: 0.88rem;
+        }
+
+        .nav-more-menu {
+          right: auto;
+          left: 0;
+          min-width: 190px;
+        }
+
+        .hero {
+          padding-top: 2rem;
+        }
+
+        .hero-actions {
+          width: 100%;
+        }
+
+        .hero-actions .btn {
+          flex: 1 1 100%;
+          text-align: center;
+        }
       }
     </style>
   </head>
@@ -1051,12 +1101,14 @@
     <main id="home">
       <section class="container hero">
         <div>
-          <span class="eyebrow">Software &amp; Systems Engineer</span>
-          <h1>I build practical software systems at the intersection of robotics, computer vision, automation, and infrastructure.</h1>
-          <p>My background combines professional IT and cloud systems operations with project-based work in Python, C++17, OpenCV, Arduino, embedded control, and machine learning. I am especially interested in developing dependable software for intelligent robots and inspection systems.</p>
+          <span class="eyebrow">Senior Technology Leader</span>
+          <h1>I design, automate, and deliver technology solutions that improve reliability, accelerate execution, and create business value.</h1>
+          <p>
+            I bridge cloud, DevOps, AI, data, robotics, and product delivery to turn complex business and technical challenges into dependable systems and measurable outcomes.
+          </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">Explore My Work</a>
-            <a class="btn btn-secondary" href="#experience">View Experience</a>
+            <a class="btn btn-secondary" href="#contact">Download CV</a>
           </div>
           <div class="stats">
             <div class="stat-card">
@@ -1164,7 +1216,7 @@
           <div class="card">
             <h3>Professional Summary</h3>
             <p>
-              I combine professional experience in IT and cloud systems operations with project-based software work in Python, C++, computer vision, embedded control, and machine learning. My long-term technical interest is robotics software and intelligent inspection systems.
+              I approach technology as a business enabler. My work focuses on building systems that are reliable, scalable, secure, automated, and directly useful to the organization.
             </p>
             <div class="pill-row">
               <span class="pill">Business value</span>
@@ -1177,12 +1229,11 @@
             <div class="profile-photo-wrap">
               <img
                 class="profile-photo"
-                src="https://ui-avatars.com/api/?name=Alimul+Fazal+Nabil&size=900&background=0d1b2e&color=6ee7f9&bold=true"
+                src="profile.jpg"
                 alt="Alimul Fazal Nabil profile photo"
                 loading="lazy"
               />
             </div>
-            <p class="profile-photo-note">Add your direct image URL or local image path here to replace the current profile placeholder.</p>
             <h3>Engineering Philosophy</h3>
             <p>
               Requirements → Architecture → Implementation → Automation → Testing → Deployment → Monitoring → Continuous Improvement.
@@ -1196,13 +1247,49 @@
 
       <section id="experience" class="container">
         <div class="section-heading">
-          <div><span class="eyebrow">Experience</span><h2>Professional systems experience and applied technical projects.</h2></div>
+          <div>
+            <span class="eyebrow">Experience</span>
+            <h2>Experience that shows engineering, leadership, and delivery across cloud, AI, and applied technology.</h2>
+          </div>
         </div>
         <div class="projects-grid">
-          <article class="project-card"><span class="tag">September 2026 • Present</span><h3>Adjunct Faculty</h3><p>Cox's Bazar International University · Cox's Bazar, Bangladesh</p><ul class="feature-list"><li>Supports teaching and learning activities in a university setting.</li><li>Connects technical concepts with practical, project-oriented learning.</li></ul></article>
-          <article class="project-card"><span class="tag">2026 • Present</span><h3>AI &amp; ML Instructor</h3><p>ReDI School of Digital Integration · Remote</p><ul class="feature-list"><li>Teaches applied machine-learning and AI concepts through practical learning activities.</li><li>Supports learners with data-oriented thinking and project-based problem solving.</li></ul></article>
-          <article class="project-card"><span class="tag">January 2026 • Present</span><h3>CTO and Co-founder</h3><p>MoviSabio · AI traffic optimization and territorial-intelligence project</p><ul class="feature-list"><li>Defines technical direction and architecture for an AI-based traffic-optimization concept.</li><li>Explores geospatial data, simulation, and optimization workflows as part of an MVP roadmap.</li><li>Project status is described as concept/architecture work unless a specific implementation is linked.</li></ul></article>
-          <article class="project-card"><span class="tag">February 2019 • Present</span><h3>Infrastructure &amp; Cloud Systems Engineer</h3><p>Energy Crown Bangladesh Ltd · Cox's Bazar, Bangladesh</p><ul class="feature-list"><li>Supports IT systems, servers, networks, and end users across an environment serving more than 200 users.</li><li>Troubleshoots infrastructure issues, monitors availability, and maintains technical documentation.</li><li>Uses scripting and automation tools to support repeatable administration and deployment workflows.</li></ul></article>
+          <article class="project-card">
+            <span class="tag">2026 • Present</span>
+            <h3>AI & ML Instructor</h3>
+            <p>ReDI School of Digital Integration · Part-time · Berlin, Germany · Remote</p>
+            <ul class="feature-list">
+              <li>Teaches practical machine learning and AI concepts with an applied, learner-focused approach.</li>
+              <li>Supports skill development in AI, data thinking, and project-based problem solving.</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <span class="tag">2026 • Present</span>
+            <h3>Chief Technology Officer and Co-founder</h3>
+            <p>MoviSabio · Self-employed</p>
+            <ul class="feature-list">
+              <li>Leads the product and technical direction for a territorial intelligence platform.</li>
+              <li>Connects AI, cloud, data, and robotics work into one market-facing solution.</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <span class="tag">2023 • Present</span>
+            <h3>Infrastructure & Cloud Systems Engineer</h3>
+            <p>Energy Crown Bangladesh · Full-time · Cox's Bazar District, Chattogram, Bangladesh · Hybrid</p>
+            <ul class="feature-list">
+              <li>Operated Azure hybrid cloud with 99.9% uptime and secure production support.</li>
+              <li>Automated provisioning with Terraform and Ansible, improving efficiency by 45%.</li>
+              <li>Built CI/CD pipelines, reduced alert noise by 30%, and supported <30-minute MTTR.</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <span class="tag">2022 • 2022</span>
+            <h3>Graduate Student Researcher</h3>
+            <p>Cox’s Bazar International University · Part-time · Remote</p>
+            <ul class="feature-list">
+              <li>Conducted applied research across robotics, mechatronics, and related engineering topics.</li>
+              <li>Published research work and contributed to technical documentation and academic outputs.</li>
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -1459,14 +1546,89 @@
       </section>
 
       <section id="projects" class="container">
-        <div class="section-heading"><div><span class="eyebrow">Selected Projects</span><h2>Code and project work relevant to software and robotics engineering.</h2></div></div>
-        <p class="section-note">The project summaries distinguish documented code, project work, and architecture concepts. Performance claims are omitted where test evidence is not available.</p>
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Projects</span>
+            <h2>Selected GitHub projects that show how I deliver value.</h2>
+          </div>
+        </div>
+        <p class="section-note">Short, visual snapshots of the most relevant projects. The flagship MoviSabio card groups the repositories that best demonstrate your AI, cloud, data, and robotics skillset.</p>
         <div class="projects-grid">
-          <article class="project-card project-photo-card featured"><div class="project-cover"><span>01 • Computer Vision</span><strong>Autonomous Lane Detection</strong><em>Python · OpenCV · NumPy</em><small>Image-processing pipeline for road-lane boundary detection.</small></div><div class="project-card-body"><span class="tag">Documented repository</span><p>Implements image preprocessing, region-of-interest selection, edge detection, Hough-line extraction, left/right lane-boundary estimates, smoothing, and visualization. The repository also documents synthetic-image tests and optional CARLA integration.</p><div class="project-links"><a class="project-link primary" href="https://github.com/alimulfazalnabil/Autonomous-Lane-Detection" target="_blank" rel="noopener noreferrer">View Repository</a></div></div></article>
-          <article class="project-card project-photo-card"><div class="project-cover alt"><span>02 • Embedded Systems</span><strong>Arduino Robotic Arm</strong><em>Arduino · Servo Motors · Bluetooth (where implemented)</em></div><div class="project-card-body"><span class="tag">Project work; validation in progress</span><p>Explores servo-based arm control and an Arduino-centered hardware/software setup. The associated repository currently reads mainly as a documentation outline, so it should not be treated as a fully validated build until source code, circuit diagrams, and test evidence are added.</p><div class="project-links"><a class="project-link" href="https://github.com/alimulfazalnabil/Bluetooth-Controlled-Robotic-Arm" target="_blank" rel="noopener noreferrer">View Repository</a></div></div></article>
-          <article class="project-card project-photo-card"><div class="project-cover green"><span>03 • AI &amp; Geospatial Data</span><strong>MoviSabio Traffic Optimization</strong><em>Python · GeoPandas · PostGIS · Simulation concepts</em></div><div class="project-card-body"><span class="tag">Architecture / concept</span><p>An AI-based urban traffic-optimization initiative exploring geospatial data, simulation, and signal-coordination approaches. Planned components should be distinguished from implemented and tested features.</p><div class="project-links"><a class="project-link" href="https://github.com/alimulfazalnabil/AI-Traffic-Signal-Coordination" target="_blank" rel="noopener noreferrer">Traffic Coordination Repository</a><a class="project-link" href="https://github.com/alimulfazalnabil/Movisabio-Enterprise-Smart-City-System" target="_blank" rel="noopener noreferrer">Smart-City Architecture</a></div></div></article>
-          <article class="project-card project-photo-card"><div class="project-cover gold"><span>04 • ML &amp; API Engineering</span><strong>Heart Disease Prediction Demo</strong><em>Python · scikit-learn · FastAPI</em></div><div class="project-card-body"><span class="tag">Demonstration application</span><p>A machine-learning demonstration with a FastAPI interface and documented model-evaluation and logging components. It is an educational software demo, not a clinically validated diagnostic tool.</p><div class="project-links"><a class="project-link primary" href="https://github.com/alimulfazalnabil/heart-disease-prediction" target="_blank" rel="noopener noreferrer">View Repository</a><a class="project-link" href="https://heart-disease-prediction-8vuc.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo</a></div></div></article>
-          <article class="project-card project-photo-card"><div class="project-cover alt"><span>05 • Web Engineering</span><strong>PGCB Organization Portal</strong><em>Web application · Testing · Deployment</em></div><div class="project-card-body"><span class="tag">Application / deployed demo</span><p>A web portal project with backend and frontend functionality, member and administration areas, role-based access, and a publicly listed Render deployment.</p><div class="project-links"><a class="project-link" href="https://github.com/alimulfazalnabil/pgcb-org-portal" target="_blank" rel="noopener noreferrer">View Repository</a><a class="project-link" href="https://pgcb-org-portal.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo</a></div></div></article>
+          <article class="project-card project-photo-card featured">
+            <div class="project-cover">
+              <span>01 • Flagship</span>
+              <strong>MoviSabio</strong>
+              <em>Territorial Intelligence Platform</em>
+              <small>One flagship story that connects the AI, cloud, data, and robotics work behind MoviSabio.</small>
+            </div>
+            <div class="project-card-body">
+              <span class="tag">AI / Cloud / Data / Robotics</span>
+              <p>A flagship ecosystem that combines the most relevant repositories and shows how I turn data, automation, and intelligent systems into practical value.</p>
+              <div class="feature-stack">
+                <div class="metric"><strong>Computer Vision</strong><span>Detection and tracking</span></div>
+                <div class="metric"><strong>YOLO</strong><span>Real-time object recognition</span></div>
+                <div class="metric"><strong>Azure Cloud</strong><span>Platform delivery</span></div>
+                <div class="metric"><strong>Data / Python</strong><span>Pipelines and logic</span></div>
+              </div>
+              <div class="repo-chip-grid">
+                <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Computer-Vision-Projects" target="_blank" rel="noopener noreferrer">Computer Vision</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/YOLO_Projects" target="_blank" rel="noopener noreferrer">YOLO</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Azure-Cloud-Projects" target="_blank" rel="noopener noreferrer">Azure Cloud</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/API-projects-" target="_blank" rel="noopener noreferrer">API</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Data-Engineering-Projects" target="_blank" rel="noopener noreferrer">Data Engineering</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Robotics-projects" target="_blank" rel="noopener noreferrer">Robotics</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Python-Projects" target="_blank" rel="noopener noreferrer">Python</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Doctors-CoPilot-Ai" target="_blank" rel="noopener noreferrer">Doctor’s Copilot</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card project-photo-card">
+            <div class="project-cover alt">
+              <span>02 • Automation</span>
+              <strong>Automation & Python</strong>
+              <em>Workflow Tools</em>
+            </div>
+            <div class="project-card-body">
+              <span class="tag">Automation / Python / Productivity</span>
+              <p>Practical Python automation tools for file handling, reporting, monitoring, and everyday workflow efficiency.</p>
+              <div class="repo-chip-grid">
+                <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Automation-Projects" target="_blank" rel="noopener noreferrer">Automation Projects</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Python-Projects" target="_blank" rel="noopener noreferrer">Python Projects</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card project-photo-card">
+            <div class="project-cover green">
+              <span>03 • Cloud</span>
+              <strong>Azure & API Systems</strong>
+              <em>Infrastructure & Services</em>
+            </div>
+            <div class="project-card-body">
+              <span class="tag">Azure / APIs / Cloud Delivery</span>
+              <p>Cloud projects covering platform delivery, infrastructure, service integration, and AI-enabled systems.</p>
+              <div class="repo-chip-grid">
+                <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Azure-Cloud-Projects" target="_blank" rel="noopener noreferrer">Azure Cloud</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/API-projects-" target="_blank" rel="noopener noreferrer">API Projects</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Doctors-CoPilot-Ai" target="_blank" rel="noopener noreferrer">Doctor’s Copilot</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card project-photo-card">
+            <div class="project-cover gold">
+              <span>04 • Data & Robotics</span>
+              <strong>Data, IoT & Robotics</strong>
+              <em>Engineering Workflows</em>
+            </div>
+            <div class="project-card-body">
+              <span class="tag">Data Engineering / IoT / Robotics</span>
+              <p>Projects spanning data pipelines, IoT systems, and robotics experimentation from beginner to advanced.</p>
+              <div class="repo-chip-grid">
+                <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Data-Engineering-Projects" target="_blank" rel="noopener noreferrer">Data Engineering</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/IoT-Projects" target="_blank" rel="noopener noreferrer">IoT Projects</a>
+                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Robotics-projects" target="_blank" rel="noopener noreferrer">Robotics</a>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -1982,9 +2144,9 @@
           <article class="project-card">
             <span class="tag">2017 – 2021</span>
             <h3>Cox's Bazar International University</h3>
-            <p>Bachelor of Science in Computer Science and Engineering.</p>
+            <p>Bachelor's degree in Computer Engineering.</p>
             <ul class="feature-list">
-              <li>CGPA: 3.50 / 4.00</li>
+              <li>Grade: 3.505 / 4.00</li>
               <li>Received full funding for strong academic performance.</li>
               <li>Founding member of the CBIU CSE Alumni Association.</li>
               <li>Relevant coursework: Algorithms, Networks, Machine Learning, Cloud Computing, AI, and Software Engineering.</li>
@@ -2010,12 +2172,51 @@
       </section>
 
       <section id="languages" class="container">
-        <div class="section-heading"><div><span class="eyebrow">Languages</span><h2>Languages for technical work and international collaboration.</h2></div></div>
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Languages</span>
+            <h2>Multilingual communication across technical and international environments.</h2>
+          </div>
+        </div>
+        <div class="pill-row" style="margin-bottom: 1rem;">
+          <span class="pill">Native/Bilingual: 2</span>
+          <span class="pill">Professional Working: 2</span>
+          <span class="pill">Limited Working: 2</span>
+        </div>
         <div class="projects-grid">
-          <article class="project-card"><span class="tag">Native</span><h3>Bangla / Bengali</h3><p>Native language.</p></article>
-          <article class="project-card"><span class="tag">Professional proficiency</span><h3>English</h3><p>Professional communication for technical documentation, teaching, and collaboration.</p><ul class="feature-list"><li>Duolingo English Test score: 130 (February 2026), as listed in the existing portfolio.</li></ul></article>
-          <article class="project-card"><span class="tag">B1</span><h3>German</h3><p>Intermediate level; continuing to develop workplace communication skills.</p></article>
-          <article class="project-card"><span class="tag">A2</span><h3>Arabic</h3><p>Basic to elementary communication.</p></article>
+          <article class="project-card">
+            <span class="tag">Native or bilingual proficiency</span>
+            <h3>Bangla</h3>
+            <p>Primary language for daily communication, collaboration, and documentation context.</p>
+          </article>
+          <article class="project-card">
+            <span class="tag">Native or bilingual proficiency</span>
+            <h3>Indo-Aryan Language</h3>
+            <p>Native-level communication ability in Indo-Aryan language contexts.</p>
+          </article>
+          <article class="project-card">
+            <span class="tag">Professional working proficiency</span>
+            <h3>English</h3>
+            <p>Professional communication for engineering work, documentation, and cross-functional collaboration.</p>
+            <ul class="feature-list">
+              <li>Duolingo English Test Score: 130 (Feb 2026)</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <span class="tag">Professional working proficiency</span>
+            <h3>German</h3>
+            <p>Professional-level communication for workplace collaboration and technical coordination.</p>
+          </article>
+          <article class="project-card">
+            <span class="tag">Limited working proficiency</span>
+            <h3>Arabic</h3>
+            <p>Functional communication ability for basic professional and social interactions.</p>
+          </article>
+          <article class="project-card">
+            <span class="tag">Limited working proficiency</span>
+            <h3>Hindi</h3>
+            <p>Basic working capability for conversation and contextual collaboration.</p>
+          </article>
         </div>
       </section>
 
@@ -2031,18 +2232,18 @@
             <h3>Value I Bring</h3>
             <p>Cloud engineering, AI solutions, DevOps, data engineering, robotics, technical leadership, and consulting that improve outcomes.</p>
             <div class="pill-row">
-              <span class="pill">LinkedIn</span>
-              <span class="pill">GitHub</span>
-              <span class="pill">Email</span>
+              <a class="pill" href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <a class="pill" href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a class="pill" href="mailto:alimul.nabil@gmail.com">Email ↗</a>
             </div>
           </div>
           <div class="contact-card card">
-            <form>
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
-              <input type="text" placeholder="Company" />
-              <textarea placeholder="Message"></textarea>
-              <a class="btn btn-primary" href="mailto:alimul.nabil@gmail.com">Send Message</a>
+            <form onsubmit="handleContactSubmit(event)">
+              <input id="contact-name" type="text" placeholder="Your Name" required />
+              <input id="contact-email" type="email" placeholder="Your Email" required />
+              <input id="contact-company" type="text" placeholder="Company or Organization" />
+              <textarea id="contact-message" placeholder="Your Message" rows="4" required></textarea>
+              <button class="btn btn-primary" type="submit" style="border: none; cursor: pointer; width: 100%;">Send Message</button>
             </form>
           </div>
         </div>
@@ -2054,7 +2255,7 @@
         <div class="footer-grid">
           <div class="footer-panel">
             <p class="footer-brand">Alimul Fazal Nabil</p>
-            <p class="footer-role">Software &amp; Systems Engineer · Robotics · Computer Vision · Automation</p>
+            <p class="footer-role">Senior Technology Leader · Cloud, DevOps, AI, Data, Robotics</p>
             <p class="footer-value">Building reliable platforms, automation-first operations, and intelligent systems aligned with business outcomes.</p>
             <div class="footer-kpis">
               <span>Cloud + Platform</span>
@@ -2065,7 +2266,7 @@
           </div>
           <div class="footer-panel">
             <h4>Let’s Build Something Valuable</h4>
-            <p>Interested in software engineering, robotics, computer vision, automation, and systems engineering opportunities.</p>
+            <p>Open to infrastructure, platform engineering, and AI-enabled product opportunities.</p>
             <div class="footer-actions">
               <a class="footer-cta primary" href="#contact">Start a Conversation</a>
               <a class="footer-cta secondary" href="mailto:alimul.nabil@gmail.com">Email Directly</a>
@@ -2119,6 +2320,16 @@
       // Keep any future sections that are not listed above.
       for (const section of byId.values()) {
         main.appendChild(section);
+      }
+
+      function handleContactSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById('contact-name').value;
+        const company = document.getElementById('contact-company').value;
+        const message = document.getElementById('contact-message').value;
+        const subject = encodeURIComponent(`Portfolio Inquiry from ${name}${company ? ' (' + company + ')' : ''}`);
+        const body = encodeURIComponent(`Name: ${name}\nCompany / Organization: ${company || 'N/A'}\n\nMessage:\n${message}`);
+        window.location.href = `mailto:alimul.nabil@gmail.com?subject=${subject}&body=${body}`;
       }
     </script>
   </body>
