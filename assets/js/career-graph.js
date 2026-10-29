@@ -7,233 +7,263 @@
   const GRAPH_DATA = {
   "nodes": [
     {
-      "id": "dom_genai",
-      "title": "Generative AI & RAG",
-      "category": "domain",
-      "domain": "genai",
-      "color": "#a855f7",
-      "radius": 24,
-      "desc": "Enterprise RAG architectures, multi-tenant hybrid retrieval, LLM agents, and semantic intelligence."
-    },
-    {
-      "id": "dom_vision",
-      "title": "Computer Vision & Perception",
-      "category": "domain",
-      "domain": "vision",
-      "color": "#38bdf8",
-      "radius": 24,
-      "desc": "Roadway edge perception, CARLA vehicle simulation, YOLO object tracking, and image analytics."
-    },
-    {
-      "id": "dom_ml",
-      "title": "Machine Learning & Analytics",
-      "category": "domain",
-      "domain": "ml",
-      "color": "#10b981",
-      "radius": 24,
-      "desc": "Supervised classification, predictive modeling, FastAPI inference services, and MLOps gates."
-    },
-    {
-      "id": "dom_cloud",
-      "title": "Cloud Systems & DevOps",
-      "category": "domain",
-      "domain": "cloud",
-      "color": "#3b82f6",
-      "radius": 24,
-      "desc": "Microsoft Azure cloud architectures, Terraform Infrastructure as Code, Kubernetes, and CI/CD."
-    },
-    {
-      "id": "dom_data",
-      "title": "Data Engineering & Pipelines",
-      "category": "domain",
-      "domain": "data",
-      "color": "#f59e0b",
-      "radius": 24,
-      "desc": "PostgreSQL, PostGIS geospatial processing, industrial telemetry pipelines, and scalable ETL."
-    },
-    {
       "id": "dom_embedded",
-      "title": "Robotics & Embedded IoT",
+      "title": "Robotics and Embedded Systems",
+      "shortTitle": "Robotics & Embedded",
       "category": "domain",
       "domain": "embedded",
       "color": "#14b8a6",
       "radius": 24,
-      "desc": "Microcontrollers (Arduino), servo kinematics, robotics feedback loops, and IoT telemetry."
+      "desc": "Autonomous mobile platforms, articulated manipulators, embedded C/C++, sensor integration, and solar PV tracking."
     },
     {
-      "id": "dom_research",
-      "title": "Research & Engineering Design",
+      "id": "dom_vision",
+      "title": "Computer Vision and Autonomous Systems",
+      "shortTitle": "Computer Vision & Autonomy",
       "category": "domain",
-      "domain": "research",
+      "domain": "vision",
+      "color": "#38bdf8",
+      "radius": 24,
+      "desc": "Deterministic roadway perception, Hough transform lane boundary extraction, CARLA simulation, and YOLO visual tracking."
+    },
+    {
+      "id": "dom_aiml",
+      "title": "Artificial Intelligence and Machine Learning",
+      "shortTitle": "AI & Machine Learning",
+      "category": "domain",
+      "domain": "aiml",
+      "color": "#a855f7",
+      "radius": 24,
+      "desc": "Enterprise RAG architectures, multi-tenant hybrid retrieval, clinical risk classification, and predictive modeling."
+    },
+    {
+      "id": "dom_cloud_data",
+      "title": "Cloud Computing and Data Engineering",
+      "shortTitle": "Cloud & Data Engineering",
+      "category": "domain",
+      "domain": "cloud-data",
+      "color": "#3b82f6",
+      "radius": 24,
+      "desc": "Microsoft Azure cloud architectures, Terraform Infrastructure-as-Code, distributed PySpark processing, and scalable ETL."
+    },
+    {
+      "id": "dom_automation",
+      "title": "Industrial Automation and Digital Twins",
+      "shortTitle": "Industrial Automation & Twins",
+      "category": "domain",
+      "domain": "automation",
+      "color": "#f59e0b",
+      "radius": 24,
+      "desc": "Industrial digital-twin concepts, simulated vibration predictive maintenance, and telemetry control topology."
+    },
+    {
+      "id": "dom_hardware",
+      "title": "Hardware Engineering and System Integration",
+      "shortTitle": "Hardware Engineering",
+      "category": "domain",
+      "domain": "hardware",
       "color": "#ec4899",
       "radius": 24,
-      "desc": "Peer-reviewed scientific publications, IoT systems, CAD modeling, and empirical benchmarking."
+      "desc": "10+ years custom computing workstation engineering, liquid cooling, thermal optimization, BIOS/UEFI profiling, and edge AI stations."
+    },
+    {
+      "id": "dom_web",
+      "title": "Web Engineering and Automation",
+      "shortTitle": "Web Engineering & Automation",
+      "category": "domain",
+      "domain": "web",
+      "color": "#06b6d4",
+      "radius": 24,
+      "desc": "Full-stack institutional web portals (PGCB), automated scraping suites, workflow tooling, and database-backed applications."
+    },
+    {
+      "id": "dom_smartcity",
+      "title": "Smart Cities and Traffic Optimization",
+      "shortTitle": "Smart Cities & Traffic",
+      "category": "domain",
+      "domain": "smartcity",
+      "color": "#8b5cf6",
+      "radius": 24,
+      "desc": "Territorial intelligence blueprints, MAXBAND green-wave arterial progression, Deep Q-Networks (DQN), and SUMO microscopic traffic simulation."
+    },
+    {
+      "id": "dom_cad",
+      "title": "Engineering Design and AutoCAD",
+      "shortTitle": "Engineering Design & CAD",
+      "category": "domain",
+      "domain": "cad",
+      "color": "#64748b",
+      "radius": 24,
+      "desc": "2D/3D precision drafting, mechanical component modeling, orthographic projections, and layout visualizations."
     },
     {
       "id": "role_redi",
-      "title": "ReDI School \u00b7 AI & ML Instructor",
-      "shortTitle": "ReDI School",
+      "title": "ReDI School \u2014 AI & ML Instructor",
       "category": "role",
-      "color": "#f43f5e",
-      "radius": 18,
-      "desc": "March 2026 \u2013 Present \u00b7 Berlin / Remote. Teaches applied machine learning, scikit-learn, and hands-on Python AI workflows."
+      "color": "#10b981",
+      "radius": 20,
+      "period": "March 2026 \u2013 Present \u00b7 Berlin / Remote",
+      "desc": "Teaches applied machine learning, scikit-learn, and hands-on Python AI workflows to diverse aspiring engineers."
     },
     {
       "id": "role_movisabio",
-      "title": "MoviSabio \u00b7 CTO & Co-Founder",
-      "shortTitle": "MoviSabio",
+      "title": "MoviSabio \u2014 CTO & Co-Founder",
       "category": "role",
-      "color": "#06b6d4",
-      "radius": 18,
-      "desc": "January 2026 \u2013 Present. Directs technical architecture and geospatial data strategy for intelligent traffic signal coordination."
+      "color": "#a855f7",
+      "radius": 20,
+      "period": "January 2026 \u2013 Present",
+      "desc": "Directs technical architecture, urban data models, and reinforcement learning strategies for intelligent traffic signal coordination."
     },
     {
       "id": "role_energy_cloud",
-      "title": "Energy Crown \u00b7 Infrastructure & Cloud Systems Engineer",
-      "shortTitle": "Energy Crown (Cloud)",
+      "title": "Energy Crown \u2014 Infrastructure & Cloud Systems Engineer",
       "category": "role",
-      "color": "#6366f1",
-      "radius": 18,
-      "desc": "July 2023 \u2013 Present. Operates Microsoft Azure infrastructure, Terraform IaC, automated CI/CD pipelines, and telemetry."
+      "color": "#3b82f6",
+      "radius": 20,
+      "period": "July 2023 \u2013 Present",
+      "desc": "Operates Microsoft Azure infrastructure, Terraform IaC, automated CI/CD pipelines, and industrial telemetry."
     },
     {
       "id": "role_energy_it",
-      "title": "Energy Crown \u00b7 IT Support Engineer",
-      "shortTitle": "Energy Crown (IT)",
+      "title": "Energy Crown \u2014 IT Support Engineer",
       "category": "role",
-      "color": "#8b5cf6",
-      "radius": 18,
-      "desc": "January 2019 \u2013 June 2023. Managed enterprise LAN/WAN networking, server administration, and foundational hardware diagnostics."
+      "color": "#06b6d4",
+      "radius": 20,
+      "period": "January 2019 \u2013 June 2023",
+      "desc": "Managed enterprise LAN/WAN networking, server administration, custom computing workstations, and hardware diagnostics."
     },
     {
       "id": "role_cbiu",
-      "title": "CBIU \u00b7 Graduate Student Researcher",
-      "shortTitle": "CBIU Research",
+      "title": "CBIU \u2014 Graduate Student Researcher",
       "category": "role",
-      "color": "#eab308",
-      "radius": 18,
-      "desc": "January 2022 \u2013 December 2022. Applied research in IoT architectures and embedded systems resulting in 2 peer-reviewed journal papers."
+      "color": "#14b8a6",
+      "radius": 20,
+      "period": "January 2022 \u2013 December 2022",
+      "desc": "Applied research in IoT architectures, embedded systems, and robotics resulting in 2 peer-reviewed journal publications."
     },
     {
       "id": "tech_python",
       "title": "Python 3.12+",
       "category": "technology",
-      "color": "#e0e7ff",
-      "radius": 14,
-      "desc": "Core engineering language for AI systems, APIs, machine learning, and automation."
+      "color": "#fbbf24",
+      "radius": 16,
+      "desc": "Core language for ML modeling, FastAPI services, computer vision pipelines, and data engineering."
     },
     {
       "id": "tech_fastapi",
       "title": "FastAPI",
       "category": "technology",
-      "color": "#5eead4",
-      "radius": 13,
-      "desc": "High-throughput asynchronous REST API framework for RAG and ML inference endpoints."
+      "color": "#009688",
+      "radius": 15,
+      "desc": "High-performance Python asynchronous REST APIs with Pydantic validation and OpenAPI docs."
     },
     {
       "id": "tech_pgvector",
       "title": "PostgreSQL & pgvector",
       "category": "technology",
-      "color": "#93c5fd",
-      "radius": 14,
-      "desc": "Relational vector database for HNSW dense embeddings, structured metadata, and PostGIS spatial indexing."
+      "color": "#336791",
+      "radius": 15,
+      "desc": "Relational storage, PostGIS spatial indexing, and high-dimensional vector similarity search."
     },
     {
       "id": "tech_rag",
       "title": "RAG & Hybrid Search",
       "category": "technology",
       "color": "#c084fc",
-      "radius": 14,
-      "desc": "Sparse BM25 + dense vector retrieval, Reciprocal Rank Fusion, and cross-encoder reranking."
+      "radius": 15,
+      "desc": "Retrieval-Augmented Generation combining dense embeddings with sparse BM25 lexical ranking."
     },
     {
       "id": "tech_azure",
       "title": "Microsoft Azure",
       "category": "technology",
-      "color": "#60a5fa",
-      "radius": 14,
-      "desc": "Enterprise cloud platform: Azure Kubernetes Service (AKS), Key Vault, Virtual Networks, and Blob Storage."
+      "color": "#008ad7",
+      "radius": 16,
+      "desc": "Enterprise cloud platform: Azure Kubernetes Service (AKS), App Services, VNets, and Key Vault."
     },
     {
       "id": "tech_terraform",
       "title": "Terraform (IaC)",
       "category": "technology",
-      "color": "#a78bfa",
-      "radius": 13,
-      "desc": "Modular Infrastructure as Code for automated cloud provisioning and state management."
+      "color": "#844fba",
+      "radius": 15,
+      "desc": "Declarative Infrastructure as Code for automated, reproducible multi-tier cloud architectures."
     },
     {
       "id": "tech_docker",
       "title": "Docker & Containers",
       "category": "technology",
-      "color": "#38bdf8",
-      "radius": 13,
-      "desc": "Multi-stage container builds, microservices isolation, and reproducible deployments."
+      "color": "#2496ed",
+      "radius": 15,
+      "desc": "OCI-compliant containerization for reproducible microservices, local debugging, and CI/CD."
     },
     {
       "id": "tech_k8s",
       "title": "Kubernetes (AKS)",
       "category": "technology",
-      "color": "#818cf8",
-      "radius": 13,
-      "desc": "Container orchestration, ingress controllers, pod scaling, and cloud-native deployments."
+      "color": "#326ce5",
+      "radius": 15,
+      "desc": "Container orchestration, rolling updates, ingress controllers, and auto-scaling workloads."
     },
     {
       "id": "tech_opencv",
       "title": "OpenCV",
       "category": "technology",
-      "color": "#fdba74",
-      "radius": 14,
-      "desc": "Computer vision library for roadway edge detection, frame preprocessing, and YOLO object tracking."
+      "color": "#5c3ee8",
+      "radius": 15,
+      "desc": "Computer vision library for color space conversions, Canny edge detection, and Hough transforms."
     },
     {
       "id": "tech_carla",
       "title": "CARLA Simulator",
       "category": "technology",
-      "color": "#f472b6",
-      "radius": 13,
-      "desc": "Unreal Engine-based autonomous driving simulation platform for camera sensor streaming and driverless testing."
+      "color": "#f97316",
+      "radius": 15,
+      "desc": "Open-source autonomous driving simulator for synthetic perception data generation and vehicle testing."
     },
     {
       "id": "tech_sumo",
       "title": "SUMO / TraCI",
       "category": "technology",
-      "color": "#fbbf24",
-      "radius": 13,
-      "desc": "Microscopic urban traffic simulation tool for dynamic traffic signal coordination."
+      "color": "#e11d48",
+      "radius": 15,
+      "desc": "Microscopic traffic flow simulator with Python TraCI interface for reinforcement learning control."
     },
     {
       "id": "tech_ros",
       "title": "ROS 2",
       "category": "technology",
-      "color": "#2dd4bf",
-      "radius": 13,
-      "desc": "Robot Operating System for autonomous mobile robot navigation nodes and sensor topics."
+      "color": "#22c55e",
+      "radius": 15,
+      "desc": "Robot Operating System for modular node communication, sensor drivers, and motion control."
     },
     {
       "id": "tech_scikit",
       "title": "scikit-learn",
       "category": "technology",
-      "color": "#4ade80",
-      "radius": 13,
-      "desc": "Machine learning algorithms, classification ensembles, calibration curves, and feature pipelines."
+      "color": "#f59e0b",
+      "radius": 15,
+      "desc": "Classical machine learning: Random Forest, Logistic Regression, Cross-Validation, and grid search."
     },
     {
       "id": "tech_arduino",
       "title": "Embedded C / Arduino",
       "category": "technology",
-      "color": "#34d399",
-      "radius": 13,
-      "desc": "Microcontroller firmware, PWM servo actuation, ultrasonic ranging, and sensor telemetry."
+      "color": "#00979d",
+      "radius": 15,
+      "desc": "Low-level microcontroller programming, PWM servo control, sensor interfacing, and serial communications."
     },
     {
       "id": "PRJ-EMB-001",
       "title": "Solar-Powered Electric Vehicle with Multi-Sensor Accident Detection",
+      "shortTitle": "Solar-Powered Electric\u2026",
       "category": "project",
       "domain": "embedded",
-      "status": "prototype",
+      "color": "#14b8a6",
+      "radius": 10,
+      "status": "academic",
       "period": "July 2021 \u2013 November 2021 \u00b7 PRJ-EMB-001",
-      "desc": "Electric micro-mobility platforms require autonomous hazard identification and rapid accident alerting to protect operators in transit while maximizing solar energy utilization.",
+      "desc": "Electric micro-mobility platform featuring autonomous hazard identification and rapid accident alerting to protect operators in transit while maximizing solar PV energy harvesting.",
       "contribution": "Conceptualized system architecture; authored Arduino Mega 2560 embedded C/C++ firmware; integrated ultrasonic proximity ranging, infrared hazard sensors, and 3-axis accelerometer collision trigger thresholds; wired solar PV charge controller.",
       "technologies": [
         "Arduino Mega 2560",
@@ -243,20 +273,22 @@
         "3-Axis Accelerometer",
         "Solar PV Controller"
       ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
-      "color": "#14b8a6",
-      "radius": 11
+      "caseStudyUrl": "",
+      "repoUrl": "",
+      "liveUrl": "",
+      "isPrivateRepo": false
     },
     {
       "id": "PRJ-EMB-002",
       "title": "Servo-Motor Robotic Arm (4-Axis Articulated Manipulator)",
+      "shortTitle": "Servo-Motor Robotic Ar\u2026",
       "category": "project",
       "domain": "embedded",
+      "color": "#14b8a6",
+      "radius": 10,
       "status": "prototype",
       "period": "2018 \u2013 2019 \u00b7 PRJ-EMB-002",
-      "desc": "Precision multi-degree-of-freedom robotic positioning and manipulation at low cost using accessible microcontroller architectures and serial communications.",
+      "desc": "Four-axis articulated robotic arm utilizing PWM-driven servo motors and microcontroller logic for multi-degree-of-freedom spatial positioning and wireless Bluetooth control.",
       "contribution": "Assembled 4-axis mechanical linkage; programmed PWM servo motion trajectories and angular boundaries in Arduino C++; implemented serial command handling for wireless Bluetooth (HC-05) control.",
       "technologies": [
         "Arduino",
@@ -265,560 +297,119 @@
         "PWM Control",
         "Embedded C++"
       ],
-      "caseStudyUrl": null,
+      "caseStudyUrl": "",
       "repoUrl": "https://github.com/alimulfazalnabil/Bluetooth-Controlled-Robotic-Arm",
-      "links": [],
-      "color": "#14b8a6",
-      "radius": 11
+      "liveUrl": "",
+      "isPrivateRepo": false
     },
     {
       "id": "PRJ-EMB-003",
       "title": "Dual-Axis Solar-Tracking Photovoltaic Optimization System",
+      "shortTitle": "Dual-Axis Solar-Tracki\u2026",
       "category": "project",
       "domain": "embedded",
-      "status": "prototype",
+      "color": "#14b8a6",
+      "radius": 10,
+      "status": "academic",
       "period": "2018 \u2013 2019 \u00b7 PRJ-EMB-003",
-      "desc": "Fixed photovoltaic panels lose up to 30% solar irradiance efficiency due to oblique sun incident angles throughout daily diurnal cycles.",
-      "contribution": "Constructed dual-axis differential light sensing module using orthogonal pairs of light-dependent resistors (LDRs); coded comparative analog threshold logic to actuate elevation and azimuth servo motors.",
+      "desc": "Light-seeking solar photovoltaic tracking platform utilizing light-dependent resistor (LDR) sensor arrays and servo actuators to dynamically orient PV panels toward maximum solar irradiance.",
+      "contribution": "Designed differential light-sensing circuit using 4 LDRs; programmed tracking feedback loop with deadband threshold in Arduino C++ to eliminate motor jitter; mounted dual-axis servo gimbal.",
       "technologies": [
+        "Arduino",
         "LDR Sensors",
         "Servo Motors",
-        "Microcontroller (Arduino)",
-        "Analog Comparator Logic",
-        "Embedded C"
+        "Microcontroller",
+        "Embedded C++"
       ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
-      "color": "#14b8a6",
-      "radius": 11
+      "caseStudyUrl": "",
+      "repoUrl": "",
+      "liveUrl": "",
+      "isPrivateRepo": false
     },
     {
       "id": "PRJ-EMB-004",
       "title": "Autonomous Line-Follower Ground Robot",
+      "shortTitle": "Autonomous Line-Follow\u2026",
       "category": "project",
       "domain": "embedded",
-      "status": "prototype",
+      "color": "#14b8a6",
+      "radius": 10,
+      "status": "academic",
       "period": "2017 \u2013 2018 \u00b7 PRJ-EMB-004",
-      "desc": "Autonomous automated guided vehicles (AGVs) in industrial warehouses require robust, low-latency trajectory tracking along high-contrast floor paths.",
-      "contribution": "Designed mobile chassis; integrated multi-channel infrared reflectance array; implemented differential steering feedback algorithms in embedded C/C++ on Arduino Mega 2560.",
+      "desc": "Autonomous ground vehicle designed to follow high-contrast optical track boundaries at steady speed using reflective infrared sensing arrays and closed-loop motor control.",
+      "contribution": "Built 2WD differential drive chassis; calibrated 5-channel infrared reflectance array; programmed bang-bang and proportional steering feedback algorithms in Arduino C++ for rapid line recovery.",
       "technologies": [
         "Arduino Mega 2560",
         "Infrared Sensor Array",
-        "L298N Motor Driver",
-        "DC Gear Motors",
-        "Embedded C/C++"
+        "H-Bridge Motor Driver",
+        "Differential Drive",
+        "Embedded C++"
       ],
-      "caseStudyUrl": null,
+      "caseStudyUrl": "",
       "repoUrl": "https://github.com/alimulfazalnabil/Robotics-projects",
-      "links": [],
-      "color": "#14b8a6",
-      "radius": 11
+      "liveUrl": "",
+      "isPrivateRepo": false
     },
     {
       "id": "PRJ-EMB-005",
       "title": "IoT-Based Digital Information & Notice Board System",
+      "shortTitle": "IoT-Based Digital Info\u2026",
       "category": "project",
       "domain": "embedded",
-      "status": "research",
-      "period": "2021 \u2013 November 2022 \u00b7 PRJ-EMB-005",
-      "desc": "Manual notice distribution in institutional and commercial facilities is slow, paper-dependent, and prone to delayed dissemination of critical alerts.",
-      "contribution": "Lead author and developer; designed Wi-Fi-enabled embedded controller with ESP8266 and Arduino; programmed web API interface and MQTT message subscriber to broadcast remote notices to dynamic display boards.",
-      "technologies": [
-        "ESP8266",
-        "Arduino",
-        "MQTT",
-        "HTTP REST API",
-        "Embedded C++",
-        "HTML/CSS Web Portal"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
       "color": "#14b8a6",
-      "radius": 11
+      "radius": 10,
+      "status": "academic",
+      "period": "2021 \u2013 November 2022 \u00b7 PRJ-EMB-005",
+      "desc": "Wireless electronic bulletin board architecture replacing physical paper displays with real-time digital announcements pushed over embedded microcontrollers and IoT protocols.",
+      "contribution": "Authored embedded firmware interfacing microcontroller with wireless communication modules (ESP8266/Bluetooth); structured MQTT/serial message payloads; authored peer-reviewed paper in IRJMETS (2022).",
+      "technologies": [
+        "Arduino",
+        "ESP8266 Wi-Fi",
+        "MQTT",
+        "LiquidCrystal / Dot Matrix Display",
+        "Embedded C++"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "",
+      "liveUrl": "",
+      "isPrivateRepo": false
     },
     {
       "id": "PRJ-EMB-006",
-      "title": "Robotics Foundations & Autonomous Rover Modules Monorepo",
+      "title": "Robotics Projects (Foundations & Autonomous Rover Modules)",
+      "shortTitle": "Robotics Projects (Fou\u2026",
       "category": "project",
       "domain": "embedded",
-      "status": "learning",
-      "period": "2017 \u2013 2023 \u00b7 PRJ-EMB-006",
-      "desc": "Systematic collection of embedded hardware interfaces and autonomous robotics control patterns for education and experimentation.",
-      "contribution": "Implemented and organized modular C++ firmware examples for ultrasonic distance ranging, motor drivers, Bluetooth teleoperation, obstacle avoidance, and GPS waypoint processing.",
-      "technologies": [
-        "C++",
-        "Arduino",
-        "Ultrasonic Sensors",
-        "Bluetooth Modules",
-        "Motor Shields",
-        "GPS Telemetry"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": "https://github.com/alimulfazalnabil/Robotics-projects",
-      "links": [],
       "color": "#14b8a6",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-CV-001",
-      "title": "Autonomous Lane Detection Pipeline & CARLA Bridge",
-      "category": "project",
-      "domain": "vision",
-      "status": "prototype",
-      "period": "2023 \u2013 2024 \u00b7 PRJ-CV-001",
-      "desc": "Autonomous vehicles require fast, deterministic lane-boundary recognition under changing illumination and perspective distortions without heavy deep-learning compute dependencies.",
-      "contribution": "Authored complete Python OpenCV pipeline: Gaussian blur filtering, Canny edge detection, dynamic polygonal ROI masking, Hough Transform line extraction, lane-boundary clustering, moving-average temporal smoothing, unit test harness with synthetic images, and CARLA simulation adapter.",
+      "radius": 10,
+      "status": "collection",
+      "period": "2017 \u2013 2023 \u00b7 PRJ-EMB-006",
+      "desc": "Open-source collection of robotics sub-modules, circuit interfaces, obstacle avoidance routines, Bluetooth teleoperation, robotic arm control, and GPS rover concepts.",
+      "contribution": "Curated, implemented, and documented diverse microcontroller robotics firmware routines, sensor pinout mappings, and motor driver calibration scripts.",
       "technologies": [
-        "Python 3",
-        "OpenCV",
-        "NumPy",
-        "Matplotlib",
-        "Hough Transform",
-        "CARLA Simulator API"
+        "Arduino",
+        "C/C++",
+        "Ultrasonic Ranging",
+        "Motor Drivers (L298N)",
+        "GPS Modules",
+        "Sensors"
       ],
-      "caseStudyUrl": "case-studies/autonomous-lane-detection.html",
-      "repoUrl": "https://github.com/alimulfazalnabil/Autonomous-Lane-Detection",
-      "links": [],
-      "color": "#38bdf8",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-CV-002",
-      "title": "Vehicle and Pedestrian Visual Detection System",
-      "category": "project",
-      "domain": "vision",
-      "status": "learning",
-      "period": "2023 \u2013 2025 \u00b7 PRJ-CV-002",
-      "desc": "Real-time multi-class object localization in urban traffic environments for intelligent transportation and pedestrian safety.",
-      "contribution": "Explored YOLO-based object detection pipelines on dashcam and traffic video streams; analyzed bounding box confidence thresholds and class inference latency.",
-      "technologies": [
-        "Python",
-        "YOLO (Ultralytics YOLOv8 / Darknet)",
-        "OpenCV",
-        "NumPy"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": "https://github.com/alimulfazalnabil/Computer-Vision-Projects",
-      "links": [],
-      "color": "#38bdf8",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-CV-003",
-      "title": "Autonomous Driving Virtual Simulation in CARLA",
-      "category": "project",
-      "domain": "vision",
-      "status": "simulation",
-      "period": "2023 \u2013 2024 \u00b7 PRJ-CV-003",
-      "desc": "Physical vehicle road testing of perception and trajectory algorithms carries high financial cost and safety hazards.",
-      "contribution": "Configured CARLA 3D simulator environment; implemented Python client scripts to interface vehicle sensor actors (RGB camera, telemetry) and stream frames into lane-detection routines.",
-      "technologies": [
-        "CARLA Simulator",
-        "Python",
-        "Unreal Engine Backend",
-        "NumPy",
-        "OpenCV"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": "https://github.com/alimulfazalnabil/Autonomous-Lane-Detection",
-      "links": [],
-      "color": "#38bdf8",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-CV-004",
-      "title": "Computer Vision Exploration Hub & Deep Learning Architectures",
-      "category": "project",
-      "domain": "vision",
-      "status": "learning",
-      "period": "2022 \u2013 2024 \u00b7 PRJ-CV-004",
-      "desc": "Benchmarking diverse computer vision paradigms (transfer learning, object tracking, semantic segmentation, generative adversarial networks).",
-      "contribution": "Curated, experimented with, and adapted deep computer vision architectures across transfer learning, YOLOv8/DeepSORT tracking concepts, CycleGAN style transfer, and visual question answering.",
-      "technologies": [
-        "Python",
-        "PyTorch",
-        "TensorFlow",
-        "OpenCV",
-        "torchvision",
-        "Albumentations",
-        "Jupyter"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": "https://github.com/alimulfazalnabil/Computer-Vision-Projects",
-      "links": [],
-      "color": "#38bdf8",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-ML-001",
-      "title": "Heart Disease Clinical Risk Prediction Platform",
-      "category": "project",
-      "domain": "ml",
-      "status": "prototype",
-      "period": "2023 \u2013 2024 \u00b7 PRJ-ML-001",
-      "desc": "Early risk assessment for cardiovascular disease using multi-parametric clinical indicators to assist triage.",
-      "contribution": "Engineered scikit-learn classification pipeline with stratified cross-validation and feature standardization; developed FastAPI microservice with Pydantic input validation, prediction history logging (SQLite/PostgreSQL), Docker containerization, and GitHub Actions CI workflow.",
-      "technologies": [
-        "Python 3",
-        "scikit-learn",
-        "FastAPI",
-        "Pydantic",
-        "Pandas",
-        "NumPy",
-        "SQLite/PostgreSQL",
-        "Docker",
-        "pytest",
-        "GitHub Actions"
-      ],
-      "caseStudyUrl": "case-studies/heart-disease-prediction.html",
-      "repoUrl": "https://github.com/alimulfazalnabil/heart-disease-prediction",
-      "links": [],
-      "color": "#10b981",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-ML-002",
-      "title": "Predictive Maintenance & Equipment Anomaly Forecasting",
-      "category": "project",
-      "domain": "ml",
-      "status": "simulation",
-      "period": "2024 \u2013 2025 \u00b7 PRJ-ML-002",
-      "desc": "Industrial rotating machinery breakdowns cause sudden operational halts that could be mitigated via vibration anomaly forecasting.",
-      "contribution": "Explored machine learning feature engineering on simulated time-series vibration data (FFT spectral features, RMS, kurtosis); evaluated anomaly detection and classification models.",
-      "technologies": [
-        "Python",
-        "scikit-learn",
-        "SciPy (FFT)",
-        "Pandas",
-        "Simulated Vibration Data",
-        "Azure IoT Edge Concept"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
-      "color": "#10b981",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-ML-003",
-      "title": "Applied Data Science & Machine Learning Explorations (Falcon 9 / Stock Forecasting)",
-      "category": "project",
-      "domain": "ml",
-      "status": "learning",
-      "period": "2022 \u2013 2023 \u00b7 PRJ-ML-003",
-      "desc": "Applied machine learning and exploratory analytics across aerospace recovery economics and financial time-series forecasting.",
-      "contribution": "Data wrangling, exploratory data analysis (EDA), feature engineering, classification modeling (Logistic Regression, SVM, Decision Trees), and interactive Plotly/Dash visualization.",
-      "technologies": [
-        "Python",
-        "Pandas",
-        "NumPy",
-        "scikit-learn",
-        "Matplotlib",
-        "Seaborn",
-        "Folium",
-        "Plotly/Dash"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": "https://github.com/alimulfazalnabil/Python-Projects",
-      "links": [],
-      "color": "#10b981",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-DATA-001",
-      "title": "Azure Enterprise Data & AI Analytics Foundation",
-      "category": "project",
-      "domain": "data",
-      "status": "prototype",
-      "period": "2024 \u2013 2025 \u00b7 PRJ-DATA-001",
-      "desc": "Scalable cloud data lakehouse architecture for ingesting, transforming, and querying enterprise data with repeatable infrastructure-as-code.",
-      "contribution": "Authored Terraform modules for Azure Data Lake Storage Gen2, Azure Data Factory, and Azure Synapse Analytics workspace; created Python data ingestion scripts and simulated time-series pipelines; integrated GitHub Actions CI/CD validation.",
-      "technologies": [
-        "Terraform (HCL)",
-        "Azure Data Factory",
-        "Azure Data Lake Storage Gen2",
-        "Azure Synapse Analytics",
-        "Python",
-        "GitHub Actions",
-        "Azure Monitor"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": "https://github.com/alimulfazalnabil/azure-data-ai-analytics",
-      "links": [],
-      "color": "#f59e0b",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-DATA-002",
-      "title": "Data Engineering Pipelines & Distributed Processing Monorepo",
-      "category": "project",
-      "domain": "data",
-      "status": "learning",
-      "period": "2023 \u2013 2025 \u00b7 PRJ-DATA-002",
-      "desc": "Modular reference patterns for distributed transformations, streaming message ingestion, and data warehousing.",
-      "contribution": "Implemented practical data engineering pipelines: Spark/PySpark transformations, Kafka/Avro streaming consumers, S3/Redshift integration, PostgreSQL ETL with Pandas/SQLAlchemy, and Airflow DAG concepts.",
-      "technologies": [
-        "Python",
-        "Apache Spark",
-        "PySpark",
-        "Apache Kafka",
-        "Apache Airflow",
-        "PostgreSQL",
-        "AWS S3/Redshift",
-        "Docker"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": "https://github.com/alimulfazalnabil/Data-Engineering-Projects",
-      "links": [],
-      "color": "#f59e0b",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-DATA-003",
-      "title": "Digital-Twin Concept for Industrial Energy Management",
-      "category": "project",
-      "domain": "data",
-      "status": "simulation",
-      "period": "2025 \u00b7 PRJ-DATA-003",
-      "desc": "Commercial building HVAC and power distribution systems suffer from fragmented monitoring and inability to simulate energy optimization interventions.",
-      "contribution": "Researched and authored architectural concept for digital representation of energy distribution using Azure Digital Twins, DTDL asset models, and PLC telemetry mapping.",
-      "technologies": [
-        "Azure Digital Twins Concept",
-        "DTDL",
-        "PLC/Network Architecture",
-        "Azure Event Hubs"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
-      "color": "#f59e0b",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-CLOUD-001",
-      "title": "Azure Terraform Infrastructure CI/CD Foundation",
-      "category": "project",
-      "domain": "cloud",
-      "status": "prototype",
-      "period": "2024 \u2013 2025 \u00b7 PRJ-CLOUD-001",
-      "desc": "Manual cloud resource provisioning creates configuration drift, compliance gaps, and unrepeatable deployment environments.",
-      "contribution": "Authored modular Terraform configurations for core Azure infrastructure (VNet, Subnets, NSGs, Key Vault, App Services, Storage Accounts); created multi-stage GitHub Actions CI/CD pipeline executing terraform fmt, tflint, terraform validate, and automated plan generation.",
-      "technologies": [
-        "Terraform (HCL)",
-        "Azure Resource Manager (ARM)",
-        "GitHub Actions",
-        "Azure Key Vault",
-        "Bash"
-      ],
-      "caseStudyUrl": "case-studies/azure-terraform-cicd.html",
-      "repoUrl": "https://github.com/alimulfazalnabil/azure-terraform-cicd-foundation",
-      "links": [],
-      "color": "#3b82f6",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-CLOUD-002",
-      "title": "Enterprise Web Portal for PGCB Engineers (Power Grid Company of Bangladesh)",
-      "category": "project",
-      "domain": "cloud",
-      "status": "deployed",
-      "period": "2023 \u2013 2024 \u00b7 PRJ-CLOUD-002",
-      "desc": "Managing membership, professional records, notifications, and administrative workflows for technical staff across nationwide grid zones.",
-      "contribution": "Designed and developed full-stack web application with role-based access control (RBAC), member registry, executive committee directories, notice publication, PostgreSQL schema, Docker containerization, and cloud deployment to Render.",
-      "technologies": [
-        "Python",
-        "PostgreSQL (PLpgSQL)",
-        "HTML5/CSS3",
-        "JavaScript",
-        "Docker",
-        "Render PaaS"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": "https://github.com/alimulfazalnabil/pgcb-org-portal",
-      "links": [],
-      "color": "#3b82f6",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-CLOUD-003",
-      "title": "Enterprise Automation, Scraping & Workflow Tooling Suite",
-      "category": "project",
-      "domain": "cloud",
-      "status": "learning",
-      "period": "2023 \u2013 2025 \u00b7 PRJ-CLOUD-003",
-      "desc": "Repetitive administrative operations, manual report generation, and distributed web data collection consume excessive engineering hours.",
-      "contribution": "Developed collection of Python and Shell automation utilities for automated file system management, scheduled web scrapers (BeautifulSoup/Selenium), PDF/Excel report generators, and API health monitors.",
-      "technologies": [
-        "Python",
-        "Shell / Bash",
-        "PowerShell",
-        "BeautifulSoup",
-        "Selenium",
-        "Requests"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": "https://github.com/alimulfazalnabil/Automation-Projects",
-      "links": [],
-      "color": "#3b82f6",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-CLOUD-004",
-      "title": "Custom High-Performance Compute Workstations & Edge Hardware Engineering",
-      "category": "project",
-      "domain": "cloud",
-      "status": "production",
-      "period": "2016 \u2013 Present (10+ Years Practice) \u00b7 PRJ-CLOUD-004",
-      "desc": "Commercial desktop PCs throttle and experience hardware memory/VRM failures under continuous deep-learning training and simulation loads.",
-      "contribution": "Engineered custom computing workstations and edge inference rigs: component selection (NVIDIA RTX GPUs, AMD Ryzen/Intel Xeon, 64-128GB RAM, NVMe RAID), thermal management (custom liquid cooling, thermal paste), BIOS/UEFI optimization (XMP profiling, PCIe lane bifurcation, VT-x virtualization), PSU load/UPS power quality calculation, and industrial edge integration (NVIDIA Jetson AGX Xavier, Jetson Nano, fanless IPCs, PoE+ networking).",
-      "technologies": [
-        "NVIDIA RTX / CUDA",
-        "NVIDIA Jetson AGX Xavier / Nano",
-        "Custom Liquid Cooling",
-        "BIOS/UEFI Firmware Tuning",
-        "PCIe Bifurcation",
-        "NVMe RAID",
-        "Industrial IPCs"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
-      "color": "#3b82f6",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-GENAI-001",
-      "title": "Enterprise RAG Knowledge Intelligence Platform",
-      "category": "project",
-      "domain": "genai",
-      "status": "prototype",
-      "period": "2024 \u2013 2025 \u00b7 PRJ-GENAI-001",
-      "desc": "Enterprise LLM applications suffer from hallucinations, lack authoritative corporate document citations, and risk unauthorized cross-department data exposure.",
-      "contribution": "Architected end-to-end production-grade Retrieval-Augmented Generation (RAG) platform: hybrid search combining dense semantic embeddings and sparse lexical BM25 merged via Reciprocal Rank Fusion (RRF); cross-encoder reranking; PostgreSQL pgvector storage with metadata tenant filtering; FastAPI backend with streaming responses, conversation history, audit logging, Docker containerization, and automated integration test suite.",
-      "technologies": [
-        "Python 3",
-        "FastAPI",
-        "PostgreSQL",
-        "pgvector",
-        "BM25",
-        "Reciprocal Rank Fusion (RRF)",
-        "Cross-Encoder Reranker",
-        "OpenAI API",
-        "Docker",
-        "pytest"
-      ],
-      "caseStudyUrl": "case-studies/enterprise-rag-platform.html",
-      "repoUrl": "https://github.com/alimulfazalnabil/LLM-enterprise-rag-knowledge-platform",
-      "links": [],
-      "color": "#a855f7",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-GENAI-002",
-      "title": "MoviSabio \u2014 Intelligent Territorial Management & Traffic Optimization Platform",
-      "category": "project",
-      "domain": "genai",
-      "status": "in-development",
-      "period": "2025 \u2013 2026 \u00b7 PRJ-GENAI-002",
-      "desc": "Urban arterial congestion causes massive economic losses and excess vehicle emissions due to rigid, uncoordinated traffic signal timings.",
-      "contribution": "Co-founder / Technical Architect: authored technical architecture and MVP roadmaps; designed multi-agent optimization combining MAXBAND arterial green-wave coordination with Deep Q-Networks (DQN) and LSTM traffic flow forecasting; prepared simulation pipeline with SUMO and TraCI using BDD100K urban video datasets.",
-      "technologies": [
-        "Python",
-        "Reinforcement Learning (DQN)",
-        "MAXBAND Algorithm",
-        "SUMO (Simulation of Urban MObility)",
-        "TraCI",
-        "PyTorch",
-        "BDD100K Dataset",
-        "Cloud Architecture"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
-      "color": "#a855f7",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-GENAI-003",
-      "title": "Doctor&#x27;s Co-Pilot AI (Clinical Transcription & Intelligence Assistant)",
-      "category": "project",
-      "domain": "genai",
-      "status": "in-development",
-      "period": "July 2026 \u2013 Present \u00b7 PRJ-GENAI-003",
-      "desc": "Clinicians spend excessive time manually documenting patient consultations and typing EHR notes, contributing to physician burnout.",
-      "contribution": "Designed backend microservice architecture: created FastAPI service with health endpoints, Dockerfile, and CORS middleware; integrated Azure Cognitive Services Speech-to-Text for ambient conversation capture; engineered prompt pipeline with OpenAI/Azure OpenAI and Azure AI Text Analytics for clinical SOAP notes; authored Terraform infrastructure-as-code and GitHub Actions workflows.",
-      "technologies": [
-        "Python",
-        "FastAPI",
-        "Docker",
-        "Azure Cognitive Services (Speech)",
-        "Azure AI Text Analytics",
-        "OpenAI API",
-        "Pydantic",
-        "Terraform",
-        "GitHub Actions"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
-      "color": "#a855f7",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-GENAI-004",
-      "title": "AI-Assisted Operational Log Analysis & Incident Triage Pipeline",
-      "category": "project",
-      "domain": "genai",
-      "status": "prototype",
-      "period": "2024 \u2013 2025 \u00b7 PRJ-GENAI-004",
-      "desc": "Incident responders are overwhelmed by noisy, unstructured log streams during critical production system outages.",
-      "contribution": "Prototyped intelligent log anomaly summarization pipeline using LangChain, OpenAI embeddings, and Flask/Docker serving, filtering high-severity stack traces and recommending targeted remediation actions.",
-      "technologies": [
-        "Python",
-        "Flask",
-        "LangChain",
-        "OpenAI API",
-        "Docker",
-        "AWS ECS Concepts"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
-      "color": "#a855f7",
-      "radius": 11
-    },
-    {
-      "id": "PRJ-ENG-001",
-      "title": "SPAROO \u2014 Online Shopping and Dynamic Auctioning Web Architecture",
-      "category": "project",
-      "domain": "research",
-      "status": "research",
-      "period": "2021 \u2013 November 2022 \u00b7 PRJ-ENG-001",
-      "desc": "Standard e-commerce engines lack integrated, synchronized real-time bidding mechanisms for peer-to-peer auction items alongside traditional retail transactions.",
-      "contribution": "Lead author and developer; designed relational database schema for real-time bid increments, user transaction ledgers, product catalog indexing, and session security.",
-      "technologies": [
-        "Web Technologies (PHP/Python/JavaScript)",
-        "MySQL/PostgreSQL",
-        "Apache",
-        "Bootstrap",
-        "HTML5/CSS3"
-      ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
-      "color": "#ec4899",
-      "radius": 11
+      "caseStudyUrl": "",
+      "repoUrl": "https://github.com/alimulfazalnabil/Robotics-projects",
+      "liveUrl": "",
+      "isPrivateRepo": false
     },
     {
       "id": "PRJ-ENG-002",
       "title": "Autonomous Quadcopter Aerial Concept with ArduPilot & Pixhawk",
+      "shortTitle": "Autonomous Quadcopter \u2026",
       "category": "project",
-      "domain": "research",
-      "status": "prototype",
+      "domain": "embedded",
+      "color": "#14b8a6",
+      "radius": 10,
+      "status": "concept",
       "period": "2019 \u2013 2020 \u00b7 PRJ-ENG-002",
-      "desc": "Autonomous aerial survey and remote telemetry gathering in unstructured outdoor environments.",
+      "desc": "Autonomous aerial survey and remote telemetry gathering concept utilizing open-source flight stacks and multi-sensor navigation in unstructured outdoor environments.",
       "contribution": "Conceptualized UAV airframe layout; configured ArduPilot flight stack parameters; integrated Pixhawk flight controller, GPS, IMU, and 433MHz telemetry transceiver.",
       "technologies": [
         "ArduPilot",
@@ -828,33 +419,500 @@
         "Telemetry Radio",
         "Mission Planner"
       ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
+      "caseStudyUrl": "",
+      "repoUrl": "",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-CV-001",
+      "title": "Autonomous Lane Detection Pipeline & CARLA Bridge",
+      "shortTitle": "Autonomous Lane Detect\u2026",
+      "category": "project",
+      "domain": "vision",
+      "color": "#38bdf8",
+      "radius": 12,
+      "status": "prototype",
+      "period": "2023 \u2013 2024 \u00b7 PRJ-CV-001",
+      "desc": "Deterministic computer vision pipeline for roadway boundary detection under variable lighting, featuring synthetic evaluation tests and a modular CARLA simulator adapter.",
+      "contribution": "Engineered end-to-end vision pipeline: HSL/grayscale colorspace transformation, Canny edge detection, trapezoidal ROI masking, Hough line extraction, temporal lane line smoothing, and synthetic image test harness.",
+      "technologies": [
+        "Python",
+        "OpenCV",
+        "NumPy",
+        "Hough Transform",
+        "CARLA Simulator",
+        "Pytest"
+      ],
+      "caseStudyUrl": "case-studies/autonomous-lane-detection.html",
+      "repoUrl": "https://github.com/alimulfazalnabil/Autonomous-Lane-Detection",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-CV-002",
+      "title": "Vehicle and Pedestrian Visual Detection System",
+      "shortTitle": "Vehicle and Pedestrian\u2026",
+      "category": "project",
+      "domain": "vision",
+      "color": "#38bdf8",
+      "radius": 10,
+      "status": "learning",
+      "period": "2023 \u2013 2025 \u00b7 PRJ-CV-002",
+      "desc": "Project-based exploration of real-time object detection models (YOLOv8) for identifying vehicles, pedestrians, and cyclists in urban traffic video streams.",
+      "contribution": "Configured YOLOv8 pre-trained model weights; evaluated bounding box detection on traffic video snippets; benchmarked inference latency on CPU environments.",
+      "technologies": [
+        "Python",
+        "YOLOv8",
+        "OpenCV",
+        "PyTorch",
+        "Computer Vision Tooling"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "https://github.com/alimulfazalnabil/Computer-Vision-Projects",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-CV-003",
+      "title": "Autonomous Driving Virtual Simulation in CARLA",
+      "shortTitle": "Autonomous Driving Vir\u2026",
+      "category": "project",
+      "domain": "vision",
+      "color": "#38bdf8",
+      "radius": 10,
+      "status": "learning",
+      "period": "2023 \u2013 2024 \u00b7 PRJ-CV-003",
+      "desc": "Virtual environment simulation in the CARLA simulator exploring camera sensor placement, weather condition presets, and vehicle telemetry streaming.",
+      "contribution": "Spawned ego-vehicles and sensor suites in CARLA Python API; captured RGB camera buffers; tested bridge passing frames to perception algorithms.",
+      "technologies": [
+        "CARLA Simulator",
+        "Python",
+        "Unreal Engine Environment",
+        "OpenCV"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "https://github.com/alimulfazalnabil/Autonomous-Lane-Detection",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-CV-004",
+      "title": "Computer Vision Projects (Deep Learning & Perception Hub)",
+      "shortTitle": "Computer Vision Projec\u2026",
+      "category": "project",
+      "domain": "vision",
+      "color": "#38bdf8",
+      "radius": 10,
+      "status": "collection",
+      "period": "2022 \u2013 2024 \u00b7 PRJ-CV-004",
+      "desc": "Curated repository collection of applied computer vision architectures, transfer learning workflows, YOLOv8/DeepSORT tracking examples, and image segmentation tests.",
+      "contribution": "Implemented notebooks and scripts demonstrating transfer learning, image augmentation, object tracking basics, and model evaluation.",
+      "technologies": [
+        "Python",
+        "OpenCV",
+        "YOLOv8",
+        "DeepSORT",
+        "PyTorch",
+        "Transfer Learning"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "https://github.com/alimulfazalnabil/Computer-Vision-Projects",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-ML-001",
+      "title": "Heart Disease Clinical Risk Prediction Platform",
+      "shortTitle": "Heart Disease Clinical\u2026",
+      "category": "project",
+      "domain": "aiml",
+      "color": "#a855f7",
+      "radius": 12,
+      "status": "prototype",
+      "period": "2023 \u2013 2024 \u00b7 PRJ-ML-001",
+      "desc": "End-to-end machine learning microservice for cardiovascular clinical risk assessment, with stratified 10-fold cross-validation, FastAPI inference API, and Docker CI/CD automation.",
+      "contribution": "Cleaned and preprocessed UCI Heart Disease dataset; trained Random Forest and Logistic Regression models (achieving 86.89% ROC-AUC); implemented FastAPI schema validation; packaged containerized Docker service.",
+      "technologies": [
+        "Python",
+        "scikit-learn",
+        "FastAPI",
+        "Pandas",
+        "Docker",
+        "GitHub Actions"
+      ],
+      "caseStudyUrl": "case-studies/heart-disease-prediction.html",
+      "repoUrl": "https://github.com/alimulfazalnabil/heart-disease-prediction",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-ML-003",
+      "title": "Machine Learning Projects (Falcon 9 Landing & Forecasting)",
+      "shortTitle": "Machine Learning Proje\u2026",
+      "category": "project",
+      "domain": "aiml",
+      "color": "#a855f7",
+      "radius": 10,
+      "status": "learning",
+      "period": "2022 \u2013 2023 \u00b7 PRJ-ML-003",
+      "desc": "Collection of exploratory machine learning and data science projects covering SpaceX Falcon 9 first-stage landing classification, launch cost estimation, and stock price forecasting.",
+      "contribution": "Wrote data extraction routines via SpaceX REST API; cleaned structured telemetry; trained Logistic Regression, SVM, Decision Tree, and KNN models with hyperparameter grid search tuning.",
+      "technologies": [
+        "Python",
+        "scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "https://github.com/alimulfazalnabil/Python-Projects",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-GENAI-001",
+      "title": "Enterprise RAG Knowledge Intelligence Platform",
+      "shortTitle": "Enterprise RAG Knowled\u2026",
+      "category": "project",
+      "domain": "aiml",
+      "color": "#a855f7",
+      "radius": 12,
+      "status": "prototype",
+      "period": "2024 \u2013 2025 \u00b7 PRJ-GENAI-001",
+      "desc": "Multi-tenant Retrieval-Augmented Generation (RAG) platform combining dense vector search and sparse BM25 lexical ranking via Reciprocal Rank Fusion (RRF) and cross-encoder reranking.",
+      "contribution": "Architected hybrid retrieval engine using PostgreSQL and pgvector; implemented document chunking, BM25 scoring, and RRF fusion; structured FastAPI endpoints with tenant access control.",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "pgvector",
+        "BM25",
+        "Cross-Encoder Reranker"
+      ],
+      "caseStudyUrl": "case-studies/enterprise-rag-platform.html",
+      "repoUrl": "https://github.com/alimulfazalnabil/LLM-enterprise-rag-knowledge-platform",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-CLOUD-001",
+      "title": "Azure Terraform Infrastructure CI/CD Foundation",
+      "shortTitle": "Azure Terraform Infras\u2026",
+      "category": "project",
+      "domain": "cloud-data",
+      "color": "#3b82f6",
+      "radius": 12,
+      "status": "prototype",
+      "period": "2024 \u2013 2025 \u00b7 PRJ-CLOUD-001",
+      "desc": "Modular Infrastructure-as-Code (IaC) repository provisioning enterprise Azure hub-spoke networking, Azure Container Registry, Azure Kubernetes Service (AKS), and Key Vault with automated GitHub Actions CI/CD.",
+      "contribution": "Structured reusable Terraform modules; configured remote state locking with Azure Blob Storage and native encryption; authored multi-stage GitHub Actions workflow for linting, security scanning, and plan/apply automation.",
+      "technologies": [
+        "Terraform",
+        "Microsoft Azure",
+        "GitHub Actions",
+        "Azure AKS",
+        "Azure Blob Storage",
+        "Key Vault"
+      ],
+      "caseStudyUrl": "case-studies/azure-terraform-cicd.html",
+      "repoUrl": "https://github.com/alimulfazalnabil/azure-terraform-cicd-foundation",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-DATA-001",
+      "title": "Azure Data and AI Analytics Foundation",
+      "shortTitle": "Azure Data and AI Anal\u2026",
+      "category": "project",
+      "domain": "cloud-data",
+      "color": "#3b82f6",
+      "radius": 10,
+      "status": "prototype",
+      "period": "2024 \u2013 2025 \u00b7 PRJ-DATA-001",
+      "desc": "Scalable enterprise data analytics blueprint integrating Azure Data Factory, Azure Data Lake Gen2, Synapse Analytics, Terraform automation, and Python forecasting on simulated telemetry.",
+      "contribution": "Authored Terraform templates for Data Lake Gen2 storage and Synapse workspaces; designed ELT data flow pipelines; wrote Python forecasting models evaluating time-series patterns.",
+      "technologies": [
+        "Microsoft Azure",
+        "Azure Data Factory",
+        "Azure Data Lake Gen2",
+        "Synapse Analytics",
+        "Terraform",
+        "Python"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "https://github.com/alimulfazalnabil/azure-data-ai-analytics",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-DATA-002",
+      "title": "Data Engineering Projects (Distributed Pipelines & ETL)",
+      "shortTitle": "Data Engineering Proje\u2026",
+      "category": "project",
+      "domain": "cloud-data",
+      "color": "#3b82f6",
+      "radius": 10,
+      "status": "collection",
+      "period": "2023 \u2013 2025 \u00b7 PRJ-DATA-002",
+      "desc": "Collection of data engineering implementations exploring Apache Airflow DAG orchestration, Apache Spark/PySpark batch processing, AWS S3/Redshift warehousing, Kafka streaming, and PostgreSQL data modeling.",
+      "contribution": "Authored PySpark transformation jobs, Airflow DAG schedules, schema migration scripts, and streaming ingestion handlers for heterogeneous data sources.",
+      "technologies": [
+        "Apache Airflow",
+        "Apache Spark",
+        "PySpark",
+        "Kafka",
+        "PostgreSQL",
+        "AWS S3 / Redshift"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "https://github.com/alimulfazalnabil/Data-Engineering-Projects",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-GENAI-004",
+      "title": "ML Deployment & AI-Assisted Log Analysis",
+      "shortTitle": "ML Deployment & AI-Ass\u2026",
+      "category": "project",
+      "domain": "cloud-data",
+      "color": "#3b82f6",
+      "radius": 10,
+      "status": "concept",
+      "period": "2024 \u2013 2025 \u00b7 PRJ-GENAI-004",
+      "desc": "Exploratory project investigating API-based machine learning model serving with Flask/Docker, container deployment on AWS ECS, and AI-assisted triage of operational infrastructure log anomalies.",
+      "contribution": "Prototyped Flask API model wrappers; containerized service using Docker; investigated LLM prompting routines for parsing structured error logs and generating incident summaries.",
+      "technologies": [
+        "Flask",
+        "Docker",
+        "AWS ECS",
+        "Python",
+        "OpenAI API",
+        "LangChain"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-DATA-003",
+      "title": "Digital-Twin Concept for Industrial Energy Management",
+      "shortTitle": "Digital-Twin Concept f\u2026",
+      "category": "project",
+      "domain": "automation",
+      "color": "#f59e0b",
+      "radius": 10,
+      "status": "concept",
+      "period": "2025 \u00b7 PRJ-DATA-003",
+      "desc": "Conceptual blueprint of an industrial digital twin for HVAC, substation telemetry, and hybrid energy distribution systems, incorporating control topology and remote telemetry connectivity.",
+      "contribution": "Drafted system architecture linking simulated PLC sensors to Azure Digital Twins graph models; defined spatial relationship hierarchies and edge ingestion routes.",
+      "technologies": [
+        "Azure Digital Twins",
+        "PLC / Network Architecture",
+        "IoT Telemetry",
+        "Digital Twin Modeling"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-ML-002",
+      "title": "Predictive-Maintenance System (Equipment Fault Forecasting)",
+      "shortTitle": "Predictive-Maintenance\u2026",
+      "category": "project",
+      "domain": "automation",
+      "color": "#f59e0b",
+      "radius": 10,
+      "status": "concept",
+      "period": "2024 \u2013 2025 \u00b7 PRJ-ML-002",
+      "desc": "Machine learning approach exploring equipment degradation and anomaly forecasting using simulated industrial vibration accelerometer time-series data.",
+      "contribution": "Engineered feature extraction pipeline for time-series vibration data; evaluated anomaly classification algorithms; formulated deployment model for edge gateways.",
+      "technologies": [
+        "Python",
+        "scikit-learn",
+        "Simulated Vibration Data",
+        "Azure IoT Edge",
+        "Time-Series Analysis"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-CLOUD-004",
+      "title": "Custom PC Building & Workstation Design (Hardware Engineering)",
+      "shortTitle": "Custom PC Building & W\u2026",
+      "category": "project",
+      "domain": "hardware",
       "color": "#ec4899",
-      "radius": 11
+      "radius": 10,
+      "status": "deployment",
+      "period": "2016 \u2013 Present (10+ Years Practice) \u00b7 PRJ-CLOUD-004",
+      "desc": "Over a decade designing, building, and maintaining custom high-performance computing workstations for deep learning training, simulation, industrial edge inference, and office IT infrastructure.",
+      "contribution": "Specified, assembled, and tested multi-GPU workstations (NVIDIA RTX, AMD Ryzen / Intel Xeon, 64\u2013128GB ECC/non-ECC RAM); engineered custom liquid cooling and thermal airflow; diagnosed VRM throttling and GPU memory faults; integrated fanless IPCs, NVIDIA Jetson Xavier/Nano/Orin edge stations, and BIOS/UEFI XMP/VT-x virtualization tuning.",
+      "technologies": [
+        "NVIDIA RTX / Jetson",
+        "AMD Ryzen / Intel Xeon",
+        "Custom Liquid Cooling",
+        "Fanless IPCs",
+        "BIOS/UEFI Tuning",
+        "Industrial SSDs"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-CLOUD-002",
+      "title": "Enterprise Web Portal for PGCB Engineers",
+      "shortTitle": "Enterprise Web Portal \u2026",
+      "category": "project",
+      "domain": "web",
+      "color": "#06b6d4",
+      "radius": 10,
+      "status": "deployment",
+      "period": "2023 \u2013 2024 \u00b7 PRJ-CLOUD-002",
+      "desc": "Full-stack institutional web portal engineered for the Power Grid Company of Bangladesh (PGCB) Engineers' Association, providing member administration, role-based access, automated notifications, and official notice boards.",
+      "contribution": "Developed full-stack web architecture, backend APIs, relational database schema, user authentication with role-based access control, admin dashboards, and automated unit tests; deployed live service on Render.",
+      "technologies": [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "JavaScript",
+        "HTML5 / CSS3",
+        "Render Cloud"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "https://github.com/alimulfazalnabil/pgcb-org-portal",
+      "liveUrl": "https://pgcb-org-portal.onrender.com/",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-CLOUD-003",
+      "title": "Automation Projects (Enterprise Scraping, Tooling & Workflow Suite)",
+      "shortTitle": "Automation Projects (E\u2026",
+      "category": "project",
+      "domain": "web",
+      "color": "#06b6d4",
+      "radius": 10,
+      "status": "collection",
+      "period": "2023 \u2013 2025 \u00b7 PRJ-CLOUD-003",
+      "desc": "Collection of practical Python automation scripts, web scrapers, report generation utilities, data conversion tools, and document processing workflows.",
+      "contribution": "Authored automated web scrapers (BeautifulSoup/Selenium), CSV/JSON transformation utilities, and file system watcher scripts for workflow automation.",
+      "technologies": [
+        "Python",
+        "BeautifulSoup",
+        "Selenium",
+        "Requests",
+        "Pandas",
+        "Automation Tooling"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "https://github.com/alimulfazalnabil/Automation-Projects",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-ENG-001",
+      "title": "SPAROO \u2014 Online Shopping & Dynamic Auctioning Web Architecture",
+      "shortTitle": "SPAROO \u2014 Online Shoppi\u2026",
+      "category": "project",
+      "domain": "web",
+      "color": "#06b6d4",
+      "radius": 10,
+      "status": "academic",
+      "period": "2021 \u2013 November 2022 \u00b7 PRJ-ENG-001",
+      "desc": "E-commerce web architecture integrating fixed-price product purchasing with dynamic real-time auction bidding, product catalogs, user accounts, and database session handling.",
+      "contribution": "Designed relational database schema, server-side bidding logic with bid increment validation, session authentication, and dynamic front-end views; authored peer-reviewed research paper in IRJET (2022).",
+      "technologies": [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "HTML5 / CSS3",
+        "Relational Database Design"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "",
+      "liveUrl": "",
+      "isPrivateRepo": false
+    },
+    {
+      "id": "PRJ-GENAI-002",
+      "title": "MoviSabio Enterprise Smart City System",
+      "shortTitle": "MoviSabio Enterprise S\u2026",
+      "category": "project",
+      "domain": "smartcity",
+      "color": "#8b5cf6",
+      "radius": 10,
+      "status": "concept",
+      "period": "2025 \u2013 2026 \u00b7 PRJ-GENAI-002",
+      "desc": "Territorial-intelligence and smart-city software architecture blueprint integrating geospatial analytics, traffic data ingestion, and urban decision support dashboards.",
+      "contribution": "Co-conceptualized system blueprint; structured geospatial data models and telemetry ingestion protocols for urban traffic optimization.",
+      "technologies": [
+        "Python",
+        "Geospatial Data",
+        "PostGIS",
+        "Docker",
+        "System Architecture"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "https://github.com/alimulfazalnabil/Movisabio-Enterprise-Smart-City-System",
+      "liveUrl": "",
+      "isPrivateRepo": true
+    },
+    {
+      "id": "PRJ-GENAI-003",
+      "title": "AI Traffic Signal Coordination (MAXBAND & DQN Traffic Optimization)",
+      "shortTitle": "AI Traffic Signal Coor\u2026",
+      "category": "project",
+      "domain": "smartcity",
+      "color": "#8b5cf6",
+      "radius": 10,
+      "status": "concept",
+      "period": "2025 \u2013 2026 \u00b7 PRJ-GENAI-003",
+      "desc": "Traffic signal coordination architecture combining MAXBAND green-wave arterial progression optimization with Deep Q-Networks (DQN) reinforcement learning, with optional LSTM/GRU traffic flow forecasting and SUMO/TraCI microscopic traffic simulation.",
+      "contribution": "Designed mathematical framework combining classical bandwidth maximization with deep reinforcement learning; configured SUMO/TraCI microscopic simulation environment for validating corridor travel times.",
+      "technologies": [
+        "Python",
+        "SUMO / TraCI",
+        "DQN (Deep Q-Networks)",
+        "MAXBAND Algorithm",
+        "PyTorch"
+      ],
+      "caseStudyUrl": "",
+      "repoUrl": "https://github.com/alimulfazalnabil/AI-Traffic-Signal-Coordination",
+      "liveUrl": "",
+      "isPrivateRepo": true
     },
     {
       "id": "PRJ-ENG-003",
-      "title": "Industrial & Architectural 2D/3D CAD Design Portfolio",
+      "title": "Engineering Design & Industrial 2D/3D AutoCAD Portfolio",
+      "shortTitle": "Engineering Design & I\u2026",
       "category": "project",
-      "domain": "research",
-      "status": "research",
+      "domain": "cad",
+      "color": "#64748b",
+      "radius": 10,
+      "status": "academic",
       "period": "2017 \u2013 2022 \u00b7 PRJ-ENG-003",
-      "desc": "Precise dimensional drafting, mechanical component modeling, and architectural planning for engineering systems.",
-      "contribution": "Created over 15 project-based 2D and 3D CAD drawings including mechanical parts, robotic chassis layouts, structural foundations, and electrical wiring schematics.",
+      "desc": "Comprehensive portfolio of over 15 project-based 2D engineering drawings, 3D solid models, orthographic projections, and layout visualizations.",
+      "contribution": "Drafted technical drawings including mechanical component assemblies, robotic chassis profiles, electrical single-line diagrams, and architectural floor plans adhering to standard dimensioning tolerances.",
       "technologies": [
         "Autodesk AutoCAD",
         "2D Drafting",
         "3D Solid Modeling",
         "Orthographic Projections",
-        "Dimensioning"
+        "Technical Dimensioning"
       ],
-      "caseStudyUrl": null,
-      "repoUrl": null,
-      "links": [],
-      "color": "#ec4899",
-      "radius": 11
+      "caseStudyUrl": "",
+      "repoUrl": "",
+      "liveUrl": "",
+      "isPrivateRepo": false
     }
   ],
   "edges": [
@@ -865,34 +923,10 @@
       "label": "categorized_by"
     },
     {
-      "source": "PRJ-EMB-001",
-      "target": "role_cbiu",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-EMB-001",
-      "target": "tech_arduino",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
       "source": "PRJ-EMB-002",
       "target": "dom_embedded",
       "type": "domain",
       "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-EMB-002",
-      "target": "role_cbiu",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-EMB-002",
-      "target": "tech_arduino",
-      "type": "tech",
-      "label": "implements"
     },
     {
       "source": "PRJ-EMB-003",
@@ -901,34 +935,10 @@
       "label": "categorized_by"
     },
     {
-      "source": "PRJ-EMB-003",
-      "target": "role_cbiu",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-EMB-003",
-      "target": "tech_arduino",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
       "source": "PRJ-EMB-004",
       "target": "dom_embedded",
       "type": "domain",
       "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-EMB-004",
-      "target": "role_cbiu",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-EMB-004",
-      "target": "tech_arduino",
-      "type": "tech",
-      "label": "implements"
     },
     {
       "source": "PRJ-EMB-005",
@@ -937,76 +947,28 @@
       "label": "categorized_by"
     },
     {
-      "source": "PRJ-EMB-005",
-      "target": "role_cbiu",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-EMB-005",
-      "target": "tech_arduino",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
       "source": "PRJ-EMB-006",
       "target": "dom_embedded",
       "type": "domain",
       "label": "categorized_by"
     },
     {
-      "source": "PRJ-EMB-006",
-      "target": "role_cbiu",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-EMB-006",
-      "target": "tech_arduino",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CV-001",
-      "target": "dom_vision",
+      "source": "PRJ-ENG-002",
+      "target": "dom_embedded",
       "type": "domain",
       "label": "categorized_by"
     },
     {
       "source": "PRJ-CV-001",
-      "target": "tech_carla",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CV-001",
-      "target": "tech_opencv",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CV-001",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CV-002",
       "target": "dom_vision",
       "type": "domain",
       "label": "categorized_by"
     },
     {
       "source": "PRJ-CV-002",
-      "target": "tech_opencv",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CV-002",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
+      "target": "dom_vision",
+      "type": "domain",
+      "label": "categorized_by"
     },
     {
       "source": "PRJ-CV-003",
@@ -1015,46 +977,160 @@
       "label": "categorized_by"
     },
     {
-      "source": "PRJ-CV-003",
-      "target": "tech_carla",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CV-003",
-      "target": "tech_opencv",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CV-003",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
       "source": "PRJ-CV-004",
       "target": "dom_vision",
       "type": "domain",
       "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-CV-004",
-      "target": "tech_opencv",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CV-004",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
     },
     {
       "source": "PRJ-ML-001",
-      "target": "dom_ml",
+      "target": "dom_aiml",
       "type": "domain",
       "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-ML-003",
+      "target": "dom_aiml",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-GENAI-001",
+      "target": "dom_aiml",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-CLOUD-001",
+      "target": "dom_cloud_data",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-DATA-001",
+      "target": "dom_cloud_data",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-DATA-002",
+      "target": "dom_cloud_data",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-GENAI-004",
+      "target": "dom_cloud_data",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-DATA-003",
+      "target": "dom_automation",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-ML-002",
+      "target": "dom_automation",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-CLOUD-004",
+      "target": "dom_hardware",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-CLOUD-002",
+      "target": "dom_web",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-CLOUD-003",
+      "target": "dom_web",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-ENG-001",
+      "target": "dom_web",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-GENAI-002",
+      "target": "dom_smartcity",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-GENAI-003",
+      "target": "dom_smartcity",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-ENG-003",
+      "target": "dom_cad",
+      "type": "domain",
+      "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-EMB-001",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-EMB-002",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-EMB-003",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-EMB-004",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-EMB-005",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-EMB-006",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-ENG-001",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-ENG-002",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-ENG-003",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
     },
     {
       "source": "PRJ-ML-001",
@@ -1063,226 +1139,16 @@
       "label": "developed_during"
     },
     {
-      "source": "PRJ-ML-001",
-      "target": "tech_docker",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-ML-001",
-      "target": "tech_fastapi",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-ML-001",
-      "target": "tech_pgvector",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-ML-001",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-ML-001",
-      "target": "tech_scikit",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-ML-002",
-      "target": "dom_ml",
-      "type": "domain",
-      "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-ML-002",
-      "target": "role_energy_cloud",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-ML-002",
-      "target": "tech_azure",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-ML-002",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-ML-002",
-      "target": "tech_scikit",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-ML-003",
-      "target": "dom_ml",
-      "type": "domain",
-      "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-ML-003",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-ML-003",
-      "target": "tech_scikit",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-DATA-001",
-      "target": "dom_data",
-      "type": "domain",
-      "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-DATA-001",
-      "target": "role_energy_cloud",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-DATA-001",
-      "target": "tech_azure",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-DATA-001",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-DATA-001",
-      "target": "tech_rag",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-DATA-001",
-      "target": "tech_terraform",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-DATA-002",
-      "target": "dom_data",
-      "type": "domain",
-      "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-DATA-002",
-      "target": "role_energy_cloud",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-DATA-002",
-      "target": "tech_docker",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-DATA-002",
-      "target": "tech_pgvector",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-DATA-002",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-DATA-003",
-      "target": "dom_data",
-      "type": "domain",
-      "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-DATA-003",
-      "target": "role_energy_cloud",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-DATA-003",
-      "target": "tech_azure",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CLOUD-001",
-      "target": "dom_cloud",
-      "type": "domain",
-      "label": "categorized_by"
-    },
-    {
       "source": "PRJ-CLOUD-001",
       "target": "role_energy_cloud",
       "type": "role",
       "label": "developed_during"
     },
     {
-      "source": "PRJ-CLOUD-001",
-      "target": "tech_azure",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CLOUD-001",
-      "target": "tech_terraform",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CLOUD-002",
-      "target": "dom_cloud",
-      "type": "domain",
-      "label": "categorized_by"
-    },
-    {
       "source": "PRJ-CLOUD-002",
       "target": "role_energy_cloud",
       "type": "role",
       "label": "developed_during"
-    },
-    {
-      "source": "PRJ-CLOUD-002",
-      "target": "tech_docker",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CLOUD-002",
-      "target": "tech_pgvector",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CLOUD-002",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CLOUD-003",
-      "target": "dom_cloud",
-      "type": "domain",
-      "label": "categorized_by"
     },
     {
       "source": "PRJ-CLOUD-003",
@@ -1291,16 +1157,34 @@
       "label": "developed_during"
     },
     {
-      "source": "PRJ-CLOUD-003",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
+      "source": "PRJ-DATA-001",
+      "target": "role_energy_cloud",
+      "type": "role",
+      "label": "developed_during"
     },
     {
-      "source": "PRJ-CLOUD-004",
-      "target": "dom_cloud",
-      "type": "domain",
-      "label": "categorized_by"
+      "source": "PRJ-DATA-002",
+      "target": "role_energy_cloud",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-DATA-003",
+      "target": "role_energy_cloud",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-ML-002",
+      "target": "role_energy_cloud",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-GENAI-004",
+      "target": "role_energy_cloud",
+      "type": "role",
+      "label": "developed_during"
     },
     {
       "source": "PRJ-CLOUD-004",
@@ -1309,14 +1193,152 @@
       "label": "developed_during"
     },
     {
-      "source": "PRJ-GENAI-001",
-      "target": "dom_genai",
-      "type": "domain",
-      "label": "categorized_by"
+      "source": "PRJ-GENAI-002",
+      "target": "role_movisabio",
+      "type": "role",
+      "label": "developed_during"
     },
     {
-      "source": "PRJ-GENAI-001",
+      "source": "PRJ-GENAI-003",
+      "target": "role_movisabio",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-EMB-001",
+      "target": "tech_arduino",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-EMB-002",
+      "target": "tech_arduino",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-EMB-003",
+      "target": "tech_arduino",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-EMB-004",
+      "target": "tech_arduino",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-EMB-005",
+      "target": "tech_arduino",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-EMB-006",
+      "target": "tech_arduino",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-ENG-002",
+      "target": "tech_arduino",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-CV-001",
+      "target": "tech_carla",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-CV-001",
+      "target": "tech_opencv",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-CV-001",
+      "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-CV-002",
+      "target": "tech_opencv",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-CV-002",
+      "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-CV-003",
+      "target": "tech_carla",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-CV-003",
+      "target": "tech_opencv",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-CV-003",
+      "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-CV-004",
+      "target": "tech_opencv",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-CV-004",
+      "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-ML-001",
       "target": "tech_docker",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-ML-001",
+      "target": "tech_fastapi",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-ML-001",
+      "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-ML-001",
+      "target": "tech_scikit",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-ML-003",
+      "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-ML-003",
+      "target": "tech_scikit",
       "type": "tech",
       "label": "implements"
     },
@@ -1345,76 +1367,58 @@
       "label": "implements"
     },
     {
-      "source": "PRJ-GENAI-002",
-      "target": "dom_genai",
-      "type": "domain",
-      "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-GENAI-002",
-      "target": "role_movisabio",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-GENAI-002",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-GENAI-002",
-      "target": "tech_sumo",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-GENAI-003",
-      "target": "dom_genai",
-      "type": "domain",
-      "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-GENAI-003",
+      "source": "PRJ-CLOUD-001",
       "target": "tech_azure",
       "type": "tech",
       "label": "implements"
     },
     {
-      "source": "PRJ-GENAI-003",
-      "target": "tech_docker",
+      "source": "PRJ-CLOUD-001",
+      "target": "tech_k8s",
       "type": "tech",
       "label": "implements"
     },
     {
-      "source": "PRJ-GENAI-003",
-      "target": "tech_fastapi",
+      "source": "PRJ-CLOUD-001",
+      "target": "tech_rag",
       "type": "tech",
       "label": "implements"
     },
     {
-      "source": "PRJ-GENAI-003",
-      "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-GENAI-003",
+      "source": "PRJ-CLOUD-001",
       "target": "tech_terraform",
       "type": "tech",
       "label": "implements"
     },
     {
-      "source": "PRJ-GENAI-004",
-      "target": "dom_genai",
-      "type": "domain",
-      "label": "categorized_by"
+      "source": "PRJ-DATA-001",
+      "target": "tech_azure",
+      "type": "tech",
+      "label": "implements"
     },
     {
-      "source": "PRJ-GENAI-004",
-      "target": "role_energy_cloud",
-      "type": "role",
-      "label": "developed_during"
+      "source": "PRJ-DATA-001",
+      "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-DATA-001",
+      "target": "tech_terraform",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-DATA-002",
+      "target": "tech_pgvector",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-DATA-002",
+      "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
     },
     {
       "source": "PRJ-GENAI-004",
@@ -1429,58 +1433,70 @@
       "label": "implements"
     },
     {
-      "source": "PRJ-ENG-001",
-      "target": "dom_research",
-      "type": "domain",
-      "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-ENG-001",
-      "target": "role_cbiu",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-ENG-001",
-      "target": "tech_pgvector",
+      "source": "PRJ-DATA-003",
+      "target": "tech_azure",
       "type": "tech",
       "label": "implements"
     },
     {
-      "source": "PRJ-ENG-001",
+      "source": "PRJ-ML-002",
+      "target": "tech_azure",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-ML-002",
       "target": "tech_python",
       "type": "tech",
       "label": "implements"
     },
     {
-      "source": "PRJ-ENG-002",
-      "target": "dom_research",
-      "type": "domain",
-      "label": "categorized_by"
-    },
-    {
-      "source": "PRJ-ENG-002",
-      "target": "role_cbiu",
-      "type": "role",
-      "label": "developed_during"
-    },
-    {
-      "source": "PRJ-ENG-002",
-      "target": "tech_arduino",
+      "source": "PRJ-ML-002",
+      "target": "tech_scikit",
       "type": "tech",
       "label": "implements"
     },
     {
-      "source": "PRJ-ENG-003",
-      "target": "dom_research",
-      "type": "domain",
-      "label": "categorized_by"
+      "source": "PRJ-CLOUD-002",
+      "target": "tech_pgvector",
+      "type": "tech",
+      "label": "implements"
     },
     {
-      "source": "PRJ-ENG-003",
-      "target": "role_cbiu",
-      "type": "role",
-      "label": "developed_during"
+      "source": "PRJ-CLOUD-003",
+      "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-GENAI-002",
+      "target": "tech_docker",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-GENAI-002",
+      "target": "tech_pgvector",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-GENAI-002",
+      "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-GENAI-003",
+      "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-GENAI-003",
+      "target": "tech_sumo",
+      "type": "tech",
+      "label": "implements"
     }
   ]
 };
@@ -1512,7 +1528,7 @@
     let dist = 100;
     if (n.category === 'domain') {
       const dIdx = GRAPH_DATA.nodes.filter(x => x.category === 'domain').indexOf(n);
-      angle = (dIdx / 7) * 2 * Math.PI - Math.PI / 2;
+      angle = (dIdx / 9) * 2 * Math.PI - Math.PI / 2;
       dist = 180;
     } else if (n.category === 'role') {
       const rIdx = GRAPH_DATA.nodes.filter(x => x.category === 'role').indexOf(n);
@@ -2108,7 +2124,7 @@
     accessibleTree.appendChild(heading);
 
     const intro = document.createElement('p');
-    intro.textContent = 'This hierarchical tree lists all 7 verified domains, career milestone roles, and technical implementations with their connected technologies for screen readers and keyboard users.';
+    intro.textContent = 'This hierarchical tree lists all 9 verified categories, career milestone roles, and technical implementations with their connected technologies for screen readers and keyboard users.';
     accessibleTree.appendChild(intro);
 
     // Group by domains

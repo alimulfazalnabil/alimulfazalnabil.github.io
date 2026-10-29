@@ -120,11 +120,11 @@ def validate_knowledge_graph():
                 techs = [n for n in nodes if n["category"] == "technology"]
                 projects = [n for n in nodes if n["category"] == "project"]
 
-                assert len(domains) == 7, f"Expected 7 domains, found {len(domains)}"
+                assert len(domains) == 9, f"Expected 9 domains, found {len(domains)}"
                 assert len(roles) == 5, f"Expected 5 roles, found {len(roles)}"
                 assert len(techs) == 14, f"Expected 14 technologies, found {len(techs)}"
                 assert len(projects) == 27, f"Expected 27 projects, found {len(projects)}"
-                print("[PASS] Exact node distribution verified (7 domains, 5 roles, 14 tech, 27 projects = 53 total)")
+                print("[PASS] Exact node distribution verified (9 domains, 5 roles, 14 tech, 27 projects = 55 total)")
 
                 # Check all project IDs are unique
                 pids = [p["id"] for p in projects]
@@ -136,7 +136,7 @@ def validate_knowledge_graph():
                 for e in edges:
                     assert e["source"] in node_ids, f"Invalid edge source: {e['source']}"
                     assert e["target"] in node_ids, f"Invalid edge target: {e['target']}"
-                assert len(edges) == 104, f"Expected 104 verified edges, found {len(edges)}"
+                assert len(edges) == 97, f"Expected 97 verified edges, found {len(edges)}"
                 print(f"[PASS] All {len(edges)} edges connect strictly valid nodes (zero orphan edges)")
 
                 # Check edge breakdown
@@ -144,9 +144,9 @@ def validate_knowledge_graph():
                 role_edges = [e for e in edges if e["type"] == "role"]
                 tech_edges = [e for e in edges if e["type"] == "tech"]
                 assert len(domain_edges) == 27, f"Expected 27 domain edges, found {len(domain_edges)}"
-                assert len(role_edges) == 20, f"Expected 20 role edges, found {len(role_edges)}"
-                assert len(tech_edges) == 57, f"Expected 57 tech edges, found {len(tech_edges)}"
-                print("[PASS] Verified edge breakdown: 27 domain edges, 20 role edges, 57 verified technology edges")
+                assert len(role_edges) == 21, f"Expected 21 role edges, found {len(role_edges)}"
+                assert len(tech_edges) == 49, f"Expected 49 tech edges, found {len(tech_edges)}"
+                print("[PASS] Verified edge breakdown: 27 domain edges, 21 role edges, 49 verified technology edges")
 
             except Exception as ex:
                 errors.append(f"Error validating graph data structure: {ex}")

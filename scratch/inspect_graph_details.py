@@ -8,12 +8,15 @@ js_file = os.path.join(base_dir, "assets", "js", "career-graph.js")
 with open(js_file, "r", encoding="utf-8") as f:
     code = f.read()
 
-match = re.search(r"const GRAPH_DATA = ({.*?});\s+let initialized", code, re.DOTALL)
-if not match:
+start_m = "const GRAPH_DATA = "
+end_m = ";\n\n  let initialized"
+sp = code.find(start_m)
+ep = code.find(end_m, sp)
+if sp == -1 or ep == -1:
     print("Could not find GRAPH_DATA")
     exit(1)
 
-data = json.loads(match.group(1))
+data = json.loads(code[sp + len(start_m):ep].strip())
 nodes = data["nodes"]
 edges = data["edges"]
 

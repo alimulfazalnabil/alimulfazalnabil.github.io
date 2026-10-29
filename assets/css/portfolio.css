@@ -355,6 +355,18 @@
   border-radius: 50%;
 }
 
+.badge-academic,
+.badge-research {
+  background: rgba(99, 102, 241, 0.12);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+.badge-academic .status-dot-sm,
+.badge-research .status-dot-sm {
+  background: #818cf8;
+  box-shadow: 0 0 6px rgba(129, 140, 248, 0.6);
+}
+
 .badge-prototype {
   background: rgba(6, 182, 212, 0.12);
   color: #22d3ee;
@@ -365,54 +377,18 @@
   box-shadow: 0 0 6px rgba(34, 211, 238, 0.6);
 }
 
+.badge-concept,
+.badge-simulation,
 .badge-in-development {
-  background: rgba(245, 158, 11, 0.12);
-  color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  background: rgba(168, 85, 247, 0.12);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
 }
+.badge-concept .status-dot-sm,
+.badge-simulation .status-dot-sm,
 .badge-in-development .status-dot-sm {
-  background: #fbbf24;
-  box-shadow: 0 0 6px rgba(251, 191, 36, 0.6);
-}
-
-.badge-deployed {
-  background: rgba(16, 185, 129, 0.12);
-  color: #34d399;
-  border: 1px solid rgba(16, 185, 129, 0.3);
-}
-.badge-deployed .status-dot-sm {
-  background: #34d399;
-  box-shadow: 0 0 6px rgba(52, 211, 153, 0.6);
-}
-
-.badge-production {
-  background: rgba(56, 189, 248, 0.15);
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.4);
-}
-.badge-production .status-dot-sm {
-  background: #38bdf8;
-  box-shadow: 0 0 6px rgba(56, 189, 248, 0.8);
-}
-
-.badge-research {
-  background: rgba(129, 140, 248, 0.12);
-  color: #a5b4fc;
-  border: 1px solid rgba(129, 140, 248, 0.3);
-}
-.badge-research .status-dot-sm {
-  background: #a5b4fc;
-  box-shadow: 0 0 6px rgba(165, 180, 252, 0.6);
-}
-
-.badge-simulation {
-  background: rgba(14, 165, 233, 0.12);
-  color: #38bdf8;
-  border: 1px solid rgba(14, 165, 233, 0.3);
-}
-.badge-simulation .status-dot-sm {
-  background: #38bdf8;
-  box-shadow: 0 0 6px rgba(56, 189, 248, 0.6);
+  background: #c084fc;
+  box-shadow: 0 0 6px rgba(192, 132, 252, 0.6);
 }
 
 .badge-learning {
@@ -422,6 +398,46 @@
 }
 .badge-learning .status-dot-sm {
   background: #94a3b8;
+}
+
+.badge-collection {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+.badge-collection .status-dot-sm {
+  background: #fbbf24;
+  box-shadow: 0 0 6px rgba(251, 191, 36, 0.6);
+}
+
+.badge-deployment,
+.badge-deployed,
+.badge-production {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+.badge-deployment .status-dot-sm,
+.badge-deployed .status-dot-sm,
+.badge-production .status-dot-sm {
+  background: #34d399;
+  box-shadow: 0 0 6px rgba(52, 211, 153, 0.6);
+}
+
+.badge-private-repo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  background: rgba(244, 63, 94, 0.1);
+  color: #fb7185;
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  border-radius: var(--radius-full);
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 /* Card Body Content */
