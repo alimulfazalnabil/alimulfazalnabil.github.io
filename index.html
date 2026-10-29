@@ -20,6 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/features.css">
   <script defer src="assets/js/main.js"></script>
 </head>
 <body>
@@ -44,6 +45,11 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="header-actions">
+      <button class="header-search-btn" id="openCommandPaletteBtn" type="button" aria-label="Open command search palette (Ctrl+K)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <span>Search</span>
+        <kbd>⌘K</kbd>
+      </button>
       <a class="header-cta" href="Profile.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF) <span aria-hidden="true">↓</span></a>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
         <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
@@ -54,6 +60,11 @@
       </button>
     </div>
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+      <button class="header-search-btn" id="openCommandPaletteBtnMobile" type="button" style="width:100%; justify-content:center; margin:8px 0;" aria-label="Open command search palette (Ctrl+K)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <span>Search Portfolio &amp; Skills</span>
+        <kbd>⌘K</kbd>
+      </button>
       <a href="#about">About</a>
       <a href="#featured">Featured</a>
       <a href="#projects">Selected Projects</a>
@@ -70,9 +81,16 @@
     <!-- 01: Hero Section -->
     <section class="hero wrap" id="home">
       <div class="hero-content">
-        <div class="status-badge">
-          <span class="status-dot"></span>
-          <span>AVAILABLE FOR RELEVANT OPPORTUNITIES</span>
+        <div class="hero-status-row">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>AVAILABLE FOR RELEVANT OPPORTUNITIES</span>
+          </div>
+          <div class="live-clock-capsule" title="Current local time in Dhaka (UTC+6)">
+            <span class="clock-pulse"></span>
+            <span class="clock-icon">🕒</span>
+            <span id="liveClockTime">--:--:-- (UTC+6)</span>
+          </div>
         </div>
         <h1>
           Building Scalable,<br>
@@ -186,39 +204,79 @@
           </div>
         </div>
 
-        <!-- The Engineering Loop -->
-        <div class="loop-stepper">
-          <div class="loop-step">
-            <span class="step-num">PHASE 01</span>
-            <h4>Problem Scoping &amp; Data</h4>
-            <p>Identifying high-leverage workflows, cleaning unstructured data, designing APIs, and setting baseline evaluation targets.</p>
+        <!-- The Interactive Engineering Lifecycle Explorer -->
+        <div class="lifecycle-wrapper">
+          <div style="margin-bottom:20px;">
+            <p class="eyebrow" style="margin-bottom:6px;">HOW I BUILD AI SOLUTIONS · 6-STAGE LIFECYCLE</p>
+            <h3 style="font-size:18px; margin:0; color:var(--text);">Systematic Engineering Pipeline from Scope to Scale</h3>
           </div>
-          <div class="loop-step">
-            <span class="step-num">PHASE 02</span>
-            <h4>Retrieval &amp; Context</h4>
-            <p>Combining sparse BM25 with dense pgvector search, reciprocal rank fusion, and cross-encoder reranking to ensure grounded context.</p>
+          <div class="lifecycle-stages-bar" id="lifecycleStageTabs" role="tablist" aria-label="AI Engineering Lifecycle Stages">
+            <!-- Populated dynamically by interactive-features.js -->
           </div>
-          <div class="loop-step">
-            <span class="step-num">PHASE 03</span>
-            <h4>Reasoning &amp; Agents</h4>
-            <p>Orchestrating LLMs, structured outputs, multi-agent handoffs, and deterministic tool execution with strict guardrails.</p>
+          <div class="lifecycle-detail-card" id="lifecycleDetailCard" role="tabpanel">
+            <!-- Populated dynamically by interactive-features.js -->
           </div>
-          <div class="loop-step">
-            <span class="step-num">PHASE 04</span>
-            <h4>Containerization &amp; CI/CD</h4>
-            <p>Packaging services in Docker, provisioning Azure/Kubernetes infrastructure via Terraform, and automating test gates in GitHub Actions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Twin Client-Side Assistant Console -->
+    <section class="section" id="ai-twin">
+      <div class="wrap">
+        <div class="section-header">
+          <p class="eyebrow">INTERACTIVE AGENT · ZERO EXTERNAL API LATENCY</p>
+          <h2 class="section-title">Query My <span class="gradient-text">AI Digital Twin.</span></h2>
+          <p class="section-desc">
+            An instant, client-side conversational interface grounded strictly in my 27 verified projects, systems engineering background, and tech stack.
+          </p>
+        </div>
+
+        <div class="ai-twin-card">
+          <div class="ai-twin-header">
+            <div class="ai-twin-profile">
+              <img src="profile.jpg" alt="Alimul Fazal Nabil AI Avatar" class="ai-twin-avatar">
+              <div class="ai-twin-info">
+                <h4>Alimul Fazal Nabil <span class="ai-twin-badge"><span class="status-dot"></span> GROUNDED KNOWLEDGE ENGINE</span></h4>
+                <div class="ai-twin-status-sub">Client-side vector pattern matcher · Zero hallucinations · Instant answers</div>
+              </div>
+            </div>
+            <div class="ai-twin-controls">
+              <button type="button" class="ai-twin-clear-btn" id="aiTwinClearBtn" title="Clear conversation history">Clear Chat</button>
+            </div>
           </div>
-          <div class="loop-step">
-            <span class="step-num">PHASE 05</span>
-            <h4>Observability &amp; Scale</h4>
-            <p>Monitoring inference latency, token expenditure, error budgets, and alert noise with Prometheus to ensure high reliability.</p>
+
+          <div class="ai-twin-chat-window" id="aiTwinBody">
+            <div class="ai-msg ai-msg-bot">
+              <div class="ai-avatar">⚡</div>
+              <div class="ai-bubble">
+                <p>Hi! I am Alimul's <strong>AI Twin</strong>, running 100% locally in your browser. Ask me anything about Alimul's 27 verified projects, RAG architectures, cloud infrastructure (Azure, Terraform), computer vision systems, or engineering background.</p>
+                <p style="font-size:13px; color:var(--text-subtle); margin-top:6px;">Try clicking one of the suggested prompts below or type your own question!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-twin-starters">
+            <button type="button" class="ai-twin-chip" data-query="What have you built with Generative AI & RAG?">⚡ GenAI &amp; Enterprise RAG</button>
+            <button type="button" class="ai-twin-chip" data-query="What is your experience with Azure & DevOps?">☁️ Azure Cloud &amp; Terraform</button>
+            <button type="button" class="ai-twin-chip" data-query="Tell me about your Computer Vision & Perception work">👁️ Computer Vision &amp; CARLA</button>
+            <button type="button" class="ai-twin-chip" data-query="Experience in Industrial Automation & Hardware?">🏭 Hardware &amp; Digital Twins</button>
+            <button type="button" class="ai-twin-chip" data-query="What makes you a strong AI Solutions Engineer?">🎯 Why Alimul as AI Solutions Engineer?</button>
+            <button type="button" class="ai-twin-chip" data-query="Are you available for full-time roles?">💼 Availability &amp; Contact</button>
+          </div>
+
+          <div class="ai-twin-input-bar">
+            <input type="text" class="ai-twin-input" id="aiTwinInput" placeholder="Ask about RAG architectures, Azure infra, CV models, or roles..." aria-label="Ask Alimul's AI Twin">
+            <button type="button" class="ai-twin-send-btn" id="aiTwinSendBtn">Send Inquiry →</button>
+          </div>
+          <div class="ai-twin-disclaimer">
+            🔒 Runs locally in browser · Pre-indexed across 27 verified projects · Zero external API data leakage
           </div>
         </div>
       </div>
     </section>
 
     <!-- 03: Featured AI & Software Projects -->
-    <section class="section" id="featured">
+    <section class="section section-alt" id="featured">
       <div class="wrap">
         <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
           <div>
@@ -314,8 +372,75 @@
       </div>
     </section>
 
+    <!-- Before / After Architecture & Impact Transformation Showcase -->
+    <section class="section" id="architecture-impact">
+      <div class="wrap">
+        <div class="section-header">
+          <p class="eyebrow">ENGINEERING IMPACT · BEFORE VS AFTER</p>
+          <h2 class="section-title">Architectural Rationale &amp;<br><span class="gradient-text">Measurable Transformation.</span></h2>
+          <p class="section-desc">
+            See how disciplined engineering solves baseline limitations across flagship RAG, perception, and clinical machine learning platforms.
+          </p>
+        </div>
+
+        <div class="impact-showcase-wrap">
+          <div class="impact-tabs" id="impactTabContainer" role="tablist" aria-label="Flagship Project Comparisons">
+            <!-- Populated dynamically by interactive-features.js -->
+          </div>
+          <div id="impactShowcaseCard" class="impact-showcase-card">
+            <!-- Populated dynamically by interactive-features.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- You Be The AI Engineer — Make The Call Scenario Challenge -->
+    <section class="section section-alt" id="engineering-challenge">
+      <div class="wrap">
+        <div class="section-header">
+          <p class="eyebrow">INTERACTIVE TRADEOFF CHALLENGE</p>
+          <h2 class="section-title">You Be The AI Engineer:<br><span class="gradient-text">Make The Architectural Call.</span></h2>
+          <p class="section-desc">
+            Test your engineering judgment on a real-world dilemma: balancing strict hallucination suppression with sub-second production latency.
+          </p>
+        </div>
+
+        <div class="scenario-challenge-card" id="scenarioChallengeContainer">
+          <div class="scenario-header-bar">
+            <span class="scenario-channel-tag">PRODUCTION SCENARIO #01 · ENTERPRISE RAG</span>
+            <span style="font-family:'DM Mono',monospace; font-size:11px; color:var(--text-subtle);">SLA: p95 &lt; 650ms</span>
+          </div>
+          <div class="scenario-statement">
+            <h4>The Engineering Dilemma</h4>
+            <p>
+              Your Enterprise RAG platform is retrieving verified knowledge from 250,000 internal technical manuals. However, during ambiguous user queries, the LLM occasionally fills knowledge gaps with plausible hallucinations. The Product Director demands zero hallucinations, while the VP of Engineering mandates maintaining &lt; 650ms p95 latency. How do you engineer the solution?
+            </p>
+          </div>
+
+          <div class="scenario-options">
+            <button type="button" class="scenario-opt-btn" data-opt="A">
+              <span><strong>Option A:</strong> Switch to a massive 1M-context model and stuff all related manuals into every raw prompt.</span>
+              <span aria-hidden="true">→</span>
+            </button>
+            <button type="button" class="scenario-opt-btn" data-opt="B">
+              <span><strong>Option B:</strong> Two-Stage Hybrid RRF + Semantic Similarity Threshold + Claim Citation Verification Gate.</span>
+              <span aria-hidden="true">→</span>
+            </button>
+            <button type="button" class="scenario-opt-btn" data-opt="C">
+              <span><strong>Option C:</strong> Remove the vector database and rely exclusively on system prompt instructions like "Never lie".</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <div class="scenario-feedback" style="display:none;" aria-live="polite">
+            <!-- Populated on click by interactive-features.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 04: Project Gallery with Interactive Filters -->
-    <section class="section section-alt" id="projects">
+    <section class="section" id="projects">
       <div class="wrap">
         <div class="section-header">
           <p class="eyebrow">04 / PROJECT DIRECTORY</p>
@@ -713,10 +838,40 @@
           <p>
             Whether you are looking to architect enterprise RAG platforms, deploy autonomous AI agents, scale cloud-native infrastructure, or collaborate on technical challenges—my inbox is open.
           </p>
-          <div class="contact-links">
-            <a class="button button-primary" href="mailto:alimul.nabil@gmail.com">
-              Email Me Directly <span>↗</span>
-            </a>
+
+          <!-- Interactive Contact Intent Selector -->
+          <div class="intent-selector-group">
+            <span class="intent-selector-label">What brings you here? Select inquiry intent to prefill:</span>
+            <div class="intent-chips" id="contactIntentChips">
+              <button type="button" class="intent-chip active" data-intent="hiring">💼 Hiring AI Solutions Engineer</button>
+              <button type="button" class="intent-chip" data-intent="rag">🤝 Enterprise RAG &amp; Cloud Project</button>
+              <button type="button" class="intent-chip" data-intent="vision">👁️ Computer Vision / Perception</button>
+              <button type="button" class="intent-chip" data-intent="workshop">🎓 Mentorship &amp; Tech Workshops</button>
+              <button type="button" class="intent-chip" data-intent="general">💬 General Engineering Inquiry</button>
+            </div>
+          </div>
+
+          <!-- Interactive Direct Message Form -->
+          <form class="contact-interactive-form" onsubmit="event.preventDefault(); const s=encodeURIComponent(document.getElementById('contactSubject').value); const m=encodeURIComponent(document.getElementById('contactMessage').value); window.location.href='mailto:alimul.nabil@gmail.com?subject=' + s + '&amp;body=' + m;">
+            <div class="form-row">
+              <input type="text" id="contactSubject" class="contact-input" placeholder="Subject" value="Inquiry: AI Solutions Engineer Opportunity" required>
+            </div>
+            <textarea id="contactMessage" class="contact-textarea" placeholder="Your message..." rows="4" required>Hi Alimul,
+
+We came across your verified portfolio and are interested in discussing an AI Solutions Engineer / MLOps role with our team.
+
+Let's connect for an initial conversation.</textarea>
+            <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+              <button type="submit" class="button button-primary">
+                Send via Email Client <span>↗</span>
+              </button>
+              <a class="button button-secondary" href="mailto:alimul.nabil@gmail.com">
+                Direct Email (Plain Link) <span>↗</span>
+              </a>
+            </div>
+          </form>
+
+          <div class="contact-links" style="margin-top:28px;">
             <a class="button button-secondary" href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">
               LinkedIn <span>↗</span>
             </a>
@@ -750,5 +905,10 @@
     <a class="back-top" href="#home">BACK TO TOP ↑</a>
     <span class="copyright">© <span id="year">2026</span> Alimul Fazal Nabil. All rights reserved.</span>
   </footer>
+
+  <!-- Advanced Interactive Features Scripts -->
+  <script defer src="assets/js/command-palette.js"></script>
+  <script defer src="assets/js/ai-twin.js"></script>
+  <script defer src="assets/js/interactive-features.js"></script>
 </body>
 </html>

@@ -16,9 +16,11 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/portfolio.css">
+  <link rel="stylesheet" href="assets/css/features.css">
   <script defer src="assets/js/main.js"></script>
   <script defer src="assets/js/portfolio.js"></script>
   <script defer src="assets/js/career-graph.js"></script>
+  <script defer src="assets/js/command-palette.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -40,6 +42,11 @@
       <a href="index.html#contact">Contact</a>
     </nav>
     <div class="header-actions">
+      <button class="header-search-btn" id="openCommandPaletteBtn" type="button" aria-label="Open command search palette (Ctrl+K)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <span>Search</span>
+        <kbd>⌘K</kbd>
+      </button>
       <a class="header-cta" href="Profile.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF) <span aria-hidden="true">↓</span></a>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
         <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
@@ -50,6 +57,11 @@
       </button>
     </div>
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+      <button class="header-search-btn" id="openCommandPaletteBtnMobile" type="button" style="width:100%; justify-content:center; margin:8px 0;" aria-label="Open command search palette (Ctrl+K)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <span>Search Portfolio &amp; Skills</span>
+        <kbd>⌘K</kbd>
+      </button>
       <a href="index.html#home">Overview</a>
       <a href="index.html#featured">Featured</a>
       <a href="portfolio.html" class="active">All Projects (27)</a>
