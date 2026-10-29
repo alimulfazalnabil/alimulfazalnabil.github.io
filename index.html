@@ -21,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/features.css">
+  <link rel="stylesheet" href="assets/css/services-estimator.css">
   <script defer src="assets/js/main.js"></script>
 </head>
 <body>
@@ -39,6 +40,9 @@
       <a href="#featured">Featured</a>
       <a href="#projects">Selected Projects</a>
       <a href="portfolio.html" style="color:var(--cyan);font-weight:600;">Full Portfolio (27)</a>
+      <a href="#services">Services</a>
+      <a href="#estimator">Estimator</a>
+      <a href="#proposal-generator">AI Proposal</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education &amp; Credentials</a>
       <a href="#skills">Skills</a>
@@ -69,6 +73,9 @@
       <a href="#featured">Featured</a>
       <a href="#projects">Selected Projects</a>
       <a href="portfolio.html" style="color:var(--cyan);font-weight:600;">Full Portfolio (27 Projects)</a>
+      <a href="#services">Services</a>
+      <a href="#estimator">Estimator</a>
+      <a href="#proposal-generator">AI Proposal</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education &amp; Credentials</a>
       <a href="#skills">Skills</a>
@@ -754,86 +761,786 @@
             Technical proficiencies organized by discipline: AI engineering, core software, cloud infrastructure, and intelligent systems.
           </p>
         </div>
-        <div class="skills-grid">
-          <!-- Skill Card 1 -->
-          <div class="skill-card">
-            <span class="card-kicker">DOMAIN 01</span>
-            <h3>AI &amp; Machine Learning</h3>
-            <div class="skill-chips">
-              <span class="skill-chip">Generative AI</span>
-              <span class="skill-chip">RAG Architectures</span>
-              <span class="skill-chip">AI Agents</span>
-              <span class="skill-chip">pgvector</span>
-              <span class="skill-chip">BM25 Retrieval</span>
-              <span class="skill-chip">Cross-Encoder</span>
-              <span class="skill-chip">scikit-learn</span>
-              <span class="skill-chip">OpenAI API</span>
-              <span class="skill-chip">MLOps</span>
-              <span class="skill-chip">Evaluation</span>
+
+        <!-- 4 Central Engineering Domains -->
+        <div class="skills-primary-grid">
+          <!-- DOMAIN 01: AI & Machine Learning -->
+          <div class="skill-card-primary">
+            <div class="skill-card-head">
+              <span class="card-kicker">DOMAIN 01</span>
+              <h3><span class="skill-domain-icon">🧠</span> AI &amp; Machine Learning</h3>
+            </div>
+            <div class="skill-group-container">
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Generative AI &amp; LLM Systems</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?q=generative+ai"><span>Generative AI</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="case-studies/enterprise-rag-platform.html"><span>Retrieval-Augmented Generation (RAG) Architectures</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=agent"><span>AI Agent Development</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=llm"><span>LLM Integration and Orchestration</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=openai"><span>OpenAI API</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=nlp"><span>NLP and Text Analytics</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Search, Retrieval &amp; Vector Architectures</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?q=vector"><span>Vector Search and Embeddings</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=pgvector"><span>pgvector</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=bm25"><span>BM25 Retrieval</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=cross-encoder"><span>Cross-Encoder Reranking</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=hybrid+search"><span>Hybrid Search and Retrieval</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Core Machine Learning &amp; Prediction</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="case-studies/heart-disease-prediction.html"><span>scikit-learn</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=pytorch"><span>PyTorch</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=tensorflow"><span>TensorFlow</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=predictive"><span>Predictive Modeling</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=recommendation"><span>Recommendation Systems</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">MLOps, Benchmarking &amp; Evaluation</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?q=mlops"><span>MLOps</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=evaluation"><span>Machine Learning Model Evaluation</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=performance"><span>Model Performance Evaluation</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=testing"><span>AI Testing and Evaluation</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Skill Card 2 -->
-          <div class="skill-card">
-            <span class="card-kicker">DOMAIN 02</span>
-            <h3>Software &amp; Data Engineering</h3>
-            <div class="skill-chips">
-              <span class="skill-chip">Python</span>
-              <span class="skill-chip">FastAPI</span>
-              <span class="skill-chip">REST APIs</span>
-              <span class="skill-chip">PostgreSQL</span>
-              <span class="skill-chip">PostGIS</span>
-              <span class="skill-chip">SQL</span>
-              <span class="skill-chip">Pandas</span>
-              <span class="skill-chip">NumPy</span>
-              <span class="skill-chip">Redis</span>
-              <span class="skill-chip">Git</span>
+          <!-- DOMAIN 02: Software & Data Engineering -->
+          <div class="skill-card-primary">
+            <div class="skill-card-head">
+              <span class="card-kicker">DOMAIN 02</span>
+              <h3><span class="skill-domain-icon">⚡</span> Software &amp; Data Engineering</h3>
+            </div>
+            <div class="skill-group-container">
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Languages &amp; API Frameworks</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?q=python"><span>Python</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=c%2B%2B"><span>C++17</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=fastapi"><span>FastAPI</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=flask"><span>Flask</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=api"><span>REST API Development</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=testing"><span>Software Testing and Debugging</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Databases, Spatial &amp; In-Memory</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?q=postgresql"><span>PostgreSQL</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=postgis"><span>PostGIS</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=sql"><span>SQL</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=redis"><span>Redis</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=database"><span>Database Design</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=data+modeling"><span>Data Modeling</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Data Processing &amp; Analytical Libraries</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?q=pandas"><span>Pandas</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=numpy"><span>NumPy</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=geopandas"><span>GeoPandas</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=cleaning"><span>Data Cleaning and Transformation</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=integration"><span>Data Integration</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Distributed Pipelines &amp; Storage Architecture</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?q=spark"><span>Apache Spark</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=airflow"><span>Apache Airflow</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=kafka"><span>Kafka</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=hadoop"><span>Hadoop</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=etl"><span>ETL/ELT Pipelines</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=warehouse"><span>Data Warehousing</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=data+lake"><span>Data Lake Architecture</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=git"><span>Git and GitHub</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Skill Card 3 -->
-          <div class="skill-card">
-            <span class="card-kicker">DOMAIN 03</span>
-            <h3>Cloud, DevOps &amp; Infrastructure</h3>
-            <div class="skill-chips">
-              <span class="skill-chip">Microsoft Azure</span>
-              <span class="skill-chip">Kubernetes (K8s)</span>
-              <span class="skill-chip">Docker</span>
-              <span class="skill-chip">Terraform (IaC)</span>
-              <span class="skill-chip">Ansible</span>
-              <span class="skill-chip">GitHub Actions</span>
-              <span class="skill-chip">CI/CD</span>
-              <span class="skill-chip">Prometheus.io</span>
-              <span class="skill-chip">Linux</span>
-              <span class="skill-chip">Bash</span>
-              <span class="skill-chip">PowerShell</span>
+          <!-- DOMAIN 03: Cloud, DevOps & Infrastructure -->
+          <div class="skill-card-primary">
+            <div class="skill-card-head">
+              <span class="card-kicker">DOMAIN 03</span>
+              <h3><span class="skill-domain-icon">☁️</span> Cloud, DevOps &amp; Infrastructure</h3>
+            </div>
+            <div class="skill-group-container">
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Cloud Platforms &amp; Resource Governance</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="case-studies/azure-terraform-cicd.html"><span>Microsoft Azure</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=aws"><span>Amazon Web Services (AWS)</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=cloud"><span>Cloud Infrastructure Management</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=optimization"><span>Cloud Resource Optimization</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Containerization &amp; Cluster Orchestration</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?q=docker"><span>Docker</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=kubernetes"><span>Kubernetes (K8s)</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=deployment"><span>Application Deployment</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Infrastructure as Code &amp; CI/CD Pipelines</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="case-studies/azure-terraform-cicd.html"><span>Terraform (Infrastructure as Code)</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=ansible"><span>Ansible</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=github+actions"><span>GitHub Actions</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=ci%2Fcd"><span>CI/CD Pipelines</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=automation"><span>Infrastructure Automation</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Observability, SysAdmin &amp; Networking</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?q=prometheus"><span>Prometheus</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=grafana"><span>Grafana</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=monitoring"><span>Monitoring and Logging</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=linux"><span>Linux</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=bash"><span>Bash</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=powershell"><span>PowerShell</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=windows+server"><span>Windows Server Administration</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=sysadmin"><span>System Administration</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=network"><span>Network Troubleshooting</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=backup"><span>Backup and Recovery Planning</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Skill Card 4 -->
-          <div class="skill-card">
-            <span class="card-kicker">DOMAIN 04</span>
-            <h3>Intelligent Systems &amp; Vision</h3>
-            <div class="skill-chips">
-              <span class="skill-chip">OpenCV</span>
-              <span class="skill-chip">YOLO Object Detection</span>
-              <span class="skill-chip">ROS 2</span>
-              <span class="skill-chip">CARLA Simulation</span>
-              <span class="skill-chip">SUMO / TraCI</span>
-              <span class="skill-chip">IoT Telemetry</span>
-              <span class="skill-chip">Geospatial Processing</span>
-              <span class="skill-chip">Sensor Fusion</span>
+          <!-- DOMAIN 04: Intelligent Systems & Vision -->
+          <div class="skill-card-primary">
+            <div class="skill-card-head">
+              <span class="card-kicker">DOMAIN 04</span>
+              <h3><span class="skill-domain-icon">👁️</span> Intelligent Systems &amp; Vision</h3>
+            </div>
+            <div class="skill-group-container">
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Computer Vision &amp; Perception Pipelines</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="case-studies/autonomous-lane-detection.html"><span>OpenCV</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=yolo"><span>YOLO Object Detection</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?domain=vision"><span>Computer Vision</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=image+processing"><span>Image Processing</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=tracking"><span>Object Tracking</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Autonomous Simulation &amp; Robotics</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?q=ros"><span>ROS 2</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="case-studies/autonomous-lane-detection.html"><span>CARLA Simulation</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=sumo"><span>SUMO / TraCI</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?domain=vision"><span>Autonomous Systems Simulation</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?domain=smartcity"><span>Traffic Simulation and Optimization</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=uav"><span>UAV / Drone Systems</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?domain=embedded"><span>Robotics Software</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Geospatial Processing &amp; Telemetry</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?q=geospatial"><span>Geospatial Processing</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=qgis"><span>QGIS</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=arcgis"><span>ArcGIS</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=telemetry"><span>IoT Telemetry</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+
+              <div class="skill-subgroup">
+                <span class="skill-subgroup-title">Embedded Systems &amp; Sensor Fusion</span>
+                <div class="skill-chips">
+                  <a class="skill-chip" href="portfolio.html?domain=embedded"><span>Embedded Systems</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=sensor+fusion"><span>Sensor Fusion</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=sensor"><span>Sensor Integration</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=arduino"><span>Arduino</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=raspberry"><span>Raspberry Pi</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  <a class="skill-chip" href="portfolio.html?q=hardware"><span>Hardware–Software Integration</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Supporting Interdisciplinary Domains -->
+        <div class="supporting-domains-wrap">
+          <div class="supporting-domains-head">
+            <span class="eyebrow-sub">SPECIALIZED &amp; CROSS-FUNCTIONAL PRACTICES</span>
+            <h3>Supporting Technical Disciplines</h3>
+            <p>
+              Interdisciplinary proficiencies bridging automated workflows, business intelligence analytics, and industrial hardware-level engineering.
+            </p>
+          </div>
+
+          <div class="skills-supporting-grid">
+            <!-- DOMAIN 05: Automation & Software Delivery -->
+            <div class="skill-card-supporting">
+              <div class="skill-card-head">
+                <span class="card-kicker">DOMAIN 05</span>
+                <h4><span class="skill-domain-icon">⚡</span> Automation &amp; Software Delivery</h4>
+              </div>
+              <div class="skill-group-container">
+                <div class="skill-subgroup">
+                  <span class="skill-subgroup-title">Workflow Automation &amp; Scripting</span>
+                  <div class="skill-chips">
+                    <a class="skill-chip" href="portfolio.html?q=automation"><span>Python Automation</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=workflow"><span>Workflow Automation</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=api"><span>API Integrations</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=scripting"><span>Scripting and Tooling</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+
+                <div class="skill-subgroup">
+                  <span class="skill-subgroup-title">Delivery Pipelines &amp; Quality</span>
+                  <div class="skill-chips">
+                    <a class="skill-chip" href="portfolio.html?q=git"><span>Git-Based Workflows</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=ci%2Fcd"><span>CI/CD Automation</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=testing"><span>Automated Testing</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=documentation"><span>Technical Documentation</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DOMAIN 06: Data Visualization & Analytics -->
+            <div class="skill-card-supporting">
+              <div class="skill-card-head">
+                <span class="card-kicker">DOMAIN 06</span>
+                <h4><span class="skill-domain-icon">📊</span> Data Visualization &amp; Analytics</h4>
+              </div>
+              <div class="skill-group-container">
+                <div class="skill-subgroup">
+                  <span class="skill-subgroup-title">Exploration &amp; Statistical Modeling</span>
+                  <div class="skill-chips">
+                    <a class="skill-chip" href="portfolio.html?q=statistical"><span>Statistical Analysis</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=eda"><span>Exploratory Data Analysis</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=matplotlib"><span>Matplotlib</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=seaborn"><span>Seaborn</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+
+                <div class="skill-subgroup">
+                  <span class="skill-subgroup-title">Business Intelligence &amp; Reporting</span>
+                  <div class="skill-chips">
+                    <a class="skill-chip" href="portfolio.html?q=power+bi"><span>Power BI</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=tableau"><span>Tableau</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=dashboard"><span>KPI Dashboards</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=forecasting"><span>Forecasting and Reporting</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DOMAIN 07: Hardware & Industrial Systems -->
+            <div class="skill-card-supporting">
+              <div class="skill-card-head">
+                <span class="card-kicker">DOMAIN 07</span>
+                <h4><span class="skill-domain-icon">🖥️</span> Hardware &amp; Industrial Systems</h4>
+              </div>
+              <div class="skill-group-container">
+                <div class="skill-subgroup">
+                  <span class="skill-subgroup-title">Workstation &amp; Network Systems</span>
+                  <div class="skill-chips">
+                    <a class="skill-chip" href="portfolio.html?domain=hardware"><span>PC and Workstation Engineering</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=diagnostics"><span>Hardware Diagnostics</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=server"><span>Server and Network Hardware</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=edge"><span>Industrial Edge Computing</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+
+                <div class="skill-subgroup">
+                  <span class="skill-subgroup-title">Industrial Automation &amp; Digital Twins</span>
+                  <div class="skill-chips">
+                    <a class="skill-chip" href="portfolio.html?domain=automation"><span>Digital Twin Concepts</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=telemetry"><span>Industrial Telemetry</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=plc"><span>PLC Connectivity Concepts</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                    <a class="skill-chip" href="portfolio.html?q=predictive+maintenance"><span>Predictive Maintenance Prototypes</span><span class="chip-link-indicator" aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 08: Contact & Social Links -->
+    <!-- 08: Professional Services Catalog -->
+    <section class="section section-alt" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">08 / PROFESSIONAL SERVICES CATALOG</p>
+          <h2>End-to-End Engineering &amp;<br><span class="gradient-text">Intelligent Solutions</span></h2>
+          <p>
+            Comprehensive production engineering across 9 technical domains and 85+ specialized services. From bespoke web applications and enterprise management systems to custom Generative AI agents, RAG knowledge retrieval, and resilient cloud architectures.
+          </p>
+        </div>
+
+        <!-- Search Bar with Live Filter -->
+        <div class="services-search-bar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="servicesSearchInput" class="services-search-input" placeholder="Search 85+ services by keyword, tech, deliverable (e.g. RAG, POS, Azure, FastAPI, Docker, Vision)..." autocomplete="off">
+          <span class="count-badge" id="servicesCountBadge">Loading services...</span>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="services-category-tabs" id="servicesCategoryTabs" role="tablist" aria-label="Services Category Filters"></div>
+
+        <!-- Services Cards Grid -->
+        <div class="services-cards-grid" id="servicesCardsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Dedicated Section: Project Budget Estimator -->
+    <section class="section" id="estimator">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">TRANSPARENT PRICING / EFFORT MODELING</p>
+          <h2>Interactive Project<br><span class="gradient-text">Budget &amp; Effort Estimator</span></h2>
+          <p>
+            Calculate preliminary engineering effort, sprint delivery timelines, and budget ranges across USD, BDT, and EUR. Transparent pricing formulas with separate recurring maintenance and third-party operational cost projections.
+          </p>
+        </div>
+
+        <div class="estimator-layout-grid">
+          <!-- Left Column: Estimator Input Form -->
+          <div class="estimator-form-card">
+            <form id="budgetEstimatorForm">
+              <div class="form-row-2col">
+                <div class="form-group-block">
+                  <label for="estimatorProjectType">1. Project Architecture Type</label>
+                  <select id="estimatorProjectType" class="est-select">
+                    <option value="Full-stack web application" selected>Full-stack web application</option>
+                    <option value="Business website">Business website</option>
+                    <option value="E-commerce or marketplace">E-commerce or marketplace</option>
+                    <option value="POS or inventory management system">POS or inventory management system</option>
+                    <option value="CRM or ERP application">CRM or ERP application</option>
+                    <option value="Custom software">Custom software</option>
+                    <option value="AI chatbot or agent">AI chatbot or agent</option>
+                    <option value="RAG or knowledge platform">RAG or knowledge platform</option>
+                    <option value="Machine-learning solution">Machine-learning solution</option>
+                    <option value="Workflow automation">Workflow automation</option>
+                    <option value="Cloud and DevOps">Cloud and DevOps</option>
+                    <option value="Data engineering and analytics">Data engineering and analytics</option>
+                    <option value="IoT or computer vision prototype">IoT or computer vision prototype</option>
+                    <option value="Other / custom project">Other / custom project</option>
+                  </select>
+                </div>
+
+                <div class="form-group-block">
+                  <label for="estimatorIndustry">2. Industry / Domain</label>
+                  <select id="estimatorIndustry" class="est-select">
+                    <option value="General Business" selected>General Business / Enterprise</option>
+                    <option value="E-commerce &amp; Retail">E-commerce &amp; Retail</option>
+                    <option value="Healthcare &amp; MedTech">Healthcare &amp; MedTech</option>
+                    <option value="FinTech &amp; Financial Services">FinTech &amp; Financial Services</option>
+                    <option value="Education &amp; EdTech">Education &amp; EdTech</option>
+                    <option value="Logistics &amp; Supply Chain">Logistics &amp; Supply Chain</option>
+                    <option value="Manufacturing &amp; Industry 4.0">Manufacturing &amp; Industry 4.0</option>
+                    <option value="Smart Cities &amp; Transportation">Smart Cities &amp; Transportation</option>
+                    <option value="SaaS &amp; Tech Startups">SaaS &amp; Tech Startups</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-block">
+                <label for="estimatorDescription">3. Project Requirements / Scope Summary</label>
+                <textarea id="estimatorDescription" class="est-textarea" placeholder="Briefly describe your objectives, key workflows, or custom requirements..."></textarea>
+              </div>
+
+              <div class="form-row-2col">
+                <div class="form-group-block">
+                  <label>4. User Roles &amp; Permission Levels</label>
+                  <div class="radio-pills-row">
+                    <label class="radio-pill">
+                      <input type="radio" name="estimatorRoles" value="1-2" checked>
+                      <span>1–2 Roles</span>
+                    </label>
+                    <label class="radio-pill">
+                      <input type="radio" name="estimatorRoles" value="3-5">
+                      <span>3–5 Roles</span>
+                    </label>
+                    <label class="radio-pill">
+                      <input type="radio" name="estimatorRoles" value="6+">
+                      <span>6+ Roles</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group-block">
+                  <label for="estimatorDesign">5. UI / UX Design Requirement</label>
+                  <select id="estimatorDesign" class="est-select">
+                    <option value="Standard modern" selected>Standard modern (Clean, responsive system)</option>
+                    <option value="Client provided">Client provided (Figma / design assets ready)</option>
+                    <option value="Custom bespoke">Custom bespoke (Wireframes &amp; bespoke UI)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row-2col">
+                <div class="form-group-block">
+                  <label for="estimatorIntegration">6. Third-Party Integrations</label>
+                  <select id="estimatorIntegration" class="est-select">
+                    <option value="1-2 standard" selected>1–2 standard (Payment, email, single API)</option>
+                    <option value="None">None (Self-contained standalone)</option>
+                    <option value="3-5 enterprise">3–5 enterprise (CRM, ERP, gateway, webhooks)</option>
+                    <option value="6+ bespoke">6+ bespoke (High-complexity distributed mesh)</option>
+                  </select>
+                </div>
+
+                <div class="form-group-block">
+                  <label for="estimatorAI">7. AI / Machine Learning Layer</label>
+                  <select id="estimatorAI" class="est-select">
+                    <option value="None" selected>None (Deterministic engineering)</option>
+                    <option value="Basic automation">Basic automation (Rule engines / scripted)</option>
+                    <option value="LLM integration">LLM integration (Assistant / prompting)</option>
+                    <option value="Advanced RAG/ML">Advanced RAG / ML (Vector DB / PyTorch)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row-3col">
+                <div class="form-group-block">
+                  <label for="estimatorComplexity">8. Complexity Level</label>
+                  <select id="estimatorComplexity" class="est-select">
+                    <option value="Simple">Simple (MVP / Utility)</option>
+                    <option value="Medium" selected>Medium (Production standard)</option>
+                    <option value="High">High (High-concurrency)</option>
+                    <option value="Enterprise">Enterprise (Multi-tenant distributed)</option>
+                  </select>
+                </div>
+
+                <div class="form-group-block">
+                  <label for="estimatorTimeline">9. Delivery Timeline</label>
+                  <select id="estimatorTimeline" class="est-select">
+                    <option value="Flexible (8-12 weeks)">Flexible (8–12 weeks)</option>
+                    <option value="Standard (4-8 weeks)" selected>Standard (4–8 weeks)</option>
+                    <option value="Accelerated (2-4 weeks)">Accelerated (2–4 weeks)</option>
+                  </select>
+                </div>
+
+                <div class="form-group-block">
+                  <label for="estimatorMaintenance">10. Ongoing Support SLA</label>
+                  <select id="estimatorMaintenance" class="est-select">
+                    <option value="None">None (Handover only)</option>
+                    <option value="3 Months SLA" selected>3 Months SLA (Warranty)</option>
+                    <option value="6 Months SLA">6 Months SLA (Ongoing)</option>
+                    <option value="12 Months SLA">12 Months SLA (Annual)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-block">
+                <label for="estimatorCurrency">11. Currency Selection</label>
+                <select id="estimatorCurrency" class="est-select">
+                  <option value="USD" selected>USD ($ — US Dollar)</option>
+                  <option value="BDT">BDT (৳ — Bangladeshi Taka)</option>
+                  <option value="EUR">EUR (€ — Euro)</option>
+                </select>
+              </div>
+
+              <div class="form-group-block">
+                <label>12. Additional Core Features</label>
+                <div class="features-checkbox-grid">
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="auth_rbac" checked>
+                    <span>Role-Based Auth (RBAC)</span>
+                  </label>
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="database_orm" checked>
+                    <span>PostgreSQL / ORM Schema</span>
+                  </label>
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="rest_api" checked>
+                    <span>REST / OpenAPI Suite</span>
+                  </label>
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="dashboards" checked>
+                    <span>Analytics Dashboard</span>
+                  </label>
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="payment_gateway">
+                    <span>Payment Gateway (Stripe/SSL)</span>
+                  </label>
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="search_vector">
+                    <span>Vector / Semantic Search</span>
+                  </label>
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="ai_rag">
+                    <span>RAG Document Retrieval</span>
+                  </label>
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="bg_workers">
+                    <span>Async Background Workers</span>
+                  </label>
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="webhooks">
+                    <span>Webhooks &amp; Event Stream</span>
+                  </label>
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="doc_pdf">
+                    <span>Automated PDF / Invoice Engine</span>
+                  </label>
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="i18n">
+                    <span>Multi-Language (i18n)</span>
+                  </label>
+                  <label class="feature-check-label">
+                    <input type="checkbox" name="estimatorFeatures" value="pwa_offline">
+                    <span>PWA Offline Caching</span>
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="button button-primary" id="estimatorRecalcBtn" style="width:100%; margin-top:12px;">
+                Calculate Detailed Estimate ⚡
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Column: Interactive Estimate Scorecard -->
+          <div id="estimatorResults" class="estimator-results-column"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated Section: AI Project Proposal Generator -->
+    <section class="section section-alt" id="proposal-generator">
+      <div class="wrap">
+        <div class="section-head" id="proposalGeneratorHeader">
+          <p class="eyebrow">AUTOMATED SCOPE SYNTHESIS / FORMAL DOCUMENT GENERATION</p>
+          <h2>Client Requirement-Based<br><span class="gradient-text">AI Proposal Generator</span></h2>
+          <p>
+            Transform operational objectives and technical criteria into a formal, 21-part engineering proposal complete with architectural breakdown, milestone schedule, pricing milestones, and SLA terms.
+          </p>
+        </div>
+
+        <!-- Operating Mode Selector -->
+        <div class="prop-mode-selector" role="tablist" aria-label="Proposal Generator Operating Modes">
+          <button type="button" class="prop-mode-tab active" data-mode="deterministic" role="tab" aria-selected="true">
+            ⚡ Mode A: Free In-Browser Generator (Instant &amp; Offline)
+          </button>
+          <button type="button" class="prop-mode-tab" data-mode="ai-enhanced" role="tab" aria-selected="false">
+            🤖 Mode B: Prepared AI Engine Hook (API Key Optional)
+          </button>
+        </div>
+
+        <div class="prop-ai-config-box" id="propAiConfigBox">
+          <p><strong>Mode B Hook Active:</strong> In-browser AI drafting with client-side API execution. Your API key is stored only in memory for this session and is never logged, transmitted to any backend, or persisted.</p>
+          <div class="form-row-2col">
+            <input type="password" id="propApiKey" class="est-input" placeholder="Enter Gemini or OpenAI API Key (Optional)...">
+            <select id="propAiModel" class="est-select">
+              <option value="gemini-1.5-flash">Google Gemini 1.5 Flash (Fast)</option>
+              <option value="gpt-4o-mini">OpenAI GPT-4o Mini</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 4-Step Wizard Card -->
+        <div class="prop-wizard-card">
+          <form id="proposalGeneratorForm">
+            <!-- Step Navigation Tabs -->
+            <div class="prop-wizard-steps-nav" role="tablist">
+              <button type="button" class="prop-step-btn active" data-step="1">
+                <span class="step-circle">1</span>
+                <span>Client &amp; Domain</span>
+              </button>
+              <button type="button" class="prop-step-btn" data-step="2">
+                <span class="step-circle">2</span>
+                <span>Problem &amp; Scope</span>
+              </button>
+              <button type="button" class="prop-step-btn" data-step="3">
+                <span class="step-circle">3</span>
+                <span>Technical Stack</span>
+              </button>
+              <button type="button" class="prop-step-btn" data-step="4">
+                <span class="step-circle">4</span>
+                <span>Timeline &amp; Commercials</span>
+              </button>
+            </div>
+
+            <!-- Step 1: Client & Domain -->
+            <div class="prop-step-pane active" data-step-index="1">
+              <div class="form-row-2col">
+                <div class="form-group-block">
+                  <label for="propClientName">Client / Organization Name *</label>
+                  <input type="text" id="propClientName" class="est-input" placeholder="e.g. Acme Innovations Ltd." required>
+                </div>
+                <div class="form-group-block">
+                  <label for="propClientContact">Contact Person / Email *</label>
+                  <input type="text" id="propClientContact" class="est-input" placeholder="e.g. leadership@acme.io" required>
+                </div>
+              </div>
+
+              <div class="form-row-2col">
+                <div class="form-group-block">
+                  <label for="propIndustry">Industry / Vertical *</label>
+                  <input type="text" id="propIndustry" class="est-input" placeholder="e.g. FinTech, Healthcare, Logistics" required>
+                </div>
+                <div class="form-group-block">
+                  <label for="propServiceCategory">Service Category</label>
+                  <select id="propServiceCategory" class="est-select">
+                    <option value="Web Development" selected>Web Development</option>
+                    <option value="Business Management Software">Business Management Software</option>
+                    <option value="Custom Software Development">Custom Software Development</option>
+                    <option value="AI and Machine Learning">AI and Machine Learning</option>
+                    <option value="Automation and Productivity">Automation and Productivity</option>
+                    <option value="Cloud, DevOps and IT Infrastructure">Cloud, DevOps &amp; IT Infrastructure</option>
+                    <option value="Data Engineering and Analytics">Data Engineering &amp; Analytics</option>
+                    <option value="IoT, Robotics and Computer Vision">IoT, Robotics &amp; Computer Vision</option>
+                    <option value="Technical Consulting and Support">Technical Consulting &amp; Support</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-block">
+                <label for="propProjectTitle">Working Project Title *</label>
+                <input type="text" id="propProjectTitle" class="est-input" placeholder="e.g. Enterprise RAG Knowledge Retrieval Platform" required>
+              </div>
+
+              <div class="prop-step-footer">
+                <div></div>
+                <button type="button" class="button button-primary prop-btn-next">Next: Problem &amp; Scope →</button>
+              </div>
+            </div>
+
+            <!-- Step 2: Problem & Scope -->
+            <div class="prop-step-pane" data-step-index="2">
+              <div class="form-group-block">
+                <label for="propProblemStatement">Core Problem Statement / Operational Challenge</label>
+                <textarea id="propProblemStatement" class="est-textarea" placeholder="Describe the current operational bottlenecks, latency issues, or manual errors..."></textarea>
+              </div>
+
+              <div class="form-group-block">
+                <label for="propBusinessObjectives">Target Business Objectives</label>
+                <textarea id="propBusinessObjectives" class="est-textarea" placeholder="e.g. Reduce manual processing time by 70%, achieve sub-second query latency, ensure high data reliability..."></textarea>
+              </div>
+
+              <div class="form-group-block">
+                <label for="propRequiredFeatures">Key Functional Deliverables &amp; Features</label>
+                <textarea id="propRequiredFeatures" class="est-textarea" placeholder="List mandatory capabilities (e.g. RBAC security, REST API, pgvector hybrid search, admin dashboard)..."></textarea>
+              </div>
+
+              <div class="form-group-block">
+                <label for="propExistingSystems">Existing Software / Legacy Systems to Integrate</label>
+                <input type="text" id="propExistingSystems" class="est-input" placeholder="e.g. PostgreSQL database, REST webhooks, Excel spreadsheets, Google Workspace">
+              </div>
+
+              <div class="prop-step-footer">
+                <button type="button" class="button button-secondary prop-btn-prev">← Back</button>
+                <button type="button" class="button button-primary prop-btn-next">Next: Technical Stack →</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Technical Stack -->
+            <div class="prop-step-pane" data-step-index="3">
+              <div class="form-row-2col">
+                <div class="form-group-block">
+                  <label for="propTechPreferences">Preferred Technologies / Stacks</label>
+                  <input type="text" id="propTechPreferences" class="est-input" placeholder="e.g. Python, FastAPI, PostgreSQL, Docker, Azure (or best recommendations)">
+                </div>
+                <div class="form-group-block">
+                  <label for="propUserRoles">Target User Roles</label>
+                  <input type="text" id="propUserRoles" class="est-input" placeholder="e.g. Admin, Operations Manager, Field Staff, End User">
+                </div>
+              </div>
+
+              <div class="form-row-2col">
+                <div class="form-group-block">
+                  <label for="propDataMigration">Data Migration Requirements</label>
+                  <input type="text" id="propDataMigration" class="est-input" placeholder="e.g. Export from existing SQL / CSV archives into new normalized schema">
+                </div>
+                <div class="form-group-block">
+                  <label for="propSecurityCompliance">Security &amp; Compliance Standards</label>
+                  <input type="text" id="propSecurityCompliance" class="est-input" placeholder="e.g. Role-based access control, TLS encryption, audit logging, OWASP Top 10">
+                </div>
+              </div>
+
+              <div class="form-group-block">
+                <label for="propHostingPref">Hosting &amp; Cloud Infrastructure Preference</label>
+                <input type="text" id="propHostingPref" class="est-input" placeholder="e.g. Client-owned Azure subscription, Docker on Linux VPS, or Cloudflare/Serverless">
+              </div>
+
+              <div class="prop-step-footer">
+                <button type="button" class="button button-secondary prop-btn-prev">← Back</button>
+                <button type="button" class="button button-primary prop-btn-next">Next: Timeline &amp; Commercials →</button>
+              </div>
+            </div>
+
+            <!-- Step 4: Timeline & Commercials -->
+            <div class="prop-step-pane" data-step-index="4">
+              <div class="form-row-3col">
+                <div class="form-group-block">
+                  <label for="propDeadline">Target Delivery Timeline</label>
+                  <input type="text" id="propDeadline" class="est-input" placeholder="e.g. 6–8 Weeks, Q3 Launch">
+                </div>
+                <div class="form-group-block">
+                  <label for="propCurrency">Currency</label>
+                  <select id="propCurrency" class="est-select">
+                    <option value="USD" selected>USD ($)</option>
+                    <option value="BDT">BDT (৳)</option>
+                    <option value="EUR">EUR (€)</option>
+                  </select>
+                </div>
+                <div class="form-group-block">
+                  <label for="propBudgetRange">Target Budget Alignment</label>
+                  <input type="text" id="propBudgetRange" class="est-input" placeholder="e.g. Aligned with Estimator / Sprint Scope">
+                </div>
+              </div>
+
+              <div class="form-row-2col">
+                <div class="form-group-block">
+                  <label for="propMaintenancePref">Post-Launch Warranty &amp; SLA Support</label>
+                  <input type="text" id="propMaintenancePref" class="est-input" placeholder="e.g. 3 Months SLA Warranty (included)">
+                </div>
+                <div class="form-group-block">
+                  <label for="propAdditionalNotes">Special Terms / Success Criteria</label>
+                  <input type="text" id="propAdditionalNotes" class="est-input" placeholder="e.g. Weekly milestone sprint demos, Git handover">
+                </div>
+              </div>
+
+              <div class="prop-step-footer">
+                <button type="button" class="button button-secondary prop-btn-prev">← Back</button>
+                <button type="submit" class="button button-primary">Generate Formal Proposal 📄</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Proposal Document Preview Container -->
+        <div id="proposalPreviewContainer" class="prop-preview-wrap" hidden></div>
+      </div>
+    </section>
+
+    <!-- 09: Contact & Social Links -->
     <section class="section section-alt" id="contact">
       <div class="wrap">
         <div class="contact-box">
-          <p class="eyebrow">08 / INITIATE CONTACT</p>
+          <p class="eyebrow">09 / INITIATE CONTACT</p>
           <h2>Let’s Build Intelligent Systems<br><span class="gradient-text">Together.</span></h2>
           <p>
             Whether you are looking to architect enterprise RAG platforms, deploy autonomous AI agents, scale cloud-native infrastructure, or collaborate on technical challenges—my inbox is open.
@@ -910,5 +1617,8 @@ Let's connect for an initial conversation.</textarea>
   <script defer src="assets/js/command-palette.js"></script>
   <script defer src="assets/js/ai-twin.js"></script>
   <script defer src="assets/js/interactive-features.js"></script>
+  <script defer src="assets/js/services-data.js"></script>
+  <script defer src="assets/js/budget-estimator.js"></script>
+  <script defer src="assets/js/proposal-generator.js"></script>
 </body>
 </html>

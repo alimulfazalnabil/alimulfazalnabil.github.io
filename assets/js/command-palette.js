@@ -12,6 +12,9 @@
     { type: "Case Study", title: "Azure Terraform Infrastructure CI/CD", url: "case-studies/azure-terraform-cicd.html", category: "Cloud & DevOps", icon: "📄" },
 
     // Core Pages & Views
+    { type: "Navigation", title: "Professional Services Catalog (9 Domains, 85+ Services)", url: "index.html#services", category: "Services", icon: "💼" },
+    { type: "Navigation", title: "Project Budget & Effort Estimator (USD, BDT, EUR)", url: "index.html#estimator", category: "Estimator", icon: "🧮" },
+    { type: "Navigation", title: "AI Project Proposal Generator (21-Part Formal Document)", url: "index.html#proposal-generator", category: "Proposal", icon: "📄" },
     { type: "Navigation", title: "Full Engineering Portfolio (27 Projects)", url: "portfolio.html", category: "Archive", icon: "📁" },
     { type: "Navigation", title: "Interactive Career Knowledge Graph", url: "portfolio.html?view=graph", category: "Graph", icon: "🕸️" },
     { type: "Navigation", title: "Download Resume / Profile PDF", url: "Profile.pdf", category: "Credentials", icon: "📥" },
