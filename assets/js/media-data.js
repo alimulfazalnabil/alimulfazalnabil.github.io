@@ -72,6 +72,70 @@ const MEDIA_ITEMS = [
     featured: true
   },
   {
+    id: "media-quadcopter-drone",
+    title: "Autonomous Quadcopter UAV Airframe & Avionics Testbed",
+    description: "Multi-rotor quadcopter airframe assembly and flight avionics testbench, featuring high-thrust brushless motors, electronic speed controllers (ESCs), Pixhawk/ArduPilot interface, and laptop ground station telemetry.",
+    category: "Drone Photography & Aerial Mapping",
+    mediaType: "image",
+    src: "assets/images/quadcopter-drone-testbench.jpg",
+    thumbnail: "assets/images/quadcopter-drone-testbench.jpg",
+    alt: "Autonomous multi-rotor quadcopter UAV airframe on laboratory testbench with laptop telemetry",
+    caption: "Autonomous quadcopter airframe and avionics testbed under flight controller calibration and telemetry bench testing.",
+    date: "2019–2020",
+    relatedUrl: "portfolio.html#projectGrid",
+    relatedLabel: "View Quadcopter Project",
+    originalUrl: "assets/images/quadcopter-drone-testbench.jpg",
+    featured: true
+  },
+  {
+    id: "media-aeroguard-radar",
+    title: "AeroGuard: Smart Obstacle Avoiding Robot with Radar Detection",
+    description: "University laboratory exhibition of AeroGuard, an autonomous embedded ground vehicle utilizing servo-swept ultrasonic radar detection to identify, map, and navigate around aerial and ground obstacles in real time.",
+    category: "Robotics & Hardware",
+    mediaType: "image",
+    src: "assets/images/aeroguard-radar-robot.jpg",
+    thumbnail: "assets/images/aeroguard-radar-robot.jpg",
+    alt: "AeroGuard smart obstacle-avoiding robot inside university exhibition display case",
+    caption: "AeroGuard autonomous obstacle-avoidance robot on display in the academic robotics laboratory exhibit.",
+    date: "2019–2021",
+    relatedUrl: "portfolio.html#projectGrid",
+    relatedLabel: "Explore Robotics Project",
+    originalUrl: "assets/images/aeroguard-radar-robot.jpg",
+    featured: true
+  },
+  {
+    id: "media-six-wheel-rover",
+    title: "6-Wheel Terrain Rover & Automated Fluid Dispensing System",
+    description: "Custom-fabricated 6-wheel rocker-bogie terrain rover equipped with high-torque gear motors, DC liquid pump, servo-directed nozzle, and wireless telemetry for automated agricultural spraying and surface disinfection tasks.",
+    category: "Robotics & Hardware",
+    mediaType: "image",
+    src: "assets/images/six-wheel-terrain-rover.jpg",
+    thumbnail: "assets/images/six-wheel-terrain-rover.jpg",
+    alt: "6-wheel rocker-bogie terrain rover robot with liquid tank, pump, and servo nozzle",
+    caption: "Custom 6-wheel multi-terrain rover platform with fluid reservoir, electric pump, and directional nozzle.",
+    date: "2020–2021",
+    relatedUrl: "portfolio.html#projectGrid",
+    relatedLabel: "Explore Rover Project",
+    originalUrl: "assets/images/six-wheel-terrain-rover.jpg",
+    featured: true
+  },
+  {
+    id: "media-line-follower-robot",
+    title: "Autonomous Line-Following Ground Robot & Track Optimization",
+    description: "Microcontroller-driven autonomous line-tracking robot navigating high-contrast closed-loop floor circuits using an infrared reflectance sensor array and differential steering PID feedback control.",
+    category: "Robotics & Hardware",
+    mediaType: "image",
+    src: "assets/images/line-follower-robot.jpg",
+    thumbnail: "assets/images/line-follower-robot.jpg",
+    alt: "Top-down view of autonomous line-following robot tracking high-contrast octagonal floor course",
+    caption: "Autonomous line-follower robot executing closed-loop trajectory tracking along an octagonal floor course.",
+    date: "2017–2018",
+    relatedUrl: "portfolio.html#projectGrid",
+    relatedLabel: "View Line Follower Project",
+    originalUrl: "assets/images/line-follower-robot.jpg",
+    featured: false
+  },
+  {
     id: "media-eng-field",
     title: "Engineering Leadership & Applied AI Solutions",
     description: "Alimul Fazal Nabil leading enterprise AI architecture, retrieval systems, and intelligent multi-agent orchestration across production and cloud environments.",
@@ -170,15 +234,8 @@ const MEDIA_ITEMS = [
 ];
 
 // Pre-configured slots for user-supplied visual assets
-// When files are placed in assets/media/, these can be uncommented to populate Drone Photography & Travel categories!
+// When files are placed in assets/media/, these can be uncommented to populate remaining categories!
 const PENDING_MEDIA_SLOTS = [
-  {
-    id: "media-drone-survey",
-    title: "Aerial Photogrammetry & Orthomosaic Surveying Flight",
-    category: "Drone Photography & Aerial Mapping",
-    description: "High-resolution aerial multispectral mapping and autonomous GPS waypoint survey flight path.",
-    pendingAssetPrompt: "Place aerial capture JPG in assets/media/drone-mapping.jpg"
-  },
   {
     id: "media-travel-exploration",
     title: "Geographical Explorations & Field Work Logistics",

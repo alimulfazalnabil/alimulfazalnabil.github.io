@@ -1,15 +1,18 @@
 const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
 
-console.log("=== Testing Media Showcase with 4 New Images ===");
+console.log("=== Testing Media Showcase with 8 Images & 14 Total Items ===");
 
 // 1. Check physical files on disk
 const expectedFiles = [
   'assets/images/solar-tracking-lab.jpg',
   'assets/images/autonomous-path-planning.jpg',
   'assets/images/robot-sensor-fusion-architecture.jpg',
-  'assets/images/autonomous-robot-hardware.jpg'
+  'assets/images/autonomous-robot-hardware.jpg',
+  'assets/images/quadcopter-drone-testbench.jpg',
+  'assets/images/aeroguard-radar-robot.jpg',
+  'assets/images/six-wheel-terrain-rover.jpg',
+  'assets/images/line-follower-robot.jpg'
 ];
 
 expectedFiles.forEach(f => {
@@ -26,26 +29,31 @@ expectedFiles.forEach(f => {
 const { MEDIA_ITEMS } = require('../assets/js/media-data.js');
 
 console.log(`\nTotal MEDIA_ITEMS: ${MEDIA_ITEMS.length}`);
-if (MEDIA_ITEMS.length !== 10) {
-  console.error(`FAIL: Expected 10 media items, got ${MEDIA_ITEMS.length}`);
+if (MEDIA_ITEMS.length !== 14) {
+  console.error(`FAIL: Expected 14 media items, got ${MEDIA_ITEMS.length}`);
   process.exit(1);
 }
 
-// Check new items exist
-const solar = MEDIA_ITEMS.find(m => m.id === 'media-solar-tracking-lab');
-const pathPlanning = MEDIA_ITEMS.find(m => m.id === 'media-autonomous-path-planning');
-const sensorFusion = MEDIA_ITEMS.find(m => m.id === 'media-sensor-fusion-architecture');
-const robotHw = MEDIA_ITEMS.find(m => m.id === 'media-robot-hardware-prototype');
+// Check items exist
+const checkIds = [
+  'media-solar-tracking-lab',
+  'media-autonomous-path-planning',
+  'media-sensor-fusion-architecture',
+  'media-robot-hardware-prototype',
+  'media-quadcopter-drone',
+  'media-aeroguard-radar',
+  'media-six-wheel-rover',
+  'media-line-follower-robot'
+];
 
-if (!solar || !pathPlanning || !sensorFusion || !robotHw) {
-  console.error("FAIL: One or more new media items missing in MEDIA_ITEMS");
-  process.exit(1);
-}
-
-console.log("  ✓ media-solar-tracking-lab:", solar.title, `[${solar.category}]`);
-console.log("  ✓ media-autonomous-path-planning:", pathPlanning.title, `[${pathPlanning.category}]`);
-console.log("  ✓ media-sensor-fusion-architecture:", sensorFusion.title, `[${sensorFusion.category}]`);
-console.log("  ✓ media-robot-hardware-prototype:", robotHw.title, `[${robotHw.category}]`);
+checkIds.forEach(id => {
+  const item = MEDIA_ITEMS.find(m => m.id === id);
+  if (!item) {
+    console.error(`FAIL: Missing media item '${id}'`);
+    process.exit(1);
+  }
+  console.log(`  ✓ ${id}: "${item.title}" [${item.category}]`);
+});
 
 // 3. Check categories
 const categories = ["All Media"];
@@ -61,6 +69,7 @@ const expectedCats = [
   "Engineering & Technical Demonstrations",
   "AI & Computer Vision",
   "Robotics & Hardware",
+  "Drone Photography & Aerial Mapping",
   "Presentations & Publications"
 ];
 
@@ -69,6 +78,31 @@ expectedCats.forEach(cat => {
     console.error(`FAIL: Expected category '${cat}' not found in active categories`);
     process.exit(1);
   }
+});
+
+// 4. Verify i18n translation mapping for all active categories
+const TRANSLATIONS = require('../assets/js/translations.js');
+const CAT_I18N_MAP = {
+  "All Media": "mediaCatAll",
+  "Drone Photography & Aerial Mapping": "mediaCatDrone",
+  "Travel & Exploration": "mediaCatTravel",
+  "Robotics & Hardware": "mediaCatRobotics",
+  "AI & Computer Vision": "mediaCatVision",
+  "Engineering & Technical Demonstrations": "mediaCatDemos",
+  "Presentations & Publications": "mediaCatPubs"
+};
+
+console.log("\nChecking i18n translation keys for all active categories:");
+['en', 'de'].forEach(lang => {
+  const dict = TRANSLATIONS[lang];
+  categories.forEach(cat => {
+    const key = CAT_I18N_MAP[cat];
+    if (!key || !dict[key]) {
+      console.error(`FAIL: Missing translation key '${key}' for category '${cat}' in lang '${lang}'`);
+      process.exit(1);
+    }
+    console.log(`  ✓ [${lang.toUpperCase()}] ${cat} -> "${dict[key]}"`);
+  });
 });
 
 console.log("\n=======================================================");
