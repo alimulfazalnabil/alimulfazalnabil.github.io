@@ -35,26 +35,53 @@
       <span class="brand-mark">AN<span>·</span></span>
       <span class="brand-name">Alimul Fazal Nabil</span>
     </a>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#featured">Featured</a>
-      <a href="#projects">Selected Projects</a>
-      <a href="portfolio.html" style="color:var(--cyan);font-weight:600;">Full Portfolio (27)</a>
-      <a href="#services">Services</a>
-      <a href="#estimator">Estimator</a>
-      <a href="#proposal-generator">AI Proposal</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education &amp; Credentials</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+    <nav class="desktop-nav" id="desktopNav" aria-label="Main navigation">
+      <a href="#about" class="nav-item nav-link-p1" data-i18n="navAbout">About</a>
+      <a href="#featured" class="nav-item nav-link-p2" data-i18n="navFeatured">Featured</a>
+      <a href="#projects" class="nav-item nav-link-p3" data-i18n="navProjects">Selected Projects</a>
+      <a href="#experience" class="nav-item nav-link-p4" data-i18n="navExperience">Experience</a>
+      <a href="#education" class="nav-item nav-link-p5" data-i18n="navEducation">Education &amp; Credentials</a>
+
+      <div class="nav-dropdown-wrap" id="navMoreWrap">
+        <button type="button" class="nav-dropdown-btn" id="navMoreBtn" aria-expanded="false" aria-haspopup="true" aria-controls="navMoreMenu">
+          <span data-i18n="navMore">More</span>
+          <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="nav-dropdown-menu" id="navMoreMenu" role="menu" hidden aria-labelledby="navMoreBtn">
+          <!-- Collapsed primary items (revealed progressively when desktop space constrains) -->
+          <a href="#education" role="menuitem" class="dropdown-item dropdown-item-p5" data-i18n="navEducation" tabindex="-1">Education &amp; Credentials</a>
+          <a href="#experience" role="menuitem" class="dropdown-item dropdown-item-p4" data-i18n="navExperience" tabindex="-1">Experience</a>
+          <a href="#projects" role="menuitem" class="dropdown-item dropdown-item-p3" data-i18n="navProjects" tabindex="-1">Selected Projects</a>
+          <div class="dropdown-divider dropdown-divider-priority" role="separator"></div>
+
+          <!-- Secondary / overflow items -->
+          <a href="#skills" role="menuitem" class="dropdown-item" data-i18n="navSkills" tabindex="-1">Skills &amp; Capabilities</a>
+          <a href="#services" role="menuitem" class="dropdown-item" data-i18n="navServices" tabindex="-1">Professional Services</a>
+          <a href="#estimator" role="menuitem" class="dropdown-item" data-i18n="navEstimator" tabindex="-1">Budget Estimator</a>
+          <a href="#proposal-generator" role="menuitem" class="dropdown-item" data-i18n="navProposal" tabindex="-1">AI Proposal Generator</a>
+          <div class="dropdown-divider" role="separator"></div>
+          <a href="portfolio.html" role="menuitem" class="dropdown-item highlight-item" data-i18n="navPortfolio" tabindex="-1">Full Portfolio (27 Projects) <span class="ext-arrow" aria-hidden="true">↗</span></a>
+          <a href="#contact" role="menuitem" class="dropdown-item" data-i18n="navContact" tabindex="-1">Contact</a>
+          <a href="Profile.pdf" role="menuitem" class="dropdown-item" target="_blank" rel="noopener noreferrer" data-i18n="navResume" tabindex="-1">Resume (PDF) <span class="ext-arrow" aria-hidden="true">↓</span></a>
+        </div>
+      </div>
     </nav>
     <div class="header-actions">
+      <!-- Language Switcher (EN / DE) -->
+      <div class="lang-switch" id="langSwitch" role="group" aria-label="Language selector">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true" aria-label="Switch to English">EN</button>
+        <span class="lang-divider" aria-hidden="true">/</span>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false" aria-label="Auf Deutsch umschalten">DE</button>
+      </div>
+
       <button class="header-search-btn" id="openCommandPaletteBtn" type="button" aria-label="Open command search palette (Ctrl+K)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <span>Search</span>
+        <span data-i18n="navSearch">Search</span>
         <kbd>⌘K</kbd>
       </button>
-      <a class="header-cta" href="Profile.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF) <span aria-hidden="true">↓</span></a>
+      <a class="header-cta" href="Profile.pdf" target="_blank" rel="noopener noreferrer">
+        <span data-i18n="navResume">Resume (PDF)</span> <span aria-hidden="true">↓</span>
+      </a>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
         <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
         <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.7 8.7 0 0 1 8.7 3.8 8.8 8.8 0 1 0 20.2 15.3Z"></path></svg>
@@ -66,21 +93,31 @@
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
       <button class="header-search-btn" id="openCommandPaletteBtnMobile" type="button" style="width:100%; justify-content:center; margin:8px 0;" aria-label="Open command search palette (Ctrl+K)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <span>Search Portfolio &amp; Skills</span>
+        <span data-i18n="navSearchMobile">Search Portfolio &amp; Skills</span>
         <kbd>⌘K</kbd>
       </button>
-      <a href="#about">About</a>
-      <a href="#featured">Featured</a>
-      <a href="#projects">Selected Projects</a>
-      <a href="portfolio.html" style="color:var(--cyan);font-weight:600;">Full Portfolio (27 Projects)</a>
-      <a href="#services">Services</a>
-      <a href="#estimator">Estimator</a>
-      <a href="#proposal-generator">AI Proposal</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education &amp; Credentials</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-      <a href="Profile.pdf" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+
+      <div class="mobile-lang-wrap">
+        <span class="mobile-lang-label">Language / Sprache:</span>
+        <div class="lang-switch" id="mobileLangSwitch" role="group" aria-label="Mobile language selector">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true" aria-label="Switch to English">EN</button>
+          <span class="lang-divider" aria-hidden="true">/</span>
+          <button type="button" class="lang-btn" data-lang="de" aria-pressed="false" aria-label="Auf Deutsch umschalten">DE</button>
+        </div>
+      </div>
+
+      <a href="#about" data-i18n="navAbout">About</a>
+      <a href="#featured" data-i18n="navFeatured">Featured</a>
+      <a href="#projects" data-i18n="navProjects">Selected Projects</a>
+      <a href="#experience" data-i18n="navExperience">Experience</a>
+      <a href="#education" data-i18n="navEducation">Education &amp; Credentials</a>
+      <a href="#skills" data-i18n="navSkills">Skills &amp; Capabilities</a>
+      <a href="#services" data-i18n="navServices">Professional Services</a>
+      <a href="#estimator" data-i18n="navEstimator">Budget Estimator</a>
+      <a href="#proposal-generator" data-i18n="navProposal">AI Proposal Generator</a>
+      <a href="portfolio.html" style="color:var(--cyan);font-weight:600;" data-i18n="navPortfolio">Full Portfolio (27 Projects) ↗</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+      <a href="Profile.pdf" target="_blank" rel="noopener noreferrer" data-i18n="navResume">Resume (PDF) ↓</a>
     </nav>
   </header>
 
@@ -91,7 +128,7 @@
         <div class="hero-status-row">
           <div class="status-badge">
             <span class="status-dot"></span>
-            <span>AVAILABLE FOR RELEVANT OPPORTUNITIES</span>
+            <span data-i18n="statusAvailable">AVAILABLE FOR RELEVANT OPPORTUNITIES</span>
           </div>
           <div class="live-clock-capsule" title="Current local time in Dhaka (UTC+6)">
             <span class="clock-pulse"></span>
