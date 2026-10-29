@@ -365,7 +365,6 @@
           <ul>
             <li><strong>Development Fee Separation:</strong> Third-party infrastructure (Azure cloud compute, OpenAI tokens, domain renewals, payment processing fees) is billed directly to your own provider accounts; my fee covers engineering implementation.</li>
             <li><strong>Non-Binding Estimate:</strong> This calculation is an illustrative architectural estimate based on typical effort models. Final commercial pricing is verified after formal discovery.</li>
-            <li><strong>Currency Conversion:</strong> Converted at configurable baseline reference rates (1 USD = 120 BDT = 0.92 EUR). Client contracts can be denominated in USD, BDT, or EUR.</li>
           </ul>
         </div>
 
