@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/features.css">
   <link rel="stylesheet" href="assets/css/services-estimator.css">
+  <link rel="stylesheet" href="assets/css/media-showcase.css">
   <script defer src="assets/js/main.js"></script>
 </head>
 <body>
@@ -55,6 +56,7 @@
           <div class="dropdown-divider dropdown-divider-priority" role="separator"></div>
 
           <!-- Secondary / overflow items -->
+          <a href="#media" role="menuitem" class="dropdown-item" data-i18n="navMedia" tabindex="-1">Media Showcase</a>
           <a href="#skills" role="menuitem" class="dropdown-item" data-i18n="navSkills" tabindex="-1">Skills &amp; Capabilities</a>
           <a href="#services" role="menuitem" class="dropdown-item" data-i18n="navServices" tabindex="-1">Professional Services</a>
           <a href="#estimator" role="menuitem" class="dropdown-item" data-i18n="navEstimator" tabindex="-1">Budget Estimator</a>
@@ -109,6 +111,7 @@
       <a href="#about" data-i18n="navAbout">About</a>
       <a href="#featured" data-i18n="navFeatured">Featured</a>
       <a href="#projects" data-i18n="navProjects">Selected Projects</a>
+      <a href="#media" data-i18n="navMedia">Media Showcase</a>
       <a href="#experience" data-i18n="navExperience">Experience</a>
       <a href="#education" data-i18n="navEducation">Education &amp; Credentials</a>
       <a href="#skills" data-i18n="navSkills">Skills &amp; Capabilities</a>
@@ -268,52 +271,64 @@
     <section class="section" id="ai-twin">
       <div class="wrap">
         <div class="section-header">
-          <p class="eyebrow">INTERACTIVE AGENT · ZERO EXTERNAL API LATENCY</p>
+          <p class="eyebrow">INTERACTIVE AGENT · LOCAL CLIENT-SIDE RETRIEVAL</p>
           <h2 class="section-title">Query My <span class="gradient-text">AI Digital Twin.</span></h2>
           <p class="section-desc">
-            An instant, client-side conversational interface grounded strictly in my 27 verified projects, systems engineering background, and tech stack.
+            Explore my engineering work, technical expertise, projects, and professional background through a private, interactive knowledge interface.
           </p>
         </div>
 
         <div class="ai-twin-card">
           <div class="ai-twin-header">
             <div class="ai-twin-profile">
-              <img src="profile.jpg" alt="Alimul Fazal Nabil AI Avatar" class="ai-twin-avatar">
+              <img src="assets/images/profile.jpg" alt="Alimul Fazal Nabil AI Avatar" class="ai-twin-avatar" onerror="this.onerror=null;this.src='profile.jpg';">
               <div class="ai-twin-info">
-                <h4>Alimul Fazal Nabil <span class="ai-twin-badge"><span class="status-dot"></span> GROUNDED KNOWLEDGE ENGINE</span></h4>
-                <div class="ai-twin-status-sub">Client-side vector pattern matcher · Zero hallucinations · Instant answers</div>
+                <h4>Alimul Fazal Nabil <span class="ai-twin-badge"><span class="status-dot"></span> LOCAL KNOWLEDGE ENGINE</span></h4>
+                <div class="ai-twin-status-sub">Local processing enabled · Grounded across 27 projects · Privacy-first</div>
               </div>
             </div>
             <div class="ai-twin-controls">
+              <button type="button" class="ai-twin-info-btn" id="aiTwinInfoBtn" aria-expanded="false" aria-controls="aiTwinInfoPanel" title="How answers are generated">ℹ️ Architecture</button>
               <button type="button" class="ai-twin-clear-btn" id="aiTwinClearBtn" title="Clear conversation history">Clear Chat</button>
             </div>
+          </div>
+
+          <div class="ai-twin-info-panel is-hidden" id="aiTwinInfoPanel">
+            <h5>Deterministic Local Retrieval Engine</h5>
+            <p>
+              Answers are computed 100% locally in your browser using deterministic layered retrieval: intent classification, entity &amp; alias resolution, TF-IDF scoring, and structured composition grounded strictly in Alimul's 27 documented projects and career history. No remote AI or embedding API is called, and no visitor data leaves your device.
+            </p>
           </div>
 
           <div class="ai-twin-chat-window" id="aiTwinBody">
             <div class="ai-msg ai-msg-bot">
               <div class="ai-avatar">⚡</div>
               <div class="ai-bubble">
-                <p>Hi! I am Alimul's <strong>AI Twin</strong>, running 100% locally in your browser. Ask me anything about Alimul's 27 verified projects, RAG architectures, cloud infrastructure (Azure, Terraform), computer vision systems, or engineering background.</p>
-                <p style="font-size:13px; color:var(--text-subtle); margin-top:6px;">Try clicking one of the suggested prompts below or type your own question!</p>
+                <p>Hi! I am Alimul's <strong>AI Twin</strong>, running locally in your browser through a deterministic knowledge retrieval engine. Ask me anything about Alimul's 27 verified projects, Enterprise RAG architectures, Azure &amp; Terraform infrastructure, computer vision systems, or engineering qualifications.</p>
+                <p style="font-size:13px; color:var(--text-subtle); margin-top:6px;">Click any of the 10 suggested prompts below, ask for project comparisons, or paste a target job description for a grounded suitability analysis!</p>
               </div>
             </div>
           </div>
 
           <div class="ai-twin-starters">
-            <button type="button" class="ai-twin-chip" data-query="What have you built with Generative AI & RAG?">⚡ GenAI &amp; Enterprise RAG</button>
-            <button type="button" class="ai-twin-chip" data-query="What is your experience with Azure & DevOps?">☁️ Azure Cloud &amp; Terraform</button>
-            <button type="button" class="ai-twin-chip" data-query="Tell me about your Computer Vision & Perception work">👁️ Computer Vision &amp; CARLA</button>
-            <button type="button" class="ai-twin-chip" data-query="Experience in Industrial Automation & Hardware?">🏭 Hardware &amp; Digital Twins</button>
-            <button type="button" class="ai-twin-chip" data-query="What makes you a strong AI Solutions Engineer?">🎯 Why Alimul as AI Solutions Engineer?</button>
-            <button type="button" class="ai-twin-chip" data-query="Are you available for full-time roles?">💼 Availability &amp; Contact</button>
+            <button type="button" class="ai-twin-chip" data-query="What have you built with Generative AI & Enterprise RAG?">⚡ GenAI &amp; Enterprise RAG</button>
+            <button type="button" class="ai-twin-chip" data-query="What is your experience with Azure Cloud & Terraform?">☁️ Azure Cloud &amp; Terraform</button>
+            <button type="button" class="ai-twin-chip" data-query="Tell me about your Computer Vision & CARLA simulation work">👁️ Computer Vision &amp; CARLA</button>
+            <button type="button" class="ai-twin-chip" data-query="What have you built in Robotics & Embedded Systems?">🤖 Robotics &amp; Embedded Systems</button>
+            <button type="button" class="ai-twin-chip" data-query="What is your experience in Cloud & Data Engineering?">📊 Cloud &amp; Data Engineering</button>
+            <button type="button" class="ai-twin-chip" data-query="Compare the Enterprise RAG platform and the Heart Disease ML project">⚖️ Compare My Technical Projects</button>
+            <button type="button" class="ai-twin-chip" data-query="Analyze your fit for an AI Solutions Engineer role">🎯 Analyze My Fit for an AI Engineer Role</button>
+            <button type="button" class="ai-twin-chip" data-query="What professional services and software development solutions do you offer?">💼 Services &amp; Software Development</button>
+            <button type="button" class="ai-twin-chip" data-query="Why choose Alimul for an AI Solutions Engineering project?">💡 Why Alimul for an AI Solutions Engineering Project?</button>
+            <button type="button" class="ai-twin-chip" data-query="How can I contact Alimul or submit a project inquiry?">📬 Contact &amp; Project Inquiry</button>
           </div>
 
           <div class="ai-twin-input-bar">
-            <input type="text" class="ai-twin-input" id="aiTwinInput" placeholder="Ask about RAG architectures, Azure infra, CV models, or roles..." aria-label="Ask Alimul's AI Twin">
+            <input type="text" class="ai-twin-input" id="aiTwinInput" placeholder="Ask about RAG architectures, Azure infra, CV models, project comparison, or roles..." aria-label="Ask Alimul's AI Twin">
             <button type="button" class="ai-twin-send-btn" id="aiTwinSendBtn">Send Inquiry →</button>
           </div>
           <div class="ai-twin-disclaimer">
-            🔒 Runs locally in browser · Pre-indexed across 27 verified projects · Zero external API data leakage
+            🔒 Runs locally in browser · No external AI API round trip · Grounded across 27 documented projects · Zero visitor data leakage
           </div>
         </div>
       </div>
@@ -603,6 +618,122 @@
         </div>
       </div>
     </section>
+
+    <!-- 04.5: Media Showcase Section -->
+    <section class="section media-showcase-section" id="media">
+      <div class="wrap">
+        <div class="section-header">
+          <p class="eyebrow" data-i18n="mediaEyebrow">MEDIA SHOWCASE</p>
+          <h2 class="section-title">
+            Beyond the Code.<br>
+            <span class="gradient-text">Into the Field.</span>
+          </h2>
+          <p class="section-desc" data-i18n="mediaDesc">
+            Explore selected moments from engineering projects, robotics experiments, drone and travel photography, technical demonstrations, and visual explorations.
+          </p>
+        </div>
+
+        <!-- Category Filter Bar -->
+        <div class="media-filter-bar" id="mediaFilterBar" role="tablist" aria-label="Media Categories">
+          <!-- Dynamically populated from active categories in media-data.js -->
+        </div>
+
+        <!-- Showcase Slider Stage -->
+        <div class="media-slider-stage" id="mediaSliderStage" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Media Showcase Slider">
+          
+          <!-- Main Prominent Media Card -->
+          <div class="media-main-card" id="mediaMainCard">
+            <!-- Visual Media Frame -->
+            <div class="media-frame-wrapper">
+              <div class="media-frame" id="mediaFrame">
+                <!-- Rendered dynamically by media-showcase.js -->
+              </div>
+              <!-- Overlaid Category & Media Type Badges -->
+              <div class="media-badges-overlay">
+                <span class="media-cat-badge" id="mediaCatBadge">ENGINEERING &amp; DEMOS</span>
+                <span class="media-type-badge" id="mediaTypeBadge">
+                  <span class="media-type-icon" aria-hidden="true">📷</span>
+                  <span id="mediaTypeLabel">IMAGE</span>
+                </span>
+              </div>
+              <!-- Full-size Lightbox Zoom Button -->
+              <button type="button" class="media-zoom-btn" id="mediaZoomBtn" aria-label="View full size in lightbox" title="View full size in lightbox">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </button>
+            </div>
+
+            <!-- Accompanying Metadata & Story Panel -->
+            <div class="media-metadata-panel">
+              <div class="media-meta-top">
+                <span class="media-slide-counter" id="mediaSlideCounter" aria-live="polite">01 / 06</span>
+                <span class="media-date-badge" id="mediaDateBadge">2024–2026</span>
+              </div>
+
+              <h3 class="media-title" id="mediaTitle">Alimul Fazal Nabil — Engineering &amp; Applied AI Solutions</h3>
+              <p class="media-caption" id="mediaCaption">
+                Alimul Fazal Nabil leading AI solutions, systems architecture, and engineering initiatives.
+              </p>
+              <p class="media-description" id="mediaDescription">
+                Explore hands-on systems architecture, prototype benchmarks, and hardware-integrated deployments.
+              </p>
+
+              <div class="media-actions">
+                <a class="button button-primary" id="mediaOriginalBtn" href="assets/images/profile.jpg" target="_blank" rel="noopener noreferrer">
+                  <span>View Original</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <a class="repo-btn" id="mediaRelatedBtn" href="#about">
+                  <span>View Related Project</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="media-slider-controls">
+            <button type="button" class="slider-nav-btn prev-btn" id="mediaPrevBtn" aria-label="Previous media slide" title="Previous slide (Left Arrow)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+
+            <!-- Pagination Dots -->
+            <div class="slider-pagination-dots" id="mediaPaginationDots" role="tablist" aria-label="Slide dots">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <button type="button" class="slider-nav-btn next-btn" id="mediaNextBtn" aria-label="Next media slide" title="Next slide (Right Arrow)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+
+          <!-- Thumbnails Strip -->
+          <div class="media-thumbnails-strip" id="mediaThumbnailsStrip" role="tablist" aria-label="Media thumbnails">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-Size Lightbox Modal -->
+    <div class="media-lightbox-backdrop" id="mediaLightbox" role="dialog" aria-modal="true" aria-label="Full-size media viewer" hidden>
+      <div class="media-lightbox-content">
+        <button type="button" class="media-lightbox-close" id="mediaLightboxClose" aria-label="Close full-size viewer (Escape)" title="Close viewer (Escape)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="media-lightbox-body" id="mediaLightboxBody">
+          <!-- Injected dynamically -->
+        </div>
+        <div class="media-lightbox-footer">
+          <div class="lightbox-info">
+            <h4 id="lightboxTitle">Media Title</h4>
+            <p id="lightboxCaption">Media caption</p>
+          </div>
+          <a class="button button-primary" id="lightboxDirectLink" href="#" target="_blank" rel="noopener noreferrer">
+            Open Original Resource ↗
+          </a>
+        </div>
+      </div>
+    </div>
 
     <!-- 05: Professional Experience Timeline -->
     <section class="section" id="experience">
@@ -1652,10 +1783,13 @@ Let's connect for an initial conversation.</textarea>
 
   <!-- Advanced Interactive Features Scripts -->
   <script defer src="assets/js/command-palette.js"></script>
+  <script defer src="assets/js/ai-twin-knowledge.js"></script>
   <script defer src="assets/js/ai-twin.js"></script>
   <script defer src="assets/js/interactive-features.js"></script>
   <script defer src="assets/js/services-data.js"></script>
   <script defer src="assets/js/budget-estimator.js"></script>
   <script defer src="assets/js/proposal-generator.js"></script>
+  <script defer src="assets/js/media-data.js"></script>
+  <script defer src="assets/js/media-showcase.js"></script>
 </body>
 </html>
