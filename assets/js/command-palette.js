@@ -63,6 +63,7 @@
     modalBackdrop.className = "cmd-palette-backdrop";
     modalBackdrop.id = "cmdPaletteBackdrop";
     modalBackdrop.hidden = true;
+    modalBackdrop.style.display = "none";
 
     modalBackdrop.innerHTML = `
       <div class="cmd-palette-modal" role="dialog" aria-modal="true" aria-label="Command search palette">
@@ -210,7 +211,10 @@
   function openPalette() {
     createCommandPaletteDOM();
     if (!modalBackdrop) return;
+    modalBackdrop.hidden = false;
     modalBackdrop.removeAttribute("hidden");
+    modalBackdrop.style.display = "flex";
+    modalBackdrop.classList.add("open");
     filteredItems = [...COMMAND_ITEMS];
     selectedIndex = 0;
     if (searchInput) {
@@ -223,7 +227,10 @@
 
   function closePalette() {
     if (!modalBackdrop) return;
+    modalBackdrop.hidden = true;
     modalBackdrop.setAttribute("hidden", "true");
+    modalBackdrop.style.display = "none";
+    modalBackdrop.classList.remove("open");
     document.body.style.overflow = "";
   }
 
@@ -231,7 +238,7 @@
   document.addEventListener("keydown", (e) => {
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
       e.preventDefault();
-      if (modalBackdrop && !modalBackdrop.hidden) {
+      if (modalBackdrop && !modalBackdrop.hidden && modalBackdrop.classList.contains("open")) {
         closePalette();
       } else {
         openPalette();
@@ -242,12 +249,15 @@
     }
   });
 
-  // Wire search button in header if present
+  // Wire search buttons in header and mobile nav
   window.addEventListener("DOMContentLoaded", () => {
-    createCommandPaletteDOM();
     const openBtn = document.getElementById("openCommandPaletteBtn");
     if (openBtn) {
       openBtn.addEventListener("click", openPalette);
+    }
+    const openBtnMobile = document.getElementById("openCommandPaletteBtnMobile");
+    if (openBtnMobile) {
+      openBtnMobile.addEventListener("click", openPalette);
     }
   });
 
