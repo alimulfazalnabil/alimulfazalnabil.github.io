@@ -158,11 +158,11 @@
       skillsSubtitle: "SPECIALIZED & CROSS-FUNCTIONAL PRACTICES",
       skillsDom1: "🧠 AI & Machine Learning",
       skillsDom2: "⚡ Software & Data Engineering",
-      skillsDom3: "☁️ Cloud Infrastructure & DevOps",
-      skillsDom4: "👁️ Computer Vision & Autonomous Systems",
-      skillsDom5: "🤖 Embedded Systems, Robotics & IoT",
-      skillsDom6: "🛠️ Hardware Prototyping & Digital Fabrication",
-      skillsDom7: "🔄 Hardware-Software Co-Design & Digital Twins",
+      skillsDom3: "☁️ Cloud, DevOps & Infrastructure",
+      skillsDom4: "👁️ Intelligent Systems & Vision",
+      skillsDom5: "⚡ Automation & Software Delivery",
+      skillsDom6: "📊 Data Visualization & Analytics",
+      skillsDom7: "🖥️ Hardware & Industrial Systems",
 
       // Section 08: Professional Services (#services)
       servicesEyebrow: "08 / PROFESSIONAL SERVICES CATALOG",
@@ -417,11 +417,11 @@
       skillsSubtitle: "SPEZIALISIERTE & INTERDISZIPLINÄRE DISZIPLINEN",
       skillsDom1: "🧠 KI & Maschinelles Lernen",
       skillsDom2: "⚡ Software- & Daten-Engineering",
-      skillsDom3: "☁️ Cloud-Infrastruktur & DevOps",
-      skillsDom4: "👁️ Computer Vision & Autonome Systeme",
-      skillsDom5: "🤖 Eingebettete Systeme, Robotik & IoT",
-      skillsDom6: "🛠️ Hardware-Prototyping & Digitale Fertigung",
-      skillsDom7: "🔄 Hardware-Software-Co-Design & Digitale Zwillinge",
+      skillsDom3: "☁️ Cloud, DevOps & Infrastruktur",
+      skillsDom4: "👁️ Intelligente Systeme & Computer Vision",
+      skillsDom5: "⚡ Automatisierung & Softwarebereitstellung",
+      skillsDom6: "📊 Datenvisualisierung & Analytik",
+      skillsDom7: "🖥️ Hardware & Industrielle Systeme",
 
       // Section 08: Professional Services (#services)
       servicesEyebrow: "08 / DIENSTLEISTUNGSKATALOG",

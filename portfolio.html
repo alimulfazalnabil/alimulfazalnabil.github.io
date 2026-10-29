@@ -104,13 +104,13 @@
       </a>
       <div class="status-badge" style="margin-bottom:16px;">
         <span class="status-dot"></span>
-        <span>VERIFIED ENGINEERING MASTER ARCHIVE</span>
+        <span data-i18n="portEyebrow">VERIFIED ENGINEERING MASTER ARCHIVE</span>
       </div>
-      <h1 class="archive-title">
+      <h1 class="archive-title" data-i18n="portHeading">
         A Decade of<br>
         <span class="gradient-text">Engineering Projects</span> (2016–2026).
       </h1>
-      <p class="archive-lead">
+      <p class="archive-lead" data-i18n="portDesc">
         A structured, factual archive of 27 technical systems spanning hardware, autonomous robotics, computer vision, data engineering, cloud infrastructure, and modern Generative AI. Every entry is categorized by domain and supported by verifiable evidence.
       </p>
 
@@ -118,19 +118,19 @@
       <div class="archive-stats">
         <div class="archive-stat-item">
           <span class="archive-stat-number">27</span>
-          <span class="archive-stat-label">Verified Projects</span>
+          <span class="archive-stat-label" data-i18n="portStatProjects">Verified Projects</span>
         </div>
         <div class="archive-stat-item">
           <span class="archive-stat-number">7</span>
-          <span class="archive-stat-label">Engineering Domains</span>
+          <span class="archive-stat-label" data-i18n="portStatDomains">Engineering Domains</span>
         </div>
         <div class="archive-stat-item">
           <span class="archive-stat-number">10</span>
-          <span class="archive-stat-label">Years Timeline</span>
+          <span class="archive-stat-label" data-i18n="portStatYears">Years Timeline</span>
         </div>
         <div class="archive-stat-item">
           <span class="archive-stat-number">2</span>
-          <span class="archive-stat-label">Peer-Reviewed Papers</span>
+          <span class="archive-stat-label" data-i18n="heroMetricPapers">Peer-Reviewed Papers</span>
         </div>
       </div>
     </section>
@@ -148,6 +148,7 @@
             type="search"
             class="search-input"
             id="archiveSearch"
+            data-i18n-placeholder="portSearchPlaceholder"
             placeholder="Search by title, technology, domain, or keyword (e.g. RAG, CARLA, PyTorch, Docker, ESP8266)..."
             aria-label="Search engineering projects by title, technology, or keywords"
             autocomplete="off"
@@ -226,12 +227,12 @@
               <span>Knowledge Graph</span>
             </button>
           </div>
-          <button class="reset-all-btn" id="resetFiltersBtn" type="button">Reset All Filters</button>
+          <button class="reset-all-btn" id="resetFiltersBtn" type="button" data-i18n="portEmptyReset">Reset All Filters</button>
           <label for="sortOrder" style="display:none;">Sort projects</label>
           <select class="sort-select" id="sortOrder" aria-label="Sort projects">
-            <option value="newest" selected>Sort by: Newest First</option>
-            <option value="oldest">Sort by: Oldest First</option>
-            <option value="title">Sort by: Project Title</option>
+            <option value="newest" selected data-i18n="portSortNewest">Sort by: Newest First</option>
+            <option value="oldest" data-i18n="portSortOldest">Sort by: Oldest First</option>
+            <option value="title" data-i18n="portSortTitle">Sort by: Project Title</option>
           </select>
         </div>
       </div>
@@ -1008,11 +1009,11 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             <line x1="8" y1="11" x2="14" y2="11"></line>
           </svg>
-          <h4 class="empty-state-title">No matching engineering projects found</h4>
-          <p class="empty-state-desc">
+          <h4 class="empty-state-title" data-i18n="portEmptyTitle">No matching engineering projects found</h4>
+          <p class="empty-state-desc" data-i18n="portEmptyDesc">
             No projects match your current query and filter combination. Try clearing your search or switching to "All Projects".
           </p>
-          <button class="button button-primary" id="emptyStateResetBtn" type="button">Reset All Filters</button>
+          <button class="button button-primary" id="emptyStateResetBtn" type="button" data-i18n="portEmptyReset">Reset All Filters</button>
         </div>
       </div>
 
@@ -1118,8 +1119,8 @@
       <a href="index.html#experience">Experience</a>
       <a href="index.html#contact">Contact</a>
     </div>
-    <a class="back-top" href="#main">BACK TO TOP ↑</a>
-    <span class="copyright">© <span id="year">2026</span> Alimul Fazal Nabil. All rights reserved.</span>
+    <a class="back-top" href="#main" data-i18n="footerBackTop">BACK TO TOP ↑</a>
+    <span class="copyright" data-i18n="footerCopyright">© <span id="year">2026</span> Alimul Fazal Nabil. All rights reserved.</span>
   </footer>
 </body>
 </html>
