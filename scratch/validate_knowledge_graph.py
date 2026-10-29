@@ -95,44 +95,61 @@ def validate_knowledge_graph():
     with open(js_path, "r", encoding="utf-8") as f:
         js_code = f.read()
 
-    # Find the GRAPH_DATA object in JS
-    match = re.search(r"const GRAPH_DATA = ({.*?});\s+let initialized", js_code, re.DOTALL)
-    if not match:
-        errors.append("Unable to parse GRAPH_DATA from career-graph.js")
+    # Find the GRAPH_DATA object in JS using string slicing
+    start_marker = "const GRAPH_DATA = "
+    end_marker = ";\n\n  let initialized"
+    start_pos = js_code.find(start_marker)
+    if start_pos == -1:
+        errors.append("Unable to locate start of GRAPH_DATA in career-graph.js")
     else:
-        try:
-            graph_data = json.loads(match.group(1))
-            nodes = graph_data.get("nodes", [])
-            edges = graph_data.get("edges", [])
+        end_pos = js_code.find(end_marker, start_pos)
+        if end_pos == -1:
+            errors.append("Unable to locate end of GRAPH_DATA in career-graph.js")
+        else:
+            json_str = js_code[start_pos + len(start_marker):end_pos].strip()
+            try:
+                graph_data = json.loads(json_str)
+                nodes = graph_data.get("nodes", [])
+                edges = graph_data.get("edges", [])
 
-            print(f"[PASS] Parsed {len(nodes)} nodes and {len(edges)} edges from career-graph.js")
+                print(f"[PASS] Parsed {len(nodes)} nodes and {len(edges)} edges from career-graph.js")
 
-            # Check counts
-            domains = [n for n in nodes if n["category"] == "domain"]
-            roles = [n for n in nodes if n["category"] == "role"]
-            techs = [n for n in nodes if n["category"] == "technology"]
-            projects = [n for n in nodes if n["category"] == "project"]
+                # Check counts
+                domains = [n for n in nodes if n["category"] == "domain"]
+                roles = [n for n in nodes if n["category"] == "role"]
+                techs = [n for n in nodes if n["category"] == "technology"]
+                projects = [n for n in nodes if n["category"] == "project"]
 
-            assert len(domains) == 7, f"Expected 7 domains, found {len(domains)}"
-            assert len(roles) == 5, f"Expected 5 roles, found {len(roles)}"
-            assert len(techs) == 14, f"Expected 14 technologies, found {len(techs)}"
-            assert len(projects) == 27, f"Expected 27 projects, found {len(projects)}"
-            print("[PASS] Exact node distribution verified (7 domains, 5 roles, 14 tech, 27 projects = 53 total)")
+                assert len(domains) == 7, f"Expected 7 domains, found {len(domains)}"
+                assert len(roles) == 5, f"Expected 5 roles, found {len(roles)}"
+                assert len(techs) == 14, f"Expected 14 technologies, found {len(techs)}"
+                assert len(projects) == 27, f"Expected 27 projects, found {len(projects)}"
+                print("[PASS] Exact node distribution verified (7 domains, 5 roles, 14 tech, 27 projects = 53 total)")
 
-            # Check all project IDs are unique
-            pids = [p["id"] for p in projects]
-            assert len(set(pids)) == 27, "Duplicate project IDs in graph!"
-            print("[PASS] All 27 project IDs are unique")
+                # Check all project IDs are unique
+                pids = [p["id"] for p in projects]
+                assert len(set(pids)) == 27, "Duplicate project IDs in graph!"
+                print("[PASS] All 27 project IDs are unique")
 
-            # Check edge validity
-            node_ids = set(n["id"] for n in nodes)
-            for e in edges:
-                assert e["source"] in node_ids, f"Invalid edge source: {e['source']}"
-                assert e["target"] in node_ids, f"Invalid edge target: {e['target']}"
-            print("[PASS] All 94 edges connect strictly valid nodes (zero orphan edges)")
+                # Check edge validity
+                node_ids = set(n["id"] for n in nodes)
+                for e in edges:
+                    assert e["source"] in node_ids, f"Invalid edge source: {e['source']}"
+                    assert e["target"] in node_ids, f"Invalid edge target: {e['target']}"
+                assert len(edges) == 104, f"Expected 104 verified edges, found {len(edges)}"
+                print(f"[PASS] All {len(edges)} edges connect strictly valid nodes (zero orphan edges)")
 
-        except Exception as ex:
-            errors.append(f"Error validating graph data structure: {ex}")
+                # Check edge breakdown
+                domain_edges = [e for e in edges if e["type"] == "domain"]
+                role_edges = [e for e in edges if e["type"] == "role"]
+                tech_edges = [e for e in edges if e["type"] == "tech"]
+                assert len(domain_edges) == 27, f"Expected 27 domain edges, found {len(domain_edges)}"
+                assert len(role_edges) == 20, f"Expected 20 role edges, found {len(role_edges)}"
+                assert len(tech_edges) == 57, f"Expected 57 tech edges, found {len(tech_edges)}"
+                print("[PASS] Verified edge breakdown: 27 domain edges, 20 role edges, 57 verified technology edges")
+
+            except Exception as ex:
+                errors.append(f"Error validating graph data structure: {ex}")
 
     if errors:
         print("\n[FAIL] VALIDATION ERRORS:")

@@ -267,12 +267,7 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": "https://github.com/alimulfazalnabil/Bluetooth-Controlled-Robotic-Arm",
-      "links": [
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/Bluetooth-Controlled-Robotic-Arm"
-        }
-      ],
+      "links": [],
       "color": "#14b8a6",
       "radius": 11
     },
@@ -316,12 +311,7 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": "https://github.com/alimulfazalnabil/Robotics-projects",
-      "links": [
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/Robotics-projects"
-        }
-      ],
+      "links": [],
       "color": "#14b8a6",
       "radius": 11
     },
@@ -367,12 +357,7 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": "https://github.com/alimulfazalnabil/Robotics-projects",
-      "links": [
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/Robotics-projects"
-        }
-      ],
+      "links": [],
       "color": "#14b8a6",
       "radius": 11
     },
@@ -395,16 +380,7 @@
       ],
       "caseStudyUrl": "case-studies/autonomous-lane-detection.html",
       "repoUrl": "https://github.com/alimulfazalnabil/Autonomous-Lane-Detection",
-      "links": [
-        {
-          "text": "Read Case Study \u2192",
-          "href": "case-studies/autonomous-lane-detection.html"
-        },
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/Autonomous-Lane-Detection"
-        }
-      ],
+      "links": [],
       "color": "#38bdf8",
       "radius": 11
     },
@@ -425,12 +401,7 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": "https://github.com/alimulfazalnabil/Computer-Vision-Projects",
-      "links": [
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/Computer-Vision-Projects"
-        }
-      ],
+      "links": [],
       "color": "#38bdf8",
       "radius": 11
     },
@@ -452,12 +423,7 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": "https://github.com/alimulfazalnabil/Autonomous-Lane-Detection",
-      "links": [
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/Autonomous-Lane-Detection"
-        }
-      ],
+      "links": [],
       "color": "#38bdf8",
       "radius": 11
     },
@@ -481,12 +447,7 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": "https://github.com/alimulfazalnabil/Computer-Vision-Projects",
-      "links": [
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/Computer-Vision-Projects"
-        }
-      ],
+      "links": [],
       "color": "#38bdf8",
       "radius": 11
     },
@@ -513,16 +474,7 @@
       ],
       "caseStudyUrl": "case-studies/heart-disease-prediction.html",
       "repoUrl": "https://github.com/alimulfazalnabil/heart-disease-prediction",
-      "links": [
-        {
-          "text": "Read Case Study \u2192",
-          "href": "case-studies/heart-disease-prediction.html"
-        },
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/heart-disease-prediction"
-        }
-      ],
+      "links": [],
       "color": "#10b981",
       "radius": 11
     },
@@ -570,12 +522,7 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": "https://github.com/alimulfazalnabil/Python-Projects",
-      "links": [
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/Python-Projects"
-        }
-      ],
+      "links": [],
       "color": "#10b981",
       "radius": 11
     },
@@ -599,12 +546,7 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": "https://github.com/alimulfazalnabil/azure-data-ai-analytics",
-      "links": [
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/azure-data-ai-analytics"
-        }
-      ],
+      "links": [],
       "color": "#f59e0b",
       "radius": 11
     },
@@ -629,12 +571,7 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": "https://github.com/alimulfazalnabil/Data-Engineering-Projects",
-      "links": [
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/Data-Engineering-Projects"
-        }
-      ],
+      "links": [],
       "color": "#f59e0b",
       "radius": 11
     },
@@ -677,16 +614,7 @@
       ],
       "caseStudyUrl": "case-studies/azure-terraform-cicd.html",
       "repoUrl": "https://github.com/alimulfazalnabil/azure-terraform-cicd-foundation",
-      "links": [
-        {
-          "text": "Read Case Study \u2192",
-          "href": "case-studies/azure-terraform-cicd.html"
-        },
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/azure-terraform-cicd-foundation"
-        }
-      ],
+      "links": [],
       "color": "#3b82f6",
       "radius": 11
     },
@@ -709,16 +637,7 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": "https://github.com/alimulfazalnabil/pgcb-org-portal",
-      "links": [
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/pgcb-org-portal"
-        },
-        {
-          "text": "Live Portal \u2197",
-          "href": "https://pgcb-org-portal.onrender.com/"
-        }
-      ],
+      "links": [],
       "color": "#3b82f6",
       "radius": 11
     },
@@ -741,12 +660,7 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": "https://github.com/alimulfazalnabil/Automation-Projects",
-      "links": [
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/Automation-Projects"
-        }
-      ],
+      "links": [],
       "color": "#3b82f6",
       "radius": 11
     },
@@ -797,16 +711,7 @@
       ],
       "caseStudyUrl": "case-studies/enterprise-rag-platform.html",
       "repoUrl": "https://github.com/alimulfazalnabil/LLM-enterprise-rag-knowledge-platform",
-      "links": [
-        {
-          "text": "Read Case Study \u2192",
-          "href": "case-studies/enterprise-rag-platform.html"
-        },
-        {
-          "text": "View Code \u2197",
-          "href": "https://github.com/alimulfazalnabil/LLM-enterprise-rag-knowledge-platform"
-        }
-      ],
+      "links": [],
       "color": "#a855f7",
       "radius": 11
     },
@@ -831,18 +736,13 @@
       ],
       "caseStudyUrl": null,
       "repoUrl": null,
-      "links": [
-        {
-          "text": "Live Portal \u2197",
-          "href": "https://www.movisabio.com/"
-        }
-      ],
+      "links": [],
       "color": "#a855f7",
       "radius": 11
     },
     {
       "id": "PRJ-GENAI-003",
-      "title": "Doctor's Co-Pilot AI (Clinical Transcription & Intelligence Assistant)",
+      "title": "Doctor&#x27;s Co-Pilot AI (Clinical Transcription & Intelligence Assistant)",
       "category": "project",
       "domain": "genai",
       "status": "in-development",
@@ -984,6 +884,12 @@
     },
     {
       "source": "PRJ-EMB-002",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-EMB-002",
       "target": "tech_arduino",
       "type": "tech",
       "label": "implements"
@@ -993,6 +899,12 @@
       "target": "dom_embedded",
       "type": "domain",
       "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-EMB-003",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
     },
     {
       "source": "PRJ-EMB-003",
@@ -1008,7 +920,7 @@
     },
     {
       "source": "PRJ-EMB-004",
-      "target": "role_energy_it",
+      "target": "role_cbiu",
       "type": "role",
       "label": "developed_during"
     },
@@ -1026,6 +938,12 @@
     },
     {
       "source": "PRJ-EMB-005",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-EMB-005",
       "target": "tech_arduino",
       "type": "tech",
       "label": "implements"
@@ -1038,6 +956,12 @@
     },
     {
       "source": "PRJ-EMB-006",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-EMB-006",
       "target": "tech_arduino",
       "type": "tech",
       "label": "implements"
@@ -1067,12 +991,6 @@
       "label": "implements"
     },
     {
-      "source": "PRJ-CV-001",
-      "target": "tech_rag",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
       "source": "PRJ-CV-002",
       "target": "dom_vision",
       "type": "domain",
@@ -1129,12 +1047,6 @@
     {
       "source": "PRJ-CV-004",
       "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CV-004",
-      "target": "tech_ros",
       "type": "tech",
       "label": "implements"
     },
@@ -1175,10 +1087,22 @@
       "label": "implements"
     },
     {
+      "source": "PRJ-ML-001",
+      "target": "tech_scikit",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
       "source": "PRJ-ML-002",
       "target": "dom_ml",
       "type": "domain",
       "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-ML-002",
+      "target": "role_energy_cloud",
+      "type": "role",
+      "label": "developed_during"
     },
     {
       "source": "PRJ-ML-002",
@@ -1212,12 +1136,6 @@
     },
     {
       "source": "PRJ-ML-003",
-      "target": "tech_ros",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-ML-003",
       "target": "tech_scikit",
       "type": "tech",
       "label": "implements"
@@ -1227,6 +1145,12 @@
       "target": "dom_data",
       "type": "domain",
       "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-DATA-001",
+      "target": "role_energy_cloud",
+      "type": "role",
+      "label": "developed_during"
     },
     {
       "source": "PRJ-DATA-001",
@@ -1290,19 +1214,13 @@
     },
     {
       "source": "PRJ-DATA-003",
-      "target": "role_movisabio",
+      "target": "role_energy_cloud",
       "type": "role",
       "label": "developed_during"
     },
     {
       "source": "PRJ-DATA-003",
       "target": "tech_azure",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-DATA-003",
-      "target": "tech_rag",
       "type": "tech",
       "label": "implements"
     },
@@ -1321,12 +1239,6 @@
     {
       "source": "PRJ-CLOUD-001",
       "target": "tech_azure",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CLOUD-001",
-      "target": "tech_rag",
       "type": "tech",
       "label": "implements"
     },
@@ -1363,12 +1275,6 @@
     {
       "source": "PRJ-CLOUD-002",
       "target": "tech_python",
-      "type": "tech",
-      "label": "implements"
-    },
-    {
-      "source": "PRJ-CLOUD-002",
-      "target": "tech_ros",
       "type": "tech",
       "label": "implements"
     },
@@ -1377,6 +1283,12 @@
       "target": "dom_cloud",
       "type": "domain",
       "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-CLOUD-003",
+      "target": "role_energy_cloud",
+      "type": "role",
+      "label": "developed_during"
     },
     {
       "source": "PRJ-CLOUD-003",
@@ -1389,6 +1301,12 @@
       "target": "dom_cloud",
       "type": "domain",
       "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-CLOUD-004",
+      "target": "role_energy_it",
+      "type": "role",
+      "label": "developed_during"
     },
     {
       "source": "PRJ-GENAI-001",
@@ -1417,6 +1335,12 @@
     {
       "source": "PRJ-GENAI-001",
       "target": "tech_python",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
+      "source": "PRJ-GENAI-001",
+      "target": "tech_rag",
       "type": "tech",
       "label": "implements"
     },
@@ -1475,10 +1399,22 @@
       "label": "implements"
     },
     {
+      "source": "PRJ-GENAI-003",
+      "target": "tech_terraform",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
       "source": "PRJ-GENAI-004",
       "target": "dom_genai",
       "type": "domain",
       "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-GENAI-004",
+      "target": "role_energy_cloud",
+      "type": "role",
+      "label": "developed_during"
     },
     {
       "source": "PRJ-GENAI-004",
@@ -1500,6 +1436,12 @@
     },
     {
       "source": "PRJ-ENG-001",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-ENG-001",
       "target": "tech_pgvector",
       "type": "tech",
       "label": "implements"
@@ -1517,10 +1459,28 @@
       "label": "categorized_by"
     },
     {
+      "source": "PRJ-ENG-002",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
+    },
+    {
+      "source": "PRJ-ENG-002",
+      "target": "tech_arduino",
+      "type": "tech",
+      "label": "implements"
+    },
+    {
       "source": "PRJ-ENG-003",
       "target": "dom_research",
       "type": "domain",
       "label": "categorized_by"
+    },
+    {
+      "source": "PRJ-ENG-003",
+      "target": "role_cbiu",
+      "type": "role",
+      "label": "developed_during"
     }
   ]
 };
