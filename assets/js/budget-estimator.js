@@ -282,78 +282,91 @@
 
     const sym = data.currency.symbol;
     const code = data.currency.code;
+    const isDe = (document.documentElement.getAttribute("lang") || "en").toLowerCase().startsWith("de");
+
+    const phaseLabelsDe = {
+      "Discovery & Technical Scoping": "Konzeption & Technische Spezifikation",
+      "UI / UX & System Prototyping": "UI / UX & System-Prototyping",
+      "Frontend & Client Engineering": "Frontend- & Client-Entwicklung",
+      "Backend Architecture & APIs": "Backend-Architektur & APIs",
+      "Database Modeling & Vector Schemas": "Datenmodellierung & Vektor-Schemas",
+      "External Integrations & Webhooks": "Externe Integrationen & Webhooks",
+      "AI Engineering, Models & RAG": "KI-Engineering, Modelle & RAG",
+      "Testing, QA & Security Auditing": "Testing, QA & Sicherheits-Audits",
+      "DevOps, Containerization & CI/CD": "DevOps, Containerisierung & CI/CD"
+    };
 
     container.innerHTML = `
       <div class="est-scorecard">
         <div class="est-scorecard-header">
           <div>
-            <span class="est-badge">PRELIMINARY BUDGET ESTIMATE</span>
+            <span class="est-badge">${isDe ? "VORLÄUFIGE BUDGETSCHÄTZUNG" : "PRELIMINARY BUDGET ESTIMATE"}</span>
             <h3 class="est-title">${escapeHTML(data.projectType)}</h3>
-            <p class="est-industry-sub">Domain / Industry: <strong>${escapeHTML(data.industry)}</strong> · Complexity: <strong>${data.complexity}</strong></p>
+            <p class="est-industry-sub">${isDe ? "Bereich / Branche:" : "Domain / Industry:"} <strong>${escapeHTML(data.industry)}</strong> · ${isDe ? "Komplexität:" : "Complexity:"} <strong>${data.complexity}</strong></p>
           </div>
-          <div class="est-currency-tag">Currencies: ${code} (${sym})</div>
+          <div class="est-currency-tag">${isDe ? "Währung:" : "Currencies:"} ${code} (${sym})</div>
         </div>
 
         <!-- 3-Tier Budget Range -->
         <div class="est-tiers-grid">
           <div class="est-tier-card est-tier-low">
-            <span class="tier-label">CONSERVATIVE (MINIMAL SCOPE)</span>
+            <span class="tier-label">${isDe ? "KONSERVATIV (MINIMALER UMFANG)" : "CONSERVATIVE (MINIMAL SCOPE)"}</span>
             <div class="tier-price">${sym}${data.lowCost.toLocaleString()}</div>
-            <p class="tier-desc">Streamlined MVP focusing strictly on essential core user paths.</p>
+            <p class="tier-desc">${isDe ? "Optimiertes MVP mit Fokus auf die wesentlichen Kernabläufe." : "Streamlined MVP focusing strictly on essential core user paths."}</p>
           </div>
 
           <div class="est-tier-card est-tier-likely active">
-            <div class="tier-pill">MOST LIKELY TARGET</div>
-            <span class="tier-label">ENGINEERED PRODUCTION SCOPE</span>
+            <div class="tier-pill">${isDe ? "EMPFOHLENER ZIELBEREICH" : "MOST LIKELY TARGET"}</div>
+            <span class="tier-label">${isDe ? "VOLLSTÄNDIGER PRODUKTIONSUMFANG" : "ENGINEERED PRODUCTION SCOPE"}</span>
             <div class="tier-price">${sym}${data.likelyCost.toLocaleString()}</div>
-            <p class="tier-desc">Complete production build with full testing, documentation & CI/CD.</p>
+            <p class="tier-desc">${isDe ? "Komplette Produktionsentwicklung inklusive Tests, Dokumentation & CI/CD." : "Complete production build with full testing, documentation & CI/CD."}</p>
           </div>
 
           <div class="est-tier-card est-tier-high">
-            <span class="tier-label">COMPREHENSIVE (BUFFERED)</span>
+            <span class="tier-label">${isDe ? "UMFASSEND (MIT PUFFER)" : "COMPREHENSIVE (BUFFERED)"}</span>
             <div class="tier-price">${sym}${data.highCost.toLocaleString()}</div>
-            <p class="tier-desc">Covers complex edge-cases, extensive custom polish & scale buffers.</p>
+            <p class="tier-desc">${isDe ? "Deckt komplexe Randfälle, maßgeschneidertes Design & Skalierungspuffer ab." : "Covers complex edge-cases, extensive custom polish & scale buffers."}</p>
           </div>
         </div>
 
         <!-- Key Metrics Summary -->
         <div class="est-meta-grid">
           <div class="est-meta-card">
-            <span class="meta-label">ESTIMATED TIMELINE</span>
-            <span class="meta-val">${data.lowWeeks}–${data.highWeeks} Weeks</span>
-            <span class="meta-sub">Sprint-based delivery</span>
+            <span class="meta-label">${isDe ? "GESCHÄTZTE PROJEKTDAUER" : "ESTIMATED TIMELINE"}</span>
+            <span class="meta-val">${data.lowWeeks}–${data.highWeeks} ${isDe ? "Wochen" : "Weeks"}</span>
+            <span class="meta-sub">${isDe ? "Sprint-basierte Bereitstellung" : "Sprint-based delivery"}</span>
           </div>
 
           <div class="est-meta-card">
-            <span class="meta-label">ENGINEERING EFFORT</span>
-            <span class="meta-val">~${data.adjustedHours} Hours</span>
-            <span class="meta-sub">Architecture & full implementation</span>
+            <span class="meta-label">${isDe ? "ENTWICKLUNGSAUFWAND" : "ENGINEERING EFFORT"}</span>
+            <span class="meta-val">~${data.adjustedHours} ${isDe ? "Stunden" : "Hours"}</span>
+            <span class="meta-sub">${isDe ? "Architektur & vollständige Implementierung" : "Architecture & full implementation"}</span>
           </div>
 
           <div class="est-meta-card">
-            <span class="meta-label">MONTHLY MAINTENANCE (SLA)</span>
-            <span class="meta-val">${data.monthlyMaint > 0 ? sym + data.monthlyMaint.toLocaleString() + "/mo" : "Optional"}</span>
+            <span class="meta-label">${isDe ? "MONATLICHE WARTUNG (SLA)" : "MONTHLY MAINTENANCE (SLA)"}</span>
+            <span class="meta-val">${data.monthlyMaint > 0 ? sym + data.monthlyMaint.toLocaleString() + (isDe ? "/Monat" : "/mo") : (isDe ? "Optional" : "Optional")}</span>
             <span class="meta-sub">${escapeHTML(data.maintenance)}</span>
           </div>
 
           <div class="est-meta-card">
-            <span class="meta-label">EST. THIRD-PARTY EXPENSES</span>
-            <span class="meta-val">~${sym}${data.monthlyThirdParty.toLocaleString()}/mo</span>
+            <span class="meta-label">${isDe ? "GESCHÄTZTE DRITTKOSTEN" : "EST. THIRD-PARTY EXPENSES"}</span>
+            <span class="meta-val">~${sym}${data.monthlyThirdParty.toLocaleString()}${isDe ? "/Monat" : "/mo"}</span>
             <span class="meta-sub">${escapeHTML(data.thirdPartyDetails.notes)}</span>
           </div>
         </div>
 
         <!-- Itemized Phase Breakdown -->
         <div class="est-breakdown-section">
-          <h4 class="est-section-heading">Estimated Phase & Effort Allocation</h4>
+          <h4 class="est-section-heading">${isDe ? "Geschätzte Phasen- & Aufwandsverteilung" : "Estimated Phase & Effort Allocation"}</h4>
           <div class="est-phases-list">
             ${data.phaseBreakdown.map(p => `
               <div class="est-phase-row">
-                <span class="phase-name">${p.phase}</span>
+                <span class="phase-name">${isDe && phaseLabelsDe[p.phase] ? phaseLabelsDe[p.phase] : p.phase}</span>
                 <span class="phase-bar-wrap">
                   <span class="phase-bar" style="width: ${p.pct * 100}%"></span>
                 </span>
-                <span class="phase-hours">~${p.hours} hrs (${Math.round(p.pct * 100)}%)</span>
+                <span class="phase-hours">~${p.hours} ${isDe ? "Std." : "hrs"} (${Math.round(p.pct * 100)}%)</span>
               </div>
             `).join("")}
           </div>
@@ -361,23 +374,23 @@
 
         <!-- Assumptions & Limitations Callout -->
         <div class="est-assumptions-box">
-          <h5>⚠️ Scope Assumptions & Transparency Disclaimer</h5>
+          <h5>${isDe ? "⚠️ Annahmen zum Projektumfang & Transparenzhinweis" : "⚠️ Scope Assumptions & Transparency Disclaimer"}</h5>
           <ul>
-            <li><strong>Development Fee Separation:</strong> Third-party infrastructure (Azure cloud compute, OpenAI tokens, domain renewals, payment processing fees) is billed directly to your own provider accounts; my fee covers engineering implementation.</li>
-            <li><strong>Non-Binding Estimate:</strong> This calculation is an illustrative architectural estimate based on typical effort models. Final commercial pricing is verified after formal discovery.</li>
+            <li><strong>${isDe ? "Trennung von Entwicklungs- & Infrastrukturkosten:" : "Development Fee Separation:"}</strong> ${isDe ? "Drittanbieter-Infrastruktur (Azure Cloud-Ressourcen, OpenAI API-Tokens, Domain-Verlängerungen, Transaktionsgebühren) wird direkt über Ihre eigenen Anbieterkonten abgerechnet; mein Honorar deckt die reine Software- und Systementwicklung." : "Third-party infrastructure (Azure cloud compute, OpenAI tokens, domain renewals, payment processing fees) is billed directly to your own provider accounts; my fee covers engineering implementation."}</li>
+            <li><strong>${isDe ? "Unverbindliche Schätzung:" : "Non-Binding Estimate:"}</strong> ${isDe ? "Diese Berechnung stellt eine unverbindliche Orientierungshilfe basierend auf typischen Erfahrungswerten dar. Die finalen Konditionen werden nach Klärung der genauen Spezifikationen verbindlich festgelegt." : "This calculation is an illustrative architectural estimate based on typical effort models. Final commercial pricing is verified after formal discovery."}</li>
           </ul>
         </div>
 
         <!-- Action Buttons -->
         <div class="est-actions-bar">
           <button type="button" class="button button-primary" id="estBtnTransferProposal">
-            Transfer to AI Proposal Generator →
+            ${isDe ? "In KI-Angebotsersteller übertragen →" : "Transfer to AI Proposal Generator →"}
           </button>
           <button type="button" class="button button-secondary" id="estBtnCopySummary">
-            Copy Estimate Summary 📋
+            ${isDe ? "Zusammenfassung kopieren 📋" : "Copy Estimate Summary 📋"}
           </button>
           <button type="button" class="button button-secondary" id="estBtnPrintPDF">
-            Print / Save PDF 🖨️
+            ${isDe ? "Drucken / Als PDF speichern 🖨️" : "Print / Save PDF 🖨️"}
           </button>
         </div>
       </div>
@@ -496,6 +509,13 @@ Website: https://alimulfazalnabil.github.io/
     preselectService: preselectService,
     getCurrentResult: () => currentEstimateResult
   };
+
+  // Re-render scorecard when language changes
+  window.addEventListener("portfolio-language-changed", () => {
+    if (currentEstimateResult) {
+      renderEstimateResults(currentEstimateResult);
+    }
+  });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initBudgetEstimator);

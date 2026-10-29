@@ -64,10 +64,24 @@
     }
   });
 
+  // Category Translation Mapping
+  const CAT_I18N_MAP = {
+    "All Media": "mediaCatAll",
+    "Drone Photography & Aerial Mapping": "mediaCatDrone",
+    "Travel & Exploration": "mediaCatTravel",
+    "Robotics & Hardware": "mediaCatRobotics",
+    "AI & Computer Vision": "mediaCatVision",
+    "Engineering & Technical Demonstrations": "mediaCatDemos",
+    "Presentations & Publications": "mediaCatPubs"
+  };
+
   // 2. Render Category Filter Bar
   function renderFilterBar() {
     if (!filterBar) return;
     filterBar.innerHTML = "";
+
+    const lang = (document.documentElement.getAttribute("lang") || "en").toLowerCase().startsWith("de") ? "de" : "en";
+    const dict = (window.TRANSLATIONS && window.TRANSLATIONS[lang]) || {};
 
     availableCategories.forEach((cat) => {
       const btn = document.createElement("button");
@@ -75,7 +89,9 @@
       btn.className = `media-filter-btn ${cat === currentCategory ? "active" : ""}`;
       btn.setAttribute("role", "tab");
       btn.setAttribute("aria-selected", String(cat === currentCategory));
-      btn.textContent = cat;
+      btn.setAttribute("data-cat", cat);
+      const key = CAT_I18N_MAP[cat];
+      btn.textContent = (key && dict[key]) ? dict[key] : cat;
 
       btn.addEventListener("click", () => {
         setCategory(cat);
@@ -100,7 +116,7 @@
     // Update filter buttons
     const buttons = filterBar.querySelectorAll(".media-filter-btn");
     buttons.forEach((b) => {
-      const isActive = b.textContent.trim() === cat;
+      const isActive = b.getAttribute("data-cat") === cat;
       b.classList.toggle("active", isActive);
       b.setAttribute("aria-selected", String(isActive));
     });
@@ -478,4 +494,10 @@
   renderCurrentSlide();
   renderPaginationDots();
   renderThumbnails();
+
+  // Re-render when language changes
+  window.addEventListener("portfolio-language-changed", () => {
+    renderFilterBar();
+    renderCurrentSlide();
+  });
 })();

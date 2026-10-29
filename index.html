@@ -1264,21 +1264,49 @@
           <p class="eyebrow" data-i18n="servicesEyebrow">08 / PROFESSIONAL SERVICES CATALOG</p>
           <h2 data-i18n="servicesTitle">End-to-End Engineering &amp;<br><span class="gradient-text">Intelligent Solutions</span></h2>
           <p data-i18n="servicesDesc">
-            Comprehensive production engineering across 9 technical domains and 85+ specialized services. From bespoke web applications and enterprise management systems to custom Generative AI agents, RAG knowledge retrieval, and resilient cloud architectures.
+            Comprehensive production engineering across 9 technical domains and 95 specialized services. From bespoke web applications and enterprise management systems to custom Generative AI agents, RAG knowledge retrieval, and resilient cloud architectures.
           </p>
         </div>
 
-        <!-- Search Bar with Live Filter -->
-        <div class="services-search-bar">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="servicesSearchInput" class="services-search-input" data-i18n-placeholder="servicesSearchPlaceholder" placeholder="Search 85+ services by keyword, tech, deliverable (e.g. RAG, POS, Azure, FastAPI, Docker, Vision)..." autocomplete="off">
-          <span class="count-badge" id="servicesCountBadge">Loading services...</span>
+        <!-- Compact Control Bar: Category Selector + Search + Live Count -->
+        <div class="services-control-bar">
+          <div class="services-control-group services-control-select">
+            <label for="servicesCategorySelect" class="sr-only" data-i18n="servicesSelectLabel">Select Service Category</label>
+            <div class="services-select-container">
+              <svg class="services-control-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              <select id="servicesCategorySelect" class="services-category-select" aria-label="Select Service Category">
+                <option value="" data-i18n="servicesSelectPlaceholder">Select a Category (95 services)...</option>
+              </select>
+              <svg class="services-select-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="services-control-group services-control-search">
+            <div class="services-search-container">
+              <svg class="services-control-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="servicesSearchInput" class="services-search-input" data-i18n-placeholder="servicesSearchPlaceholder" placeholder="Search 95 services by keyword, tech, deliverable (e.g. RAG, POS, Azure, FastAPI, Docker, Vision)..." autocomplete="off">
+              <button type="button" id="servicesClearSearchBtn" class="services-clear-search-btn" aria-label="Clear Search" title="Clear search" style="display:none;">✕</button>
+            </div>
+          </div>
+
+          <div class="services-control-group services-control-badge">
+            <span class="count-badge" id="servicesCountBadge">95 Services across 9 Domains</span>
+          </div>
         </div>
 
-        <!-- Category Filter Tabs -->
-        <div class="services-category-tabs" id="servicesCategoryTabs" role="tablist" aria-label="Services Category Filters"></div>
+        <!-- Active Category Header / Filter Breadcrumb -->
+        <div id="servicesActiveHeader" class="services-active-header" style="display: none;"></div>
 
-        <!-- Services Cards Grid -->
+        <!-- Services Cards Grid (Displays prompt card by default, or filtered service cards) -->
         <div class="services-cards-grid" id="servicesCardsGrid"></div>
       </div>
     </section>

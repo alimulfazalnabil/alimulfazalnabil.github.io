@@ -1030,66 +1030,261 @@
   ];
 
   // Expose catalog to window
-  window.SERVICES_DATA = SERVICES_DATA;
+  if (typeof window !== "undefined") {
+    window.SERVICES_DATA = SERVICES_DATA;
+  }
 
   function initServicesSection() {
+    const categorySelect = document.getElementById("servicesCategorySelect");
     const categoryTabsContainer = document.getElementById("servicesCategoryTabs");
     const cardsGridContainer = document.getElementById("servicesCardsGrid");
     const searchInput = document.getElementById("servicesSearchInput");
+    const clearSearchBtn = document.getElementById("servicesClearSearchBtn");
     const countBadge = document.getElementById("servicesCountBadge");
+    const activeHeader = document.getElementById("servicesActiveHeader");
 
-    if (!categoryTabsContainer || !cardsGridContainer) return;
+    if (!cardsGridContainer) return;
 
-    let activeCategory = "all";
+    // activeCategory: "" means default compact view (unselected)
+    // "all" means explicitly show all 87 services
+    // or specific category ID ("web-dev", "ai-ml", etc.)
+    let activeCategory = "";
     let searchQuery = "";
 
-    function renderCategoryTabs() {
-      const allBtn = `
-        <button class="svc-tab-btn active" data-cat="all" role="tab" aria-selected="true">
-          <span>⚡ All Services</span>
-          <span class="svc-tab-count">${getTotalServiceCount()}</span>
-        </button>
-      `;
-
-      const categoryButtons = SERVICES_DATA.map((cat) => `
-        <button class="svc-tab-btn" data-cat="${cat.categoryId}" role="tab" aria-selected="false">
-          <span>${cat.categoryIcon} ${cat.categoryName}</span>
-          <span class="svc-tab-count">${cat.services.length}</span>
-        </button>
-      `).join("");
-
-      categoryTabsContainer.innerHTML = allBtn + categoryButtons;
-
-      categoryTabsContainer.addEventListener("click", (e) => {
-        const btn = e.target.closest(".svc-tab-btn");
-        if (!btn) return;
-        const cat = btn.getAttribute("data-cat");
-        if (!cat) return;
-
-        categoryTabsContainer.querySelectorAll(".svc-tab-btn").forEach((b) => {
-          b.classList.remove("active");
-          b.setAttribute("aria-selected", "false");
-        });
-        btn.classList.add("active");
-        btn.setAttribute("aria-selected", "true");
-
-        activeCategory = cat;
-        renderCards();
-      });
-    }
+    const catNamesDe = {
+      "web-dev": "Webentwicklung",
+      "business-software": "Unternehmenssoftware",
+      "business-mgmt": "Unternehmenssoftware",
+      "custom-software": "Individuelle Software",
+      "ai-ml": "KI & Machine Learning",
+      "automation": "Automatisierung & Workflows",
+      "cloud-devops": "Cloud, DevOps & Infrastruktur",
+      "data-engineering": "Data Engineering & Analytics",
+      "data-eng": "Data Engineering & Analytics",
+      "iot-robotics": "IoT, Robotik & Computer Vision",
+      "consulting": "Technische Beratung & Support",
+      "tech-consulting": "Technische Beratung & Support"
+    };
 
     function getTotalServiceCount() {
       return SERVICES_DATA.reduce((acc, cat) => acc + cat.services.length, 0);
     }
 
+    function populateCategorySelect() {
+      if (!categorySelect) return;
+      const isDe = (document.documentElement.getAttribute("lang") || "en").toLowerCase().startsWith("de");
+      const totalCount = getTotalServiceCount();
+
+      const placeholderText = isDe ? `Kategorie auswählen (${totalCount} Services)...` : `Select a Category (${totalCount} services)...`;
+      const allText = isDe ? `⚡ Alle Services (${totalCount})` : `⚡ All Services (${totalCount})`;
+
+      let optionsHtml = `
+        <option value="" ${activeCategory === "" ? "selected" : ""}>${placeholderText}</option>
+        <option value="all" ${activeCategory === "all" ? "selected" : ""}>${allText}</option>
+      `;
+
+      SERVICES_DATA.forEach((cat) => {
+        const name = (isDe && catNamesDe[cat.categoryId]) ? catNamesDe[cat.categoryId] : cat.categoryName;
+        const isSelected = activeCategory === cat.categoryId;
+        optionsHtml += `
+          <option value="${cat.categoryId}" ${isSelected ? "selected" : ""}>${cat.categoryIcon} ${name} (${cat.services.length})</option>
+        `;
+      });
+
+      categorySelect.innerHTML = optionsHtml;
+      categorySelect.value = activeCategory;
+    }
+
+    // Render fallback tabs if container exists
+    function renderCategoryTabs() {
+      if (!categoryTabsContainer) return;
+      const isDe = (document.documentElement.getAttribute("lang") || "en").toLowerCase().startsWith("de");
+      const allText = isDe ? "Alle Services" : "All Services";
+      const isAllActive = activeCategory === "all";
+
+      const allBtn = `
+        <button class="svc-tab-btn ${isAllActive ? 'active' : ''}" data-cat="all" role="tab" aria-selected="${isAllActive}">
+          <span>⚡ ${allText}</span>
+          <span class="svc-tab-count">${getTotalServiceCount()}</span>
+        </button>
+      `;
+
+      const categoryButtons = SERVICES_DATA.map((cat) => {
+        const name = (isDe && catNamesDe[cat.categoryId]) ? catNamesDe[cat.categoryId] : cat.categoryName;
+        const isActive = activeCategory === cat.categoryId;
+        return `
+          <button class="svc-tab-btn ${isActive ? 'active' : ''}" data-cat="${cat.categoryId}" role="tab" aria-selected="${isActive}">
+            <span>${cat.categoryIcon} ${name}</span>
+            <span class="svc-tab-count">${cat.services.length}</span>
+          </button>
+        `;
+      }).join("");
+
+      categoryTabsContainer.innerHTML = allBtn + categoryButtons;
+    }
+
+    function renderActiveHeader(filteredCount) {
+      if (!activeHeader) return;
+      const isDe = (document.documentElement.getAttribute("lang") || "en").toLowerCase().startsWith("de");
+
+      // Hide active header if in default compact view and no search active
+      if (activeCategory === "" && !searchQuery) {
+        activeHeader.style.display = "none";
+        activeHeader.innerHTML = "";
+        return;
+      }
+
+      activeHeader.style.display = "flex";
+
+      let titleHtml = "";
+      if (searchQuery) {
+        if (activeCategory && activeCategory !== "all") {
+          const activeCatObj = SERVICES_DATA.find((c) => c.categoryId === activeCategory);
+          const catName = activeCatObj ? ((isDe && catNamesDe[activeCatObj.categoryId]) ? catNamesDe[activeCatObj.categoryId] : activeCatObj.categoryName) : activeCategory;
+          const icon = activeCatObj ? activeCatObj.categoryIcon : "📁";
+          titleHtml = `
+            <span class="svc-active-name">${icon} ${escapeHTML(catName)}</span>
+            <span style="color:var(--text-muted);font-size:13px;">+ "${escapeHTML(searchQuery)}"</span>
+            <span class="svc-active-count-tag">${filteredCount} ${isDe ? "Treffer" : "matches"}</span>
+          `;
+        } else {
+          titleHtml = `
+            <span class="svc-active-name">🔍 "${escapeHTML(searchQuery)}"</span>
+            <span class="svc-active-count-tag">${filteredCount} ${isDe ? "Treffer" : "matches"}</span>
+          `;
+        }
+      } else if (activeCategory === "all") {
+        titleHtml = `
+          <span class="svc-active-name">⚡ ${isDe ? "Alle Services" : "All Services"}</span>
+          <span class="svc-active-count-tag">${filteredCount} ${isDe ? "verfügbar" : "available"}</span>
+        `;
+      } else {
+        const activeCatObj = SERVICES_DATA.find((c) => c.categoryId === activeCategory);
+        const catName = activeCatObj ? ((isDe && catNamesDe[activeCatObj.categoryId]) ? catNamesDe[activeCatObj.categoryId] : activeCatObj.categoryName) : activeCategory;
+        const icon = activeCatObj ? activeCatObj.categoryIcon : "📁";
+        titleHtml = `
+          <span class="svc-active-name">${icon} ${escapeHTML(catName)}</span>
+          <span class="svc-active-count-tag">${filteredCount} ${isDe ? "Services" : "services"}</span>
+        `;
+      }
+
+      activeHeader.innerHTML = `
+        <div class="svc-active-title-group">
+          ${titleHtml}
+        </div>
+        <button type="button" class="svc-active-reset-btn" id="servicesResetViewBtn">
+          ${isDe ? "✕ Zurück zur Übersicht" : "✕ Back to overview"}
+        </button>
+      `;
+
+      const resetViewBtn = document.getElementById("servicesResetViewBtn");
+      if (resetViewBtn) {
+        resetViewBtn.addEventListener("click", () => {
+          activeCategory = "";
+          searchQuery = "";
+          if (searchInput) searchInput.value = "";
+          if (clearSearchBtn) clearSearchBtn.style.display = "none";
+          populateCategorySelect();
+          renderCards();
+        });
+      }
+    }
+
     function renderCards() {
+      const isDe = (document.documentElement.getAttribute("lang") || "en").toLowerCase().startsWith("de");
+      const totalCount = getTotalServiceCount();
+
+      // 1. DEFAULT COMPACT VIEW: No category chosen and no search query
+      if (activeCategory === "" && !searchQuery) {
+        if (countBadge) {
+          countBadge.textContent = isDe ? `${totalCount} Services in 9 Fachbereichen` : `${totalCount} Services across 9 Domains`;
+        }
+        renderActiveHeader(0);
+
+        cardsGridContainer.innerHTML = `
+          <div class="svc-prompt-card">
+            <div class="svc-prompt-icon-wrap" aria-hidden="true">🧭</div>
+            <p class="svc-prompt-eyebrow">${isDe ? "DIENSTLEISTUNGSKATALOG ERKUNDEN" : "EXPLORE SERVICES CATALOG"}</p>
+            <h3 class="svc-prompt-title">${isDe ? "Wählen Sie eine Kategorie oder suchen Sie, um Services anzuzeigen" : "Select a Category or Search to Explore Services"}</h3>
+            <p class="svc-prompt-desc">
+              ${isDe
+                ? `Erkunden Sie ${totalCount} spezialisierte produktionsreife Dienstleistungen in 9 Fachbereichen. Wählen Sie oben eine Kategorie aus dem Dropdown, klicken Sie unten auf einen Bereich oder suchen Sie nach Technologien und Leistungen.`
+                : `Browse ${totalCount} specialized production-grade engineering services across 9 technical domains. Select a domain from the dropdown above, pick a category below, or search for any technology or deliverable.`}
+            </p>
+
+            <div class="svc-prompt-quick-wrap">
+              <p class="svc-prompt-quick-title">${isDe ? "Nach Fachbereich erkunden:" : "Explore by Domain:"}</p>
+              <div class="svc-prompt-chips-grid">
+                ${SERVICES_DATA.map((cat) => {
+                  const name = (isDe && catNamesDe[cat.categoryId]) ? catNamesDe[cat.categoryId] : cat.categoryName;
+                  return `
+                    <button type="button" class="svc-prompt-chip" data-cat="${cat.categoryId}">
+                      <span>${cat.categoryIcon} ${escapeHTML(name)}</span>
+                      <span class="svc-prompt-chip-count">${cat.services.length}</span>
+                    </button>
+                  `;
+                }).join("")}
+              </div>
+
+              <div class="svc-prompt-search-tags">
+                <span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--text-subtle);text-transform:uppercase;margin-right:4px;">
+                  ${isDe ? "Beliebte Suchen:" : "Popular searches:"}
+                </span>
+                ${["RAG", "Azure", "POS", "FastAPI", "Docker", "Computer Vision", "ERP", "IoT"].map((tag) => `
+                  <button type="button" class="svc-prompt-tag-btn" data-search="${tag}">${tag}</button>
+                `).join("")}
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Wire click handlers for prompt chips
+        cardsGridContainer.querySelectorAll(".svc-prompt-chip").forEach((chip) => {
+          chip.addEventListener("click", () => {
+            const cat = chip.getAttribute("data-cat");
+            if (cat) {
+              activeCategory = cat;
+              populateCategorySelect();
+              renderCards();
+            }
+          });
+        });
+
+        // Wire click handlers for search tag suggestions
+        cardsGridContainer.querySelectorAll(".svc-prompt-tag-btn").forEach((tagBtn) => {
+          tagBtn.addEventListener("click", () => {
+            const q = tagBtn.getAttribute("data-search");
+            if (q) {
+              searchQuery = q;
+              if (searchInput) searchInput.value = q;
+              if (clearSearchBtn) clearSearchBtn.style.display = "flex";
+              renderCards();
+            }
+          });
+        });
+
+        return;
+      }
+
+      // 2. FILTERED VIEW: Either a category is active, or a search query is typed
       let filtered = [];
 
       SERVICES_DATA.forEach((cat) => {
-        if (activeCategory === "all" || activeCategory === cat.categoryId) {
+        // If searching and category is not explicitly constrained to a single category (i.e. activeCategory is "" or "all"), search everywhere.
+        // If activeCategory is set to a specific category, filter within that category.
+        const shouldIncludeCategory =
+          activeCategory === "all" ||
+          (activeCategory === "" && searchQuery !== "") ||
+          activeCategory === cat.categoryId;
+
+        if (shouldIncludeCategory) {
           cat.services.forEach((svc) => {
             if (!searchQuery) {
-              filtered.push({ ...svc, categoryName: cat.categoryName, categoryIcon: cat.categoryIcon });
+              filtered.push({
+                ...svc,
+                categoryName: (isDe && catNamesDe[cat.categoryId]) ? catNamesDe[cat.categoryId] : cat.categoryName,
+                categoryIcon: cat.categoryIcon
+              });
             } else {
               const q = searchQuery.toLowerCase();
               const match =
@@ -1098,42 +1293,69 @@
                 svc.deliverables.some((d) => d.toLowerCase().includes(q)) ||
                 svc.useCases.some((u) => u.toLowerCase().includes(q)) ||
                 svc.tech.some((t) => t.toLowerCase().includes(q)) ||
-                cat.categoryName.toLowerCase().includes(q);
+                cat.categoryName.toLowerCase().includes(q) ||
+                (catNamesDe[cat.categoryId] && catNamesDe[cat.categoryId].toLowerCase().includes(q));
 
               if (match) {
-                filtered.push({ ...svc, categoryName: cat.categoryName, categoryIcon: cat.categoryIcon });
+                filtered.push({
+                  ...svc,
+                  categoryName: (isDe && catNamesDe[cat.categoryId]) ? catNamesDe[cat.categoryId] : cat.categoryName,
+                  categoryIcon: cat.categoryIcon
+                });
               }
             }
           });
         }
       });
 
+      // Update badge count
       if (countBadge) {
-        countBadge.textContent = `${filtered.length} Services Available`;
+        if (searchQuery) {
+          countBadge.textContent = isDe
+            ? `${filtered.length} Services gefunden für "${searchQuery}"`
+            : `${filtered.length} Services Matching "${searchQuery}"`;
+        } else if (activeCategory === "all") {
+          countBadge.textContent = isDe
+            ? `${filtered.length} Services verfügbar`
+            : `${filtered.length} Services Available`;
+        } else {
+          const activeCatObj = SERVICES_DATA.find((c) => c.categoryId === activeCategory);
+          const catName = activeCatObj
+            ? ((isDe && catNamesDe[activeCatObj.categoryId]) ? catNamesDe[activeCatObj.categoryId] : activeCatObj.categoryName)
+            : "";
+          countBadge.textContent = isDe
+            ? `${filtered.length} Services in ${catName}`
+            : `${filtered.length} Services in ${catName}`;
+        }
       }
 
+      renderActiveHeader(filtered.length);
+
+      // Handle Empty State
       if (filtered.length === 0) {
         cardsGridContainer.innerHTML = `
-          <div class="svc-empty-state">
+          <div class="svc-empty-state" style="grid-column: 1 / -1;">
             <span class="empty-icon">🔍</span>
-            <h4>No matching services found</h4>
-            <p>Try searching for terms like "RAG", "Azure", "POS", "API", or "Docker", or reset your category filter.</p>
-            <button type="button" class="button button-secondary" id="resetServicesFilterBtn">Reset Filter & Search</button>
+            <h4>${isDe ? "Keine passenden Services gefunden" : "No matching services found"}</h4>
+            <p>${isDe ? 'Versuchen Sie es mit Begriffen wie "RAG", "Azure", "POS", "API" oder "Docker", oder setzen Sie den Filter zurück.' : 'Try searching for terms like "RAG", "Azure", "POS", "API", or "Docker", or reset your category filter.'}</p>
+            <button type="button" class="button button-secondary" id="resetServicesFilterBtn">${isDe ? "Filter & Suche zurücksetzen" : "Reset Filter & Search"}</button>
           </div>
         `;
         const resetBtn = document.getElementById("resetServicesFilterBtn");
         if (resetBtn) {
           resetBtn.addEventListener("click", () => {
-            activeCategory = "all";
+            activeCategory = "";
             searchQuery = "";
             if (searchInput) searchInput.value = "";
-            const allBtn = categoryTabsContainer.querySelector('[data-cat="all"]');
-            if (allBtn) allBtn.click();
+            if (clearSearchBtn) clearSearchBtn.style.display = "none";
+            populateCategorySelect();
+            renderCards();
           });
         }
         return;
       }
 
+      // Render Cards
       cardsGridContainer.innerHTML = filtered.map((svc) => {
         const typeBadgeClass =
           svc.type === "Implementation" ? "badge-impl" :
@@ -1151,21 +1373,21 @@
             <p class="svc-card-desc">${escapeHTML(svc.description)}</p>
 
             <div class="svc-deliverables-block">
-              <span class="svc-sub-label">KEY DELIVERABLES</span>
+              <span class="svc-sub-label">${isDe ? "WICHTIGSTE LEISTUNGEN" : "KEY DELIVERABLES"}</span>
               <ul class="svc-deliverables-list">
                 ${svc.deliverables.map((d) => `<li><span class="svc-check">✓</span> <span>${escapeHTML(d)}</span></li>`).join("")}
               </ul>
             </div>
 
             <div class="svc-meta-block">
-              <span class="svc-sub-label">TYPICAL USE CASES</span>
+              <span class="svc-sub-label">${isDe ? "TYPISCHE ANWENDUNGSFÄLLE" : "TYPICAL USE CASES"}</span>
               <div class="svc-chips">
                 ${svc.useCases.map((u) => `<span class="svc-chip">${escapeHTML(u)}</span>`).join("")}
               </div>
             </div>
 
             <div class="svc-meta-block" style="margin-bottom:20px;">
-              <span class="svc-sub-label">TECH STACK</span>
+              <span class="svc-sub-label">${isDe ? "TECH-STACK" : "TECH STACK"}</span>
               <div class="svc-chips">
                 ${svc.tech.map((t) => `<span class="svc-tech-tag">${escapeHTML(t)}</span>`).join("")}
               </div>
@@ -1173,10 +1395,10 @@
 
             <div class="svc-card-actions">
               <button type="button" class="svc-action-btn svc-btn-estimate" data-service-title="${escapeHTML(svc.title)}" data-service-type="${escapeHTML(svc.estimatorType)}">
-                Estimate Budget ↗
+                ${isDe ? "Budget kalkulieren ↗" : "Estimate Budget ↗"}
               </button>
               <button type="button" class="svc-action-btn svc-btn-proposal" data-service-title="${escapeHTML(svc.title)}" data-service-type="${escapeHTML(svc.estimatorType)}">
-                Request Proposal →
+                ${isDe ? "Angebot anfordern →" : "Request Proposal →"}
               </button>
             </div>
           </article>
@@ -1219,15 +1441,54 @@
       });
     }
 
-    if (searchInput) {
-      searchInput.addEventListener("input", (e) => {
-        searchQuery = (e.target.value || "").trim();
+    if (categorySelect) {
+      categorySelect.addEventListener("change", (e) => {
+        activeCategory = e.target.value;
         renderCards();
       });
     }
 
+    if (categoryTabsContainer) {
+      categoryTabsContainer.addEventListener("click", (e) => {
+        const btn = e.target.closest(".svc-tab-btn");
+        if (!btn) return;
+        const cat = btn.getAttribute("data-cat");
+        if (!cat) return;
+        activeCategory = cat;
+        populateCategorySelect();
+        renderCards();
+      });
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        searchQuery = (e.target.value || "").trim();
+        if (clearSearchBtn) {
+          clearSearchBtn.style.display = searchQuery.length > 0 ? "flex" : "none";
+        }
+        renderCards();
+      });
+    }
+
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener("click", () => {
+        searchQuery = "";
+        if (searchInput) searchInput.value = "";
+        clearSearchBtn.style.display = "none";
+        renderCards();
+      });
+    }
+
+    populateCategorySelect();
     renderCategoryTabs();
     renderCards();
+
+    // Re-render when language changes
+    window.addEventListener("portfolio-language-changed", () => {
+      populateCategorySelect();
+      renderCategoryTabs();
+      renderCards();
+    });
   }
 
   function escapeHTML(str) {
@@ -1240,11 +1501,19 @@
       .replace(/'/g, "&#039;");
   }
 
-  window.escapeHTML = escapeHTML;
+  if (typeof window !== "undefined") {
+    window.escapeHTML = escapeHTML;
+  }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initServicesSection);
-  } else {
-    initServicesSection();
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = { SERVICES_DATA };
+  }
+
+  if (typeof document !== "undefined") {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initServicesSection);
+    } else {
+      initServicesSection();
+    }
   }
 })();

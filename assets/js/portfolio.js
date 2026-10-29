@@ -72,7 +72,15 @@
     });
 
     // Update Counter
-    if (visibleCountElem) {
+    const countContainer = document.querySelector(".results-count");
+    const isDe = (document.documentElement.getAttribute("lang") || "en").toLowerCase().startsWith("de");
+    if (countContainer) {
+      if (isDe) {
+        countContainer.innerHTML = `Zeige <strong id="visibleCount">${visibleCount}</strong> von ${totalCount} verifizierten Projekten`;
+      } else {
+        countContainer.innerHTML = `Showing <strong id="visibleCount">${visibleCount}</strong> of ${totalCount} verified projects`;
+      }
+    } else if (visibleCountElem) {
       visibleCountElem.textContent = String(visibleCount);
     }
 
@@ -336,4 +344,9 @@
   // Init
   readUrlParams();
   applyFilters();
+
+  // Re-apply filters / update counter when language changes
+  window.addEventListener("portfolio-language-changed", () => {
+    applyFilters();
+  });
 })();

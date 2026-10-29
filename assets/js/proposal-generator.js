@@ -313,23 +313,25 @@
 
     const sym = p.costEstimate.symbol;
 
+    const isDe = (document.documentElement.getAttribute("lang") || "en").toLowerCase().startsWith("de");
+
     container.innerHTML = `
       <div class="prop-doc-actions-top">
         <div class="prop-doc-meta">
           <span class="prop-number">${escapeHTML(p.proposalNumber)}</span>
           <span class="prop-mode-pill ${p.operatingMode === 'ai-enhanced' ? 'mode-ai' : 'mode-det'}">
-            ${p.operatingMode === 'ai-enhanced' ? '✨ Mode B: AI-Enhanced Draft' : '⚡ Mode A: Deterministic Draft'}
+            ${p.operatingMode === 'ai-enhanced' ? (isDe ? '✨ Modus B: KI-Entwurf' : '✨ Mode B: AI-Enhanced Draft') : (isDe ? '⚡ Modus A: Deterministischer Entwurf' : '⚡ Mode A: Deterministic Draft')}
           </span>
         </div>
         <div class="prop-doc-btns">
-          <button type="button" class="button button-secondary" id="propBtnCopyMarkdown">Copy Markdown 📋</button>
-          <button type="button" class="button button-secondary" id="propBtnDownloadMD">Download .MD 📥</button>
-          <button type="button" class="button button-primary" id="propBtnPrint">Print / Save PDF 🖨️</button>
+          <button type="button" class="button button-secondary" id="propBtnCopyMarkdown">${isDe ? 'Markdown kopieren 📋' : 'Copy Markdown 📋'}</button>
+          <button type="button" class="button button-secondary" id="propBtnDownloadMD">${isDe ? '.MD herunterladen 📥' : 'Download .MD 📥'}</button>
+          <button type="button" class="button button-primary" id="propBtnPrint">${isDe ? 'Drucken / PDF speichern 🖨️' : 'Print / Save PDF 🖨️'}</button>
         </div>
       </div>
 
       <!-- Formal Proposal Document (Editable in place) -->
-      <article class="prop-document" id="proposalFormalDoc" contenteditable="true" spellcheck="false" title="Click anywhere to edit text before exporting">
+      <article class="prop-document" id="proposalFormalDoc" contenteditable="true" spellcheck="false" title="${isDe ? 'Klicken Sie an eine beliebige Stelle, um den Text vor dem Export zu bearbeiten' : 'Click anywhere to edit text before exporting'}">
         
         <!-- Header & Letterhead -->
         <header class="prop-header">
@@ -775,6 +777,13 @@ ${p.costEstimate.paymentMilestones.map(pm => `- ${pm.milestone} (${pm.percentage
     prefillService: prefillService,
     getCurrentProposal: () => currentProposalData
   };
+
+  // Re-render proposal preview when language changes
+  window.addEventListener("portfolio-language-changed", () => {
+    if (currentProposalData) {
+      renderProposalPreview(currentProposalData);
+    }
+  });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initProposalGenerator);

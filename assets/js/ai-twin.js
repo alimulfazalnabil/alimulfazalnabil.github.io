@@ -104,15 +104,15 @@
 
     // 1. Comparison Intent
     if (
-      /\b(compare|comparison|difference\s+between|versus|\bvs\b|how\s+does.*compare)\b/i.test(q)
+      /\b(compare|comparison|difference\s+between|versus|\bvs\b|how\s+does.*compare|vergleich|vergleiche|unterschied|vergleichen)\b/i.test(q)
     ) {
       return "project_compare";
     }
 
     // 2. Job-Fit / Resume Suitability Intent
     if (
-      /\b(job\s+description|fit\s+for|role\s+fit|analyze\s+(my|your)?\s*fit|hiring\s+for|candidate\s+for|match\s+for|requirements:|qualifications|suitability|job\s+fit)\b/i.test(q) ||
-      (q.length > 120 && /\b(responsibilities|requirements|skills|experience\s+with|must\s+have)\b/i.test(q))
+      /\b(job\s+description|fit\s+for|role\s+fit|analyze\s+(my|your)?\s*fit|hiring\s+for|candidate\s+for|match\s+for|requirements:|qualifications|suitability|job\s+fit|stellenbeschreibung|eignung|kandidat|anforderungen|profil|qualifikation)\b/i.test(q) ||
+      (q.length > 120 && /\b(responsibilities|requirements|skills|experience\s+with|must\s+have|aufgaben|anforderungen|kenntnisse|erfahrung\s+mit)\b/i.test(q))
     ) {
       return "job_fit";
     }
@@ -127,49 +127,49 @@
 
     // 4. Architecture / System Design Deep-Dive
     if (
-      /\b(architecture|system\s+design|how\s+does.*work|how\s+is.*implemented|pipeline\s+design|technical\s+breakdown|hallucination\s+controls?)\b/i.test(q)
+      /\b(architecture|system\s+design|how\s+does.*work|how\s+is.*implemented|pipeline\s+design|technical\s+breakdown|hallucination\s+controls?|architektur|systemdesign|funktionsweise|wie\s+funktioniert|aufbau)\b/i.test(q)
     ) {
       return "architecture_summary";
     }
 
     // 5. Tech Search ("Which projects use X", "Projects with FastAPI", etc.)
     if (
-      /\b(which\s+projects?|show\s+me\s+projects?|projects?\s+using|projects?\s+with|built\s+with|technologies?\s+used)\b/i.test(q)
+      /\b(which\s+projects?|show\s+me\s+projects?|projects?\s+using|projects?\s+with|built\s+with|technologies?\s+used|welche\s+projekte|zeige\s+projekte|projekte\s+mit|gebaut\s+mit|technologien)\b/i.test(q)
     ) {
       return "tech_search";
     }
 
     // 6. Career, Education & Organizations
     if (
-      /\b(career|experience|background|history|redi\s*school|energy\s*crown|pgcb|cbiu|cox['’]?s\s*bazar|education|degree|university|publications?|papers?|irjmets|irjet)\b/i.test(q)
+      /\b(career|experience|background|history|redi\s*school|energy\s*crown|pgcb|cbiu|cox['’]?s\s*bazar|education|degree|university|publications?|papers?|irjmets|irjet|karriere|erfahrung|werdegang|berufserfahrung|ausbildung|studium|publikationen)\b/i.test(q)
     ) {
       return "career_experience";
     }
 
     // 7. Services & Commercial Offerings
     if (
-      /\b(services?|what\s+(can\s+you|do\s+you)\s+offer|software\s+development|consulting|contract|freelance|pricing|budget|build\s+for\s+me)\b/i.test(q)
+      /\b(services?|what\s+(can\s+you|do\s+you)\s+offer|software\s+development|consulting|contract|freelance|pricing|budget|build\s+for\s+me|dienstleistungen|leistungen|angebot|angebote|softwareentwicklung|beratung|preise)\b/i.test(q)
     ) {
       return "services_offered";
     }
 
     // 8. Why Hire / Value Proposition
     if (
-      /\b(why\s+hire|why\s+alimul|strengths?|value\s+proposition|what\s+makes\s+you\s+strong|why\s+should\s+we)\b/i.test(q)
+      /\b(why\s+hire|why.*alimul|warum.*alimul|warum\s+sollte|strengths?|value\s+proposition|what\s+makes\s+you\s+strong|why\s+should\s+we|warum\s+alimul|warum\s+einstellen|stärken|mehrwert|warum\s+sollten\s+wir)\b/i.test(q)
     ) {
       return "why_hire";
     }
 
     // 9. Contact & Availability
     if (
-      /\b(contact|email|available|availability|hire|relocat\w*|full[- ]time|remote|salary|interview|reach\s+out|inquiry|hire\s+you)\b/i.test(q)
+      /\b(contact|email|available|availability|hire|relocat\w*|full[- ]time|remote|salary|interview|reach\s+out|inquiry|hire\s+you|kontakt|kontaktieren|verfügbar|verfügbarkeit|anschreiben|nachricht|vollzeit)\b/i.test(q)
     ) {
       return "contact_availability";
     }
 
     // 10. High-level Domain Overview (GenAI, Vision, Cloud, Robotics, Hardware, Data)
     if (
-      /\b(genai|rag|computer\s*vision|autonomous|robotics?|embedded|cloud|devops|azure|terraform|hardware|workstations?|data\s*engineering)\b/i.test(q)
+      /\b(genai|rag|computer\s*vision|autonomous|robotics?|embedded|cloud|devops|azure|terraform|hardware|workstations?|data\s*engineering|bildverarbeitung|autonomie|robotik|eingebettete\s+systeme|datenverarbeitung|daten\s*engineering)\b/i.test(q)
     ) {
       return "category_overview";
     }
@@ -1028,6 +1028,54 @@
       }
     });
 
+    // Starter chips localized data
+    const STARTER_CHIPS_DATA = {
+      en: [
+        { label: "⚡ GenAI & Enterprise RAG", query: "What have you built with Generative AI & Enterprise RAG?" },
+        { label: "☁️ Azure Cloud & Terraform", query: "What is your experience with Azure Cloud & Terraform?" },
+        { label: "👁️ Computer Vision & CARLA", query: "Tell me about your Computer Vision & CARLA simulation work" },
+        { label: "🤖 Robotics & Embedded Systems", query: "What have you built in Robotics & Embedded Systems?" },
+        { label: "📊 Cloud & Data Engineering", query: "What is your experience in Cloud & Data Engineering?" },
+        { label: "⚖️ Compare My Technical Projects", query: "Compare the Enterprise RAG platform and the Heart Disease ML project" },
+        { label: "🎯 Analyze My Fit for an AI Engineer Role", query: "Analyze your fit for an AI Solutions Engineer role" },
+        { label: "💼 Services & Software Development", query: "What professional services and software development solutions do you offer?" },
+        { label: "💡 Why Alimul for an AI Solutions Engineering Project?", query: "Why choose Alimul for an AI Solutions Engineering project?" },
+        { label: "📬 Contact & Project Inquiry", query: "How can I contact Alimul or submit a project inquiry?" }
+      ],
+      de: [
+        { label: "⚡ GenAI & Enterprise RAG", query: "Was hast du mit Generative AI & Enterprise RAG gebaut?" },
+        { label: "☁️ Azure Cloud & Terraform", query: "Was ist deine Erfahrung mit Azure Cloud & Terraform?" },
+        { label: "👁️ Computer Vision & CARLA", query: "Erzähle mir von deinen Arbeiten zu Computer Vision & CARLA-Simulation" },
+        { label: "🤖 Robotik & Eingebettete Systeme", query: "Was hast du im Bereich Robotik & Eingebettete Systeme entwickelt?" },
+        { label: "📊 Cloud & Data Engineering", query: "Was ist deine Erfahrung im Bereich Cloud & Data Engineering?" },
+        { label: "⚖️ Technische Projekte vergleichen", query: "Vergleiche die Enterprise RAG-Plattform und das Herzrisiko-ML-Projekt" },
+        { label: "🎯 Eignung für AI Engineer-Rolle analysieren", query: "Analysiere deine Eignung für eine Rolle als AI Solutions Engineer" },
+        { label: "💼 Dienstleistungen & Softwareentwicklung", query: "Welche professionellen Dienstleistungen und Softwarelösungen bietest du an?" },
+        { label: "💡 Warum Alimul für ein AI Solutions-Projekt?", query: "Warum sollte man Alimul für ein AI Solutions Engineering-Projekt wählen?" },
+        { label: "📬 Kontakt & Projektanfrage", query: "Wie kann ich Alimul kontaktieren oder eine Projektanfrage stellen?" }
+      ]
+    };
+
+    function updateStarterChips(lang) {
+      const list = STARTER_CHIPS_DATA[lang] || STARTER_CHIPS_DATA.en;
+      starterChips.forEach((chip, i) => {
+        if (list[i]) {
+          chip.textContent = list[i].label;
+          chip.setAttribute("data-query", list[i].query);
+        }
+      });
+    }
+
+    // Set initial starter chips based on active lang
+    const initialLang = (document.documentElement.getAttribute("lang") || "en").toLowerCase().startsWith("de") ? "de" : "en";
+    updateStarterChips(initialLang);
+
+    // Listen for language changes
+    window.addEventListener("portfolio-language-changed", (e) => {
+      const lang = (e.detail && e.detail.lang) || "en";
+      updateStarterChips(lang);
+    });
+
     // Handle suggestion starter chips
     starterChips.forEach((chip) => {
       chip.addEventListener("click", () => {
@@ -1040,12 +1088,13 @@
     // Clear chat button
     if (clearBtn) {
       clearBtn.addEventListener("click", () => {
+        const isDe = (document.documentElement.getAttribute("lang") || "en").toLowerCase().startsWith("de");
         chatBody.innerHTML = `
           <div class="ai-msg ai-msg-bot">
             <div class="ai-avatar">⚡</div>
             <div class="ai-bubble">
-              <p>Conversation cleared. I am Alimul's <strong>AI Twin</strong>, running locally in your browser. Grounded strictly in his 27 verified projects, engineering background, and tech stack.</p>
-              <p style="font-size:13px; color:var(--text-subtle); margin-top:6px;">Ask a technical question or click any suggestion chip to begin!</p>
+              <p>${isDe ? "Konversation zurückgesetzt. Ich bin Alimuls <strong>KI-Twin</strong>, der lokal in Ihrem Browser läuft. Streng fundiert auf seinen 27 verifizierten Projekten, technischem Hintergrund und Tech-Stack." : "Conversation cleared. I am Alimul's <strong>AI Twin</strong>, running locally in your browser. Grounded strictly in his 27 verified projects, engineering background, and tech stack."}</p>
+              <p style="font-size:13px; color:var(--text-subtle); margin-top:6px;">${isDe ? "Stellen Sie eine technische Frage oder klicken Sie auf einen der Vorschläge, um zu beginnen!" : "Ask a technical question or click any suggestion chip to begin!"}</p>
             </div>
           </div>
         `;
@@ -1163,13 +1212,14 @@
     bubble.appendChild(contentDiv);
 
     // Response Action Bar (Copy Button + Retrieval Metadata)
+    const isDe = (document.documentElement.getAttribute("lang") || "en").toLowerCase().startsWith("de");
     const footerBar = document.createElement("div");
     footerBar.className = "ai-response-footer";
     footerBar.innerHTML = `
-      <span class="ai-retrieval-stat">⚡ Local deterministic retrieval · ${computeTime}ms</span>
-      <button type="button" class="ai-copy-btn" title="Copy response to clipboard">
+      <span class="ai-retrieval-stat">⚡ ${isDe ? "Lokale deterministische Abfrage" : "Local deterministic retrieval"} · ${computeTime}ms</span>
+      <button type="button" class="ai-copy-btn" title="${isDe ? "Antwort in die Zwischenablage kopieren" : "Copy response to clipboard"}">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-        Copy Response
+        ${isDe ? "Antwort kopieren" : "Copy Response"}
       </button>
     `;
     bubble.appendChild(footerBar);
@@ -1179,7 +1229,7 @@
       const followUpContainer = document.createElement("div");
       followUpContainer.className = "ai-followup-chips";
       followUpContainer.innerHTML = `
-        <span class="ai-followup-label">Suggested follow-ups:</span>
+        <span class="ai-followup-label">${isDe ? "Empfohlene Anschlussfragen:" : "Suggested follow-ups:"}</span>
         <div class="ai-followup-list">
           ${result.followUps.map((q) => `<button type="button" class="ai-followup-chip" data-query="${escapeHTML(q)}">${escapeHTML(q)} →</button>`).join("")}
         </div>
