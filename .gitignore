@@ -1,6 +1,6 @@
-# Archives
-*.zip
-
-# OS files
+# Editor and operating-system files
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+*.log
