@@ -6,9 +6,15 @@
   <meta name="theme-color" content="#070913">
   <meta name="description" content="Alimul Fazal Nabil — AI Solutions Engineer focused on Generative AI, RAG, AI agents, applied machine learning, MLOps, and cloud infrastructure.">
   <meta property="og:title" content="Alimul Fazal Nabil — AI Solutions Engineer">
-  <meta property="og:description" content="Building scalable, production-ready intelligent AI solutions and cloud-native systems.">
+  <meta property="og:description" content="Building scalable, production-ready intelligent AI solutions, RAG architectures, and cloud-native systems.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="profile.jpg">
+  <meta property="og:url" content="https://alimulfazalnabil.github.io/">
+  <meta property="og:image" content="https://alimulfazalnabil.github.io/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alimul Fazal Nabil — AI Solutions Engineer">
+  <meta name="twitter:description" content="AI Solutions Engineer specializing in Generative AI, RAG, AI agents, machine learning, and cloud infrastructure.">
+  <meta name="twitter:image" content="https://alimulfazalnabil.github.io/profile.jpg">
+  <link rel="canonical" href="https://alimulfazalnabil.github.io/">
   <title>Alimul Fazal Nabil — AI Solutions Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +36,8 @@
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#featured">Featured</a>
-      <a href="#projects">Projects</a>
+      <a href="#projects">Selected Projects</a>
+      <a href="portfolio.html" style="color:var(--cyan);font-weight:600;">Full Portfolio (27)</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education &amp; Credentials</a>
       <a href="#skills">Skills</a>
@@ -49,7 +56,8 @@
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
       <a href="#about">About</a>
       <a href="#featured">Featured</a>
-      <a href="#projects">Projects</a>
+      <a href="#projects">Selected Projects</a>
+      <a href="portfolio.html" style="color:var(--cyan);font-weight:600;">Full Portfolio (27 Projects)</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education &amp; Credentials</a>
       <a href="#skills">Skills</a>
@@ -212,12 +220,17 @@
     <!-- 03: Featured AI & Software Projects -->
     <section class="section" id="featured">
       <div class="wrap">
-        <div class="section-header">
-          <p class="eyebrow">03 / FLAGSHIP INITIATIVES</p>
-          <h2 class="section-title">Architectures Built For<br><span class="gradient-text">Real Enterprise Scenarios.</span></h2>
-          <p class="section-desc">
-            Deep dive into flagship production reference platforms and live engineering initiatives.
-          </p>
+        <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+          <div>
+            <p class="eyebrow">03 / FLAGSHIP INITIATIVES</p>
+            <h2 class="section-title">Architectures Built For<br><span class="gradient-text">Real Enterprise Scenarios.</span></h2>
+            <p class="section-desc">
+              Deep dive into flagship production reference platforms and live engineering initiatives.
+            </p>
+          </div>
+          <a class="button button-secondary" href="portfolio.html" style="margin-bottom:8px;">
+            Explore All 27 Projects <span aria-hidden="true">→</span>
+          </a>
         </div>
         <div class="featured-grid">
           <!-- Flagship 01: RAG Platform -->
@@ -253,8 +266,11 @@
                 <span class="tag">Terraform</span>
               </div>
               <div class="card-actions">
+                <a class="button button-primary" href="case-studies/enterprise-rag-platform.html" style="padding:8px 16px; font-size:13px;">
+                  Read Deep Case Study <span aria-hidden="true">→</span>
+                </a>
                 <a class="repo-btn" href="https://github.com/alimulfazalnabil/LLM-enterprise-rag-knowledge-platform" target="_blank" rel="noopener noreferrer">
-                  Inspect Repository on GitHub <span aria-hidden="true">↗</span>
+                  View Code <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </div>
@@ -310,12 +326,14 @@
         </div>
 
         <!-- Filter Bar -->
-        <div class="filter-bar" role="group" aria-label="Filter projects by domain">
-          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
-          <button class="filter-btn" data-filter="genai" aria-pressed="false">Generative AI &amp; RAG</button>
-          <button class="filter-btn" data-filter="ml" aria-pressed="false">Applied ML &amp; Analytics</button>
-          <button class="filter-btn" data-filter="vision" aria-pressed="false">Computer Vision &amp; Robotics</button>
+        <div class="filter-bar" role="group" aria-label="Filter selected projects by domain">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Selected (3)</button>
+          <button class="filter-btn" data-filter="vision" aria-pressed="false">Computer Vision</button>
+          <button class="filter-btn" data-filter="ml" aria-pressed="false">Applied ML</button>
           <button class="filter-btn" data-filter="cloud" aria-pressed="false">Cloud &amp; DevOps</button>
+          <a class="filter-btn" href="portfolio.html" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px; color:var(--cyan); border-color:rgba(56,189,248,0.3);">
+            Full Archive (27) <span aria-hidden="true">→</span>
+          </a>
         </div>
 
         <div class="gallery-grid" id="projectGrid">
@@ -336,6 +354,9 @@
               <span class="tag">CARLA Simulator</span>
             </div>
             <div class="card-actions">
+              <a class="button button-primary" href="case-studies/autonomous-lane-detection.html" style="padding:6px 14px; font-size:12px;">
+                Case Study <span aria-hidden="true">→</span>
+              </a>
               <a class="repo-btn" href="https://github.com/alimulfazalnabil/Autonomous-Lane-Detection" target="_blank" rel="noopener noreferrer">
                 View Repository <span aria-hidden="true">↗</span>
               </a>
@@ -359,6 +380,9 @@
               <span class="tag">CI/CD</span>
             </div>
             <div class="card-actions">
+              <a class="button button-primary" href="case-studies/heart-disease-prediction.html" style="padding:6px 14px; font-size:12px;">
+                Case Study <span aria-hidden="true">→</span>
+              </a>
               <a class="repo-btn" href="https://github.com/alimulfazalnabil/heart-disease-prediction" target="_blank" rel="noopener noreferrer">
                 View Repository <span aria-hidden="true">↗</span>
               </a>
@@ -382,101 +406,31 @@
               <span class="tag">OIDC Security</span>
             </div>
             <div class="card-actions">
+              <a class="button button-primary" href="case-studies/azure-terraform-cicd.html" style="padding:6px 14px; font-size:12px;">
+                Case Study <span aria-hidden="true">→</span>
+              </a>
               <a class="repo-btn" href="https://github.com/alimulfazalnabil/azure-terraform-cicd-foundation" target="_blank" rel="noopener noreferrer">
                 View Repository <span aria-hidden="true">↗</span>
               </a>
             </div>
           </article>
+        </div>
 
-          <!-- Card 4: Enterprise RAG Knowledge Platform -->
-          <article class="gallery-card" data-category="genai">
-            <div class="project-topline">
-              <span class="project-cat">GENERATIVE AI</span>
-              <span class="project-badge">RAG SYSTEM</span>
-            </div>
-            <h4>LLM Enterprise RAG Knowledge Platform</h4>
-            <p>
-              High-throughput knowledge retrieval platform incorporating dense embeddings in PostgreSQL/pgvector, sparse BM25 indexing, Reciprocal Rank Fusion, cross-encoder reranking, and tenant-scoped RBAC authorization.
-            </p>
-            <div class="hero-tags" style="margin-top:0; padding-top:0; border-top:none;">
-              <span class="tag">Python 3.12+</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">pgvector</span>
-              <span class="tag">RRF</span>
-            </div>
-            <div class="card-actions">
-              <a class="repo-btn" href="https://github.com/alimulfazalnabil/LLM-enterprise-rag-knowledge-platform" target="_blank" rel="noopener noreferrer">
-                View Repository <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card 5: Computer Vision Projects Collection -->
-          <article class="gallery-card" data-category="vision">
-            <div class="project-topline">
-              <span class="project-cat">COMPUTER VISION</span>
-              <span class="project-badge">COLLECTION</span>
-            </div>
-            <h4>Computer Vision Projects Hub</h4>
-            <p>
-              A curated suite of computer vision projects covering image classification, YOLO object detection and tracking, segmentation, image-to-image translation, and real-time camera feed inference.
-            </p>
-            <div class="hero-tags" style="margin-top:0; padding-top:0; border-top:none;">
-              <span class="tag">OpenCV</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">YOLOv8</span>
-              <span class="tag">Video Analytics</span>
-            </div>
-            <div class="card-actions">
-              <a class="repo-btn" href="https://github.com/alimulfazalnabil/Computer-Vision-Projects" target="_blank" rel="noopener noreferrer">
-                View Repository <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card 6: Python & Automation Hub -->
-          <article class="gallery-card" data-category="ml">
-            <div class="project-topline">
-              <span class="project-cat">AUTOMATION &amp; DATA</span>
-              <span class="project-badge">COLLECTION</span>
-            </div>
-            <h4>Python &amp; Automation Projects</h4>
-            <p>
-              A structured collection of Python software projects, scripts, and algorithmic workflows encompassing automated data pipelines, system utilities, web scraping, and API integrations.
-            </p>
-            <div class="hero-tags" style="margin-top:0; padding-top:0; border-top:none;">
-              <span class="tag">Python</span>
-              <span class="tag">Automation</span>
-              <span class="tag">REST APIs</span>
-              <span class="tag">Data Prep</span>
-            </div>
-            <div class="card-actions">
-              <a class="repo-btn" href="https://github.com/alimulfazalnabil/Python-Projects" target="_blank" rel="noopener noreferrer">
-                View Repository <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card 7: Wider Repositories (Directory) -->
-          <article class="gallery-card" data-category="all" style="background:linear-gradient(145deg, var(--surface), rgba(56, 189, 248, 0.06));">
-            <div class="project-topline">
-              <span class="project-cat">OPEN SOURCE</span>
-              <span class="project-badge">GITHUB PROFILE</span>
-            </div>
-            <h4>Browse All Public Repositories</h4>
-            <p>
-              Explore additional public work covering cloud migrations, robotics ROS 2 nodes, Bluetooth hardware prototypes, and intelligent automation scripts on GitHub.
-            </p>
-            <div class="hero-tags" style="margin-top:0; padding-top:0; border-top:none;">
-              <span class="tag">60+ Repositories</span>
-              <span class="tag">Open Source</span>
-            </div>
-            <div class="card-actions">
-              <a class="repo-btn" href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">
-                All Repositories on GitHub <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
+        <!-- Full Project Archive Callout -->
+        <div style="margin-top:40px; text-align:center; padding:36px 24px; background:var(--surface); border:1px solid var(--line-strong); border-radius:var(--radius-md); box-shadow:0 12px 36px rgba(0,0,0,0.25);">
+          <div class="status-badge" style="margin-bottom:12px; display:inline-flex;">
+            <span class="status-dot"></span>
+            <span>2016 — 2026 VERIFIED MASTER INVENTORY</span>
+          </div>
+          <h3 style="font-family:'Manrope',sans-serif; font-size:24px; font-weight:800; margin:0 0 10px; color:var(--text);">
+            Looking for the Complete <span class="gradient-text">10-Year Engineering Archive</span>?
+          </h3>
+          <p style="color:var(--text-muted); max-width:680px; margin:0 auto 24px; font-size:15px; line-height:1.6;">
+            Search and filter all 27 verified technical systems across Embedded Robotics, Computer Vision, CARLA Sim, Data Engineering, Azure Cloud, and Generative AI.
+          </p>
+          <a class="button button-primary" href="portfolio.html">
+            Explore Full Project Archive (27 Projects) <span aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>
@@ -537,11 +491,11 @@
               </div>
               <div class="timeline-org">Energy Crown Bangladesh Ltd · Cox's Bazar, Bangladesh</div>
               <ul class="timeline-bullets">
-                <li>Operated Microsoft Azure hybrid cloud infrastructure maintaining 99.9% operational uptime.</li>
-                <li>Automated cloud provisioning using Terraform and Ansible, driving a 45% efficiency gain in deployments.</li>
-                <li>Built automated CI/CD pipelines and operational workflows with AI-assisted log analysis, reducing alert noise by 30%.</li>
-                <li>Ensured rigorous enterprise security compliance and 24/7 incident response with under 30-minute MTTR.</li>
-                <li>Maintained production web platforms with automated deployment, containerization, and monitoring.</li>
+                <li>Managed and scaled Microsoft Azure hybrid cloud infrastructure, ensuring high service availability and reliable network operations.</li>
+                <li>Automated multi-environment provisioning using Terraform Infrastructure as Code (IaC) and Ansible configuration management.</li>
+                <li>Architected automated GitHub Actions CI/CD pipelines to streamline container deployments and enforce testing quality gates.</li>
+                <li>Ensured enterprise cloud security compliance, credential rotation protocols, and systematic incident response.</li>
+                <li>Maintained production web platforms with containerized workloads, health monitoring, and system telemetry.</li>
               </ul>
             </div>
           </div>
@@ -791,7 +745,7 @@
       <span class="brand-name">Alimul Fazal Nabil</span>
     </div>
     <p class="footer-copy">
-      AI Solutions Engineer · Practical Systems · Production-Grade Architectures
+      AI Solutions Engineer · <a href="portfolio.html" style="color:var(--cyan);text-decoration:none;">Full Project Archive (27)</a> · Production-Grade Architectures
     </p>
     <a class="back-top" href="#home">BACK TO TOP ↑</a>
     <span class="copyright">© <span id="year">2026</span> Alimul Fazal Nabil. All rights reserved.</span>

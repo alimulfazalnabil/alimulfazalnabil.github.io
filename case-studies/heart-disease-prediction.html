@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070913">
+  <meta name="description" content="Technical Case Study: Heart Disease Clinical Risk Prediction Platform & API by Alimul Fazal Nabil. Leakage-free supervised ML pipeline with scikit-learn, stratified cross-validation, FastAPI service, and audit persistence.">
+  <meta property="og:title" content="Case Study: Heart Disease Risk Prediction Platform — Alimul Fazal Nabil">
+  <meta property="og:description" content="Leakage-free supervised classification architecture adhering to strict enterprise constraints with containerized FastAPI deployment.">
+  <meta property="og:type" content="article">
+  <title>Case Study: Heart Disease Risk Prediction Platform — Alimul Fazal Nabil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <a class="brand" href="../index.html#home" aria-label="Alimul Fazal Nabil home">
+      <span class="brand-mark">AN<span>·</span></span>
+      <span class="brand-name">Alimul Fazal Nabil</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="../index.html#home">Overview</a>
+      <a href="../portfolio.html">All Projects (27)</a>
+      <a href="../index.html#featured">Featured</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-cta" href="../Profile.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF) <span aria-hidden="true">↓</span></a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.7 8.7 0 0 1 8.7 3.8 8.8 8.8 0 1 0 20.2 15.3Z"></path></svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+      <a href="../index.html#home">Overview</a>
+      <a href="../portfolio.html">All Projects (27)</a>
+      <a href="../index.html#featured">Featured</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../Profile.pdf" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero Banner -->
+    <section class="case-study-hero wrap">
+      <nav class="case-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="../portfolio.html">Project Archive</a>
+        <span aria-hidden="true">/</span>
+        <span>Case Study · PRJ-ML-001</span>
+      </nav>
+      <span class="case-kicker">TECHNICAL CASE STUDY · MACHINE LEARNING &amp; CLOUD APIS</span>
+      <h1 class="case-title">Heart Disease Clinical Risk Prediction Platform</h1>
+      <p class="case-subtitle">
+        Engineering a leakage-free supervised classification pipeline with scikit-learn, stratified cross-validation, a containerized FastAPI service, and database audit persistence.
+      </p>
+
+      <!-- Mandatory Medical Disclaimer Banner -->
+      <div class="case-callout callout-warning" style="margin-top:20px; margin-bottom:24px;">
+        <h4>⚠️ Mandatory Clinical &amp; Medical Disclaimer</h4>
+        <p>
+          This project is an engineering and machine learning technical demonstration built on academic benchmark data. It is <strong>NOT</strong> a certified medical diagnostic device and must not be used for clinical decision-making or direct patient care without medical trial authorization.
+        </p>
+      </div>
+
+      <!-- Metadata Grid -->
+      <div class="case-meta-grid">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Project Period</span>
+          <span class="case-meta-val">2023 – 2024</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Primary Role</span>
+          <span class="case-meta-val">ML Engineer &amp; Full-Stack API Developer</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Verified Status</span>
+          <span class="case-meta-val">Prototype / Cloud Deployed Demo</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Key Technologies</span>
+          <span class="case-meta-val">Python 3.10+, scikit-learn, FastAPI, Docker, Render</span>
+        </div>
+      </div>
+
+      <div class="case-hero-actions">
+        <a class="button button-primary" href="https://github.com/alimulfazalnabil/heart-disease-prediction" target="_blank" rel="noopener noreferrer">
+          View Repository on GitHub <span aria-hidden="true">↗</span>
+        </a>
+        <a class="button button-secondary" href="https://heart-disease-prediction-8vuc.onrender.com/" target="_blank" rel="noopener noreferrer">
+          Live Render Demo <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Main Layout -->
+    <div class="wrap case-layout">
+      <!-- Sticky Sidebar Table of Contents -->
+      <aside class="case-sidebar" aria-label="Case Study Table of Contents">
+        <nav class="case-toc-box">
+          <h2 class="case-toc-title">Table of Contents</h2>
+          <ul class="case-toc-list">
+            <li><a href="#overview">1. Executive Overview</a></li>
+            <li><a href="#problem">2. Problem &amp; Objectives</a></li>
+            <li><a href="#architecture">3. Solution Architecture</a></li>
+            <li><a href="#implementation">4. Implementation Details</a></li>
+            <li><a href="#evaluation">5. Evaluation &amp; Verification</a></li>
+            <li><a href="#tradeoffs">6. Challenges &amp; Trade-offs</a></li>
+            <li><a href="#future">7. Future Roadmap</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Article Content -->
+      <article class="case-article">
+        <!-- 1. Overview -->
+        <section class="case-section" id="overview">
+          <h2><span class="sec-num">01</span> Executive Overview</h2>
+          <p>
+            The <strong>Heart Disease Prediction Platform</strong> is an end-to-end machine learning system developed using the UCI Cleveland Heart Disease dataset. Built to demonstrate rigorous machine-learning best practices, the system addresses the common pitfall of data leakage by encapsulating all data transformation steps inside scikit-learn <code>Pipeline</code> and <code>ColumnTransformer</code> objects.
+          </p>
+          <p>
+            The project pairs the serialized model with an interactive clinical frontend and a production-ready FastAPI backend, providing automated input validation, structured prediction responses, and persistent audit logging to an SQL database.
+          </p>
+          <div class="case-callout callout-evidence">
+            <h4>✓ Author Contribution &amp; Authorship Boundary</h4>
+            <p>
+              Sole author. Developed the training pipeline in <code>src/train.py</code>, evaluated permitted model families across stratified cross-validation folds, authored the FastAPI microservice and web dashboard in <code>app.py</code>, wrote the automated test suite with <code>pytest</code>, configured the Docker container, and deployed the live application to Render PaaS.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. Problem & Objectives -->
+        <section class="case-section" id="problem">
+          <h2><span class="sec-num">02</span> Problem &amp; System Objectives</h2>
+          <h3>The Machine Learning Integrity Challenge</h3>
+          <p>
+            Many published machine-learning projects suffer from subtle data leakage bugs: fitting scalers or imputers on the entire dataset before splitting, or evaluating models without stratified sampling. When applied to tabular diagnostic benchmarks, these bugs lead to artificially inflated evaluation metrics that collapse in real-world inference.
+          </p>
+          <h3>Engineering Objectives</h3>
+          <ol>
+            <li><strong>Leakage-Free Feature Processing:</strong> Encapsulate all imputation and feature scaling within an atomic scikit-learn Pipeline so test splits remain strictly unseen until final evaluation.</li>
+            <li><strong>Adherence to Interpretable Models:</strong> Constrain model families to permitted, interpretable architectures (Logistic Regression, Decision Trees, Random Forests, and Soft Voting Ensembles) rather than uncalibrated black-box models.</li>
+            <li><strong>Automated Persistence &amp; Audit Logging:</strong> Record all inference queries, input feature vectors, predicted probabilities, and timestamps into an SQL audit table for traceability.</li>
+            <li><strong>Production-Grade CI/CD &amp; Containerization:</strong> Enforce automated testing in GitHub Actions and containerize the service using Docker.</li>
+          </ol>
+        </section>
+
+        <!-- 3. Architecture -->
+        <section class="case-section" id="architecture">
+          <h2><span class="sec-num">03</span> Solution Architecture</h2>
+          <p>
+            The platform architecture enforces clean separation between data ingestion, offline model training/serialization, online inference serving, and database persistence:
+          </p>
+
+          <div class="arch-diagram-box" role="region" aria-label="Machine Learning Pipeline Architecture">
+            <div class="arch-diagram-title">Data Processing &amp; Inference Pipeline</div>
+            <pre class="arch-diagram-content">
+[UCI Cleveland Raw Dataset: 13 Features]
+                   │
+                   ▼
+  [Stratified 80/20 Train/Test Split]
+        ├── Training Split (80%) ───────► [Pipeline Training]
+        └── Untouched Test Split (20%) ──► [Final Generalization Holdout]
+                   │
+                   ▼
+  [Scikit-Learn Pipeline &amp; ColumnTransformer]
+  ├── Numeric Pipeline: SimpleImputer(median) ──► StandardScaler()
+  └── Categorical Pipeline: SimpleImputer(most_frequent) ──► OneHotEncoder()
+                   │
+                   ▼
+  [Model Training &amp; Stratified 5-Fold Cross-Validation]
+  (Logistic Regression, Decision Tree, Random Forest, Soft Voting)
+                   │
+                   ▼
+ [Serialized Artifact: models/heart_model.pkl]
+                   │
+                   ▼
+ [FastAPI REST Service &amp; Clinical Dashboard]
+  ├── GET  /         (Interactive Clinical UI)
+  ├── GET  /health   (Microservice Health Check)
+  ├── POST /predict  (Pydantic Validated Prediction)
+  └── GET  /history  (Recent Patient Predictions)
+                   │
+                   ▼
+[SQL Audit Database: SQLite / PostgreSQL]
+            </pre>
+          </div>
+
+          <h3>Feature Set Specification</h3>
+          <p>The model processes 13 clinical features:</p>
+          <ul>
+            <li><strong>Demographics &amp; Vitals:</strong> Age, Sex, Resting Blood Pressure (<code>trestbps</code>), Serum Cholesterol (<code>chol</code>), Fasting Blood Sugar (<code>fbs</code>).</li>
+            <li><strong>Cardiological Exam Metrics:</strong> Chest Pain Type (<code>cp</code>), Resting ECG (<code>restecg</code>), Max Heart Rate (<code>thalach</code>), Exercise Induced Angina (<code>exang</code>), ST Depression (<code>oldpeak</code>), Slope of ST Segment (<code>slope</code>), Number of Major Vessels (<code>ca</code>), Thalassemia Type (<code>thal</code>).</li>
+            <li><strong>Target Variable:</strong> Binary clinical condition (0 = No heart disease, 1 = Heart disease present).</li>
+          </ul>
+        </section>
+
+        <!-- 4. Implementation Details -->
+        <section class="case-section" id="implementation">
+          <h2><span class="sec-num">04</span> Implementation Details</h2>
+          <h3>Implemented Engineering Highlights</h3>
+          <ul>
+            <li><strong>Atomic Pipeline Encapsulation:</strong> By binding <code>ColumnTransformer</code> and the classifier into a single composite object, serialization and deserialization guarantee identical transformation logic during both training and real-time inference.</li>
+            <li><strong>Pydantic Data Contracts:</strong> The <code>POST /predict</code> endpoint uses a strict Pydantic model enforcing clinical boundary validation (e.g. valid age ranges, permitted categorical integers). Malformed payloads return explicit HTTP 422 errors before reaching the model.</li>
+            <li><strong>Audit Logging:</strong> Every inference query automatically writes patient feature values, predicted probabilities, and timestamp records into SQLite (locally) or PostgreSQL (in cloud deployment).</li>
+          </ul>
+
+          <div class="case-callout callout-decision">
+            <h4>💡 Key Engineering Decision: Soft Voting Ensemble</h4>
+            <p>
+              To balance individual model biases, the production configuration employs a Soft Voting Ensemble combining calibrated Logistic Regression (providing high interpretability and well-scaled probabilities) with Random Forest (capturing non-linear interactions). The ensemble averages predicted class probabilities: <em>P(y=1) = [P_LR(y=1) + P_RF(y=1)] / 2</em>.
+            </p>
+          </div>
+        </section>
+
+        <!-- 5. Evaluation & Verification -->
+        <section class="case-section" id="evaluation">
+          <h2><span class="sec-num">05</span> Evaluation &amp; Verification Evidence</h2>
+          <p>
+            Evaluation was conducted using Stratified 5-Fold Cross-Validation on the training split, followed by evaluation on the untouched 20% holdout test set:
+          </p>
+          <ul>
+            <li><strong>Validation Generalization:</strong> The Soft Voting Ensemble achieved balanced accuracy and strong ROC-AUC on the holdout split (~85% on validation folds).</li>
+            <li><strong>Automated Test Suite:</strong> Comprehensive unit tests (<code>tests/test_model.py</code>, <code>tests/test_api.py</code>) execute under <code>pytest</code>, verifying prediction payload formats, schema edge cases, and health check status codes.</li>
+            <li><strong>Live Deployment:</strong> Containerized and actively hosted on Render PaaS at <code>https://heart-disease-prediction-8vuc.onrender.com/</code>.</li>
+          </ul>
+        </section>
+
+        <!-- 6. Challenges & Trade-offs -->
+        <section class="case-section" id="tradeoffs">
+          <h2><span class="sec-num">06</span> Challenges &amp; Engineering Trade-offs</h2>
+          <table class="case-table">
+            <thead>
+              <tr>
+                <th>Challenge</th>
+                <th>Engineering Trade-off Accepted</th>
+                <th>Mitigation Strategy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Benchmark Sample Size</strong></td>
+                <td>The UCI Cleveland dataset contains 303 patient records, limiting complex deep network architectures.</td>
+                <td>Constrained modeling strictly to regularized linear and tree ensembles; prioritized data hygiene over model complexity.</td>
+              </tr>
+              <tr>
+                <td><strong>Free-Tier PaaS Hosting</strong></td>
+                <td>Render free-tier instances sleep after 15 minutes of inactivity, leading to a ~50-second cold start.</td>
+                <td>Added clear user documentation explaining the initial spin-up latency on public portfolio links.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- 7. Future Roadmap -->
+        <section class="case-section" id="future">
+          <h2><span class="sec-num">07</span> Future Roadmap</h2>
+          <ol>
+            <li><strong>SHAP Feature Attribution:</strong> Integrate TreeSHAP into the web UI to present individualized waterfall plots explaining feature contributions for each prediction.</li>
+            <li><strong>Brier Score &amp; Probability Calibration:</strong> Apply isotonic regression or Platt scaling to ensure calculated probabilities match empirical diagnostic rates.</li>
+            <li><strong>Multi-Center Dataset Integration:</strong> Expand evaluation across external datasets (e.g. Hungarian and Long Beach cohorts) to assess cross-hospital generalization.</li>
+          </ol>
+        </section>
+
+        <!-- Navigation Footer -->
+        <div class="case-nav-footer">
+          <a class="case-nav-btn" href="autonomous-lane-detection.html">
+            <span class="nav-dir">← Previous Case Study</span>
+            <span class="nav-title">Autonomous Lane Detection Pipeline</span>
+          </a>
+          <a class="case-nav-btn" href="azure-terraform-cicd.html" style="text-align:right;">
+            <span class="nav-dir">Next Case Study →</span>
+            <span class="nav-title">Azure Terraform &amp; CI/CD Infrastructure Platform</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer wrap">
+    <div class="brand">
+      <span class="brand-mark">AN<span>·</span></span>
+      <span class="brand-name">Alimul Fazal Nabil</span>
+    </div>
+    <p class="footer-copy">AI Solutions Engineer · Practical Systems · Production-Grade Architectures</p>
+    <a class="back-top" href="#main">BACK TO TOP ↑</a>
+    <span class="copyright">© 2026 Alimul Fazal Nabil. All rights reserved.</span>
+  </footer>
+</body>
+</html>

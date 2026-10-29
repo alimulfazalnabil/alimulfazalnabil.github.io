@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070913">
+  <meta name="description" content="Technical Case Study: Autonomous Lane Detection Pipeline & CARLA Bridge by Alimul Fazal Nabil. Classical computer vision roadway perception with OpenCV, Hough transforms, temporal smoothing, and synthetic testing.">
+  <meta property="og:title" content="Case Study: Autonomous Lane Detection Pipeline — Alimul Fazal Nabil">
+  <meta property="og:description" content="Deterministic roadway perception pipeline combining Canny edge extraction, dynamic ROI masking, Hough line fitting, and CARLA simulator bridging.">
+  <meta property="og:type" content="article">
+  <title>Case Study: Autonomous Lane Detection Pipeline — Alimul Fazal Nabil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <a class="brand" href="../index.html#home" aria-label="Alimul Fazal Nabil home">
+      <span class="brand-mark">AN<span>·</span></span>
+      <span class="brand-name">Alimul Fazal Nabil</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="../index.html#home">Overview</a>
+      <a href="../portfolio.html">All Projects (27)</a>
+      <a href="../index.html#featured">Featured</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-cta" href="../Profile.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF) <span aria-hidden="true">↓</span></a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.7 8.7 0 0 1 8.7 3.8 8.8 8.8 0 1 0 20.2 15.3Z"></path></svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+      <a href="../index.html#home">Overview</a>
+      <a href="../portfolio.html">All Projects (27)</a>
+      <a href="../index.html#featured">Featured</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../Profile.pdf" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero Banner -->
+    <section class="case-study-hero wrap">
+      <nav class="case-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="../portfolio.html">Project Archive</a>
+        <span aria-hidden="true">/</span>
+        <span>Case Study · PRJ-CV-001</span>
+      </nav>
+      <span class="case-kicker">TECHNICAL CASE STUDY · COMPUTER VISION &amp; AUTONOMOUS SYSTEMS</span>
+      <h1 class="case-title">Autonomous Lane Detection Pipeline &amp; CARLA Bridge</h1>
+      <p class="case-subtitle">
+        Engineering a deterministic road-perception pipeline in Python and OpenCV with dynamic polygonal ROI masking, Hough line extraction, temporal filtering, and CARLA simulation bridging.
+      </p>
+
+      <!-- Metadata Grid -->
+      <div class="case-meta-grid">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Project Period</span>
+          <span class="case-meta-val">2023 – 2024</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Primary Role</span>
+          <span class="case-meta-val">Computer Vision Engineer &amp; Author</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Verified Status</span>
+          <span class="case-meta-val">Prototype (Deterministic CV Pipeline)</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Key Technologies</span>
+          <span class="case-meta-val">Python 3, OpenCV, NumPy, Hough Transform, CARLA API</span>
+        </div>
+      </div>
+
+      <div class="case-hero-actions">
+        <a class="button button-primary" href="https://github.com/alimulfazalnabil/Autonomous-Lane-Detection" target="_blank" rel="noopener noreferrer">
+          View Repository on GitHub <span aria-hidden="true">↗</span>
+        </a>
+        <a class="button button-secondary" href="../portfolio.html?domain=vision">
+          Back to Vision Archive <span aria-hidden="true">←</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Main Layout -->
+    <div class="wrap case-layout">
+      <!-- Sticky Sidebar Table of Contents -->
+      <aside class="case-sidebar" aria-label="Case Study Table of Contents">
+        <nav class="case-toc-box">
+          <h2 class="case-toc-title">Table of Contents</h2>
+          <ul class="case-toc-list">
+            <li><a href="#overview">1. Executive Overview</a></li>
+            <li><a href="#problem">2. Problem &amp; Objectives</a></li>
+            <li><a href="#architecture">3. Solution Architecture</a></li>
+            <li><a href="#implementation">4. Implementation Details</a></li>
+            <li><a href="#evaluation">5. Evaluation &amp; Verification</a></li>
+            <li><a href="#tradeoffs">6. Challenges &amp; Trade-offs</a></li>
+            <li><a href="#future">7. Future Roadmap</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Article Content -->
+      <article class="case-article">
+        <!-- 1. Overview -->
+        <section class="case-section" id="overview">
+          <h2><span class="sec-num">01</span> Executive Overview</h2>
+          <p>
+            The <strong>Autonomous Lane Detection Pipeline</strong> is a modular computer-vision perception system developed to identify road-lane boundaries from onboard monocular camera feeds. Built primarily using classical image processing principles in Python and OpenCV, the project decouples raw visual feature extraction from virtual vehicle dynamics by isolating the CARLA simulator connection behind a dedicated bridge adapter.
+          </p>
+          <div class="case-callout callout-evidence">
+            <h4>✓ Author Contribution &amp; Authorship Boundary</h4>
+            <p>
+              Sole author and developer. Designed and implemented the core image processing algorithms in <code>lane_detector.py</code>, built the synthetic test image generator and automated unit tests in <code>tests/test_lane_detector.py</code>, and developed the CARLA sensor-streaming interface in <code>carla_adapter.py</code>.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. Problem & Objectives -->
+        <section class="case-section" id="problem">
+          <h2><span class="sec-num">02</span> Problem &amp; System Objectives</h2>
+          <h3>The Perception Challenge</h3>
+          <p>
+            Autonomous and semi-autonomous driving systems depend on precise, low-latency identification of drivable corridor boundaries. While deep neural networks (e.g. segmentation CNNs) provide rich representations, they present major engineering challenges:
+          </p>
+          <ul>
+            <li><strong>High Compute Footprint:</strong> Deep learning models require substantial GPU memory and draw significant electrical power, making them costly on resource-constrained embedded automotive ECUs.</li>
+            <li><strong>Lack of Determinism:</strong> Black-box neural models can fail unpredictably when confronted with out-of-distribution visual artifacts, making debugging and formal safety verification difficult.</li>
+            <li><strong>Tight Coupling with Simulators:</strong> Many academic research projects hardcode simulator dependencies into the core perception logic, preventing the code from running on standard video streams or alternative simulators.</li>
+          </ul>
+
+          <h3>System Objectives</h3>
+          <ol>
+            <li><strong>Deterministic Classical Pipeline:</strong> Formulate an interpretable pipeline using mathematical edge detection and Hough line clustering that runs at high frame rates on standard CPU architectures.</li>
+            <li><strong>Temporal Boundary Smoothing:</strong> Prevent frame-to-frame jitter through exponential or moving-average smoothing of estimated left and right lane coordinates.</li>
+            <li><strong>Decoupled Architecture:</strong> Maintain a strict boundary between image analysis and simulator interaction, allowing identical detection code to process prerecorded MP4 dashcam footage or live CARLA RGB sensor streams.</li>
+          </ol>
+        </section>
+
+        <!-- 3. Architecture -->
+        <section class="case-section" id="architecture">
+          <h2><span class="sec-num">03</span> Solution Architecture</h2>
+          <p>
+            The pipeline processes images sequentially through filtering, gradient calculation, spatial masking, geometric feature extraction, and temporal filtering:
+          </p>
+
+          <div class="arch-diagram-box" role="region" aria-label="Lane Detection Architecture Flow">
+            <div class="arch-diagram-title">Perception &amp; Simulation Pipeline</div>
+            <pre class="arch-diagram-content">
+[CARLA Simulator / Dashcam Video]
+               │
+               ▼
+   [Raw RGB Frame Acquisition]
+               │
+               ▼
+[Grayscale Conversion &amp; Gaussian Blur] (5x5 kernel, σ=1.5)
+               │
+               ▼
+     [Canny Edge Extraction] (Low=50, High=150 hysteresis)
+               │
+               ▼
+   [Dynamic Trapezoidal ROI Mask] (Clamping to roadway perspective)
+               │
+               ▼
+[Probabilistic Hough Line Transform] (HoughLinesP: ρ=2, θ=π/180)
+               │
+               ▼
+  [Slope &amp; Intercept Clustering]
+  ├── Left Lane:  Negative Slope (m &lt; -0.5)
+  └── Right Lane: Positive Slope (m &gt; 0.5)
+               │
+               ▼
+   [Extrapolation to Horizon &amp; Bottom]
+               │
+               ▼
+  [Temporal Moving-Average Smoothing] (Buffer N=5 frames)
+               │
+               ▼
+[Visual Alpha Overlay &amp; Metric Output] ──► [CARLA Visualizer]
+            </pre>
+          </div>
+
+          <h3>Component Rationale</h3>
+          <ul>
+            <li><strong>Gaussian Blur (5x5 Kernel):</strong> Suppresses high-frequency asphalt texture and sensor noise that causes spurious gradient spikes.</li>
+            <li><strong>Dynamic Polygonal ROI:</strong> Zeroes out image regions containing sky, horizon, and roadside obstacles, confining line detection strictly to the projected driving corridor.</li>
+            <li><strong>Slope Separation:</strong> Filters out horizontal and near-zero slope lines (guardrails, crosswalks, shadows) by enforcing threshold boundaries on candidate line gradients.</li>
+          </ul>
+        </section>
+
+        <!-- 4. Implementation Details -->
+        <section class="case-section" id="implementation">
+          <h2><span class="sec-num">04</span> Implementation Details</h2>
+          <h3>Core Modules in Repository</h3>
+          <ul>
+            <li><code>lane_detector.py</code>: Encapsulates all OpenCV perception logic. Provides methods for grayscale preprocessing, edge calculation, polygonal masking, line fitting, and weighted overlay rendering.</li>
+            <li><code>carla_adapter.py</code>: Handles CARLA simulator client connection, world actor attachment, synchronous camera sensor listening, and format conversion from raw CARLA BGRA image buffers to NumPy BGR frames.</li>
+            <li><code>tests/test_lane_detector.py</code>: Automated unit tests utilizing programmatic synthetic lane images (black canvases with programmatic high-contrast diagonal white stripes) to verify slope calculation and boundary extrapolation without external media files.</li>
+          </ul>
+
+          <div class="case-callout callout-decision">
+            <h4>💡 Key Engineering Decision: Decoupled Simulation Adapter</h4>
+            <p>
+              By isolating CARLA code inside <code>carla_adapter.py</code>, the core <code>lane_detector.py</code> has zero CARLA Python API dependencies. This ensures the perception pipeline can be executed, benchmarked, and unit-tested on lightweight CI runners without installing the heavy 20GB Unreal Engine CARLA simulator package.
+            </p>
+          </div>
+        </section>
+
+        <!-- 5. Evaluation & Verification -->
+        <section class="case-section" id="evaluation">
+          <h2><span class="sec-num">05</span> Evaluation &amp; Verification Evidence</h2>
+          <p>
+            Verification was performed using unit testing suites and video playback inspection:
+          </p>
+          <ul>
+            <li><strong>Automated Unit Tests:</strong> Programmatic synthetic lane tests pass consistently in CI via <code>pytest</code>, verifying that left and right lines are accurately separated and extrapolated to predefined vertical bounds.</li>
+            <li><strong>Synthetic Video Playback:</strong> The pipeline successfully tracks lane markings on clean asphalt test sequences with smooth corridor visual overlays.</li>
+          </ul>
+
+          <div class="case-callout callout-warning">
+            <h4>⚠️ Evaluation Scope Note</h4>
+            <p>
+              In strict compliance with portfolio standards: End-to-end steering angle prediction and closed-loop autonomous vehicle lateral control are explicitly not claimed. This project is a visual perception and road feature extraction pipeline, not a certified full autonomous driving stack.
+            </p>
+          </div>
+        </section>
+
+        <!-- 6. Challenges & Trade-offs -->
+        <section class="case-section" id="tradeoffs">
+          <h2><span class="sec-num">06</span> Challenges &amp; Engineering Trade-offs</h2>
+          <table class="case-table">
+            <thead>
+              <tr>
+                <th>Design Aspect</th>
+                <th>Trade-off Accepted</th>
+                <th>Mitigation Strategy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Classical CV vs. Deep Learning</strong></td>
+                <td>Classical edge detection struggles with severe tree shadows and worn-out lane paint markings.</td>
+                <td>Applied adaptive thresholding and temporal frame averaging to carry previous valid lane trajectories across obscured frames.</td>
+              </tr>
+              <tr>
+                <td><strong>Straight-Line Hough Fit</strong></td>
+                <td>Hough transform fits straight lines (y = mx + b), which loses fidelity in sharp hairpin curves.</td>
+                <td>Restricted detection horizon to the immediate 30-meter vehicle front zone; planned higher-order polynomial fitting.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- 7. Future Roadmap -->
+        <section class="case-section" id="future">
+          <h2><span class="sec-num">07</span> Future Roadmap</h2>
+          <ol>
+            <li><strong>2nd-Order Polynomial Curve Fitting:</strong> Upgrade from straight-line Hough clustering to sliding-window polynomial fitting (x = Ay² + By + C) to accurately track curved highway ramps.</li>
+            <li><strong>Hybrid Deep Learning Integration:</strong> Integrate a lightweight segmentation network (e.g. ENet or Ultra-Fast-Lane-Detection) for robust mark classification under challenging adverse weather conditions.</li>
+            <li><strong>Closed-Loop Lateral Control:</strong> Implement a PID or Pure Pursuit steering controller inside the CARLA adapter to evaluate vehicle lane-keeping behavior in simulation.</li>
+          </ol>
+        </section>
+
+        <!-- Navigation Footer -->
+        <div class="case-nav-footer">
+          <a class="case-nav-btn" href="enterprise-rag-platform.html">
+            <span class="nav-dir">← Previous Case Study</span>
+            <span class="nav-title">Enterprise RAG Knowledge Platform</span>
+          </a>
+          <a class="case-nav-btn" href="heart-disease-prediction.html" style="text-align:right;">
+            <span class="nav-dir">Next Case Study →</span>
+            <span class="nav-title">Heart Disease Clinical Risk Prediction Platform</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer wrap">
+    <div class="brand">
+      <span class="brand-mark">AN<span>·</span></span>
+      <span class="brand-name">Alimul Fazal Nabil</span>
+    </div>
+    <p class="footer-copy">AI Solutions Engineer · Practical Systems · Production-Grade Architectures</p>
+    <a class="back-top" href="#main">BACK TO TOP ↑</a>
+    <span class="copyright">© 2026 Alimul Fazal Nabil. All rights reserved.</span>
+  </footer>
+</body>
+</html>

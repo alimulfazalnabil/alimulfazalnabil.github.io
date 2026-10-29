@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070913">
+  <meta name="description" content="Technical Case Study: Enterprise RAG Knowledge Intelligence Platform by Alimul Fazal Nabil. Multi-tenant hybrid retrieval with pgvector, BM25, Reciprocal Rank Fusion, cross-encoders, and citation checks.">
+  <meta property="og:title" content="Case Study: Enterprise RAG Knowledge Platform — Alimul Fazal Nabil">
+  <meta property="og:description" content="Production-oriented hybrid retrieval architecture combining dense pgvector embeddings, sparse BM25 indexing, and tenant isolation.">
+  <meta property="og:type" content="article">
+  <title>Case Study: Enterprise RAG Knowledge Platform — Alimul Fazal Nabil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <a class="brand" href="../index.html#home" aria-label="Alimul Fazal Nabil home">
+      <span class="brand-mark">AN<span>·</span></span>
+      <span class="brand-name">Alimul Fazal Nabil</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="../index.html#home">Overview</a>
+      <a href="../portfolio.html">All Projects (27)</a>
+      <a href="../index.html#featured">Featured</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-cta" href="../Profile.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF) <span aria-hidden="true">↓</span></a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.7 8.7 0 0 1 8.7 3.8 8.8 8.8 0 1 0 20.2 15.3Z"></path></svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+      <a href="../index.html#home">Overview</a>
+      <a href="../portfolio.html">All Projects (27)</a>
+      <a href="../index.html#featured">Featured</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../Profile.pdf" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero Banner -->
+    <section class="case-study-hero wrap">
+      <nav class="case-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="../portfolio.html">Project Archive</a>
+        <span aria-hidden="true">/</span>
+        <span>Case Study · PRJ-GENAI-001</span>
+      </nav>
+      <span class="case-kicker">TECHNICAL CASE STUDY · GENERATIVE AI &amp; RAG ARCHITECTURE</span>
+      <h1 class="case-title">Enterprise RAG Knowledge Intelligence Platform</h1>
+      <p class="case-subtitle">
+        Architecting a multi-tenant, hybrid-retrieval RAG microservice with dense pgvector embeddings, sparse BM25 rank fusion, cross-encoder reranking, and deterministic citation guardrails.
+      </p>
+
+      <!-- Metadata Grid -->
+      <div class="case-meta-grid">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Project Period</span>
+          <span class="case-meta-val">2024 – 2025</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Primary Role</span>
+          <span class="case-meta-val">AI Solutions Architect &amp; Lead Engineer</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Verified Status</span>
+          <span class="case-meta-val">Prototype (Production-Grade Architecture)</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Key Technologies</span>
+          <span class="case-meta-val">Python 3.12+, FastAPI, pgvector, BM25, Docker</span>
+        </div>
+      </div>
+
+      <div class="case-hero-actions">
+        <a class="button button-primary" href="https://github.com/alimulfazalnabil/LLM-enterprise-rag-knowledge-platform" target="_blank" rel="noopener noreferrer">
+          View Repository on GitHub <span aria-hidden="true">↗</span>
+        </a>
+        <a class="button button-secondary" href="../portfolio.html?domain=genai">
+          Back to GenAI Archive <span aria-hidden="true">←</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Main Layout -->
+    <div class="wrap case-layout">
+      <!-- Sticky Sidebar Table of Contents -->
+      <aside class="case-sidebar" aria-label="Case Study Table of Contents">
+        <nav class="case-toc-box">
+          <h2 class="case-toc-title">Table of Contents</h2>
+          <ul class="case-toc-list">
+            <li><a href="#overview">1. Executive Overview</a></li>
+            <li><a href="#problem">2. Problem &amp; Objectives</a></li>
+            <li><a href="#architecture">3. Solution Architecture</a></li>
+            <li><a href="#implementation">4. Implementation Details</a></li>
+            <li><a href="#evaluation">5. Evaluation &amp; Verification</a></li>
+            <li><a href="#tradeoffs">6. Challenges &amp; Trade-offs</a></li>
+            <li><a href="#future">7. Future Roadmap</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Article Content -->
+      <article class="case-article">
+        <!-- 1. Overview -->
+        <section class="case-section" id="overview">
+          <h2><span class="sec-num">01</span> Executive Overview</h2>
+          <p>
+            The <strong>Enterprise RAG Knowledge Platform</strong> is an end-to-end Retrieval-Augmented Generation (RAG) backend engineered to solve institutional knowledge fragmentation. In large enterprises, critical operational guidelines, compliance specifications, and technical manuals are scattered across unstructured PDFs, Markdown documents, and DOCX files.
+          </p>
+          <p>
+            Rather than relying on naive vector-similarity search (which frequently fails on exact acronyms, numbers, and part codes) or basic conversational wrappers, this system introduces an enterprise-grade retrieval pipeline combining dense semantic search (via PostgreSQL and <code>pgvector</code>) with sparse lexical BM25 retrieval, reciprocal rank fusion, cross-encoder reranking, and deterministic citation validation.
+          </p>
+          <div class="case-callout callout-evidence">
+            <h4>✓ Author Contribution &amp; Authorship Boundary</h4>
+            <p>
+              Sole author and architect of the open repository. Designed the modular FastAPI microservice architecture, configured PostgreSQL schema migrations with <code>pgvector</code>, implemented the Reciprocal Rank Fusion (RRF) algorithm, authored automated integration test suites with <code>pytest</code>, and containerized the service using Docker and Docker Compose.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. Problem & Objectives -->
+        <section class="case-section" id="problem">
+          <h2><span class="sec-num">02</span> Problem &amp; System Objectives</h2>
+          <h3>The Enterprise Knowledge Challenge</h3>
+          <p>
+            Enterprise adoption of Large Language Models (LLMs) faces three catastrophic failure modes when applied to private institutional data:
+          </p>
+          <ol>
+            <li><strong>Hallucination &amp; Ungrounded Answers:</strong> Standard LLMs generate authoritative-sounding but fabricated answers when domain context is missing or ambiguous.</li>
+            <li><strong>Keyword vs. Semantic Retrieval Mismatches:</strong> Vector-only search often misses exact technical identifiers (e.g., error codes like <code>ERR-0x892B</code>, policy numbers, or SKU tags), while traditional keyword search misses semantic paraphrasing.</li>
+            <li><strong>Cross-Department Data Leakage:</strong> Naive vector stores lack multi-tenant access boundaries, risking unauthorized disclosure of internal HR or executive data to unauthorized employees.</li>
+          </ol>
+
+          <h3>Target System Requirements</h3>
+          <ul>
+            <li><strong>Sub-second Hybrid Retrieval:</strong> Merge dense semantic embeddings and sparse keyword scores to guarantee both high recall and high precision.</li>
+            <li><strong>Deterministic Attribution:</strong> Enforce mandatory inline bracketed citations linking every asserted fact directly to source document chunks.</li>
+            <li><strong>Strict Multi-Tenant Isolation:</strong> Enforce tenant, department, and role-based filtering directly at the database query layer prior to retrieval.</li>
+            <li><strong>Containerized Zero-Drift Deployment:</strong> Package backend services and dependencies in self-contained Docker environments with automated CI quality gates.</li>
+          </ul>
+        </section>
+
+        <!-- 3. Architecture -->
+        <section class="case-section" id="architecture">
+          <h2><span class="sec-num">03</span> Solution Architecture</h2>
+          <p>
+            The system follows a decoupled microservice architecture separating document ingestion, hybrid query execution, reranking, and generation.
+          </p>
+
+          <div class="arch-diagram-box" role="region" aria-label="RAG Architecture Diagram">
+            <div class="arch-diagram-title">System Architecture Flow</div>
+            <pre class="arch-diagram-content">
+[Unstructured Sources: PDF, DOCX, MD, TXT]
+                    │
+                    ▼
+       [Ingestion &amp; Chunking Pipeline]
+     (Hierarchical Splitting + Token Clamping)
+                    │
+       ┌────────────┴────────────┐
+       ▼                         ▼
+[Dense Embedding Engine]   [Sparse BM25 Indexer]
+(OpenAI text-embedding-3)    (Lexical Inverted Index)
+       │                         │
+       ▼                         ▼
+ [PostgreSQL + pgvector]   [Local Sparse Store]
+ └─────────────┬─────────────────────────┘
+               │  Multi-Tenant RBAC Filter (TenantID + DeptID)
+               ▼
+      [User Query Input]
+               │
+       ┌───────┴───────┐
+       ▼               ▼
+[Dense Top-K]    [Sparse Top-K]
+       └───────┬───────┘
+               ▼
+  [Reciprocal Rank Fusion (RRF)]
+  Score = Σ (1 / (k + rank_i))  where k = 60
+               │
+               ▼
+   [Cross-Encoder Reranker]
+   (ms-marco-MiniLM-L-6-v2)
+               │
+               ▼
+  [Prompt Assembly &amp; Context Clamping]
+               │
+               ▼
+     [LLM Generation: GPT-4o]
+               │
+               ▼
+ [Citation Verification &amp; Guardrails]
+               │
+               ▼
+ [Validated JSON API Response with Citations]
+            </pre>
+          </div>
+
+          <h3>Component Rationale</h3>
+          <ul>
+            <li><strong>PostgreSQL with pgvector:</strong> Eliminates the operational complexity of maintaining a separate dedicated vector database (e.g. Pinecone/Weaviate), allowing transactional document metadata and vector embeddings to share ACID guarantees and relational foreign keys.</li>
+            <li><strong>Reciprocal Rank Fusion (RRF):</strong> Normalizes disparate score distributions between vector cosine similarities and unbounded BM25 scores without requiring manual weight calibrations.</li>
+            <li><strong>Cross-Encoder Reranking:</strong> Performs joint attention across query-document pairs, eliminating false positives from initial candidate retrieval stages.</li>
+          </ul>
+        </section>
+
+        <!-- 4. Implementation Details -->
+        <section class="case-section" id="implementation">
+          <h2><span class="sec-num">04</span> Implementation Details</h2>
+          <h3>Implemented Features</h3>
+          <ul>
+            <li><strong>FastAPI Async Microservice:</strong> High-performance async REST API providing endpoints for document ingestion (<code>POST /api/v1/documents/upload</code>), query generation (<code>POST /api/v1/chat/query</code>), and system health (<code>GET /health</code>).</li>
+            <li><strong>Tenant-Scoped Query Execution:</strong> Every SQL retrieval query applies strict WHERE clauses: <code>tenant_id = :tenant_id AND access_level &lt;= :user_level</code>, guaranteeing tenant isolation before vector distance computations.</li>
+            <li><strong>Deterministic Citation Extraction:</strong> Post-processes LLM generations to ensure every cited index <code>[chunk_id]</code> matches an existing retrieved passage in the prompt context. If ungrounded assertions are detected, the response flags a verification warning.</li>
+          </ul>
+
+          <div class="case-callout callout-decision">
+            <h4>💡 Key Engineering Decision: Reciprocal Rank Fusion (RRF)</h4>
+            <p>
+              Cosine similarity scores from dense embeddings and BM25 scores from keyword indices have non-comparable scale and variance. Rather than linear weighted summation (which requires brittle heuristic hyperparameter tuning for every dataset), RRF uses reciprocal rank ordering: <em>RRF_Score(d) = Σ [1 / (60 + rank(d))]</em>. This provides robust, stable ranking across diverse document lengths and technical vocabularies.
+            </p>
+          </div>
+        </section>
+
+        <!-- 5. Evaluation & Verification -->
+        <section class="case-section" id="evaluation">
+          <h2><span class="sec-num">05</span> Evaluation &amp; Verification Evidence</h2>
+          <p>
+            The system has been evaluated through reproducible automated test suites and benchmark query comparisons:
+          </p>
+          <ul>
+            <li><strong>Automated Test Suite (pytest):</strong> Tests cover vector indexing, BM25 scoring edge cases, reciprocal rank merging, Pydantic request validation, and API authentication.</li>
+            <li><strong>Sub-second Latency:</strong> In local containerized testing, hybrid candidate retrieval across 1,000 embedded chunks executes in under 250 milliseconds prior to LLM generation.</li>
+            <li><strong>CI Quality Gates:</strong> Automated GitHub Actions workflow executing code formatting (<code>black</code>, <code>isort</code>), static linting (<code>flake8</code>), and test runs on every pull request.</li>
+          </ul>
+
+          <div class="case-callout callout-warning">
+            <h4>⚠️ Evaluation Scope Note</h4>
+            <p>
+              In accordance with portfolio credibility standards: This system is classified as a production-grade prototype. Latency and retrieval metrics were gathered in controlled developer test environments. Large-scale enterprise benchmarks across hundreds of thousands of concurrent users are subject to cloud hardware scaling.
+            </p>
+          </div>
+        </section>
+
+        <!-- 6. Challenges & Trade-offs -->
+        <section class="case-section" id="tradeoffs">
+          <h2><span class="sec-num">06</span> Challenges &amp; Engineering Trade-offs</h2>
+          <table class="case-table">
+            <thead>
+              <tr>
+                <th>Design Decision</th>
+                <th>Trade-off Accepted</th>
+                <th>Mitigation Strategy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>PostgreSQL + pgvector</strong></td>
+                <td>Slightly lower indexing throughput compared to pure in-memory vector databases.</td>
+                <td>Created HNSW vector indices (<code>m=16, ef_construction=64</code>) for sub-linear query scaling while maintaining transactional integrity.</td>
+              </tr>
+              <tr>
+                <td><strong>Cross-Encoder Reranker</strong></td>
+                <td>Adds 50–150ms computational overhead per query request.</td>
+                <td>Limited reranking input to top 15 candidate chunks rather than all retrieved candidates.</td>
+              </tr>
+              <tr>
+                <td><strong>Local BM25 Store</strong></td>
+                <td>Requires memory cache synchronization across distributed worker replicas.</td>
+                <td>In future cloud deployments, delegate BM25 sparse search directly to PostgreSQL full-text search (tsvector).</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- 7. Future Roadmap -->
+        <section class="case-section" id="future">
+          <h2><span class="sec-num">07</span> Future Roadmap</h2>
+          <ol>
+            <li><strong>Local LLM &amp; Embedding Engine Support:</strong> Integrate vLLM / Ollama backends to allow air-gapped on-premise execution without third-party API dependencies.</li>
+            <li><strong>PostgreSQL Native Full-Text Search:</strong> Consolidate sparse BM25 indexing into native PostgreSQL <code>tsvector</code> columns to simplify multi-node horizontal scaling.</li>
+            <li><strong>GraphRAG Knowledge Graph Integration:</strong> Incorporate entity-relationship graphs for complex multi-hop regulatory reasoning.</li>
+          </ol>
+        </section>
+
+        <!-- Navigation Footer -->
+        <div class="case-nav-footer">
+          <a class="case-nav-btn" href="../portfolio.html">
+            <span class="nav-dir">← Project Archive</span>
+            <span class="nav-title">All 27 Projects</span>
+          </a>
+          <a class="case-nav-btn" href="autonomous-lane-detection.html" style="text-align:right;">
+            <span class="nav-dir">Next Case Study →</span>
+            <span class="nav-title">Autonomous Lane Detection &amp; CARLA Bridge</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer wrap">
+    <div class="brand">
+      <span class="brand-mark">AN<span>·</span></span>
+      <span class="brand-name">Alimul Fazal Nabil</span>
+    </div>
+    <p class="footer-copy">AI Solutions Engineer · Practical Systems · Production-Grade Architectures</p>
+    <a class="back-top" href="#main">BACK TO TOP ↑</a>
+    <span class="copyright">© 2026 Alimul Fazal Nabil. All rights reserved.</span>
+  </footer>
+</body>
+</html>

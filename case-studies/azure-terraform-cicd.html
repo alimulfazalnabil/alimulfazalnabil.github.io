@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070913">
+  <meta name="description" content="Technical Case Study: Azure Terraform & CI/CD Infrastructure Platform by Alimul Fazal Nabil. Modular Infrastructure as Code, environment isolation, and passwordless OIDC-authenticated GitHub Actions pipelines.">
+  <meta property="og:title" content="Case Study: Azure Terraform CI/CD Infrastructure Platform — Alimul Fazal Nabil">
+  <meta property="og:description" content="Enterprise-grade modular IaC deployment framework automating multi-tier Azure cloud resource provisioning with OIDC authentication.">
+  <meta property="og:type" content="article">
+  <title>Case Study: Azure Terraform CI/CD Infrastructure Platform — Alimul Fazal Nabil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <a class="brand" href="../index.html#home" aria-label="Alimul Fazal Nabil home">
+      <span class="brand-mark">AN<span>·</span></span>
+      <span class="brand-name">Alimul Fazal Nabil</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="../index.html#home">Overview</a>
+      <a href="../portfolio.html">All Projects (27)</a>
+      <a href="../index.html#featured">Featured</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-cta" href="../Profile.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF) <span aria-hidden="true">↓</span></a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.7 8.7 0 0 1 8.7 3.8 8.8 8.8 0 1 0 20.2 15.3Z"></path></svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+      <a href="../index.html#home">Overview</a>
+      <a href="../portfolio.html">All Projects (27)</a>
+      <a href="../index.html#featured">Featured</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../Profile.pdf" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero Banner -->
+    <section class="case-study-hero wrap">
+      <nav class="case-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="../portfolio.html">Project Archive</a>
+        <span aria-hidden="true">/</span>
+        <span>Case Study · PRJ-CLOUD-001</span>
+      </nav>
+      <span class="case-kicker">TECHNICAL CASE STUDY · CLOUD INFRASTRUCTURE &amp; DEVOPS</span>
+      <h1 class="case-title">Azure Terraform &amp; CI/CD Infrastructure Platform</h1>
+      <p class="case-subtitle">
+        Architecting an enterprise-grade modular Infrastructure as Code (IaC) deployment framework for Microsoft Azure with passwordless OIDC federated authentication and GitHub Actions automation.
+      </p>
+
+      <!-- Metadata Grid -->
+      <div class="case-meta-grid">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Project Period</span>
+          <span class="case-meta-val">2024 – 2025</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Primary Role</span>
+          <span class="case-meta-val">Cloud Infrastructure &amp; DevOps Engineer</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Verified Status</span>
+          <span class="case-meta-val">Prototype (Modular IaC Codebase)</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Key Technologies</span>
+          <span class="case-meta-val">Terraform, Microsoft Azure, GitHub Actions, OIDC</span>
+        </div>
+      </div>
+
+      <div class="case-hero-actions">
+        <a class="button button-primary" href="https://github.com/alimulfazalnabil/azure-terraform-cicd-foundation" target="_blank" rel="noopener noreferrer">
+          View Repository on GitHub <span aria-hidden="true">↗</span>
+        </a>
+        <a class="button button-secondary" href="../portfolio.html?domain=cloud">
+          Back to Cloud Archive <span aria-hidden="true">←</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Main Layout -->
+    <div class="wrap case-layout">
+      <!-- Sticky Sidebar Table of Contents -->
+      <aside class="case-sidebar" aria-label="Case Study Table of Contents">
+        <nav class="case-toc-box">
+          <h2 class="case-toc-title">Table of Contents</h2>
+          <ul class="case-toc-list">
+            <li><a href="#overview">1. Executive Overview</a></li>
+            <li><a href="#problem">2. Problem &amp; Objectives</a></li>
+            <li><a href="#architecture">3. Solution Architecture</a></li>
+            <li><a href="#implementation">4. Implementation Details</a></li>
+            <li><a href="#evaluation">5. Evaluation &amp; Verification</a></li>
+            <li><a href="#tradeoffs">6. Challenges &amp; Trade-offs</a></li>
+            <li><a href="#future">7. Future Roadmap</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Article Content -->
+      <article class="case-article">
+        <!-- 1. Overview -->
+        <section class="case-section" id="overview">
+          <h2><span class="sec-num">01</span> Executive Overview</h2>
+          <p>
+            The <strong>Azure Terraform &amp; CI/CD Infrastructure Platform</strong> is a modular, production-ready Infrastructure as Code (IaC) deployment framework built for Microsoft Azure. The project eliminates manual cloud console resource provisioning by establishing automated, repeatable infrastructure landing zones through version-controlled Terraform modules and automated GitHub Actions pipelines.
+          </p>
+          <div class="case-callout callout-evidence">
+            <h4>✓ Author Contribution &amp; Authorship Boundary</h4>
+            <p>
+              Sole author. Designed and implemented the reusable Terraform modules for Resource Groups, Virtual Networks, Subnets, and Azure Key Vault; established isolated multi-environment directory layouts (<code>environments/dev</code> and <code>environments/prod</code>); and authored the multi-stage GitHub Actions CI/CD pipeline configuring passwordless OpenID Connect (OIDC) federated Azure authentication.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. Problem & Objectives -->
+        <section class="case-section" id="problem">
+          <h2><span class="sec-num">02</span> Problem &amp; System Objectives</h2>
+          <h3>The Infrastructure Anti-Pattern</h3>
+          <p>
+            Ad-hoc cloud provisioning through web portals or manual CLI commands introduces severe operational vulnerabilities:
+          </p>
+          <ul>
+            <li><strong>Configuration Drift:</strong> Undocumented changes made directly in cloud consoles cause production environments to diverge from testing environments.</li>
+            <li><strong>Secret Exposure Hazards:</strong> Storing long-lived cloud service principal credentials (client secrets or certificates) inside CI/CD repository secrets creates permanent credential theft risks if compromised.</li>
+            <li><strong>Non-Reproducible Deployments:</strong> Lack of modularization forces engineering teams to copy-paste configurations, propagating misconfigurations across development, staging, and production tiers.</li>
+          </ul>
+
+          <h3>System Objectives</h3>
+          <ol>
+            <li><strong>Zero Long-Lived Secrets:</strong> Authenticate GitHub Actions CI/CD runners to Azure exclusively using passwordless OpenID Connect (OIDC) token federation.</li>
+            <li><strong>Strict Environment Isolation:</strong> Separate configuration variables, remote state backends, and access credentials between <code>dev</code> and <code>prod</code> tiers.</li>
+            <li><strong>Automated Quality Gates:</strong> Enforce automated linting (<code>terraform fmt -check</code>, <code>tflint</code>), syntax validation, and dry-run plan generation on every pull request prior to merge.</li>
+          </ol>
+        </section>
+
+        <!-- 3. Architecture -->
+        <section class="case-section" id="architecture">
+          <h2><span class="sec-num">03</span> Solution Architecture</h2>
+          <p>
+            The platform combines modular Terraform abstractions with an automated GitOps delivery pipeline:
+          </p>
+
+          <div class="arch-diagram-box" role="region" aria-label="Azure Terraform Pipeline Flow">
+            <div class="arch-diagram-title">GitOps Delivery &amp; Azure Cloud Architecture</div>
+            <pre class="arch-diagram-content">
+[Developer Commit / Pull Request to main]
+                   │
+                   ▼
+       [GitHub Actions CI/CD Runner]
+                   │
+       ┌───────────┴───────────┐
+       ▼                       ▼
+[terraform fmt -check]    [terraform validate]
+       │
+       ▼
+[Passwordless OIDC Azure Authentication]
+(Short-Lived JWT Token ──► Azure Entra ID Federated Credential)
+                   │
+                   ▼
+     [Remote State Acquisition]
+  (Azure Blob Storage with Lease Lock)
+                   │
+       ┌───────────┴───────────┐
+       ▼                       ▼
+[terraform plan: dev]    [terraform plan: prod]
+ (Plan posted to PR for peer review)
+                   │
+                   ▼ (Merge to main)
+     [Automated terraform apply]
+                   │
+                   ▼
+     [Azure Secure Landing Zone]
+ ├── Resource Group (East US / West Europe)
+ ├── Virtual Network (10.0.0.0/16)
+ │    ├── App Subnet (10.0.1.0/24)
+ │    └── Data Subnet (10.0.2.0/24) + Network Security Groups
+ └── Azure Key Vault (RBAC Authorization + Soft Delete)
+            </pre>
+          </div>
+
+          <h3>Modular Directory Layout</h3>
+          <p>The repository establishes clean structural boundaries:</p>
+          <ul>
+            <li><code>modules/resource_group/</code>: Provisions standardized resource groupings with mandatory cost-center and environment tags.</li>
+            <li><code>modules/vnet/</code>: Provisions software-defined Virtual Networks, custom subnets, and Network Security Group (NSG) rules.</li>
+            <li><code>modules/key_vault/</code>: Provisions Azure Key Vault with Azure role-based access control (RBAC) and soft-delete protection.</li>
+            <li><code>environments/dev/</code> and <code>environments/prod/</code>: Self-contained root modules declaring environment-specific remote state storage containers and parameter variables.</li>
+          </ul>
+        </section>
+
+        <!-- 4. Implementation Details -->
+        <section class="case-section" id="implementation">
+          <h2><span class="sec-num">04</span> Implementation Details</h2>
+          <h3>Implemented Security &amp; CI/CD Features</h3>
+          <ul>
+            <li><strong>Passwordless OIDC Federation:</strong> The workflow exchanges a GitHub-issued OIDC JSON Web Token (JWT) directly with Microsoft Entra ID (Azure AD). Azure validates the token subject claim (<code>repo:alimulfazalnabil/azure-terraform-cicd-foundation:ref:refs/heads/main</code>), granting short-lived scoped permissions without storing static passwords.</li>
+            <li><strong>Automated Pull-Request Dry Runs:</strong> Pull requests automatically trigger dry-run plans for both development and production tiers, enabling reviewers to inspect intended resource changes before any infrastructure is modified.</li>
+            <li><strong>State Locking:</strong> Remote backend configurations utilize Azure Blob Storage containers with native blob leasing to prevent race conditions during concurrent CI/CD pipeline runs.</li>
+          </ul>
+
+          <div class="case-callout callout-decision">
+            <h4>💡 Key Engineering Decision: Passwordless OIDC over Service Principals</h4>
+            <p>
+              Traditional CI/CD configurations store client secrets with 1-2 year expiration dates. When credentials expire, deployments break; if stolen, attackers gain permanent cloud access. Transitioning to OpenID Connect token federation eliminates secrets entirely: tokens are ephemeral, cryptographically bound to specific branches, and expire within minutes.
+            </p>
+          </div>
+        </section>
+
+        <!-- 5. Evaluation & Verification -->
+        <section class="case-section" id="evaluation">
+          <h2><span class="sec-num">05</span> Evaluation &amp; Verification Evidence</h2>
+          <p>
+            The infrastructure platform has been verified through pipeline automation and syntax evaluation:
+          </p>
+          <ul>
+            <li><strong>Automated Pipeline Execution:</strong> The GitHub Actions workflow (<code>terraform-pipeline.yml</code>) successfully executes formatting checks, provider initialization, and schema validation.</li>
+            <li><strong>Modular Reusability:</strong> Tested across separate <code>dev</code> and <code>prod</code> configurations with zero module code duplication.</li>
+          </ul>
+
+          <div class="case-callout callout-warning">
+            <h4>⚠️ Evaluation Scope Note</h4>
+            <p>
+              In accordance with portfolio credibility standards: This codebase is maintained as an infrastructure automation reference and portfolio showcase. It is not tied to a permanently active, paid production Azure landing zone to prevent recurring cloud hosting costs.
+            </p>
+          </div>
+        </section>
+
+        <!-- 6. Challenges & Trade-offs -->
+        <section class="case-section" id="tradeoffs">
+          <h2><span class="sec-num">06</span> Challenges &amp; Engineering Trade-offs</h2>
+          <table class="case-table">
+            <thead>
+              <tr>
+                <th>Engineering Decision</th>
+                <th>Trade-off Accepted</th>
+                <th>Mitigation Strategy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Strict Environment Directories</strong></td>
+                <td>Requires maintaining separate <code>main.tf</code> files for dev and prod rather than Terraform Workspaces.</td>
+                <td>Ensures total blast-radius isolation; accidental dev state mutations cannot touch production infrastructure.</td>
+              </tr>
+              <tr>
+                <td><strong>OIDC Subject Claims</strong></td>
+                <td>Initial Azure Entra ID federated credential setup requires manual tenant configuration.</td>
+                <td>Documented exact step-by-step federated identity configuration in the repository README.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- 7. Future Roadmap -->
+        <section class="case-section" id="future">
+          <h2><span class="sec-num">07</span> Future Roadmap</h2>
+          <ol>
+            <li><strong>Terratest Integration:</strong> Author automated Go-based infrastructure tests to programmatically verify that deployed subnets and endpoints are reachable after provisioning.</li>
+            <li><strong>Policy as Code (Conftest / OPA):</strong> Enforce corporate security policies (e.g. banning public IP assignments on storage accounts) at the pull-request stage.</li>
+            <li><strong>Cost Estimation via Infracost:</strong> Integrate automated monthly cloud expenditure estimates directly into GitHub pull-request review comments.</li>
+          </ol>
+        </section>
+
+        <!-- Navigation Footer -->
+        <div class="case-nav-footer">
+          <a class="case-nav-btn" href="heart-disease-prediction.html">
+            <span class="nav-dir">← Previous Case Study</span>
+            <span class="nav-title">Heart Disease Risk Prediction Platform</span>
+          </a>
+          <a class="case-nav-btn" href="../portfolio.html" style="text-align:right;">
+            <span class="nav-dir">Return to Archive →</span>
+            <span class="nav-title">All 27 Engineering Projects</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer wrap">
+    <div class="brand">
+      <span class="brand-mark">AN<span>·</span></span>
+      <span class="brand-name">Alimul Fazal Nabil</span>
+    </div>
+    <p class="footer-copy">AI Solutions Engineer · Practical Systems · Production-Grade Architectures</p>
+    <a class="back-top" href="#main">BACK TO TOP ↑</a>
+    <span class="copyright">© 2026 Alimul Fazal Nabil. All rights reserved.</span>
+  </footer>
+</body>
+</html>
