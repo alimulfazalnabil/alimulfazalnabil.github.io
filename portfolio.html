@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070913">
+  <meta name="description" content="A detailed archive of Alimul Fazal Nabil's engineering projects across AI, computer vision, robotics, IoT, data engineering, cloud infrastructure, and software systems.">
+  <meta property="og:title" content="Full Project Portfolio — Alimul Fazal Nabil">
+  <meta property="og:description" content="A decade of engineering exploration: from embedded robotics to AI systems and cloud-native applications.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alimulfazalnabil.github.io/portfolio.html">
+  <meta property="og:image" content="https://alimulfazalnabil.github.io/profile.jpg">
+  <link rel="canonical" href="https://alimulfazalnabil.github.io/portfolio.html">
+  <title>Full Project Portfolio — Alimul Fazal Nabil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/portfolio.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Alimul Fazal Nabil home">
+      <span class="brand-mark">AN<span>·</span></span><span class="brand-name">Alimul Fazal Nabil</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html#about">About</a>
+      <a href="index.html#featured">Featured</a>
+      <a href="portfolio.html" aria-current="page">Full Portfolio</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-cta" href="Profile.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF) <span aria-hidden="true">↓</span></a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.7 8.7 0 0 1 8.7 3.8 8.8 8.8 0 1 0 20.2 15.3Z"></path></svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation"><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+      <a href="index.html#about">About</a><a href="index.html#featured">Featured</a><a href="portfolio.html">Full Portfolio</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a><a href="Profile.pdf" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="portfolio-hero wrap">
+      <p class="eyebrow">ENGINEERING ARCHIVE · 2016—2026</p>
+      <h1>A decade of <span class="gradient-text">building and learning.</span></h1>
+      <p class="portfolio-intro">This page brings together my project history across embedded systems, robotics, computer vision, machine learning, data platforms, cloud infrastructure, and software engineering. It is a project archive—not a claim that every experiment is a production deployment.</p>
+      <div class="portfolio-callout"><strong>How to read this archive</strong><span>Project descriptions reflect available repository documentation and my project notes. Reported metrics are not independently verified here. Research, learning exercises, simulations, prototypes, and deployed applications are labelled distinctly where known.</span></div>
+      <div class="portfolio-stats" aria-label="Portfolio overview">
+        <div><strong>2016–2026</strong><span>PROJECT TIMELINE</span></div>
+        <div><strong>6</strong><span>ENGINEERING DOMAINS</span></div>
+        <div><strong>Build → Test</strong><span>ENGINEERING APPROACH</span></div>
+      </div>
+    </section>
+
+    <section class="wrap portfolio-content" aria-labelledby="archive-title">
+      <div class="section-heading portfolio-heading">
+        <div><p class="eyebrow">PROJECT INDEX</p><h2 id="archive-title">Explore the work</h2></div>
+        <p>Filter by domain or search for a project, tool, or technology.</p>
+      </div>
+      <div class="portfolio-controls">
+        <label class="portfolio-search-label" for="projectSearch">Search projects</label>
+        <input id="projectSearch" class="portfolio-search" type="search" placeholder="Try “YOLO”, “robotic arm”, “RAG”…" autocomplete="off">
+        <div class="portfolio-filters" role="group" aria-label="Filter projects by domain">
+          <button class="portfolio-filter active" type="button" data-filter="all" aria-pressed="true">All work</button>
+          <button class="portfolio-filter" type="button" data-filter="robotics" aria-pressed="false">Robotics &amp; IoT</button>
+          <button class="portfolio-filter" type="button" data-filter="vision" aria-pressed="false">Computer Vision</button>
+          <button class="portfolio-filter" type="button" data-filter="ml" aria-pressed="false">ML &amp; Data Science</button>
+          <button class="portfolio-filter" type="button" data-filter="data" aria-pressed="false">Data Engineering</button>
+          <button class="portfolio-filter" type="button" data-filter="cloud" aria-pressed="false">Cloud &amp; DevOps</button>
+          <button class="portfolio-filter" type="button" data-filter="software" aria-pressed="false">Software &amp; GenAI</button>
+          <button class="portfolio-filter" type="button" data-filter="design" aria-pressed="false">Design &amp; Research</button>
+        </div>
+        <p class="portfolio-result-count" id="resultCount" aria-live="polite">Showing all projects</p>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+        <article class="portfolio-card" data-category="robotics" data-search="autonomous solar powered vehicle accident detection embedded robotics sensor">
+          <div class="portfolio-card-top"><span class="portfolio-year">2021</span><span class="project-status status-notes">Project notes</span></div>
+          <h3>Autonomous Solar-Powered Vehicle with Accident Detection</h3>
+          <p>Embedded vehicle concept combining solar power, autonomous movement, and an accident-detection function.</p>
+          <ul class="tag-list"><li>Embedded Systems</li><li>Control</li><li>Sensors</li></ul>
+          <p class="portfolio-meta">Documented project period: Jul–Nov 2021. Detailed implementation evidence to be linked.</p>
+        </article>
+        <article class="portfolio-card" data-category="robotics" data-search="robotic hand robotic arm bluetooth arduino servo motors hc-05">
+          <div class="portfolio-card-top"><span class="portfolio-year">2018–2019</span><span class="project-status status-repo">Public repository</span></div>
+          <h3>Bluetooth-Controlled Robotic Arm</h3>
+          <p>Arduino-based multi-servo arm concept controlled from an Android device over Bluetooth, with per-joint control and pick-and-place use cases described in the repository.</p>
+          <ul class="tag-list"><li>Arduino</li><li>HC-05 Bluetooth</li><li>Servo Control</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/Bluetooth-Controlled-Robotic-Arm" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="robotics" data-search="dual axis solar tracker solar energy control arduino">
+          <div class="portfolio-card-top"><span class="portfolio-year">2018–2019</span><span class="project-status status-notes">Project notes</span></div>
+          <h3>Dual-Axis Solar Tracker</h3>
+          <p>Solar-tracking system concept designed to adjust panel orientation along two axes as the light source changes.</p>
+          <ul class="tag-list"><li>Control Systems</li><li>Electronics</li><li>Renewable Energy</li></ul>
+          <p class="portfolio-meta">Documented in the project archive; repository link not yet matched.</p>
+        </article>
+        <article class="portfolio-card" data-category="robotics" data-search="quadcopter UAV drone ArduPilot QGroundControl flight control">
+          <div class="portfolio-card-top"><span class="portfolio-year">2019–2020</span><span class="project-status status-notes">Project notes</span></div>
+          <h3>Quadcopter UAV</h3>
+          <p>Drone development and flight-control work involving an ArduPilot-based toolchain.</p>
+          <ul class="tag-list"><li>UAV</li><li>ArduPilot</li><li>Flight Control</li></ul>
+          <p class="portfolio-meta">Documented in the project archive; build details and flight-test evidence can be added.</p>
+        </article>
+        <article class="portfolio-card" data-category="robotics" data-search="line follower robot robotics embedded sensors">
+          <div class="portfolio-card-top"><span class="portfolio-year">2017–2018</span><span class="project-status status-notes">Project notes</span></div>
+          <h3>Line-Follower Robot</h3>
+          <p>Small autonomous robotics project focused on sensing a path and controlling motion to follow a line.</p>
+          <ul class="tag-list"><li>Robotics</li><li>Sensors</li><li>Motor Control</li></ul>
+        </article>
+        <article class="portfolio-card" data-category="software" data-search="SPAROO online shopping auction e-commerce web application">
+          <div class="portfolio-card-top"><span class="portfolio-year">2022</span><span class="project-status status-notes">Project notes</span></div>
+          <h3>SPAROO — Online Shopping and Auction System</h3>
+          <p>Web application concept combining online shopping and auction workflows.</p>
+          <ul class="tag-list"><li>E-commerce</li><li>Web Application</li></ul>
+          <p class="portfolio-meta">Documented project date: Nov 2022. Source repository not yet matched.</p>
+        </article>
+        <article class="portfolio-card" data-category="robotics" data-search="IoT smart notice board internet of things">
+          <div class="portfolio-card-top"><span class="portfolio-year">2022</span><span class="project-status status-notes">Project notes</span></div>
+          <h3>IoT-Based Smart Notice Board</h3>
+          <p>Connected notice-board concept for updating information digitally rather than relying on manual paper notices.</p>
+          <ul class="tag-list"><li>IoT</li><li>Embedded Systems</li></ul>
+          <p class="portfolio-meta">Documented project date: Nov 2022. Publication/repository details require confirmation.</p>
+        </article>
+
+        <article class="portfolio-card" data-category="vision" data-search="YOLOv8 vehicle detection tracking computer vision traffic">
+          <div class="portfolio-card-top"><span class="portfolio-year">2022–2023</span><span class="project-status status-repo">Project collection</span></div>
+          <h3>Vehicle Detection and Tracking</h3>
+          <p>Computer-vision work on identifying and tracking vehicles in image or video streams. A project collection documents YOLO-based object detection and tracking work.</p>
+          <ul class="tag-list"><li>YOLOv8</li><li>OpenCV</li><li>Object Tracking</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/Computer-Vision-Projects" target="_blank" rel="noopener noreferrer">View project collection <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="vision" data-search="pedestrian detection YOLO computer vision">
+          <div class="portfolio-card-top"><span class="portfolio-year">2023</span><span class="project-status status-research">Applied CV project</span></div>
+          <h3>Pedestrian Detection</h3>
+          <p>Detection-focused computer-vision work aimed at recognizing pedestrians in visual scenes.</p>
+          <ul class="tag-list"><li>Computer Vision</li><li>Object Detection</li><li>YOLO</li></ul>
+          <p class="portfolio-meta">Part of the documented project history; exact dataset and evaluation protocol are not yet linked.</p>
+        </article>
+        <article class="portfolio-card" data-category="vision" data-search="autonomous lane detection lane keeping assistance CARLA OpenCV">
+          <div class="portfolio-card-top"><span class="portfolio-year">2022–2024</span><span class="project-status status-repo">Public repository</span></div>
+          <h3>Lane Detection and Autonomous Driving Experiments</h3>
+          <p>OpenCV lane-line detection baseline with a separate CARLA integration path for simulator-based inspection. The repository documents limitations from illumination, geometry, occlusion, and noise.</p>
+          <ul class="tag-list"><li>OpenCV</li><li>CARLA</li><li>Python</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/Autonomous-Lane-Detection" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="vision" data-search="computer vision classification segmentation CycleGAN VQA transfer learning">
+          <div class="portfolio-card-top"><span class="portfolio-year">Portfolio collection</span><span class="project-status status-repo">Public repository</span></div>
+          <h3>Computer Vision Project Collection</h3>
+          <p>Collection describing image classification with transfer learning, real-time detection and tracking, semantic segmentation, image-to-image translation, and visual question answering.</p>
+          <ul class="tag-list"><li>PyTorch</li><li>Transformers</li><li>Deep Learning</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/Computer-Vision-Projects" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="vision" data-search="CARLA autonomous vehicle simulation driving perception">
+          <div class="portfolio-card-top"><span class="portfolio-year">2023–2024</span><span class="project-status status-simulation">Simulation</span></div>
+          <h3>CARLA Autonomous Vehicle Simulation</h3>
+          <p>Simulation-oriented exploration of autonomous-driving perception and lane-related workflows in a virtual driving environment.</p>
+          <ul class="tag-list"><li>CARLA</li><li>Python</li><li>Perception</li></ul>
+          <p class="portfolio-meta">Simulation work; not presented as a road-tested autonomous vehicle.</p>
+        </article>
+
+        <article class="portfolio-card" data-category="ml" data-search="SpaceX Falcon 9 landing prediction machine learning classification">
+          <div class="portfolio-card-top"><span class="portfolio-year">2023</span><span class="project-status status-research">Data science project</span></div>
+          <h3>SpaceX Falcon 9 Landing Prediction</h3>
+          <p>Machine-learning workflow exploring launch data and predicting Falcon 9 first-stage landing outcomes.</p>
+          <ul class="tag-list"><li>Python</li><li>scikit-learn</li><li>Model Evaluation</li></ul>
+        </article>
+        <article class="portfolio-card" data-category="ml" data-search="SpaceX launch cost estimation regression data analysis">
+          <div class="portfolio-card-top"><span class="portfolio-year">2023</span><span class="project-status status-research">Data science project</span></div>
+          <h3>SpaceX Launch Cost Estimation</h3>
+          <p>Exploratory analysis and predictive modelling around launch-related data and cost factors.</p>
+          <ul class="tag-list"><li>Python</li><li>Regression</li><li>Data Analysis</li></ul>
+        </article>
+        <article class="portfolio-card" data-category="ml" data-search="stock price prediction time series forecasting machine learning">
+          <div class="portfolio-card-top"><span class="portfolio-year">2023</span><span class="project-status status-research">Forecasting project</span></div>
+          <h3>Stock Price Forecasting</h3>
+          <p>Time-series exploration focused on modelling historical price data and evaluating forecasting approaches.</p>
+          <ul class="tag-list"><li>Python</li><li>Time Series</li><li>Forecasting</li></ul>
+        </article>
+        <article class="portfolio-card" data-category="ml" data-search="movie recommendation recommender system collaborative filtering">
+          <div class="portfolio-card-top"><span class="portfolio-year">2022</span><span class="project-status status-research">ML project</span></div>
+          <h3>Movie Recommendation System</h3>
+          <p>Recommendation-system exploration for suggesting movies from available user/item data.</p>
+          <ul class="tag-list"><li>Python</li><li>Recommendation</li><li>Machine Learning</li></ul>
+        </article>
+        <article class="portfolio-card" data-category="ml" data-search="Twitter sentiment analysis natural language processing NLP">
+          <div class="portfolio-card-top"><span class="portfolio-year">2022</span><span class="project-status status-research">NLP project</span></div>
+          <h3>Twitter Sentiment Analysis</h3>
+          <p>Natural-language-processing workflow for classifying sentiment in social-media text.</p>
+          <ul class="tag-list"><li>NLP</li><li>Text Classification</li><li>Python</li></ul>
+        </article>
+        <article class="portfolio-card" data-category="ml" data-search="heart disease prediction FastAPI scikit-learn clinical model">
+          <div class="portfolio-card-top"><span class="portfolio-year">2026</span><span class="project-status status-live">Live demo linked</span></div>
+          <h3>Heart Disease Prediction &amp; Inference System</h3>
+          <p>Machine-learning web application documented with a scikit-learn preprocessing pipeline, stratified cross-validation, FastAPI inference, prediction-history logging, Docker, and GitHub Actions CI. Intended for demonstration, not clinical diagnosis.</p>
+          <ul class="tag-list"><li>scikit-learn</li><li>FastAPI</li><li>Docker</li><li>CI</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/heart-disease-prediction" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a>
+          <a class="project-link" href="https://heart-disease-prediction-8vuc.onrender.com/" target="_blank" rel="noopener noreferrer">Open demo <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="portfolio-card" data-category="data" data-search="ETL ELT pipeline Airflow PostgreSQL Pandas data engineering sales database">
+          <div class="portfolio-card-top"><span class="portfolio-year">2024–2025</span><span class="project-status status-repo">Public repository</span></div>
+          <h3>ETL Pipeline and Data Warehousing</h3>
+          <p>Project collection covering a Python/PostgreSQL sales ETL pipeline, Airflow orchestration, Amazon S3/Redshift warehousing, Spark processing, and Kafka streaming examples.</p>
+          <ul class="tag-list"><li>Python</li><li>Airflow</li><li>PostgreSQL</li><li>Spark</li><li>Kafka</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/Data-Engineering-Projects" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="data" data-search="log analysis Elasticsearch Logstash Kibana Docker observability">
+          <div class="portfolio-card-top"><span class="portfolio-year">2024–2025</span><span class="project-status status-repo">Public repository</span></div>
+          <h3>Log Analysis and Observability Pipeline</h3>
+          <p>ELK-stack example for ingesting and inspecting logs, with Docker-based local setup described in the repository.</p>
+          <ul class="tag-list"><li>Elasticsearch</li><li>Logstash</li><li>Kibana</li><li>Docker</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/Data-Engineering-Projects" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="data" data-search="predictive maintenance industrial data sensors anomaly detection">
+          <div class="portfolio-card-top"><span class="portfolio-year">2024–2025</span><span class="project-status status-notes">Project notes</span></div>
+          <h3>Predictive Maintenance Prototype</h3>
+          <p>Industrial analytics concept using equipment data to explore early indicators of possible maintenance needs.</p>
+          <ul class="tag-list"><li>Industrial Data</li><li>Machine Learning</li><li>Time Series</li></ul>
+          <p class="portfolio-meta">Project notes mention model results; benchmark data and reproducible evaluation need to be attached before publishing numeric claims.</p>
+        </article>
+        <article class="portfolio-card" data-category="data" data-search="digital twin industrial data simulation monitoring">
+          <div class="portfolio-card-top"><span class="portfolio-year">2025</span><span class="project-status status-notes">Project notes</span></div>
+          <h3>Industrial Digital Twin Framework</h3>
+          <p>Conceptual framework connecting operational data, system models, and monitoring for industrial-system visibility.</p>
+          <ul class="tag-list"><li>Digital Twin</li><li>Industrial IoT</li><li>Data Integration</li></ul>
+        </article>
+
+        <article class="portfolio-card" data-category="cloud" data-search="Azure Terraform GitHub Actions CI CD infrastructure as code OIDC">
+          <div class="portfolio-card-top"><span class="portfolio-year">2026</span><span class="project-status status-repo">Public repository</span></div>
+          <h3>Azure Terraform &amp; CI/CD Foundation</h3>
+          <p>Infrastructure-as-code reference using reusable Terraform modules, separate environments, GitHub Actions validation, and OIDC-based Azure authentication.</p>
+          <ul class="tag-list"><li>Terraform</li><li>Azure</li><li>GitHub Actions</li><li>OIDC</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/azure-terraform-cicd-foundation" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="cloud" data-search="Azure scalable web platform cloud architecture">
+          <div class="portfolio-card-top"><span class="portfolio-year">2026</span><span class="project-status status-repo">Public repository</span></div>
+          <h3>Scalable Cloud Web Platform</h3>
+          <p>Cloud architecture project repository focused on a scalable web-platform pattern. Details should be expanded from its implementation and deployment notes.</p>
+          <ul class="tag-list"><li>Cloud Architecture</li><li>Infrastructure</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/azure-scalable-web-platform" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="cloud" data-search="Azure hybrid migration zero trust security data AI analytics">
+          <div class="portfolio-card-top"><span class="portfolio-year">2026</span><span class="project-status status-repo">Project series</span></div>
+          <h3>Cloud Migration, Zero Trust, and Data/AI Architecture</h3>
+          <p>A group of focused repositories exploring hybrid migration, zero-trust security, and cloud data/AI analytics patterns.</p>
+          <ul class="tag-list"><li>Cloud Security</li><li>Migration</li><li>Data &amp; AI</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/azure-hybrid-migration" target="_blank" rel="noopener noreferrer">Hybrid migration <span aria-hidden="true">↗</span></a>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/azure-zero-trust-security" target="_blank" rel="noopener noreferrer">Zero trust <span aria-hidden="true">↗</span></a>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/azure-data-ai-analytics" target="_blank" rel="noopener noreferrer">Data &amp; AI <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="cloud" data-search="PGCB organization portal FastAPI React deployment security">
+          <div class="portfolio-card-top"><span class="portfolio-year">2026</span><span class="project-status status-live">Live demo linked</span></div>
+          <h3>PGCB Organization Portal</h3>
+          <p>Institutional portal documented with bilingual public pages, member self-service, digital credential verification, role-based administration, and security controls. Repository links to a live Render deployment.</p>
+          <ul class="tag-list"><li>FastAPI</li><li>Web Platform</li><li>RBAC</li><li>Deployment</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/pgcb-org-portal" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a>
+          <a class="project-link" href="https://pgcb-org-portal.onrender.com/" target="_blank" rel="noopener noreferrer">Open demo <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="portfolio-card" data-category="software" data-search="LLM RAG LangChain embeddings vector search FAISS">
+          <div class="portfolio-card-top"><span class="portfolio-year">2026</span><span class="project-status status-learning">Learning lab</span></div>
+          <h3>LLM Foundations to RAG</h3>
+          <p>Progressive notebooks and mini-projects exploring LLM APIs, prompt engineering, LangChain workflows, document ingestion, chunking, embeddings, and vector search.</p>
+          <ul class="tag-list"><li>Python</li><li>LangChain</li><li>FAISS</li><li>Ollama</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/LLMs-From-Basic-to-RAG" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="software" data-search="enterprise RAG knowledge platform LLM retrieval augmented generation">
+          <div class="portfolio-card-top"><span class="portfolio-year">2026</span><span class="project-status status-prototype">Architecture / prototype</span></div>
+          <h3>Enterprise RAG Knowledge Platform</h3>
+          <p>Repository for an enterprise-oriented retrieval-augmented generation knowledge platform. This archive links the project without assuming production readiness.</p>
+          <ul class="tag-list"><li>LLMs</li><li>RAG</li><li>Knowledge Retrieval</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/LLM-enterprise-rag-knowledge-platform" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="software" data-search="MoviSabio smart city territorial intelligence digital twin traffic optimization">
+          <div class="portfolio-card-top"><span class="portfolio-year">2026</span><span class="project-status status-prototype">Architecture / execution phase</span></div>
+          <h3>MoviSabio — Territorial Intelligence Platform</h3>
+          <p>Smart-city and geospatial platform concept combining territorial data, digital-twin thinking, simulation, optimization, and a planned traffic-intelligence vertical slice. The repository states the architecture is transitioning into execution.</p>
+          <ul class="tag-list"><li>Geospatial AI</li><li>Digital Twin</li><li>Traffic Intelligence</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/Movisabio-Enterprise-Smart-City-System" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="portfolio-card" data-category="software" data-search="PGCB website member portal web engineering institutional">
+          <div class="portfolio-card-top"><span class="portfolio-year">2026</span><span class="project-status status-repo">Related repository</span></div>
+          <h3>PGCB Website</h3>
+          <p>Separate repository associated with the PGCB website work; linked independently to preserve the project trail.</p>
+          <ul class="tag-list"><li>Web Engineering</li><li>Institutional Site</li></ul>
+          <a class="project-link" href="https://github.com/alimulfazalnabil/PGCB-website" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="portfolio-card" data-category="design" data-search="AutoCAD architectural engineering design technical drawings 15 projects">
+          <div class="portfolio-card-top"><span class="portfolio-year">2021–2023</span><span class="project-status status-notes">Project notes</span></div>
+          <h3>AutoCAD Engineering and Architectural Designs</h3>
+          <p>Technical drafting and design work across architectural and engineering projects, recorded in the project archive as 15+ designs.</p>
+          <ul class="tag-list"><li>AutoCAD</li><li>Technical Drawing</li><li>Engineering Design</li></ul>
+          <p class="portfolio-meta">The count is from supplied project notes and has not been independently audited.</p>
+        </article>
+        <article class="portfolio-card" data-category="design" data-search="industrial edge hardware workstation PC build system integration">
+          <div class="portfolio-card-top"><span class="portfolio-year">2016–2026</span><span class="project-status status-notes">Experience notes</span></div>
+          <h3>PC Workstations and Industrial Edge Hardware</h3>
+          <p>Hardware assembly, workstation configuration, troubleshooting, and integration work recorded across the broader engineering timeline.</p>
+          <ul class="tag-list"><li>Hardware</li><li>System Integration</li><li>Troubleshooting</li></ul>
+        </article>
+        <article class="portfolio-card" data-category="design" data-search="research papers IoT notice board online shopping auction SPAROO">
+          <div class="portfolio-card-top"><span class="portfolio-year">Publication details pending</span><span class="project-status status-notes">Needs source check</span></div>
+          <h3>Research and Technical Writing</h3>
+          <p>The supplied archive lists research/paper work associated with an IoT-based notice board and the SPAROO online shopping and auction system. Publication venues, DOI/URL, authorship, and peer-review status should be verified before formal claims are shown.</p>
+          <ul class="tag-list"><li>Research</li><li>IoT</li><li>Software Systems</li></ul>
+        </article>
+      </div>
+      <div class="portfolio-empty" id="portfolioEmpty" hidden>No projects match that search. Try another keyword or choose “All work”.</div>
+      <p class="portfolio-note">This is an evolving archive. Some older projects are currently documented through personal project notes rather than a public repository. Repository links point to available source material; upstream or learning repositories are not presented as original work unless the project documentation supports that attribution.</p>
+    </section>
+    <section class="portfolio-next wrap">
+      <div><p class="eyebrow">NEXT STEP</p><h2>Want to discuss a project?</h2><p>Return to the main profile for my current focus, experience, and contact details.</p></div>
+      <a class="button button-primary" href="index.html#contact">Contact me <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span id="year"></span> Alimul Fazal Nabil</span><span>Project archive · Updated as evidence and repositories are verified</span><a href="index.html">Back to homepage ↑</a></div></footer>
+</body>
+</html>
