@@ -1,0 +1,4283 @@
+{
+  "home": [
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "AVAILABLE FOR RELEVANT OPPORTUNITIES",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "--:--:-- (UTC+6)",
+      "id": "liveClockTime"
+    },
+    {
+      "tag": "h1",
+      "classes": [],
+      "text": "Building Scalable, Intelligent AI Systems for Enterprise Impact.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Intelligent AI Systems",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "hero-subtitle"
+      ],
+      "text": "AI SOLUTIONS ENGINEER | GENAI · RAG · AI AGENTS · MLOPS",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "hero-lead"
+      ],
+      "text": "I bridge machine learning and production engineering: turning modern AI capabilities—from RAG architectures and autonomo",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-primary"
+      ],
+      "text": "Explore Selected Work ↘",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-secondary"
+      ],
+      "text": "Connect on LinkedIn ↗",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-secondary"
+      ],
+      "text": "Download Resume ↓",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "metric-label"
+      ],
+      "text": "YEARS INFRASTRUCTURE",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "metric-label"
+      ],
+      "text": "PRODUCTION & OPEN REPOS",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "metric-label"
+      ],
+      "text": "PEER-REVIEWED PAPERS",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "metric-label"
+      ],
+      "text": "EF SET ENGLISH PROFICIENT",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "01 / ARCHITECTURE CORE",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-status"
+      ],
+      "text": "ACTIVE PRODUCTION",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "Generative AI & RAG",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Hybrid retrieval (dense + sparse BM25), pgvector, reranking, and citation grounding.",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "Autonomous AI Agents",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Tool calling, multi-agent orchestration, structured output, and deterministic reasoning.",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "MLOps & Cloud Systems",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Microsoft Azure, Docker, Kubernetes, Terraform IaC, and automated CI/CD pipelines.",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "Computer Vision & Robotics",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "OpenCV perception, YOLO object tracking, ROS 2, and CARLA/SUMO simulation.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Python",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "FastAPI",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "pgvector",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Azure",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Kubernetes",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Terraform",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "OpenCV",
+      "id": ""
+    }
+  ],
+  "about": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "02 / ABOUT & METHODOLOGY",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [
+        "section-title"
+      ],
+      "text": "Systems Thinking Meets Applied Intelligence.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Applied Intelligence.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "section-desc"
+      ],
+      "text": "Operational engineering experience applied directly to the frontier of artificial intelligence.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "lead-text"
+      ],
+      "text": "I am an AI Solutions Engineer grounded in over 7 years of infrastructure, cloud architecture, automation, and DevOps exp",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "AI solutions cannot live in an isolated notebook: they require robust data ingestion, fast vector retrieval, resilient A",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "My progression connects the entire engineering stack: Python → Machine Learning → APIs → LLMs → RAG → Vector Databases →",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "HOW I BUILD AI SOLUTIONS · 6-STAGE LIFECYCLE",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Systematic Engineering Pipeline from Scope to Scale",
+      "id": ""
+    }
+  ],
+  "ai-twin": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "INTERACTIVE AGENT · LOCAL CLIENT-SIDE RETRIEVAL",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [
+        "section-title"
+      ],
+      "text": "Query My AI Digital Twin.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "AI Digital Twin.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "section-desc"
+      ],
+      "text": "Explore my engineering work, technical expertise, projects, and professional background through a private, interactive k",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "Alimul Fazal Nabil LOCAL KNOWLEDGE ENGINE",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "ai-twin-badge"
+      ],
+      "text": "LOCAL KNOWLEDGE ENGINE",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-info-btn"
+      ],
+      "text": "ℹ️ Architecture",
+      "id": "aiTwinInfoBtn"
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-clear-btn"
+      ],
+      "text": "Clear Chat",
+      "id": "aiTwinClearBtn"
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Answers are computed 100% locally in your browser using deterministic layered retrieval: intent classification, entity &",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Hi! I am Alimul's AI Twin , running locally in your browser through a deterministic knowledge retrieval engine. Ask me a",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Click any of the 10 suggested prompts below, ask for project comparisons, or paste a target job description for a ground",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-chip"
+      ],
+      "text": "⚡ GenAI & Enterprise RAG",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-chip"
+      ],
+      "text": "☁️ Azure Cloud & Terraform",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-chip"
+      ],
+      "text": "👁️ Computer Vision & CARLA",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-chip"
+      ],
+      "text": "🤖 Robotics & Embedded Systems",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-chip"
+      ],
+      "text": "📊 Cloud & Data Engineering",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-chip"
+      ],
+      "text": "⚖️ Compare My Technical Projects",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-chip"
+      ],
+      "text": "🎯 Analyze My Fit for an AI Engineer Role",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-chip"
+      ],
+      "text": "💼 Services & Software Development",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-chip"
+      ],
+      "text": "💡 Why Alimul for an AI Solutions Engineering Project?",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-chip"
+      ],
+      "text": "📬 Contact & Project Inquiry",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "ai-twin-send-btn"
+      ],
+      "text": "Send Inquiry →",
+      "id": "aiTwinSendBtn"
+    }
+  ],
+  "featured": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "03 / FLAGSHIP INITIATIVES",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [
+        "section-title"
+      ],
+      "text": "Architectures Built For Real Enterprise Scenarios.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Real Enterprise Scenarios.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "section-desc"
+      ],
+      "text": "Deep dive into flagship production reference platforms and live engineering initiatives.",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-secondary"
+      ],
+      "text": "Explore All 27 Projects →",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "rag-node"
+      ],
+      "text": "DOCUMENTS",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "rag-node"
+      ],
+      "text": "EMBEDDINGS pgvector",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "rag-node"
+      ],
+      "text": "HYBRID SEARCH BM25 + Dense",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "rag-node"
+      ],
+      "text": "RERANK Cross-Encoder",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "rag-node"
+      ],
+      "text": "GROUNDED ANSWER",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "project-cat"
+      ],
+      "text": "AI SYSTEMS / ENTERPRISE RAG",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "project-badge"
+      ],
+      "text": "FLAGSHIP ARCHITECTURE",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "LLM Enterprise RAG Knowledge Platform",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "A production-grade, multi-tenant Retrieval-Augmented Generation (RAG) reference architecture built to eliminate hallucin",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Python 3.12+",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "FastAPI",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "PostgreSQL / pgvector",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "BM25 Hybrid",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Docker",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Terraform",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-primary"
+      ],
+      "text": "Read Deep Case Study →",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "repo-btn"
+      ],
+      "text": "View Code ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "project-cat"
+      ],
+      "text": "INTELLIGENT TRANSPORTATION / MOBILITY",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "project-badge"
+      ],
+      "text": "CO-FOUNDER & CTO",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "AI Traffic Signal Coordination (MoviSabio)",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "A territorial intelligence initiative optimizing urban traffic flow and reducing intersection wait times. Integrates geo",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Python",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "GeoPandas",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "PostGIS",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "SUMO / TraCI",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Computer Vision",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Simulation",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "repo-btn"
+      ],
+      "text": "Visit MoviSabio Platform ↗",
+      "id": ""
+    }
+  ],
+  "architecture-impact": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "ENGINEERING IMPACT · BEFORE VS AFTER",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [
+        "section-title"
+      ],
+      "text": "Architectural Rationale & Measurable Transformation.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Measurable Transformation.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "section-desc"
+      ],
+      "text": "See how disciplined engineering solves baseline limitations across flagship RAG, perception, and clinical machine learni",
+      "id": ""
+    }
+  ],
+  "engineering-challenge": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "INTERACTIVE TRADEOFF CHALLENGE",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [
+        "section-title"
+      ],
+      "text": "You Be The AI Engineer: Make The Architectural Call.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Make The Architectural Call.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "section-desc"
+      ],
+      "text": "Test your engineering judgment on a real-world dilemma: balancing strict hallucination suppression with sub-second produ",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "scenario-channel-tag"
+      ],
+      "text": "PRODUCTION SCENARIO #01 · ENTERPRISE RAG",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "SLA: p95 < 650ms",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "The Engineering Dilemma",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Your Enterprise RAG platform is retrieving verified knowledge from 250,000 internal technical manuals. However, during a",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "scenario-opt-btn"
+      ],
+      "text": "Option A: Switch to a massive 1M-context model and stuff all related manuals into every raw prompt. →",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Option A: Switch to a massive 1M-context model and stuff all related manuals into every raw prompt.",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "scenario-opt-btn"
+      ],
+      "text": "Option B: Two-Stage Hybrid RRF + Semantic Similarity Threshold + Claim Citation Verification Gate. →",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Option B: Two-Stage Hybrid RRF + Semantic Similarity Threshold + Claim Citation Verification Gate.",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "scenario-opt-btn"
+      ],
+      "text": "Option C: Remove the vector database and rely exclusively on system prompt instructions like \"Never lie\". →",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Option C: Remove the vector database and rely exclusively on system prompt instructions like \"Never lie\".",
+      "id": ""
+    }
+  ],
+  "projects": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "04 / PROJECT DIRECTORY",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [
+        "section-title"
+      ],
+      "text": "Explore Verified Repositories & Prototypes.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Repositories & Prototypes.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "section-desc"
+      ],
+      "text": "Filter by domain to inspect dedicated repositories, machine learning prototypes, computer vision systems, and cloud infr",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "filter-btn",
+        "active"
+      ],
+      "text": "All Selected (3)",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "filter-btn"
+      ],
+      "text": "Computer Vision",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "filter-btn"
+      ],
+      "text": "Applied ML",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "filter-btn"
+      ],
+      "text": "Cloud & DevOps",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "filter-btn"
+      ],
+      "text": "Full Archive (27) →",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "project-cat"
+      ],
+      "text": "COMPUTER VISION",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "project-badge"
+      ],
+      "text": "DEDICATED REPO",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "Autonomous Lane Detection",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "A computer-vision roadway perception pipeline with CARLA simulation integration. Performs RGB preprocessing, region-of-i",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Python",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "OpenCV",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "NumPy",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "CARLA Simulator",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-primary"
+      ],
+      "text": "Case Study →",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "repo-btn"
+      ],
+      "text": "View Repository ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "project-cat"
+      ],
+      "text": "APPLIED MACHINE LEARNING",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "project-badge"
+      ],
+      "text": "EDUCATIONAL DEMO",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "Heart Disease Prediction & API",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "A leakage-free, supervised classification system trained on the UCI Cleveland dataset. Adheres to enterprise constraints",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "scikit-learn",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "FastAPI",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Docker",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "CI/CD",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-primary"
+      ],
+      "text": "Case Study →",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "repo-btn"
+      ],
+      "text": "View Repository ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "project-cat"
+      ],
+      "text": "CLOUD ENGINEERING",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "project-badge"
+      ],
+      "text": "INFRASTRUCTURE AS CODE",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "Azure Terraform & CI/CD Foundation",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "An enterprise-grade, modular Infrastructure as Code (IaC) deployment framework for Azure. Automates multi-tier cloud pro",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Terraform",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "Microsoft Azure",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "GitHub Actions",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "tag"
+      ],
+      "text": "OIDC Security",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-primary"
+      ],
+      "text": "Case Study →",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "repo-btn"
+      ],
+      "text": "View Repository ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "2016 — 2026 VERIFIED MASTER INVENTORY",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Looking for the Complete 10-Year Engineering Archive ?",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "10-Year Engineering Archive",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Search and filter all 27 verified technical systems across Embedded Robotics, Computer Vision, CARLA Sim, Data Engineeri",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-primary"
+      ],
+      "text": "Explore Full Project Archive (27 Projects) →",
+      "id": ""
+    }
+  ],
+  "media": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "MEDIA SHOWCASE",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [
+        "section-title"
+      ],
+      "text": "Beyond the Code. Into the Field.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Into the Field.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "section-desc"
+      ],
+      "text": "Explore selected moments from engineering projects, robotics experiments, drone and travel photography, technical demons",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "media-cat-badge"
+      ],
+      "text": "ENGINEERING & DEMOS",
+      "id": "mediaCatBadge"
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "media-type-badge"
+      ],
+      "text": "📷 IMAGE",
+      "id": "mediaTypeBadge"
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "IMAGE",
+      "id": "mediaTypeLabel"
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "media-slide-counter"
+      ],
+      "text": "01 / 06",
+      "id": "mediaSlideCounter"
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "media-date-badge"
+      ],
+      "text": "2024–2026",
+      "id": "mediaDateBadge"
+    },
+    {
+      "tag": "h3",
+      "classes": [
+        "media-title"
+      ],
+      "text": "Alimul Fazal Nabil — Engineering & Applied AI Solutions",
+      "id": "mediaTitle"
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "media-caption"
+      ],
+      "text": "Alimul Fazal Nabil leading AI solutions, systems architecture, and engineering initiatives.",
+      "id": "mediaCaption"
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "media-description"
+      ],
+      "text": "Explore hands-on systems architecture, prototype benchmarks, and hardware-integrated deployments.",
+      "id": "mediaDescription"
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-primary"
+      ],
+      "text": "View Original ↗",
+      "id": "mediaOriginalBtn"
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "View Original",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "repo-btn"
+      ],
+      "text": "View Related Project →",
+      "id": "mediaRelatedBtn"
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "View Related Project",
+      "id": ""
+    }
+  ],
+  "experience": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "05 / CAREER JOURNEY",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [
+        "section-title"
+      ],
+      "text": "Engineering, Leadership & Technical Instruction.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Technical Instruction.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "section-desc"
+      ],
+      "text": "A track record spanning AI instruction, technical leadership, and 7+ years of infrastructure operations.",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "AI & ML Instructor",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "timeline-period"
+      ],
+      "text": "MARCH 2026 — PRESENT",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Chief Technology Officer & Co-founder",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "timeline-period"
+      ],
+      "text": "JANUARY 2026 — PRESENT",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "repo-btn"
+      ],
+      "text": "Visit MoviSabio ↗",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Infrastructure & Cloud Systems Engineer",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "timeline-period"
+      ],
+      "text": "JULY 2023 — PRESENT",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Information Technology Support Engineer",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "timeline-period"
+      ],
+      "text": "JANUARY 2019 — JUNE 2023",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Graduate Student Researcher",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "timeline-period"
+      ],
+      "text": "JANUARY 2022 — DECEMBER 2022",
+      "id": ""
+    }
+  ],
+  "education": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "06 / ACADEMIC & CREDENTIALS",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [
+        "section-title"
+      ],
+      "text": "Academic Foundations, Research & Certifications.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Research & Certifications.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "section-desc"
+      ],
+      "text": "Formal engineering education, peer-reviewed international publications, and verified professional certifications.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "edu-year"
+      ],
+      "text": "2017 — 2021",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Bachelor of Science in Computer Engineering",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "edu-year"
+      ],
+      "text": "2013 — 2014",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Higher Secondary School Certificate (HSC), Science",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "RESEARCH & SCHOLARSHIP",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Peer-Reviewed Publications (2022)",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "Implementation of IoT Based Notice Board",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "pub-link"
+      ],
+      "text": "Read Journal Paper (PDF) ↗",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "Implementation of Online Shopping and Auction System (SPAROO)",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "pub-link"
+      ],
+      "text": "Read Journal Paper (PDF) ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "VERIFIED CREDENTIALS",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Professional Certifications",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "CONTINUOUS STUDY & PREPARATION",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "edu-detail"
+      ],
+      "text": "Active examination preparation for Azure Administrator (AZ-104), Azure AI Engineer (AI-102), Azure Developer (AZ-204), a",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "HONORS & LANGUAGES",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Honors & Language Proficiency",
+      "id": ""
+    }
+  ],
+  "skills": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "07 / TECHNICAL CAPABILITIES",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [
+        "section-title"
+      ],
+      "text": "An Integrated Engineering Matrix.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Engineering Matrix.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [
+        "section-desc"
+      ],
+      "text": "Technical proficiencies organized by discipline: AI engineering, core software, cloud infrastructure, and intelligent sy",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "DOMAIN 01",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "🧠 AI & Machine Learning",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Generative AI & LLM Systems",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Generative AI ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Generative AI",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Retrieval-Augmented Generation (RAG) Architectures ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Retrieval-Augmented Generation (RAG) Architectures",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "AI Agent Development ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "AI Agent Development",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "LLM Integration and Orchestration ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "LLM Integration and Orchestration",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "OpenAI API ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "OpenAI API",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "NLP and Text Analytics ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "NLP and Text Analytics",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Search, Retrieval & Vector Architectures",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Vector Search and Embeddings ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Vector Search and Embeddings",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "pgvector ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "pgvector",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "BM25 Retrieval ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "BM25 Retrieval",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Cross-Encoder Reranking ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Cross-Encoder Reranking",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Hybrid Search and Retrieval ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Hybrid Search and Retrieval",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Core Machine Learning & Prediction",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "scikit-learn ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "scikit-learn",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "PyTorch ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "PyTorch",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "TensorFlow ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "TensorFlow",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Predictive Modeling ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Predictive Modeling",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Recommendation Systems ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Recommendation Systems",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "MLOps, Benchmarking & Evaluation",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "MLOps ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "MLOps",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Machine Learning Model Evaluation ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Machine Learning Model Evaluation",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Model Performance Evaluation ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Model Performance Evaluation",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "AI Testing and Evaluation ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "AI Testing and Evaluation",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "DOMAIN 02",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "⚡ Software & Data Engineering",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Languages & API Frameworks",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Python ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Python",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "C++17 ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "C++17",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "FastAPI ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "FastAPI",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Flask ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Flask",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "REST API Development ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "REST API Development",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Software Testing and Debugging ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Software Testing and Debugging",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Databases, Spatial & In-Memory",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "PostgreSQL ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "PostgreSQL",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "PostGIS ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "PostGIS",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "SQL ↗",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Redis ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Redis",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Database Design ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Database Design",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Data Modeling ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Data Modeling",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Data Processing & Analytical Libraries",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Pandas ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Pandas",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "NumPy ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "NumPy",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "GeoPandas ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "GeoPandas",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Data Cleaning and Transformation ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Data Cleaning and Transformation",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Data Integration ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Data Integration",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Distributed Pipelines & Storage Architecture",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Apache Spark ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Apache Spark",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Apache Airflow ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Apache Airflow",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Kafka ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Kafka",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Hadoop ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Hadoop",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "ETL/ELT Pipelines ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "ETL/ELT Pipelines",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Data Warehousing ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Data Warehousing",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Data Lake Architecture ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Data Lake Architecture",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Git and GitHub ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Git and GitHub",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "DOMAIN 03",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "☁️ Cloud, DevOps & Infrastructure",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Cloud Platforms & Resource Governance",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Microsoft Azure ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Microsoft Azure",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Amazon Web Services (AWS) ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Amazon Web Services (AWS)",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Cloud Infrastructure Management ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Cloud Infrastructure Management",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Cloud Resource Optimization ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Cloud Resource Optimization",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Containerization & Cluster Orchestration",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Docker ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Docker",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Kubernetes (K8s) ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Kubernetes (K8s)",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Application Deployment ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Application Deployment",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Infrastructure as Code & CI/CD Pipelines",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Terraform (Infrastructure as Code) ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Terraform (Infrastructure as Code)",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Ansible ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Ansible",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "GitHub Actions ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "GitHub Actions",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "CI/CD Pipelines ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "CI/CD Pipelines",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Infrastructure Automation ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Infrastructure Automation",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Observability, SysAdmin & Networking",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Prometheus ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Prometheus",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Grafana ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Grafana",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Monitoring and Logging ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Monitoring and Logging",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Linux ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Linux",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Bash ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Bash",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "PowerShell ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "PowerShell",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Windows Server Administration ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Windows Server Administration",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "System Administration ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "System Administration",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Network Troubleshooting ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Network Troubleshooting",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Backup and Recovery Planning ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Backup and Recovery Planning",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "DOMAIN 04",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "👁️ Intelligent Systems & Vision",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Computer Vision & Perception Pipelines",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "OpenCV ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "OpenCV",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "YOLO Object Detection ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "YOLO Object Detection",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Computer Vision ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Computer Vision",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Image Processing ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Image Processing",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Object Tracking ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Object Tracking",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Autonomous Simulation & Robotics",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "ROS 2 ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "ROS 2",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "CARLA Simulation ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "CARLA Simulation",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "SUMO / TraCI ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "SUMO / TraCI",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Autonomous Systems Simulation ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Autonomous Systems Simulation",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Traffic Simulation and Optimization ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Traffic Simulation and Optimization",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "UAV / Drone Systems ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "UAV / Drone Systems",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Robotics Software ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Robotics Software",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Geospatial Processing & Telemetry",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Geospatial Processing ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Geospatial Processing",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "QGIS ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "QGIS",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "ArcGIS ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "ArcGIS",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "IoT Telemetry ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "IoT Telemetry",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Embedded Systems & Sensor Fusion",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Embedded Systems ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Embedded Systems",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Sensor Fusion ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Sensor Fusion",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Sensor Integration ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Sensor Integration",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Arduino ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Arduino",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Raspberry Pi ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Raspberry Pi",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Hardware–Software Integration ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Hardware–Software Integration",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "eyebrow-sub"
+      ],
+      "text": "SPECIALIZED & CROSS-FUNCTIONAL PRACTICES",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "classes": [],
+      "text": "Supporting Technical Disciplines",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Interdisciplinary proficiencies bridging automated workflows, business intelligence analytics, and industrial hardware-l",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "DOMAIN 05",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "⚡ Automation & Software Delivery",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Workflow Automation & Scripting",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Python Automation ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Python Automation",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Workflow Automation ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Workflow Automation",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "API Integrations ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "API Integrations",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Scripting and Tooling ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Scripting and Tooling",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Delivery Pipelines & Quality",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Git-Based Workflows ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Git-Based Workflows",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "CI/CD Automation ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "CI/CD Automation",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Automated Testing ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Automated Testing",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Technical Documentation ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Technical Documentation",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "DOMAIN 06",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "📊 Data Visualization & Analytics",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Exploration & Statistical Modeling",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Statistical Analysis ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Statistical Analysis",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Exploratory Data Analysis ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Exploratory Data Analysis",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Matplotlib ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Matplotlib",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Seaborn ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Seaborn",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Business Intelligence & Reporting",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Power BI ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Power BI",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Tableau ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Tableau",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "KPI Dashboards ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "KPI Dashboards",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Forecasting and Reporting ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Forecasting and Reporting",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "card-kicker"
+      ],
+      "text": "DOMAIN 07",
+      "id": ""
+    },
+    {
+      "tag": "h4",
+      "classes": [],
+      "text": "🖥️ Hardware & Industrial Systems",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Workstation & Network Systems",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "PC and Workstation Engineering ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "PC and Workstation Engineering",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Hardware Diagnostics ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Hardware Diagnostics",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Server and Network Hardware ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Server and Network Hardware",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Industrial Edge Computing ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Industrial Edge Computing",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "skill-subgroup-title"
+      ],
+      "text": "Industrial Automation & Digital Twins",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Digital Twin Concepts ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Digital Twin Concepts",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Industrial Telemetry ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Industrial Telemetry",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "PLC Connectivity Concepts ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "PLC Connectivity Concepts",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "skill-chip"
+      ],
+      "text": "Predictive Maintenance Prototypes ↗",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Predictive Maintenance Prototypes",
+      "id": ""
+    }
+  ],
+  "services": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "08 / PROFESSIONAL SERVICES CATALOG",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [],
+      "text": "End-to-End Engineering & Intelligent Solutions",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Intelligent Solutions",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Comprehensive production engineering across 9 technical domains and 85+ specialized services. From bespoke web applicati",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "count-badge"
+      ],
+      "text": "Loading services...",
+      "id": "servicesCountBadge"
+    }
+  ],
+  "estimator": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "TRANSPARENT PRICING / EFFORT MODELING",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [],
+      "text": "Interactive Project Budget & Effort Estimator",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Budget & Effort Estimator",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Calculate preliminary engineering effort, sprint delivery timelines, and budget ranges across USD, BDT, and EUR. Transpa",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "1. Project Architecture Type",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "2. Industry / Domain",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "3. Project Requirements / Scope Summary",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "4. User Roles & Permission Levels",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "radio-pill"
+      ],
+      "text": "1–2 Roles",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "1–2 Roles",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "radio-pill"
+      ],
+      "text": "3–5 Roles",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "3–5 Roles",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "radio-pill"
+      ],
+      "text": "6+ Roles",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "6+ Roles",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "5. UI / UX Design Requirement",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "6. Third-Party Integrations",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "7. AI / Machine Learning Layer",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "8. Complexity Level",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "9. Delivery Timeline",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "10. Ongoing Support SLA",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "11. Currency Selection",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "12. Additional Core Features",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "Role-Based Auth (RBAC)",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Role-Based Auth (RBAC)",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "PostgreSQL / ORM Schema",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "PostgreSQL / ORM Schema",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "REST / OpenAPI Suite",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "REST / OpenAPI Suite",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "Analytics Dashboard",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Analytics Dashboard",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "Payment Gateway (Stripe/SSL)",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Payment Gateway (Stripe/SSL)",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "Vector / Semantic Search",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Vector / Semantic Search",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "RAG Document Retrieval",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "RAG Document Retrieval",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "Async Background Workers",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Async Background Workers",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "Webhooks & Event Stream",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Webhooks & Event Stream",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "Automated PDF / Invoice Engine",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Automated PDF / Invoice Engine",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "Multi-Language (i18n)",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Multi-Language (i18n)",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [
+        "feature-check-label"
+      ],
+      "text": "PWA Offline Caching",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "PWA Offline Caching",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "button",
+        "button-primary"
+      ],
+      "text": "Calculate Detailed Estimate ⚡",
+      "id": "estimatorRecalcBtn"
+    }
+  ],
+  "proposal-generator": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "AUTOMATED SCOPE SYNTHESIS / FORMAL DOCUMENT GENERATION",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [],
+      "text": "Client Requirement-Based AI Proposal Generator",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "AI Proposal Generator",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Transform operational objectives and technical criteria into a formal, 21-part engineering proposal complete with archit",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "prop-mode-tab",
+        "active"
+      ],
+      "text": "⚡ Mode A: Free In-Browser Generator (Instant & Offline)",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "prop-mode-tab"
+      ],
+      "text": "🤖 Mode B: Prepared AI Engine Hook (API Key Optional)",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Mode B Hook Active: In-browser AI drafting with client-side API execution. Your API key is stored only in memory for thi",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "prop-step-btn",
+        "active"
+      ],
+      "text": "1 Client & Domain",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Client & Domain",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "prop-step-btn"
+      ],
+      "text": "2 Problem & Scope",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Problem & Scope",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "prop-step-btn"
+      ],
+      "text": "3 Technical Stack",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Technical Stack",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "prop-step-btn"
+      ],
+      "text": "4 Timeline & Commercials",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [],
+      "text": "Timeline & Commercials",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Client / Organization Name *",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Contact Person / Email *",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Industry / Vertical *",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Service Category",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Working Project Title *",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "button",
+        "button-primary",
+        "prop-btn-next"
+      ],
+      "text": "Next: Problem & Scope →",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Core Problem Statement / Operational Challenge",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Target Business Objectives",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Key Functional Deliverables & Features",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Existing Software / Legacy Systems to Integrate",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "button",
+        "button-secondary",
+        "prop-btn-prev"
+      ],
+      "text": "← Back",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "button",
+        "button-primary",
+        "prop-btn-next"
+      ],
+      "text": "Next: Technical Stack →",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Preferred Technologies / Stacks",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Target User Roles",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Data Migration Requirements",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Security & Compliance Standards",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Hosting & Cloud Infrastructure Preference",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "button",
+        "button-secondary",
+        "prop-btn-prev"
+      ],
+      "text": "← Back",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "button",
+        "button-primary",
+        "prop-btn-next"
+      ],
+      "text": "Next: Timeline & Commercials →",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Target Delivery Timeline",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Currency",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Target Budget Alignment",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Post-Launch Warranty & SLA Support",
+      "id": ""
+    },
+    {
+      "tag": "label",
+      "classes": [],
+      "text": "Special Terms / Success Criteria",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "button",
+        "button-secondary",
+        "prop-btn-prev"
+      ],
+      "text": "← Back",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "button",
+        "button-primary"
+      ],
+      "text": "Generate Formal Proposal 📄",
+      "id": ""
+    }
+  ],
+  "contact": [
+    {
+      "tag": "p",
+      "classes": [
+        "eyebrow"
+      ],
+      "text": "09 / INITIATE CONTACT",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "classes": [],
+      "text": "Let’s Build Intelligent Systems Together.",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "gradient-text"
+      ],
+      "text": "Together.",
+      "id": ""
+    },
+    {
+      "tag": "p",
+      "classes": [],
+      "text": "Whether you are looking to architect enterprise RAG platforms, deploy autonomous AI agents, scale cloud-native infrastru",
+      "id": ""
+    },
+    {
+      "tag": "span",
+      "classes": [
+        "intent-selector-label"
+      ],
+      "text": "What brings you here? Select inquiry intent to prefill:",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "intent-chip",
+        "active"
+      ],
+      "text": "💼 Hiring AI Solutions Engineer",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "intent-chip"
+      ],
+      "text": "🤝 Enterprise RAG & Cloud Project",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "intent-chip"
+      ],
+      "text": "👁️ Computer Vision / Perception",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "intent-chip"
+      ],
+      "text": "🎓 Mentorship & Tech Workshops",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "intent-chip"
+      ],
+      "text": "💬 General Engineering Inquiry",
+      "id": ""
+    },
+    {
+      "tag": "button",
+      "classes": [
+        "button",
+        "button-primary"
+      ],
+      "text": "Send via Email Client ↗",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-secondary"
+      ],
+      "text": "Direct Email (Plain Link) ↗",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-secondary"
+      ],
+      "text": "LinkedIn ↗",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-secondary"
+      ],
+      "text": "GitHub ↗",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-secondary"
+      ],
+      "text": "LeetCode ↗",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-secondary"
+      ],
+      "text": "MoviSabio ↗",
+      "id": ""
+    },
+    {
+      "tag": "a",
+      "classes": [
+        "button",
+        "button-secondary"
+      ],
+      "text": "Resume (PDF) ↓",
+      "id": ""
+    }
+  ]
+}

@@ -43,53 +43,54 @@
   // =========================================================================
   // 2. Bilingual Translation Dictionary (English / German)
   // =========================================================================
-  const I18N = {
-    en: {
-      navAbout: "About",
-      navFeatured: "Featured",
-      navProjects: "Selected Projects",
-      navExperience: "Experience",
-      navEducation: "Education & Credentials",
-      navMore: "More",
-      navMedia: "Media Showcase",
-      mediaEyebrow: "MEDIA SHOWCASE",
-      mediaDesc: "Explore selected moments from engineering projects, robotics experiments, drone and travel photography, technical demonstrations, and visual explorations.",
-      navSkills: "Skills & Capabilities",
-      navServices: "Professional Services",
-      navEstimator: "Budget Estimator",
-      navProposal: "AI Proposal Generator",
-      navPortfolio: "Full Portfolio (27 Projects) ↗",
-      navContact: "Contact",
-      navResume: "Resume (PDF) ↓",
-      navSearch: "Search",
-      navSearchMobile: "Search Portfolio & Skills",
-      statusAvailable: "AVAILABLE FOR RELEVANT OPPORTUNITIES",
-      navPortfolioOverview: "Overview",
-      navPortfolioAll: "All Projects (27)"
-    },
-    de: {
-      navAbout: "Über mich",
-      navFeatured: "Highlights",
-      navProjects: "Ausgewählte Projekte",
-      navExperience: "Berufserfahrung",
-      navEducation: "Ausbildung & Qualifikationen",
-      navMore: "Mehr",
-      navMedia: "Medien-Galerie",
-      mediaEyebrow: "MEDIEN-GALERIE",
-      mediaDesc: "Entdecken Sie ausgewählte Momente aus Ingenieurprojekten, Robotik-Experimenten, Drohnen- und Reisefotografie, technischen Demonstrationen und visuellen Erkundungen.",
-      navSkills: "Fähigkeiten & Matrix",
-      navServices: "Dienstleistungen",
-      navEstimator: "Kosten-Kalkulator",
-      navProposal: "KI-Angebotsersteller",
-      navPortfolio: "Vollständiges Portfolio (27) ↗",
-      navContact: "Kontakt",
-      navResume: "Lebenslauf (PDF) ↓",
-      navSearch: "Suche",
-      navSearchMobile: "Portfolio & Fähigkeiten durchsuchen",
-      statusAvailable: "VERFÜGBAR FÜR RELEVANTE PROJEKTE",
-      navPortfolioOverview: "Übersicht",
-      navPortfolioAll: "Alle Projekte (27)"
+  const getTranslations = () => {
+    if (typeof window !== "undefined" && window.TRANSLATIONS) {
+      return window.TRANSLATIONS;
     }
+    return {
+      en: {
+        navAbout: "About",
+        navFeatured: "Featured",
+        navProjects: "Selected Projects",
+        navExperience: "Experience",
+        navEducation: "Education & Credentials",
+        navMore: "More",
+        navMedia: "Media Showcase",
+        navSkills: "Skills & Capabilities",
+        navServices: "Professional Services",
+        navEstimator: "Budget Estimator",
+        navProposal: "AI Proposal Generator",
+        navPortfolio: "Full Portfolio (27 Projects) ↗",
+        navPortfolioOverview: "Overview",
+        navPortfolioAll: "All Projects (27)",
+        navContact: "Contact",
+        navResume: "Resume (PDF) ↓",
+        navSearch: "Search",
+        navSearchMobile: "Search Portfolio & Skills",
+        statusAvailable: "AVAILABLE FOR RELEVANT OPPORTUNITIES"
+      },
+      de: {
+        navAbout: "Über mich",
+        navFeatured: "Highlights",
+        navProjects: "Ausgewählte Projekte",
+        navExperience: "Berufserfahrung",
+        navEducation: "Ausbildung & Qualifikationen",
+        navMore: "Mehr",
+        navMedia: "Medien-Galerie",
+        navSkills: "Fähigkeiten & Matrix",
+        navServices: "Dienstleistungen",
+        navEstimator: "Kosten-Kalkulator",
+        navProposal: "KI-Angebotsersteller",
+        navPortfolio: "Vollständiges Portfolio (27) ↗",
+        navPortfolioOverview: "Übersicht",
+        navPortfolioAll: "Alle Projekte (27)",
+        navContact: "Kontakt",
+        navResume: "Lebenslauf (PDF) ↓",
+        navSearch: "Suche",
+        navSearchMobile: "Portfolio & Fähigkeiten durchsuchen",
+        statusAvailable: "VERFÜGBAR FÜR RELEVANTE PROJEKTE"
+      }
+    };
   };
 
   let currentLang = "en";
@@ -107,16 +108,51 @@
       localStorage.setItem("portfolio-lang", lang);
     } catch (_) {}
 
-    // Update all elements with data-i18n
+    const dict = getTranslations();
+    const currentDict = dict[lang] || dict.en;
+
+    // 1. Update text/HTML content for all elements with data-i18n
     const elements = document.querySelectorAll("[data-i18n]");
     elements.forEach((el) => {
       const key = el.getAttribute("data-i18n");
-      if (I18N[lang] && I18N[lang][key]) {
-        el.textContent = I18N[lang][key];
+      if (currentDict && currentDict[key] !== undefined) {
+        const val = currentDict[key];
+        if (typeof val === "string" && val.includes("<") && val.includes(">")) {
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
       }
     });
 
-    // Update language switcher buttons state
+    // 2. Update placeholder for elements with data-i18n-placeholder
+    const placeholderElements = document.querySelectorAll("[data-i18n-placeholder]");
+    placeholderElements.forEach((el) => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (currentDict && currentDict[key] !== undefined) {
+        el.setAttribute("placeholder", currentDict[key]);
+      }
+    });
+
+    // 3. Update title/tooltip for elements with data-i18n-title
+    const titleElements = document.querySelectorAll("[data-i18n-title]");
+    titleElements.forEach((el) => {
+      const key = el.getAttribute("data-i18n-title");
+      if (currentDict && currentDict[key] !== undefined) {
+        el.setAttribute("title", currentDict[key]);
+      }
+    });
+
+    // 4. Update aria-label for elements with data-i18n-aria
+    const ariaElements = document.querySelectorAll("[data-i18n-aria]");
+    ariaElements.forEach((el) => {
+      const key = el.getAttribute("data-i18n-aria");
+      if (currentDict && currentDict[key] !== undefined) {
+        el.setAttribute("aria-label", currentDict[key]);
+      }
+    });
+
+    // 5. Update language switcher buttons active states
     const allLangButtons = document.querySelectorAll(".lang-btn[data-lang]");
     allLangButtons.forEach((btn) => {
       const isSelected = btn.getAttribute("data-lang") === lang;
@@ -124,7 +160,7 @@
       btn.setAttribute("aria-pressed", String(isSelected));
     });
 
-    // Dispatch event for other components if needed
+    // 6. Dispatch reactive event for specialized components
     window.dispatchEvent(new CustomEvent("portfolio-language-changed", { detail: { lang } }));
   }
 
