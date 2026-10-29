@@ -5,2330 +5,2295 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Professional engineering portfolio for Alimul Fazal Nabil, focused on business value through cloud, DevOps, AI, data, robotics, and leadership."
+      content="Alimul Fazal Nabil — AI Solutions Engineer specializing in Generative AI, Machine Learning, RAG, AI Agents, MLOps, and Cloud Engineering."
     />
-    <title>Alimul Fazal Nabil | Business-Driven Engineering Portfolio</title>
+    <meta name="author" content="Alimul Fazal Nabil" />
+    <meta property="og:title" content="Alimul Fazal Nabil | AI Solutions Engineer" />
+    <meta
+      property="og:description"
+      content="AI Solutions Engineer working across Generative AI, machine learning, intelligent applications, and cloud engineering."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alimulfazalnabil.github.io/" />
+    <meta property="og:image" content="profile.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Alimul Fazal Nabil | AI Solutions Engineer" />
+    <meta
+      name="twitter:description"
+      content="Building practical AI solutions for real-world problems. Generative AI, RAG, Machine Learning, MLOps, and Cloud Systems."
+    />
+    <meta name="twitter:image" content="profile.jpg" />
+    <title>Alimul Fazal Nabil | AI Solutions Engineer</title>
+
     <style>
       :root {
-        --bg: #07111f;
-        --surface: #101c2f;
-        --surface-2: #16263d;
-        --text: #f5f7fb;
-        --muted: #9eb0c7;
-        --accent: #4f8cff;
-        --accent-2: #6ee7f9;
-        --border: rgba(255, 255, 255, 0.12);
+        --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+        /* Light Theme (Sophisticated, warm, engineering-first) */
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --surface-subtle: #f1f5f9;
+        --surface-elevated: #ffffff;
+        --border: #e2e8f0;
+        --border-hover: #cbd5e1;
+        --text: #0f172a;
+        --text-muted: #475569;
+        --text-subtle: #64748b;
+        --accent: #2563eb;
+        --accent-hover: #1d4ed8;
+        --accent-light: #eff6ff;
+        --accent-border: #bfdbfe;
+        --tag-bg: #f1f5f9;
+        --tag-text: #334155;
+        --tag-border: #e2e8f0;
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+        --header-bg: rgba(248, 250, 252, 0.88);
+      }
+
+      [data-theme="dark"] {
+        --bg: #090d16;
+        --surface: #111827;
+        --surface-subtle: #172033;
+        --surface-elevated: #162032;
+        --border: #1f293d;
+        --border-hover: #334155;
+        --text: #f8fafc;
+        --text-muted: #94a3b8;
+        --text-subtle: #64748b;
+        --accent: #3b82f6;
+        --accent-hover: #60a5fa;
+        --accent-light: rgba(59, 130, 246, 0.12);
+        --accent-border: rgba(59, 130, 246, 0.28);
+        --tag-bg: #172033;
+        --tag-text: #cbd5e1;
+        --tag-border: #1f293d;
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.45);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.55);
+        --header-bg: rgba(9, 13, 22, 0.88);
       }
 
       * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
 
       html {
         scroll-behavior: smooth;
+        font-size: 16px;
       }
 
       body {
-        margin: 0;
-        font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
-        line-height: 1.6;
-        background: linear-gradient(135deg, #07111f 0%, #0d1b2e 100%);
+        font-family: var(--font-sans);
+        background-color: var(--bg);
         color: var(--text);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: background-color 0.2s ease, color 0.2s ease;
       }
 
       a {
-        color: var(--accent-2);
+        color: var(--accent);
         text-decoration: none;
+        transition: color 0.15s ease;
+      }
+
+      a:hover {
+        color: var(--accent-hover);
       }
 
       .container {
-        width: min(1120px, calc(100% - 2rem));
+        width: 100%;
+        max-width: 1100px;
         margin: 0 auto;
+        padding: 0 1.5rem;
       }
 
+      /* Focus visibility */
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      /* Header & Navigation */
       header {
         position: sticky;
         top: 0;
-        z-index: 10;
-        backdrop-filter: blur(16px);
-        background: rgba(7, 17, 31, 0.85);
+        z-index: 100;
+        background: var(--header-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         border-bottom: 1px solid var(--border);
+        transition: border-color 0.2s ease, background-color 0.2s ease;
       }
 
-      nav {
-        min-height: 72px;
+      .nav-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        min-height: 68px;
         gap: 1rem;
       }
 
       .brand {
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--text);
-      }
-
-      .nav-links {
         display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        font-size: 0.95rem;
+        flex-direction: column;
+        color: var(--text);
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        text-decoration: none;
+      }
+
+      .brand-name {
+        font-size: 1.05rem;
+        line-height: 1.2;
+      }
+
+      .brand-title {
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: var(--text-subtle);
+        letter-spacing: 0.02em;
+      }
+
+      .nav-menu {
+        display: flex;
         align-items: center;
+        gap: 1.5rem;
+        list-style: none;
       }
 
-      .nav-links a {
-        color: var(--muted);
+      .nav-menu a {
+        color: var(--text-muted);
+        font-size: 0.92rem;
+        font-weight: 500;
+        transition: color 0.15s ease;
       }
 
-      .nav-links a:hover {
+      .nav-menu a:hover,
+      .nav-menu a.active {
         color: var(--text);
       }
 
-      .nav-more {
-        position: relative;
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
       }
 
-      .nav-more summary {
-        list-style: none;
+      .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        color: var(--text-muted);
         cursor: pointer;
-        color: var(--muted);
+        transition: all 0.15s ease;
       }
 
-      .nav-more summary::-webkit-details-marker {
+      .icon-btn:hover {
+        color: var(--text);
+        border-color: var(--border-hover);
+        background: var(--surface-subtle);
+      }
+
+      .icon-btn svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+
+      .mobile-toggle {
         display: none;
       }
 
-      .nav-more[open] summary,
-      .nav-more summary:hover {
-        color: var(--text);
-      }
-
-      .nav-more-menu {
-        position: absolute;
-        top: 1.45rem;
-        right: 0;
-        min-width: 220px;
-        display: grid;
-        gap: 0.45rem;
-        padding: 0.65rem;
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        background: rgba(7, 17, 31, 0.97);
-      }
-
-      .nav-more-menu a {
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-
-      .nav-more-menu a:hover {
-        color: var(--text);
-      }
-
+      /* Buttons */
       .btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 0.8rem 1.2rem;
-        border-radius: 999px;
+        gap: 0.5rem;
+        font-size: 0.92rem;
         font-weight: 600;
-        transition: transform 180ms ease, background 180ms ease;
+        padding: 0.65rem 1.25rem;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        text-decoration: none;
       }
 
-      .btn:hover {
-        transform: translateY(-1px);
+      .btn svg {
+        width: 16px;
+        height: 16px;
       }
 
       .btn-primary {
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        color: #03111f;
+        background-color: var(--accent);
+        color: #ffffff;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--accent-hover);
+        color: #ffffff;
+        box-shadow: var(--shadow-sm);
+        transform: translateY(-1px);
       }
 
       .btn-secondary {
-        border: 1px solid var(--border);
+        background-color: var(--surface);
+        border-color: var(--border);
         color: var(--text);
       }
 
-      section {
-        padding: 5rem 0;
+      .btn-secondary:hover {
+        background-color: var(--surface-subtle);
+        border-color: var(--border-hover);
+        color: var(--text);
+        transform: translateY(-1px);
       }
 
-      .hero {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 2rem;
-        align-items: center;
-        padding-top: 4rem;
+      .btn-sm {
+        padding: 0.45rem 0.85rem;
+        font-size: 0.82rem;
+      }
+
+      /* Sections & Typography */
+      section {
+        padding: 4.5rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      section:last-of-type {
+        border-bottom: none;
+      }
+
+      .section-header {
+        margin-bottom: 2.5rem;
       }
 
       .eyebrow {
         display: inline-block;
-        margin-bottom: 1rem;
-        color: var(--accent-2);
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.16em;
         font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
       }
 
-      h1,
-      h2,
-      h3 {
-        line-height: 1.12;
-        margin: 0 0 1rem;
+      h1, h2, h3, h4 {
+        color: var(--text);
+        letter-spacing: -0.02em;
+        line-height: 1.25;
       }
 
       h1 {
-        font-size: clamp(2.2rem, 4vw, 3.8rem);
+        font-size: clamp(2.1rem, 4vw, 3.2rem);
+        font-weight: 800;
+        line-height: 1.15;
       }
 
       h2 {
-        font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+        font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+        font-weight: 700;
       }
 
-      .hero p {
-        font-size: 1.05rem;
-        color: var(--muted);
-        max-width: 700px;
+      h3 {
+        font-size: 1.18rem;
+        font-weight: 600;
+      }
+
+      .section-desc {
+        font-size: 1.02rem;
+        color: var(--text-muted);
+        max-width: 680px;
+        margin-top: 0.5rem;
+      }
+
+      /* Cards */
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-sm);
+        transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+      }
+
+      .card:hover {
+        border-color: var(--border-hover);
+        box-shadow: var(--shadow-md);
+      }
+
+      /* Hero */
+      .hero {
+        padding: 5rem 0 4.5rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.35fr 0.85fr;
+        gap: 3.5rem;
+        align-items: center;
+      }
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .hero-role-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: fit-content;
+        padding: 0.35rem 0.85rem;
+        border-radius: 9999px;
+        background: var(--accent-light);
+        color: var(--accent);
+        border: 1px solid var(--accent-border);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .hero-role-badge span.pulse-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--accent);
+      }
+
+      .hero p.lead {
+        font-size: 1.15rem;
+        color: var(--text-muted);
+        line-height: 1.7;
       }
 
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
-        margin-top: 1.5rem;
-      }
-
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-        margin-top: 2rem;
-      }
-
-      .impact-strip {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 0.85rem;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
       }
 
-      .impact-chip {
-        padding: 0.85rem 1rem;
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid var(--border);
-      }
-
-      .impact-chip strong {
-        display: block;
-        margin-bottom: 0.25rem;
-        color: var(--accent-2);
-      }
-
-      .stat-card,
-      .card,
-      .timeline-item,
-      .project-card,
-      .contact-card {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid var(--border);
-        border-radius: 18px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
-      }
-
-      .stat-card {
-        padding: 1rem;
-      }
-
-      .stat-card strong {
-        display: block;
-        font-size: 1.35rem;
-        margin-bottom: 0.25rem;
-      }
-
-      .repo-chip-grid {
+      .hero-meta-links {
         display: flex;
-        flex-wrap: wrap;
-        gap: 0.55rem;
-        margin-top: 0.95rem;
+        align-items: center;
+        gap: 1.25rem;
+        margin-top: 0.5rem;
+        font-size: 0.88rem;
+        color: var(--text-subtle);
       }
 
-      .repo-chip {
+      .hero-meta-links a {
         display: inline-flex;
         align-items: center;
         gap: 0.35rem;
-        padding: 0.52rem 0.78rem;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid var(--border);
+        color: var(--text-muted);
+        font-weight: 500;
+      }
+
+      .hero-meta-links a:hover {
         color: var(--text);
-        font-size: 0.88rem;
+      }
+
+      .hero-photo-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.75rem;
+      }
+
+      .photo-frame {
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--surface-subtle);
+        box-shadow: var(--shadow-md);
+        margin-bottom: 1.25rem;
+        background: var(--surface-subtle);
+      }
+
+      .photo-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .hero-photo-meta h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .hero-photo-meta p {
+        font-size: 0.86rem;
+        color: var(--text-muted);
+        margin-bottom: 0.85rem;
+      }
+
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 0.78rem;
+        font-weight: 500;
+        padding: 0.3rem 0.75rem;
+        border-radius: 999px;
+        background: var(--surface-subtle);
+        border: 1px solid var(--border);
+        color: var(--text-muted);
+      }
+
+      .status-indicator {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #10b981;
+      }
+
+      /* About Section */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 2.5rem;
+      }
+
+      .about-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+        color: var(--text-muted);
+        font-size: 1.02rem;
+      }
+
+      .about-text p strong {
+        color: var(--text);
         font-weight: 600;
       }
 
-      .repo-chip.primary {
-        background: linear-gradient(135deg, var(--accent-blue), var(--accent-2));
-        color: #03111f;
-        border-color: transparent;
-      }
-      .card {
-        padding: 1.4rem;
-      }
-
-      .domain-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.1rem;
-        margin-top: 2rem;
-      }
-
-      .domain-grid .card h3 {
-        margin-bottom: 0.45rem;
-      }
-
-      .domain-grid .card p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .section-heading {
+      .about-sidebar {
         display: flex;
-        justify-content: space-between;
-        align-items: end;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
+        flex-direction: column;
+        gap: 1.25rem;
       }
 
-      .section-heading p {
-        color: var(--muted);
-        margin: 0;
-      }
-
-      .about-grid,
-      .projects-grid {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .about-grid {
-        grid-template-columns: 1.3fr 0.7fr;
-      }
-
-      .value-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-
-      .value-card {
+      .highlight-card {
         padding: 1.25rem;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.04);
+        border-radius: 10px;
+        background: var(--surface-subtle);
         border: 1px solid var(--border);
       }
 
-      .value-card strong {
-        display: block;
-        margin-bottom: 0.45rem;
-        color: var(--accent-2);
+      .highlight-card h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+        color: var(--text);
       }
 
-      .pill-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-        margin-top: 1rem;
+      .highlight-card p {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.55;
       }
 
-      .pill {
-        padding: 0.45rem 0.75rem;
-        border-radius: 999px;
-        background: rgba(79, 140, 255, 0.14);
-        color: var(--accent-2);
-        font-size: 0.9rem;
-      }
-
-      a.pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
-        text-decoration: none;
-        transition: all 180ms ease;
-      }
-
-      a.pill:hover {
-        background: rgba(79, 140, 255, 0.28);
-        color: #fff;
-        transform: translateY(-1px);
-      }
-
-      .profile-photo-card {
-        overflow: hidden;
-      }
-
-      .profile-photo-wrap {
-        border-radius: 14px;
-        overflow: hidden;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.03);
-      }
-
-      .profile-photo {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-
-      .profile-photo-note {
-        margin-top: 0.55rem;
-        color: var(--muted);
-        font-size: 0.86rem;
-      }
-
-      .timeline {
-        display: grid;
-        gap: 1rem;
-        margin-top: 1.5rem;
-      }
-
-      .timeline-item {
-        padding: 1.25rem 1.3rem;
-      }
-
-      .timeline-item .meta {
-        color: var(--accent-2);
-        font-size: 0.92rem;
-        margin-bottom: 0.3rem;
-      }
-
-      .timeline-item ul {
-        padding-left: 1.15rem;
-        color: var(--muted);
-        margin: 0.7rem 0 0;
-      }
-
+      /* Expertise Grid */
       .expertise-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .expertise-card {
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
       }
 
-      .expertise-grid .card ul {
-        padding-left: 1.1rem;
-        color: var(--muted);
-        margin: 0.7rem 0 0;
+      .expertise-card-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
       }
 
+      .expertise-icon-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--accent-light);
+        color: var(--accent);
+        border: 1px solid var(--accent-border);
+      }
+
+      .expertise-icon-box svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .expertise-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      .expertise-list li {
+        font-size: 0.92rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        line-height: 1.5;
+      }
+
+      .expertise-list li::before {
+        content: "•";
+        color: var(--accent);
+        font-weight: bold;
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-top: 0.5rem;
+        padding-top: 0.85rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .tech-tag {
+        font-size: 0.78rem;
+        font-family: var(--font-mono);
+        padding: 0.25rem 0.55rem;
+        border-radius: 6px;
+        background: var(--tag-bg);
+        color: var(--tag-text);
+        border: 1px solid var(--tag-border);
+      }
+
+      /* Experience Timeline */
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .timeline-card {
+        position: relative;
+        padding: 1.75rem;
+      }
+
+      .timeline-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 0.5rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .timeline-role {
+        font-size: 1.18rem;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .timeline-period {
+        font-size: 0.85rem;
+        font-family: var(--font-mono);
+        color: var(--accent);
+        font-weight: 600;
+        background: var(--accent-light);
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
+        border: 1px solid var(--accent-border);
+      }
+
+      .timeline-company {
+        font-size: 0.94rem;
+        color: var(--text-subtle);
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+
+      .timeline-bullets {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .timeline-bullets li {
+        font-size: 0.94rem;
+        color: var(--text-muted);
+        position: relative;
+        padding-left: 1.25rem;
+        line-height: 1.6;
+      }
+
+      .timeline-bullets li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.65rem;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--accent);
+      }
+
+      /* Projects */
       .projects-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
       }
 
-      .section-note {
-        max-width: 760px;
-        margin: 0.5rem auto 1.5rem;
-        color: var(--muted);
-        text-align: center;
-      }
-
-      .project-photo-card {
-        overflow: hidden;
-        padding: 0;
-      }
-
-      .project-photo-card.featured {
-        border: 1px solid rgba(110, 231, 249, 0.3);
-        box-shadow: 0 18px 42px rgba(79, 140, 255, 0.18);
-      }
-
-      .project-cover {
-        min-height: 160px;
-        padding: 1.2rem;
+      .project-card {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        color: var(--white);
-        background: linear-gradient(135deg, rgba(79, 140, 255, 0.95), rgba(110, 231, 249, 0.72));
+        gap: 1.25rem;
+        padding: 1.75rem;
       }
 
-      .project-cover.alt {
-        background: linear-gradient(135deg, rgba(22, 38, 61, 0.95), rgba(79, 140, 255, 0.72));
+      .project-card.featured-hero-project {
+        grid-column: 1 / -1;
+        background: var(--surface);
+        border: 1.5px solid var(--accent-border);
+        box-shadow: var(--shadow-sm);
       }
 
-      .project-cover.green {
-        background: linear-gradient(135deg, rgba(46, 182, 125, 0.95), rgba(110, 231, 249, 0.68));
+      .project-meta-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
       }
 
-      .project-cover.gold {
-        background: linear-gradient(135deg, rgba(236, 178, 46, 0.95), rgba(79, 140, 255, 0.65));
-      }
-
-      .project-cover strong {
-        font-size: 1.4rem;
-        line-height: 1.1;
-      }
-
-      .project-cover small {
-        display: block;
-        margin-top: 0.45rem;
-        font-size: 0.92rem;
-        opacity: 0.9;
-        max-width: 26rem;
-      }
-
-      .project-cover span {
-        font-size: 0.82rem;
-        letter-spacing: 0.08em;
+      .project-status {
+        font-size: 0.74rem;
+        font-weight: 600;
         text-transform: uppercase;
-        opacity: 0.9;
+        letter-spacing: 0.05em;
+        padding: 0.2rem 0.55rem;
+        border-radius: 4px;
+        background: var(--surface-subtle);
+        color: var(--text-subtle);
+        border: 1px solid var(--border);
       }
 
-      .project-cover em {
-        font-style: normal;
-        opacity: 0.88;
-        font-size: 0.95rem;
+      .project-status.status-flagship {
+        background: var(--accent-light);
+        color: var(--accent);
+        border-color: var(--accent-border);
       }
 
-      .project-card-body {
-        padding: 1.2rem 1.3rem 1.35rem;
+      .project-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.6rem;
       }
 
-      .feature-stack {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.65rem;
-        margin-top: 0.9rem;
+      .project-desc {
+        font-size: 0.94rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
       }
 
-      .feature-stack .metric {
-        margin: 0;
+      .project-scope-note {
+        font-size: 0.84rem;
+        color: var(--text-subtle);
+        font-style: italic;
+        margin-bottom: 0.75rem;
+      }
+
+      .project-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: auto;
       }
 
       .project-links {
         display: flex;
-        gap: 0.75rem;
-        margin-top: 1rem;
+        align-items: center;
         flex-wrap: wrap;
+        gap: 0.75rem;
       }
 
-      .project-link {
+      .project-link-btn {
         display: inline-flex;
         align-items: center;
-        gap: 0.45rem;
-        padding: 0.65rem 0.9rem;
-        border-radius: 999px;
-        border: 1px solid var(--border);
-        color: var(--text);
-        font-weight: 600;
-        font-size: 0.92rem;
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .project-link.primary {
-        background: linear-gradient(135deg, var(--accent-blue), var(--accent-2));
-        color: #03111f;
-        border-color: transparent;
-      }
-
-      .featured-project {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      .featured-panel {
-        padding: 1.4rem;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid var(--border);
-      }
-
-      .metric-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.75rem;
-        margin-top: 1rem;
-      }
-
-      .metric {
-        padding: 0.9rem;
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid var(--border);
-      }
-
-      .metric strong {
-        display: block;
-        margin-bottom: 0.25rem;
-        color: var(--accent-2);
-      }
-
-      .feature-list {
-        margin: 0.9rem 0 0;
-        padding-left: 1.15rem;
-        color: var(--muted);
-      }
-
-      .arch-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.75rem;
-        margin-top: 1rem;
-      }
-
-      .arch-step {
-        padding: 0.95rem;
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid var(--border);
-      }
-
-      .arch-step strong {
-        display: block;
-        margin-bottom: 0.3rem;
-        color: var(--accent-2);
-      }
-
-      .project-card {
-        padding: 1.3rem;
-      }
-
-      .project-card .tag {
-        color: var(--accent-2);
-        font-size: 0.85rem;
-        margin-bottom: 0.4rem;
-        display: block;
-      }
-
-      .leadership-grid,
-      .cert-grid,
-      .contact-grid {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .leadership-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .cert-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .stack-hierarchy {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 0.75rem;
-        margin: 1rem 0 1.4rem;
-      }
-
-      .stack-step {
-        padding: 0.9rem;
-        border-radius: 14px;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.05);
-      }
-
-      .stack-step strong {
-        display: block;
-        color: var(--accent-2);
-        margin-bottom: 0.2rem;
-      }
-
-      .stack-matrix {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.75rem;
-        margin-bottom: 1.2rem;
-      }
-
-      .stack-matrix .metric {
-        padding: 0.8rem;
-      }
-
-      .stack-matrix .metric span {
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-
-      .stack-domain-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-      }
-
-      .stack-domain details {
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 0.85rem 0.95rem;
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .stack-domain summary {
-        cursor: pointer;
-        font-weight: 700;
-      }
-
-      .stack-domain ul {
-        margin: 0.75rem 0 0;
-        padding-left: 1.15rem;
-        color: var(--muted);
-      }
-
-      .proficiency-legend {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-        margin: 0.8rem 0 1.2rem;
-      }
-
-      .proficiency-pill {
-        padding: 0.42rem 0.72rem;
-        border-radius: 999px;
-        border: 1px solid var(--border);
+        gap: 0.4rem;
         font-size: 0.84rem;
-        font-weight: 700;
-        letter-spacing: 0.01em;
-      }
-
-      .proficiency-pill.production {
-        background: rgba(46, 182, 125, 0.18);
-        color: #99f0c8;
-      }
-
-      .proficiency-pill.hands-on {
-        background: rgba(79, 140, 255, 0.2);
-        color: #b7d0ff;
-      }
-
-      .proficiency-pill.focus {
-        background: rgba(236, 178, 46, 0.2);
-        color: #ffe0a3;
-      }
-
-      .recommendation-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      .recommendation-card {
-        padding: 1.2rem;
-        border-radius: 16px;
+        font-weight: 600;
+        color: var(--text);
+        padding: 0.4rem 0.75rem;
+        border-radius: 6px;
+        background: var(--surface-subtle);
         border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.04);
+        transition: all 0.15s ease;
       }
 
-      .recommendation-card p {
-        margin: 0;
-        color: var(--muted);
+      .project-link-btn:hover {
+        background: var(--surface);
+        border-color: var(--accent);
+        color: var(--accent);
       }
 
-      .recommendation-meta {
-        display: block;
-        margin-top: 0.7rem;
-        color: var(--accent-2);
-        font-size: 0.86rem;
+      .project-link-btn svg {
+        width: 14px;
+        height: 14px;
       }
 
-      .recommendation-list details {
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.04);
-        padding: 0.9rem 1rem;
-      }
-
-      .recommendation-list summary {
-        cursor: pointer;
-        font-weight: 700;
-      }
-
-      .recommendation-list ul {
-        margin: 0.85rem 0 0;
-        padding-left: 1.15rem;
-        color: var(--muted);
-      }
-
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1rem;
-      }
-
-      .service-card {
-        padding: 1.2rem;
-        border-radius: 16px;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .service-card .service-number {
-        color: var(--accent-2);
-        font-size: 0.82rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .service-card h3 {
-        margin: 0.35rem 0 0.5rem;
-        font-size: 1.15rem;
-      }
-
-      .service-card ul {
-        margin: 0.8rem 0 0;
-        padding-left: 1.15rem;
-        color: var(--muted);
-      }
-
-      .service-tech {
-        margin-top: 0.75rem;
-        font-size: 0.88rem;
-        color: var(--accent-2);
-      }
-
-      .service-flow,
-      .service-proof,
-      .service-cta {
-        margin-top: 1rem;
-        padding: 1.1rem 1.2rem;
-        border-radius: 16px;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .process-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 0.75rem;
-        margin-top: 0.8rem;
-      }
-
-      .process-step {
-        padding: 0.8rem;
+      .more-projects-box {
+        margin-top: 2rem;
+        padding: 1.5rem;
         border-radius: 12px;
+        background: var(--surface-subtle);
         border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.03);
-      }
-
-      .process-step strong {
-        display: block;
-        color: var(--accent-2);
-        margin-bottom: 0.2rem;
-      }
-
-      .proof-kpis {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.75rem;
-        margin-top: 0.8rem;
-      }
-
-      .proof-kpi {
-        padding: 0.85rem;
-        border-radius: 12px;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.03);
-      }
-
-      .proof-kpi strong {
-        display: block;
-        color: var(--accent-2);
-        margin-bottom: 0.22rem;
-      }
-
-      .service-cta-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.7rem;
-        margin-top: 0.85rem;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
       }
 
-      .service-cta-note {
-        margin-top: 0.7rem;
-        color: var(--muted);
+      .more-projects-text h4 {
+        font-size: 1.05rem;
+        margin-bottom: 0.25rem;
       }
 
-      form {
-        display: grid;
-        gap: 0.8rem;
-      }
-
-      input,
-      textarea {
-        width: 100%;
-        padding: 0.8rem 0.95rem;
-        border-radius: 12px;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.06);
-        color: var(--text);
-      }
-
-      textarea {
-        min-height: 110px;
-        resize: vertical;
-      }
-
-      footer {
-        padding: 2.4rem 0 2.6rem;
-        color: var(--muted);
-        border-top: 1px solid rgba(110, 231, 249, 0.22);
-        background:
-          radial-gradient(1200px 420px at 100% 0%, rgba(79, 140, 255, 0.13), transparent 55%),
-          rgba(255, 255, 255, 0.02);
-      }
-
-      .footer-grid {
-        display: grid;
-        grid-template-columns: 1.05fr 0.95fr;
-        gap: 1.1rem;
-        align-items: start;
-      }
-
-      .footer-panel {
-        padding: 1.1rem 1.2rem;
-        border-radius: 16px;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .footer-brand {
-        margin: 0;
-        color: var(--text);
-        font-size: 1.12rem;
-        font-weight: 700;
-      }
-
-      .footer-role {
-        margin: 0.25rem 0 0.6rem;
-      }
-
-      .footer-value {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .footer-meta {
-        margin-top: 0.8rem;
+      .more-projects-text p {
         font-size: 0.88rem;
+        color: var(--text-muted);
       }
 
-      .footer-kpis {
+      /* Education & Certifications */
+      .split-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .edu-card {
+        padding: 1.5rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .edu-card:last-child {
+        margin-bottom: 0;
+      }
+
+      .edu-degree {
+        font-size: 1.08rem;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .edu-school {
+        font-size: 0.92rem;
+        color: var(--text-subtle);
+        margin: 0.2rem 0 0.6rem;
+      }
+
+      .edu-details {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        font-size: 0.88rem;
+        color: var(--text-muted);
+      }
+
+      .edu-details li {
+        padding-left: 1rem;
+        position: relative;
+      }
+
+      .edu-details li::before {
+        content: "•";
+        color: var(--accent);
+        position: absolute;
+        left: 0;
+      }
+
+      .cert-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .cert-group h4 {
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-subtle);
+        margin-bottom: 0.75rem;
+      }
+
+      .cert-pills {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
-        margin-top: 0.85rem;
       }
 
-      .footer-kpis span {
-        padding: 0.36rem 0.62rem;
-        border-radius: 999px;
+      .cert-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.84rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 8px;
+        background: var(--surface);
         border: 1px solid var(--border);
-        color: var(--accent-2);
+        color: var(--text);
+      }
+
+      .cert-pill.verified {
+        border-color: var(--accent-border);
+        background: var(--accent-light);
+        color: var(--accent);
+        font-weight: 500;
+      }
+
+      .pub-card {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+        border-left: 3px solid var(--accent);
+      }
+
+      .pub-title {
+        font-size: 0.98rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+
+      .pub-journal {
+        font-size: 0.84rem;
+        color: var(--text-subtle);
+        margin-bottom: 0.5rem;
+      }
+
+      /* Leadership & Community */
+      .community-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .community-card {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .community-card h4 {
+        font-size: 1.05rem;
+      }
+
+      .community-card p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.55;
+      }
+
+      .recommendations-box {
+        margin-top: 2.5rem;
+      }
+
+      .quote-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .quote-text {
+        font-size: 0.95rem;
+        font-style: italic;
+        color: var(--text);
+        line-height: 1.6;
+        margin-bottom: 0.85rem;
+      }
+
+      .quote-author {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--accent);
+      }
+
+      .quote-role {
         font-size: 0.8rem;
-        font-weight: 600;
+        color: var(--text-subtle);
       }
 
-      .footer-panel h4 {
-        margin: 0 0 0.5rem;
-        color: var(--text);
-        font-size: 0.96rem;
+      /* Contact Section */
+      .contact-section {
+        padding: 5rem 0;
       }
 
-      .footer-panel p {
-        margin: 0;
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 3rem;
       }
 
-      .footer-actions {
+      .contact-info {
         display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-        margin-top: 0.9rem;
+        flex-direction: column;
+        gap: 1.5rem;
       }
 
-      .footer-link-list {
+      .contact-links-list {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 0.55rem;
-        margin-top: 1rem;
+        flex-direction: column;
+        gap: 0.85rem;
       }
 
-      .footer-link-list a {
-        padding: 0.42rem 0.75rem;
-        border-radius: 999px;
-        border: 1px solid var(--border);
-        color: var(--text);
-        font-size: 0.88rem;
-        font-weight: 600;
-      }
-
-      .footer-link-list a:hover {
-        border-color: rgba(110, 231, 249, 0.6);
-        color: var(--accent-2);
-      }
-
-      .footer-cta {
-        padding: 0.56rem 0.86rem;
+      .contact-channel {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.9rem 1.15rem;
         border-radius: 10px;
-        font-size: 0.88rem;
-        font-weight: 700;
+        background: var(--surface);
         border: 1px solid var(--border);
-      }
-
-      .footer-cta.primary {
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        color: #03111f;
-        border-color: transparent;
-      }
-
-      .footer-cta.secondary {
         color: var(--text);
-        background: rgba(255, 255, 255, 0.03);
+        font-weight: 500;
+        transition: all 0.15s ease;
       }
 
+      .contact-channel:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .channel-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        background: var(--surface-subtle);
+        color: var(--accent);
+      }
+
+      .channel-icon svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+      }
+
+      .channel-meta strong {
+        display: block;
+        font-size: 0.92rem;
+        color: var(--text);
+      }
+
+      .channel-meta span {
+        font-size: 0.82rem;
+        color: var(--text-subtle);
+      }
+
+      .contact-form-card {
+        padding: 2rem;
+      }
+
+      .contact-form-card h3 {
+        margin-bottom: 1.25rem;
+      }
+
+      form.contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .form-group label {
+        font-size: 0.84rem;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.75rem 0.9rem;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: var(--surface-subtle);
+        color: var(--text);
+        font-family: inherit;
+        font-size: 0.92rem;
+        transition: border-color 0.15s ease;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border-color: var(--accent);
+        outline: none;
+        background: var(--surface);
+      }
+
+      .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      /* Footer */
+      footer {
+        padding: 3rem 0;
+        background: var(--surface);
+        border-top: 1px solid var(--border);
+        font-size: 0.88rem;
+        color: var(--text-subtle);
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+      }
+
+      .footer-links a {
+        color: var(--text-muted);
+        font-weight: 500;
+      }
+
+      .footer-links a:hover {
+        color: var(--text);
+      }
+
+      /* Responsive Breakpoints */
       @media (max-width: 900px) {
-        .hero,
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+
+        .hero-photo-card {
+          order: -1;
+          margin: 0 auto;
+          max-width: 320px;
+        }
+
         .about-grid,
-        .contact-grid,
-        .projects-grid,
-        .featured-project,
         .expertise-grid,
-        .leadership-grid,
-        .cert-grid,
-        .domain-grid,
-        .stack-hierarchy,
-        .stack-matrix,
-        .stack-domain-grid,
-        .recommendation-grid,
-        .services-grid,
-        .process-grid,
-        .proof-kpis {
+        .projects-grid,
+        .split-grid,
+        .community-grid,
+        .contact-grid {
           grid-template-columns: 1fr;
-        }
-
-        .footer-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .footer-link-list {
-          justify-content: flex-start;
         }
       }
 
-      @media (max-width: 640px) {
+      @media (max-width: 680px) {
         section {
           padding: 3.5rem 0;
         }
 
-        .stats {
-          grid-template-columns: 1fr;
-        }
-
-        .impact-strip {
-          grid-template-columns: 1fr;
-        }
-
-        .value-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .nav-links {
-          gap: 0.6rem 0.85rem;
-          font-size: 0.88rem;
-        }
-
-        .nav-more-menu {
-          right: auto;
-          left: 0;
-          min-width: 190px;
-        }
-
         .hero {
-          padding-top: 2rem;
+          padding: 3rem 0;
+        }
+
+        .nav-menu {
+          display: none;
+        }
+
+        .nav-menu.mobile-open {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          position: absolute;
+          top: 68px;
+          left: 0;
+          right: 0;
+          background: var(--surface);
+          border-bottom: 1px solid var(--border);
+          padding: 1.5rem;
+          gap: 1.25rem;
+          box-shadow: var(--shadow-md);
+        }
+
+        .mobile-toggle {
+          display: inline-flex;
         }
 
         .hero-actions {
-          width: 100%;
+          flex-direction: column;
         }
 
         .hero-actions .btn {
-          flex: 1 1 100%;
-          text-align: center;
+          width: 100%;
+        }
+
+        .footer-inner {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
         }
       }
     </style>
   </head>
+
   <body>
+    <!-- Header & Navigation -->
     <header>
       <div class="container">
-        <nav>
-          <a class="brand" href="#home">Alimul Fazal Nabil</a>
-          <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#services">Services</a>
-            <a href="#leadership">Leadership</a>
-            <a href="#publications">Publications</a>
-            <details class="nav-more">
-              <summary>More</summary>
-              <div class="nav-more-menu">
-                <a href="#stack">Tech Stack</a>
-                <a href="#portfolio-projects">Full Project Portfolio</a>
-                <a href="#certifications">Certifications</a>
-                <a href="#volunteering">Volunteering</a>
-                <a href="#recommendations">Recommendations</a>
-                <a href="#languages">Languages</a>
-              </div>
-            </details>
-            <a href="#contact">Contact</a>
+        <nav class="nav-inner" aria-label="Main navigation">
+          <a class="brand" href="#home">
+            <span class="brand-name">Alimul Fazal Nabil</span>
+            <span class="brand-title">AI Solutions Engineer</span>
+          </a>
+
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <!-- Theme Toggle -->
+            <button
+              class="icon-btn"
+              id="themeToggle"
+              aria-label="Toggle dark/light theme"
+              title="Toggle theme"
+            >
+              <svg id="themeIcon" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" fill="none">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
+              </svg>
+            </button>
+
+            <!-- LinkedIn -->
+            <a
+              class="icon-btn"
+              href="https://www.linkedin.com/in/alimul-fazal-nabil/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+              title="LinkedIn Profile"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2m1.4 9.74V9.96H5.06v8.54z"
+                />
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a
+              class="icon-btn"
+              href="https://github.com/alimulfazalnabil"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
+              title="GitHub Profile"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 14.42 22 12A10 10 0 0 0 12 2z"
+                />
+              </svg>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button
+              class="icon-btn mobile-toggle"
+              id="mobileToggle"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+            >
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
           </div>
         </nav>
       </div>
     </header>
 
     <main id="home">
-      <section class="container hero">
-        <div>
-          <span class="eyebrow">Senior Technology Leader</span>
-          <h1>I design, automate, and deliver technology solutions that improve reliability, accelerate execution, and create business value.</h1>
-          <p>
-            I bridge cloud, DevOps, AI, data, robotics, and product delivery to turn complex business and technical challenges into dependable systems and measurable outcomes.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">Explore My Work</a>
-            <a class="btn btn-secondary" href="#contact">Download CV</a>
-          </div>
-          <div class="stats">
-            <div class="stat-card">
-              <strong>Operational Reliability</strong>
-              <span>Systems designed to keep services stable and support continuity</span>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-role-badge">
+                <span class="pulse-dot"></span>
+                AI Solutions Engineer
+              </div>
+
+              <h1>Building Practical AI Solutions for Real-World Problems.</h1>
+
+              <p class="lead">
+                AI Solutions Engineer working across Generative AI, machine learning, intelligent applications, and cloud engineering. I combine software development, automation, and infrastructure expertise to build practical, scalable technology solutions.
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#projects">
+                  Explore My Projects
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="btn btn-secondary"
+                  href="https://www.linkedin.com/in/alimul-fazal-nabil/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Connect on LinkedIn
+                </a>
+              </div>
+
+              <div class="hero-meta-links">
+                <a href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">
+                  <span>GitHub Repositories ↗</span>
+                </a>
+                <span>•</span>
+                <a href="#experience">
+                  <span>Experience & Roles ↓</span>
+                </a>
+                <span>•</span>
+                <a href="mailto:alimul.nabil@gmail.com">
+                  <span>alimul.nabil@gmail.com</span>
+                </a>
+              </div>
             </div>
-            <div class="stat-card">
-              <strong>Automation-First Delivery</strong>
-              <span>Workflows that reduce repetition and improve execution speed</span>
-            </div>
-            <div class="stat-card">
-              <strong>Cross-Functional Scope</strong>
-              <span>Cloud, DevOps, AI, data, robotics, and product thinking</span>
-            </div>
-            <div class="stat-card">
-              <strong>Business Alignment</strong>
-              <span>Solutions tied to cost, speed, quality, and growth outcomes</span>
-            </div>
-          </div>
-          <div class="impact-strip">
-            <div class="impact-chip">
-              <strong>Faster Delivery</strong>
-              <span>Automation and repeatable workflows that shorten release cycles.</span>
-            </div>
-            <div class="impact-chip">
-              <strong>Lower Friction</strong>
-              <span>Systems and assistants that remove manual steps and wasted effort.</span>
-            </div>
-            <div class="impact-chip">
-              <strong>Better Decisions</strong>
-              <span>Data, AI, and dashboards that make operations easier to act on.</span>
-            </div>
-            <div class="impact-chip">
-              <strong>Business Alignment</strong>
-              <span>Architecture and delivery tied to outcomes, not just features.</span>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <h3>How I Create Value</h3>
-          <div class="domain-grid" style="grid-template-columns: 1fr; margin-top: 1rem;">
-            <div class="card">
-              <h3>Cloud & Infrastructure</h3>
-              <p>Stable platforms that improve uptime, security, and scalability.</p>
-            </div>
-            <div class="card">
-              <h3>DevOps & Platform</h3>
-              <p>Automation and delivery pipelines that reduce risk and speed up releases.</p>
-            </div>
-            <div class="card">
-              <h3>AI & Data</h3>
-              <p>Insights and intelligent systems that support better decisions.</p>
-            </div>
-            <div class="card">
-              <h3>Robotics & IoT</h3>
-              <p>Connected systems that extend engineering into real-world environments.</p>
-            </div>
-            <div class="card">
-              <h3>Digital Products</h3>
-              <p>Practical product delivery that turns ideas into usable solutions.</p>
-            </div>
-            <div class="card">
-              <h3>Leadership</h3>
-              <p>Clear technical direction that keeps teams aligned and moving forward.</p>
+
+            <!-- Hero Photo Card -->
+            <div class="card hero-photo-card">
+              <div class="photo-frame">
+                <img
+                  src="profile.jpg"
+                  alt="Alimul Fazal Nabil"
+                  width="420"
+                  height="420"
+                  loading="eager"
+                />
+              </div>
+              <div class="hero-photo-meta">
+                <h3>Alimul Fazal Nabil</h3>
+                <p>AI Solutions Engineer · Cloud, DevOps & Intelligent Systems</p>
+                <div class="status-pill">
+                  <span class="status-indicator"></span>
+                  Available for AI Engineering Opportunities
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="value" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Value</span>
-            <h2>Why I add value to a company</h2>
+      <!-- About Section -->
+      <section id="about">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">About Me</span>
+            <h2>Bridging AI Engineering with Production Systems</h2>
           </div>
-        </div>
-        <div class="value-grid">
-          <div class="value-card">
-            <strong>1. I improve operational reliability</strong>
-            <p>I build stable systems, automate repeatable work, and reduce friction in day-to-day operations.</p>
-          </div>
-          <div class="value-card">
-            <strong>2. I connect technology to outcomes</strong>
-            <p>I focus on delivery that improves speed, quality, and business continuity rather than shipping features in isolation.</p>
-          </div>
-          <div class="value-card">
-            <strong>3. I bridge execution and strategy</strong>
-            <p>I can move between infrastructure, product, AI, and leadership conversations without losing business context.</p>
-          </div>
-          <div class="value-card">
-            <strong>4. I make teams more effective</strong>
-            <p>I use automation, clear architecture, and pragmatic decision-making to help teams deliver with less waste.</p>
+
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                I hold a <strong>Bachelor of Science in Computer Science and Engineering</strong> from Cox's Bazar International University (graduated with a <strong>3.505 / 4.00</strong> CGPA on a full academic scholarship). My engineering foundation combines rigorous computer science principles with hands-on systems architecture.
+              </p>
+              <p>
+                My professional career began in <strong>IT infrastructure, enterprise cloud operations, and systems automation</strong> at Energy Crown Bangladesh, where I managed Azure hybrid environments, automated provisioning using Terraform and Ansible, and implemented CI/CD pipelines to achieve 99.9% operational uptime.
+              </p>
+              <p>
+                My focused direction is <strong>AI Engineering</strong>: building practical, dependable AI solutions that connect intelligent models with software, databases, APIs, and cloud infrastructure. I work actively with <strong>Generative AI, Retrieval-Augmented Generation (RAG), AI agents, machine learning workflows, and MLOps</strong>.
+              </p>
+              <p>
+                Beyond individual engineering, I serve as an <strong>AI & ML Instructor at ReDI School of Digital Integration</strong> (Berlin, Germany / Remote), teaching practical machine learning and applied AI concepts. I also serve as <strong>CTO and Co-founder at MoviSabio</strong>, guiding the technical direction of an intelligent platform that connects AI, data, and intelligent systems into real-world applications.
+              </p>
+            </div>
+
+            <div class="about-sidebar">
+              <div class="highlight-card">
+                <h4>Verified Engineering Approach</h4>
+                <p>
+                  I maintain clear boundaries between production-ready infrastructure, applied prototypes, research, and conceptual designs. Every claim is grounded in demonstrable implementation.
+                </p>
+              </div>
+
+              <div class="highlight-card">
+                <h4>System-Wide Perspective</h4>
+                <p>
+                  I approach AI models not as isolated scripts, but as integral components of scalable platforms requiring clean data pipelines, robust APIs, automated evaluation, and secure cloud delivery.
+                </p>
+              </div>
+
+              <div class="highlight-card">
+                <h4>Knowledge Sharing & Leadership</h4>
+                <p>
+                  Committed to mentorship, technical instruction, and community development through academic societies, disaster relief coordination, and Toastmasters public speaking.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="about" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">About</span>
-            <h2>Engineering with business context, operational discipline, and measurable delivery focus.</h2>
+      <!-- Technical Expertise -->
+      <section id="expertise">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Technical Expertise</span>
+            <h2>Core Competencies & Capabilities</h2>
+            <p class="section-desc">
+              Organized into core technical areas supported by verifiable project implementations and professional experience.
+            </p>
           </div>
-        </div>
-        <div class="about-grid">
-          <div class="card">
-            <h3>Professional Summary</h3>
-            <p>
-              I approach technology as a business enabler. My work focuses on building systems that are reliable, scalable, secure, automated, and directly useful to the organization.
-            </p>
-            <div class="pill-row">
-              <span class="pill">Business value</span>
-              <span class="pill">Architecture</span>
-              <span class="pill">Automation</span>
-              <span class="pill">Delivery</span>
+
+          <div class="expertise-grid">
+            <!-- AI Engineering -->
+            <div class="card expertise-card">
+              <div class="expertise-card-header">
+                <div class="expertise-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                  </svg>
+                </div>
+                <h3>AI Engineering</h3>
+              </div>
+              <ul class="expertise-list">
+                <li>Generative AI, Large Language Model (LLM) applications, and prompt engineering</li>
+                <li>Retrieval-Augmented Generation (RAG) with hybrid search & reranking</li>
+                <li>AI agents, autonomous workflow orchestration, and tool calling</li>
+                <li>Machine learning pipeline development and supervised learning models</li>
+                <li>Model evaluation, response verification, and MLOps deployment practices</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">pgvector</span>
+                <span class="tech-tag">LangChain</span>
+                <span class="tech-tag">LangGraph</span>
+                <span class="tech-tag">Azure OpenAI</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">PyTorch</span>
+              </div>
             </div>
-          </div>
-          <div class="card profile-photo-card">
-            <div class="profile-photo-wrap">
-              <img
-                class="profile-photo"
-                src="profile.jpg"
-                alt="Alimul Fazal Nabil profile photo"
-                loading="lazy"
-              />
+
+            <!-- Programming and Data -->
+            <div class="card expertise-card">
+              <div class="expertise-card-header">
+                <div class="expertise-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                  </svg>
+                </div>
+                <h3>Programming & Data</h3>
+              </div>
+              <ul class="expertise-list">
+                <li>Python development for automation, data processing, and APIs</li>
+                <li>SQL database querying, schema modeling, and vector storage</li>
+                <li>Data processing, feature engineering, and exploratory data analysis</li>
+                <li>RESTful API design, service integration, and backend logic</li>
+                <li>Relational and document storage (PostgreSQL, MySQL, Redis)</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">C++17</span>
+              </div>
             </div>
-            <h3>Engineering Philosophy</h3>
-            <p>
-              Requirements → Architecture → Implementation → Automation → Testing → Deployment → Monitoring → Continuous Improvement.
-            </p>
-            <p>
-              This mindset keeps the focus on quality, resilience, and business impact from planning through delivery and operations.
-            </p>
+
+            <!-- Cloud and DevOps -->
+            <div class="card expertise-card">
+              <div class="expertise-card-header">
+                <div class="expertise-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
+                  </svg>
+                </div>
+                <h3>Cloud & DevOps</h3>
+              </div>
+              <ul class="expertise-list">
+                <li>Microsoft Azure cloud architecture, identity, RBAC, and virtual networks</li>
+                <li>Containerization with Docker and container orchestration with Kubernetes</li>
+                <li>Infrastructure as Code (IaC) using Terraform and configuration management with Ansible</li>
+                <li>CI/CD pipelines, release automation with GitHub Actions</li>
+                <li>Linux & Windows Server administration, telemetry, and system monitoring</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Microsoft Azure</span>
+                <span class="tech-tag">Terraform</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">GitHub Actions</span>
+                <span class="tech-tag">Ansible</span>
+                <span class="tech-tag">Linux</span>
+              </div>
+            </div>
+
+            <!-- Computer Vision & Intelligent Systems -->
+            <div class="card expertise-card">
+              <div class="expertise-card-header">
+                <div class="expertise-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3>Computer Vision & Intelligent Systems</h3>
+              </div>
+              <ul class="expertise-list">
+                <li>Computer vision, image preprocessing, and feature extraction with OpenCV</li>
+                <li>Real-time visual object detection and tracking using YOLO models</li>
+                <li>Robot Operating System (ROS 2) nodes, communication, and navigation</li>
+                <li>IoT embedded systems, telemetry capture (Raspberry Pi, Arduino, ESP32)</li>
+                <li>Autonomous simulation in CARLA and intelligent transportation models</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">YOLO</span>
+                <span class="tech-tag">ROS 2</span>
+                <span class="tech-tag">CARLA</span>
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">Embedded C/C++</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="experience" class="container">
-        <div class="section-heading">
-          <div>
+      <!-- Professional Experience -->
+      <section id="experience">
+        <div class="container">
+          <div class="section-header">
             <span class="eyebrow">Experience</span>
-            <h2>Experience that shows engineering, leadership, and delivery across cloud, AI, and applied technology.</h2>
+            <h2>Professional Experience & Roles</h2>
+            <p class="section-desc">
+              Chronological history of verified industry, instruction, leadership, and research experience.
+            </p>
           </div>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card">
-            <span class="tag">2026 • Present</span>
-            <h3>AI & ML Instructor</h3>
-            <p>ReDI School of Digital Integration · Part-time · Berlin, Germany · Remote</p>
-            <ul class="feature-list">
-              <li>Teaches practical machine learning and AI concepts with an applied, learner-focused approach.</li>
-              <li>Supports skill development in AI, data thinking, and project-based problem solving.</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <span class="tag">2026 • Present</span>
-            <h3>Chief Technology Officer and Co-founder</h3>
-            <p>MoviSabio · Self-employed</p>
-            <ul class="feature-list">
-              <li>Leads the product and technical direction for a territorial intelligence platform.</li>
-              <li>Connects AI, cloud, data, and robotics work into one market-facing solution.</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <span class="tag">2023 • Present</span>
-            <h3>Infrastructure & Cloud Systems Engineer</h3>
-            <p>Energy Crown Bangladesh · Full-time · Cox's Bazar District, Chattogram, Bangladesh · Hybrid</p>
-            <ul class="feature-list">
-              <li>Operated Azure hybrid cloud with 99.9% uptime and secure production support.</li>
-              <li>Automated provisioning with Terraform and Ansible, improving efficiency by 45%.</li>
-              <li>Built CI/CD pipelines, reduced alert noise by 30%, and supported <30-minute MTTR.</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <span class="tag">2022 • 2022</span>
-            <h3>Graduate Student Researcher</h3>
-            <p>Cox’s Bazar International University · Part-time · Remote</p>
-            <ul class="feature-list">
-              <li>Conducted applied research across robotics, mechatronics, and related engineering topics.</li>
-              <li>Published research work and contributed to technical documentation and academic outputs.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
 
-      <section id="volunteering" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Volunteering</span>
-            <h2>Community service experience that reflects leadership, coordination, and social impact.</h2>
-          </div>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card">
-            <span class="tag">Jan 2021 – Feb 2021</span>
-            <h3>Field Supervisor</h3>
-            <p>World Food Programme · Disaster and Humanitarian Relief</p>
-            <ul class="feature-list">
-              <li>Volunteered during the 2021 fire breakout emergency supporting Rohingya communities.</li>
-              <li>Helped distribute food and assisted emergency relief coordination activities.</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <span class="tag">Jan 2020 – Dec 2025</span>
-            <h3>Blood Donor and Collector</h3>
-            <p>Cox's Bazar Blood Donor Society · Health</p>
-            <ul class="feature-list">
-              <li>Supported blood donation drives and community coordination for urgent medical needs.</li>
-              <li>Raised awareness on regular blood donations for local hospitals and patients.</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <span class="tag">Jan 2019 – May 2021</span>
-            <h3>Volunteer</h3>
-            <p>Rotary International (Rotary Cox's Bazar) · Social Services</p>
-            <ul class="feature-list">
-              <li>Contributed to health campaigns, education programs, and support for underprivileged communities.</li>
-              <li>Participated in community development initiatives with local cross-functional volunteer teams.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
+          <div class="timeline">
+            <!-- Role 1 -->
+            <div class="card timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-role">AI & ML Instructor</span>
+                <span class="timeline-period">2026 – Present</span>
+              </div>
+              <div class="timeline-company">ReDI School of Digital Integration · Berlin, Germany (Remote)</div>
+              <ul class="timeline-bullets">
+                <li>Teach practical machine learning and applied artificial intelligence concepts with a hands-on, learner-focused curriculum.</li>
+                <li>Guide students through data preparation, model selection, training, evaluation metrics, and real-world problem-solving methodologies.</li>
+                <li>Foster diverse technical talent, supporting students in mastering Python-based data thinking and applied AI engineering workflows.</li>
+              </ul>
+            </div>
 
-      <section id="expertise" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Expertise</span>
-            <h2>A multidisciplinary engineering toolbox built to solve business and platform problems.</h2>
-          </div>
-        </div>
-        <div class="expertise-grid">
-          <div class="card">
-            <h3>Cloud & Infrastructure</h3>
-            <ul>
-              <li>Azure environments and hybrid systems</li>
-              <li>Networking, DNS, VPN, security boundaries</li>
-              <li>Windows Server, Linux, and operating model design</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>DevOps & Platform</h3>
-            <ul>
-              <li>Terraform and infrastructure as code</li>
-              <li>Docker, Kubernetes, and CI/CD pipelines</li>
-              <li>Monitoring, observability, and automation</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>AI & Data</h3>
-            <ul>
-              <li>Python, ML, and data workflows</li>
-              <li>Generative AI, RAG, and assistant systems</li>
-              <li>Computer vision and analytics-driven solutions</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Robotics & IoT</h3>
-            <ul>
-              <li>ROS 2 and embedded systems</li>
-              <li>Sensor integration and autonomous workflows</li>
-              <li>Simulation, perception, and real-world testing</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Security</h3>
-            <ul>
-              <li>Identity, RBAC, and zero-trust principles</li>
-              <li>Cloud security and monitoring</li>
-              <li>Secure architecture and operational hygiene</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Leadership & Delivery</h3>
-            <ul>
-              <li>Technical leadership and solution architecture</li>
-              <li>Stakeholder communication and delivery planning</li>
-              <li>Product-minded implementation and execution</li>
-            </ul>
+            <!-- Role 2 -->
+            <div class="card timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-role">Chief Technology Officer & Co-founder</span>
+                <span class="timeline-period">2026 – Present</span>
+              </div>
+              <div class="timeline-company">MoviSabio · Product & Technology Direction</div>
+              <ul class="timeline-bullets">
+                <li>Direct technical architecture and product strategy for a territorial intelligence platform connecting AI, cloud, data, and intelligent systems.</li>
+                <li>Design system architecture for multimodal data ingestion, intelligent traffic coordination, simulation modeling, and decision analytics.</li>
+                <li>Align technical milestones with business goals, establishing scalable cloud infrastructure and API specifications for international deployment.</li>
+              </ul>
+            </div>
+
+            <!-- Role 3 -->
+            <div class="card timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-role">Infrastructure & Cloud Systems Engineer</span>
+                <span class="timeline-period">2023 – Present</span>
+              </div>
+              <div class="timeline-company">Energy Crown Bangladesh · Hybrid (Cox's Bazar / Chattogram)</div>
+              <ul class="timeline-bullets">
+                <li>Maintain and operate Microsoft Azure hybrid cloud infrastructure, maintaining 99.9% uptime for core business operations.</li>
+                <li>Automated cloud provisioning and environment configuration using Terraform and Ansible, cutting manual setup overhead by 45%.</li>
+                <li>Constructed CI/CD deployment pipelines, streamlined monitoring and log telemetry, reduced alert noise by 30%, and supported &lt;30-minute MTTR.</li>
+                <li>Enforce security controls, zero-trust RBAC, identity governance, backup continuity, and disaster recovery procedures.</li>
+              </ul>
+            </div>
+
+            <!-- Role 4 -->
+            <div class="card timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-role">Graduate Student Researcher</span>
+                <span class="timeline-period">2022</span>
+              </div>
+              <div class="timeline-company">Cox’s Bazar International University · Academic Research</div>
+              <ul class="timeline-bullets">
+                <li>Conducted applied research across IoT systems, robotics automation, embedded controllers, and distributed information display architectures.</li>
+                <li>Authored and published peer-reviewed research papers in international engineering journals on IoT smart display boards and robotics.</li>
+                <li>Collaborated with faculty and student teams on hardware design, sensor interfacing, and technical documentation.</li>
+              </ul>
+            </div>
+
+            <!-- Role 5 -->
+            <div class="card timeline-card">
+              <div class="timeline-header">
+                <span class="timeline-role">IT Systems & Support Foundation</span>
+                <span class="timeline-period">2019 – 2022</span>
+              </div>
+              <div class="timeline-company">Technical Support & Engineering Project Work · Bangladesh</div>
+              <ul class="timeline-bullets">
+                <li>Managed network configurations, workstation hardware assemblies, OS deployments, and operational troubleshooting.</li>
+                <li>Designed custom PC architectures and workstations tailored for computational workloads, computer vision, and machine learning research.</li>
+                <li>Developed project-based scripts in Python and Bash for daily workflow automation, file management, and system health checks.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="stack" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Complete Technology Stack & Skills</span>
-            <h2>A broad engineering stack for enterprise delivery, not an AI-only profile.</h2>
-          </div>
-        </div>
-        <p class="section-note">
-          Portfolio hierarchy: Cloud & Infrastructure, DevOps & Automation, AI & Machine Learning, Data Engineering & Analytics,
-          Cybersecurity & Identity, Robotics/IoT/Computer Vision, Software & Solution Architecture, and Project/Product/Technical Leadership.
-        </p>
-        <div class="proficiency-legend" aria-label="Proficiency legend">
-          <span class="proficiency-pill production">Production: delivered in real operations</span>
-          <span class="proficiency-pill hands-on">Hands-on: built and applied in projects</span>
-          <span class="proficiency-pill focus">Current Focus: actively deepening</span>
-        </div>
-        <div class="stack-hierarchy">
-          <div class="stack-step"><strong>01</strong><span>Cloud & Infrastructure</span></div>
-          <div class="stack-step"><strong>02</strong><span>DevOps & Automation</span></div>
-          <div class="stack-step"><strong>03</strong><span>AI & Machine Learning</span></div>
-          <div class="stack-step"><strong>04</strong><span>Data Engineering & Analytics</span></div>
-          <div class="stack-step"><strong>05</strong><span>Cybersecurity & Identity</span></div>
-          <div class="stack-step"><strong>06</strong><span>Robotics, IoT & Computer Vision</span></div>
-          <div class="stack-step"><strong>07</strong><span>Software & Solution Architecture</span></div>
-          <div class="stack-step"><strong>08</strong><span>Project, Product & Technical Leadership</span></div>
-        </div>
-        <div class="stack-matrix">
-          <div class="metric"><strong>Cloud</strong><span>Azure, AWS</span></div>
-          <div class="metric"><strong>Infrastructure</strong><span>Windows Server, Linux, VMware, Hyper-V</span></div>
-          <div class="metric"><strong>Networking</strong><span>TCP/IP, DNS, DHCP, VPN, VLAN, Routing, Firewalls</span></div>
-          <div class="metric"><strong>DevOps</strong><span>Terraform, Ansible, Docker, Kubernetes, Helm</span></div>
-          <div class="metric"><strong>CI/CD</strong><span>GitHub Actions, Jenkins, Azure DevOps</span></div>
-          <div class="metric"><strong>Programming</strong><span>Python, PowerShell, C++, Bash, SQL, JavaScript, TypeScript, MATLAB</span></div>
-          <div class="metric"><strong>AI/ML</strong><span>TensorFlow, PyTorch, Scikit-learn, Generative AI, LLMs</span></div>
-          <div class="metric"><strong>Computer Vision</strong><span>OpenCV, YOLO, Object Detection, Tracking</span></div>
-          <div class="metric"><strong>Data</strong><span>Pandas, NumPy, Airflow, Spark, Hadoop</span></div>
-          <div class="metric"><strong>Databases</strong><span>PostgreSQL, MySQL, SQL Server, PostGIS, Redshift</span></div>
-          <div class="metric"><strong>MLOps</strong><span>Azure ML, Docker, Kubernetes, CI/CD, Monitoring</span></div>
-          <div class="metric"><strong>GenAI</strong><span>Azure OpenAI, OpenAI API, RAG, AI Agents, Vector DB</span></div>
-          <div class="metric"><strong>Robotics</strong><span>ROS 2, C++, SLAM, LiDAR, IMU, CARLA</span></div>
-          <div class="metric"><strong>UAV</strong><span>ArduPilot, QGroundControl, GPS, IMU</span></div>
-          <div class="metric"><strong>GIS</strong><span>QGIS, ArcGIS, GeoPandas, PostGIS</span></div>
-          <div class="metric"><strong>Security</strong><span>Entra ID, RBAC, PIM, Zero Trust, Sentinel, Defender</span></div>
-          <div class="metric"><strong>Monitoring</strong><span>Azure Monitor, Prometheus, Grafana, Sentinel</span></div>
-          <div class="metric"><strong>Automation</strong><span>Python, PowerShell, Terraform, Ansible</span></div>
-          <div class="metric"><strong>Architecture</strong><span>Cloud, Hybrid, Microservices, API, Event-driven</span></div>
-          <div class="metric"><strong>Product & Leadership</strong><span>MVP, Roadmaps, Project Management, Technical Leadership, Strategy</span></div>
-        </div>
-        <div class="stack-domain-grid">
-          <div class="stack-domain">
-            <details>
-              <summary>1. Cloud Computing & Cloud Architecture (Production)</summary>
-              <ul>
-                <li>Azure: Virtual Machines, VNet, Load Balancer, Storage, App Services, Entra ID, RBAC, PIM, Monitor, Sentinel, Key Vault, Data Factory, Synapse, ML, AI Services, OpenAI, Container Apps, AKS, DevOps, Functions.</li>
-                <li>AWS: EC2, S3, Lambda, SageMaker, Redshift, networking fundamentals, cloud architecture.</li>
-                <li>Architecture: Hybrid/Public Cloud, IaaS, PaaS, SaaS, migration, high availability, scalability, disaster recovery, business continuity, security, FinOps.</li>
-              </ul>
-            </details>
-          </div>
-          <div class="stack-domain">
-            <details>
-              <summary>2. Infrastructure Engineering (Production)</summary>
-              <ul>
-                <li>Systems Administration: Windows Server, Linux, Ubuntu, CentOS, Active Directory, Entra ID, Group Policy, DNS, DHCP, virtualization, Hyper-V, VMware.</li>
-                <li>Enterprise Infrastructure: Server deployment, monitoring, backup, disaster recovery, patching, capacity planning, performance optimization, incident/problem/change operations.</li>
-                <li>Service Management: IT Support L1/L2/L3, SLA management, troubleshooting, end-user support, documentation.</li>
-              </ul>
-            </details>
-          </div>
-          <div class="stack-domain">
-            <details>
-              <summary>3. Networking (Production)</summary>
-              <ul>
-                <li>Network Technologies: TCP/IP, IPv4/IPv6, DNS, DHCP, VLAN, routing, switching, NAT, VPN, firewall, load balancing, RADIUS, NAC, monitoring.</li>
-                <li>Cloud Networking: Azure VNet, subnets, NSG, VPN Gateway, VNet peering, hub-and-spoke, private endpoints, hybrid connectivity.</li>
-                <li>Architecture: Enterprise, hybrid, and cloud network design with zero-trust patterns.</li>
-              </ul>
-            </details>
-          </div>
-          <div class="stack-domain">
-            <details>
-              <summary>4. DevOps & Platform Engineering (Production)</summary>
-              <ul>
-                <li>IaC: Terraform, ARM Templates, Bicep, Ansible.</li>
-                <li>CI/CD: GitHub Actions, Azure DevOps, Jenkins, Azure Pipelines, automated testing/build/release/deployment.</li>
-                <li>Containers and Platform: Docker, Kubernetes, AKS, Helm, developer platforms, provisioning, configuration, reliability.</li>
-              </ul>
-            </details>
-          </div>
-          <div class="stack-domain">
-            <details>
-              <summary>5. Programming & Scripting (Production + Hands-on)</summary>
-              <ul>
-                <li>Python: OOP, automation, APIs, data processing, ML, ETL, infrastructure automation.</li>
-                <li>PowerShell: Windows/Azure automation, AD automation, infrastructure management, reporting, scheduled tasks.</li>
-                <li>C/C++ and Other: C++17, robotics programming, computer vision, embedded systems, ROS 2, plus Bash, SQL, JavaScript, TypeScript, MATLAB.</li>
-              </ul>
-            </details>
-          </div>
-          <div class="stack-domain">
-            <details>
-              <summary>6. AI, ML & Generative AI (Hands-on + Current Focus)</summary>
-              <ul>
-                <li>ML and Deep Learning: supervised/unsupervised learning, classification, regression, clustering, feature engineering, model evaluation, forecasting, CNN/RNN/LSTM/GRU.</li>
-                <li>Frameworks: TensorFlow, PyTorch, Scikit-learn, Keras, NumPy, Pandas.</li>
-                <li>AI Engineering: Generative AI, LLMs, AI automation/copilots, prompt engineering, Azure OpenAI, OpenAI API, model deployment, MLOps, pipelines, monitoring.</li>
-                <li>Current Focus: RAG, AI Agents, Agentic AI, Vector Databases, LangChain, LangGraph, LangSmith, Knowledge Graphs, Multi-Agent Systems, MCP, Composio, LLMOps.</li>
-              </ul>
-            </details>
-          </div>
-          <div class="stack-domain">
-            <details>
-              <summary>7. Computer Vision, Robotics & UAV (Hands-on)</summary>
-              <ul>
-                <li>Computer Vision: OpenCV, YOLO, YOLOv8, object detection/tracking, image classification/processing, lane and traffic analysis, real-time video analytics.</li>
-                <li>Robotics: ROS 2 nodes/topics/services/actions, navigation, sensor integration, LiDAR, IMU, GPS, SLAM, sensor fusion, autonomous navigation, path planning, CARLA, Gazebo.</li>
-                <li>UAV: Drone development, ArduPilot, QGroundControl, mission planning, autonomous flight, mapping, geospatial data, UAV computer vision.</li>
-              </ul>
-            </details>
-          </div>
-          <div class="stack-domain">
-            <details>
-              <summary>8. Data, Databases, GIS & Geospatial (Production + Hands-on)</summary>
-              <ul>
-                <li>Data Science and Analytics: statistical analysis, data cleaning, EDA, predictive modeling, KPI and dashboard work with Matplotlib, Seaborn, Power BI, Tableau, Plotly.</li>
-                <li>Data Engineering: ETL/ELT, data pipelines, Airflow, transformation, quality, warehousing, lakes, PostgreSQL, MySQL, Redshift, Synapse, Spark, Hadoop.</li>
-                <li>Databases and GIS: SQL Server, PostGIS, QGIS, ArcGIS, GeoPandas, spatial databases, mapping, location intelligence, vector DB, knowledge graphs.</li>
-              </ul>
-            </details>
-          </div>
-          <div class="stack-domain">
-            <details>
-              <summary>9. Security, Identity, Monitoring & Automation (Production)</summary>
-              <ul>
-                <li>Identity and Security: Entra ID/Azure AD, RBAC, PIM, IAM, conditional access, MFA, identity governance, zero trust, Defender, Sentinel, secure cloud architecture.</li>
-                <li>Observability: Azure Monitor, Log Analytics, Prometheus, Grafana, alerting, incident detection, performance monitoring.</li>
-                <li>Automation: Infrastructure and IT automation with Terraform, Ansible, PowerShell, Python, Bash including provisioning, reporting, backup, and incident workflows.</li>
-              </ul>
-            </details>
-          </div>
-          <div class="stack-domain">
-            <details>
-              <summary>10. Software, Architecture, Product & Enterprise Leadership (Production)</summary>
-              <ul>
-                <li>Software and API Development: REST APIs, FastAPI, Flask, React, TypeScript, JavaScript, Node.js fundamentals, microservices, JWT, OAuth 2.0.</li>
-                <li>Architecture: solution, cloud, hybrid, microservices, distributed systems, event-driven, security, integration, and data architecture.</li>
-                <li>Product and Delivery: project planning, MVP development, requirements, roadmaps, risk and stakeholder management, vendor coordination, business-technology alignment.</li>
-                <li>Enterprise IT and Microsoft 365: IT operations/governance, modernization, transformation, Teams, SharePoint, Exchange Online, Intune, Power Automate, Power Apps.</li>
-                <li>Industry Focus: smart cities, intelligent transportation, automotive/ADAS, IoT, energy technology, geospatial systems, AI-powered enterprise platforms.</li>
-              </ul>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="container">
-        <div class="section-heading">
-          <div>
+      <!-- Featured Projects -->
+      <section id="projects">
+        <div class="container">
+          <div class="section-header">
             <span class="eyebrow">Projects</span>
-            <h2>Selected GitHub projects that show how I deliver value.</h2>
-          </div>
-        </div>
-        <p class="section-note">Short, visual snapshots of the most relevant projects. The flagship MoviSabio card groups the repositories that best demonstrate your AI, cloud, data, and robotics skillset.</p>
-        <div class="projects-grid">
-          <article class="project-card project-photo-card featured">
-            <div class="project-cover">
-              <span>01 • Flagship</span>
-              <strong>MoviSabio</strong>
-              <em>Territorial Intelligence Platform</em>
-              <small>One flagship story that connects the AI, cloud, data, and robotics work behind MoviSabio.</small>
-            </div>
-            <div class="project-card-body">
-              <span class="tag">AI / Cloud / Data / Robotics</span>
-              <p>A flagship ecosystem that combines the most relevant repositories and shows how I turn data, automation, and intelligent systems into practical value.</p>
-              <div class="feature-stack">
-                <div class="metric"><strong>Computer Vision</strong><span>Detection and tracking</span></div>
-                <div class="metric"><strong>YOLO</strong><span>Real-time object recognition</span></div>
-                <div class="metric"><strong>Azure Cloud</strong><span>Platform delivery</span></div>
-                <div class="metric"><strong>Data / Python</strong><span>Pipelines and logic</span></div>
-              </div>
-              <div class="repo-chip-grid">
-                <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Computer-Vision-Projects" target="_blank" rel="noopener noreferrer">Computer Vision</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/YOLO_Projects" target="_blank" rel="noopener noreferrer">YOLO</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Azure-Cloud-Projects" target="_blank" rel="noopener noreferrer">Azure Cloud</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/API-projects-" target="_blank" rel="noopener noreferrer">API</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Data-Engineering-Projects" target="_blank" rel="noopener noreferrer">Data Engineering</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Robotics-projects" target="_blank" rel="noopener noreferrer">Robotics</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Python-Projects" target="_blank" rel="noopener noreferrer">Python</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Doctors-CoPilot-Ai" target="_blank" rel="noopener noreferrer">Doctor’s Copilot</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card project-photo-card">
-            <div class="project-cover alt">
-              <span>02 • Automation</span>
-              <strong>Automation & Python</strong>
-              <em>Workflow Tools</em>
-            </div>
-            <div class="project-card-body">
-              <span class="tag">Automation / Python / Productivity</span>
-              <p>Practical Python automation tools for file handling, reporting, monitoring, and everyday workflow efficiency.</p>
-              <div class="repo-chip-grid">
-                <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Automation-Projects" target="_blank" rel="noopener noreferrer">Automation Projects</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Python-Projects" target="_blank" rel="noopener noreferrer">Python Projects</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card project-photo-card">
-            <div class="project-cover green">
-              <span>03 • Cloud</span>
-              <strong>Azure & API Systems</strong>
-              <em>Infrastructure & Services</em>
-            </div>
-            <div class="project-card-body">
-              <span class="tag">Azure / APIs / Cloud Delivery</span>
-              <p>Cloud projects covering platform delivery, infrastructure, service integration, and AI-enabled systems.</p>
-              <div class="repo-chip-grid">
-                <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Azure-Cloud-Projects" target="_blank" rel="noopener noreferrer">Azure Cloud</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/API-projects-" target="_blank" rel="noopener noreferrer">API Projects</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Doctors-CoPilot-Ai" target="_blank" rel="noopener noreferrer">Doctor’s Copilot</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card project-photo-card">
-            <div class="project-cover gold">
-              <span>04 • Data & Robotics</span>
-              <strong>Data, IoT & Robotics</strong>
-              <em>Engineering Workflows</em>
-            </div>
-            <div class="project-card-body">
-              <span class="tag">Data Engineering / IoT / Robotics</span>
-              <p>Projects spanning data pipelines, IoT systems, and robotics experimentation from beginner to advanced.</p>
-              <div class="repo-chip-grid">
-                <a class="repo-chip primary" href="https://github.com/alimulfazalnabil/Data-Engineering-Projects" target="_blank" rel="noopener noreferrer">Data Engineering</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/IoT-Projects" target="_blank" rel="noopener noreferrer">IoT Projects</a>
-                <a class="repo-chip" href="https://github.com/alimulfazalnabil/Robotics-projects" target="_blank" rel="noopener noreferrer">Robotics</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-
-      <section id="portfolio-projects" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Full Technical Portfolio</span>
-            <h2>Additional Robotics, Embedded Systems, and Engineering Projects</h2>
-          </div>
-        </div>
-        <p class="section-note">This section expands the selected projects above using the technical project portfolio. Project descriptions reflect the documented scope; concepts and learning work are labelled accordingly. No performance metrics are claimed without supporting evidence.</p>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <span class="tag">Embedded Systems · Academic Project · July–November 2021</span>
-            <h3>Solar-Powered Vehicle with Accident Detection</h3>
-            <p>Academic project involving a solar-powered vehicle concept with sensor inputs and accident-detection functionality.</p>
-            <p><strong>Technologies:</strong> Arduino Mega 2560, embedded C/C++, ultrasonic and infrared sensors, accelerometer.</p>
-            <p><em>Project scope:</em> Detailed control behavior, safety response times, and energy-efficiency figures have not been independently verified.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Embedded Systems · 2018–2019</span>
-            <h3>Solar-Tracking System</h3>
-            <p>Academic project focused on aligning a solar panel using light measurements and motorized adjustment.</p>
-            <p><strong>Technologies:</strong> Light-dependent resistor (LDR) sensors, servo motors, microcontroller.</p>
-            <p><em>Project scope:</em> No energy-generation improvement percentage is claimed because supporting measurements were not available.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">UAV · Project-Based Work · 2019–2020</span>
-            <h3>Quadcopter Concept with ArduPilot</h3>
-            <p>Project-based work involving a quadcopter concept and autonomous flight-control functions.</p>
-            <p><strong>Technologies:</strong> ArduPilot, Pixhawk, GPS, IMU, telemetry.</p>
-            <p><em>Project scope:</em> No unverified navigation-accuracy or successful flight-test results are claimed.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Robotics · 2017–2018</span>
-            <h3>Line-Follower Robot</h3>
-            <p>Arduino-based robot designed to follow a line using infrared sensing and feedback to adjust movement.</p>
-            <p><strong>Technologies:</strong> Arduino Mega 2560, infrared sensor array, basic control concepts.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">IoT · November 2022</span>
-            <h3>IoT-Based Digital Information Board</h3>
-            <p>Project connecting a digital information board with an embedded communication approach.</p>
-            <p><strong>Technologies noted:</strong> Arduino, ESP8266, and MQTT, depending on the implemented version.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Computer Vision · Project Work</span>
-            <h3>Vehicle and Pedestrian Detection</h3>
-            <p>Project-based exploration of YOLO-based visual-object detection for traffic scenarios.</p>
-            <p><strong>Technologies:</strong> Python, YOLO (version to be confirmed), and computer-vision tooling.</p>
-            <p><em>Project scope:</em> The model version, dataset, evaluation results, and any edge-hardware deployment should be confirmed before making specific implementation claims.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Simulation · Learning / Project Work</span>
-            <h3>Autonomous Driving in CARLA</h3>
-            <p>Exploration of autonomous-driving functions and virtual traffic scenarios in the CARLA simulator.</p>
-            <p><strong>Technologies:</strong> CARLA and related simulation tooling, depending on the specific project.</p>
-            <p><em>Project scope:</em> No number of validated scenarios or safety guarantees is claimed.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Machine Learning · 2022–2023 per portfolio notes</span>
-            <h3>Additional Machine-Learning Projects</h3>
-            <p>Learning and project activities listed in the portfolio include Falcon 9 landing-success prediction, launch-cost estimation, stock-price forecasting, and recommendation systems.</p>
-            <p><strong>Technologies:</strong> Python, scikit-learn, and relevant ML/NLP tools depending on each project.</p>
-            <p><em>Project scope:</em> Individual datasets, evaluation methods, and results should be verified before adding performance claims.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Industrial AI · Concept / Prototype · 2024–2025 per notes</span>
-            <h3>Predictive-Maintenance System</h3>
-            <p>Exploration of a machine-learning approach for identifying possible equipment faults using simulated vibration data.</p>
-            <p><strong>Technologies noted:</strong> Python, scikit-learn, simulated sensor data, Azure IoT Edge.</p>
-            <p><em>Project scope:</em> No prediction-accuracy figure or confirmed 72-hour forecast capability is claimed.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Industrial Systems · Concept · 2025 per notes</span>
-            <h3>Digital-Twin Concept for Energy Management</h3>
-            <p>Conceptual work on a digital representation of HVAC and energy-distribution systems, including control-topology and remote-connectivity considerations.</p>
-            <p><strong>Technologies noted:</strong> Azure Digital Twins and PLC/network architecture.</p>
-            <p><em>Project scope:</em> This is presented as a concept, not as a production digital-twin deployment.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Industrial Data · Architecture Work · 2024–2025 per notes</span>
-            <h3>Data Pipelines and Industrial Analytics</h3>
-            <p>Architecture work exploring the processing of industrial telemetry and its availability for analytics and dashboards.</p>
-            <p><strong>Technologies noted:</strong> Apache Airflow, Azure Data Factory, Snowflake, and dbt.</p>
-            <p><em>Project scope:</em> Production OEE dashboards and real-time processing are not claimed without evidence.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Data Engineering · Learning / Concept Work</span>
-            <h3>Cloud Data Platforms and Stream Processing</h3>
-            <p>Learning and concept work covering data lakes, data warehouses, distributed processing, and streaming for heterogeneous data.</p>
-            <p><strong>Technologies noted:</strong> AWS S3, Athena, Redshift, Hadoop, Spark, and Kafka, depending on the project.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Software Automation · Project-Based Work · 2024–2025 per notes</span>
-            <h3>ML Deployment and AI-Assisted Log Analysis</h3>
-            <p>Project-based exploration of API-based model serving and AI-assisted analysis of technical logs.</p>
-            <p><strong>Technologies noted:</strong> Flask, Docker, AWS ECS, OpenAI API, and LangChain, depending on the actual project scope.</p>
-            <p><em>Project scope:</em> No percentage reduction in incident-triage time is claimed.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Hardware Engineering · System Integration</span>
-            <h3>Custom PC Building and Workstation Design</h3>
-            <p>Experience described in the portfolio includes workstation component selection and configuration, thermal and power considerations, BIOS/UEFI configuration, hardware troubleshooting, and research into edge-computing hardware for ML/CV and industrial workloads.</p>
-            <p><em>Scope note:</em> Specific builds, component lists, and test evidence should be supplied when using this as a formal engineering case study.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Engineering Design</span>
-            <h3>AutoCAD 2D/3D Design Work</h3>
-            <p>Project-based AutoCAD work covering 2D/3D drawings, layout planning, and visualization. The portfolio notes mention more than 15 design projects; the individual drawings should be available as evidence if this number is used professionally.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Software Engineering · Demonstration Application</span>
-            <h3>Enterprise RAG Knowledge Platform</h3>
-            <p>Repository documentation describes a knowledge-retrieval platform using FastAPI, PostgreSQL/pgvector, hybrid retrieval, BM25, reciprocal-rank fusion, reranking, citation checks, and tenant-based access control.</p>
-            <div class="project-links"><a class="project-link" href="https://github.com/alimulfazalnabil/LLM-enterprise-rag-knowledge-platform" target="_blank" rel="noopener noreferrer">View Repository</a></div>
-            <p><em>Project scope:</em> Validate implementation and tests before describing it as production-grade.</p>
-          </article>
-
-          <article class="project-card">
-            <span class="tag">Cloud / DevOps · Reference Project</span>
-            <h3>Infrastructure and Data Engineering Repositories</h3>
-            <p>Related repositories cover Terraform and CI/CD foundations, Azure data and AI analytics, Python automation examples, and data-engineering examples involving Spark, Kafka, PostgreSQL, Pandas, and Airflow.</p>
-            <div class="project-links">
-              <a class="project-link" href="https://github.com/alimulfazalnabil/azure-terraform-cicd-foundation" target="_blank" rel="noopener noreferrer">Terraform / CI/CD</a>
-              <a class="project-link" href="https://github.com/alimulfazalnabil/azure-data-ai-analytics" target="_blank" rel="noopener noreferrer">Data &amp; AI Analytics</a>
-              <a class="project-link" href="https://github.com/alimulfazalnabil/Data-Engineering-Projects" target="_blank" rel="noopener noreferrer">Data Engineering</a>
-              <a class="project-link" href="https://github.com/alimulfazalnabil/Automation-Projects" target="_blank" rel="noopener noreferrer">Automation</a>
-            </div>
-            <p><em>Project scope:</em> These links represent project repositories and examples, not independent verification of production deployment.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="services" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Services</span>
-            <h2>From Strategy to Production</h2>
-          </div>
-        </div>
-        <p class="section-note">I help organizations design, build, automate, and modernize technology solutions across cloud infrastructure, software, AI, data, DevOps, and robotics.</p>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <span class="service-number">01</span>
-            <h3>Cloud & Infrastructure</h3>
-            <p>Design and modernize reliable, secure, and scalable IT infrastructure.</p>
-            <ul>
-              <li>Azure cloud architecture, hybrid infrastructure, migration</li>
-              <li>Identity and access management, network architecture, security</li>
-              <li>Monitoring, observability, disaster recovery, optimization</li>
-            </ul>
-            <p class="service-tech">Technologies: Azure · AWS · Windows Server · Linux · Entra ID · Networking · Azure Monitor</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">02</span>
-            <h3>DevOps & Infrastructure Automation</h3>
-            <p>Automate infrastructure and software delivery to improve reliability and reduce operational effort.</p>
-            <ul>
-              <li>Infrastructure as code and cloud/server automation</li>
-              <li>CI/CD pipelines, deployment automation, configuration management</li>
-              <li>Kubernetes infrastructure and observability</li>
-            </ul>
-            <p class="service-tech">Technologies: Terraform · Ansible · PowerShell · Python · Docker · Kubernetes · GitHub Actions · Jenkins · Azure DevOps</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">03</span>
-            <h3>Full-Stack Development</h3>
-            <p>Build complete web applications from user interface to API, database, and cloud deployment.</p>
-            <ul>
-              <li>Frontend: React, Next.js, TypeScript, responsive UI, admin dashboards</li>
-              <li>Backend: Python/FastAPI/Flask, Node.js, REST APIs, auth, microservices</li>
-              <li>Delivery model: Idea → UI/UX → Frontend → Backend → Database → Testing → CI/CD → Cloud</li>
-            </ul>
-            <p class="service-tech">Technologies: PostgreSQL · MySQL · SQL Server · MongoDB · Redis · Docker · Kubernetes · Azure · AWS</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">04</span>
-            <h3>AI & Intelligent Solutions</h3>
-            <p>Integrate AI into practical business workflows and digital products.</p>
-            <ul>
-              <li>Generative AI, LLM integration, RAG applications, assistants and agents</li>
-              <li>Computer vision and machine learning solutions</li>
-              <li>AI proof of concepts and MLOps pathways</li>
-            </ul>
-            <p class="service-tech">Technologies: Python · OpenAI API · Azure OpenAI · LangChain · LangGraph · TensorFlow · PyTorch · Scikit-learn · OpenCV · YOLO</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">05</span>
-            <h3>Data Engineering & Analytics</h3>
-            <p>Turn operational data into reliable pipelines, insights, and decision-support systems.</p>
-            <ul>
-              <li>ETL/ELT pipelines, warehousing, analytics engineering</li>
-              <li>Data cleaning, BI, dashboard development, predictive analytics</li>
-              <li>Decision support workflows for operational teams</li>
-            </ul>
-            <p class="service-tech">Technologies: Python · SQL · Pandas · NumPy · Airflow · PostgreSQL · PostGIS · Spark · Power BI · Tableau</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">06</span>
-            <h3>Computer Vision, Robotics & IoT</h3>
-            <p>Build intelligent systems that connect software with the physical world.</p>
-            <ul>
-              <li>Computer vision, object detection/tracking, ROS 2 development</li>
-              <li>IoT and UAV/drone solutions with sensor integration</li>
-              <li>Autonomous systems and robotics simulation</li>
-            </ul>
-            <p class="service-tech">Technologies: ROS 2 · C++ · Python · OpenCV · YOLO · LiDAR · IMU · GPS · SLAM · CARLA · ArduPilot · Raspberry Pi · Arduino</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">07</span>
-            <h3>Digital Product Development</h3>
-            <p>Turn an idea into a technically viable and deployable digital product.</p>
-            <ul>
-              <li>Ideation, feasibility, architecture, MVP planning</li>
-              <li>API and platform design, technology selection, cloud deployment</li>
-              <li>Scaling strategy and delivery governance</li>
-            </ul>
-            <p class="service-tech">Delivery approach: Idea → Discovery → Requirements → Architecture → MVP → Testing → Deployment → Monitoring → Scale</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">08</span>
-            <h3>Technical Consulting</h3>
-            <p>Independent technical guidance for complex technology decisions.</p>
-            <ul>
-              <li>Cloud and infrastructure reviews with maturity assessment</li>
-              <li>DevOps and AI feasibility assessments</li>
-              <li>Cost optimization, migration planning, roadmaps, architecture documentation</li>
-            </ul>
-            <p class="service-tech">Outcome: clear, actionable direction with realistic implementation paths</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">09</span>
-            <h3>Project & Technology Leadership</h3>
-            <p>Delivery ownership beyond implementation engineering.</p>
-            <ul>
-              <li>Technical project management, requirements, and solution design</li>
-              <li>Stakeholder and vendor coordination, decision-making, process improvement</li>
-              <li>Product strategy and delivery management</li>
-            </ul>
-            <p class="service-tech">Focus: align technical execution with business outcomes</p>
-          </article>
-        </div>
-
-        <div class="service-flow">
-          <h3>How I Work</h3>
-          <div class="process-grid">
-            <div class="process-step"><strong>01 — Discover</strong><span>Understand the problem, constraints, and desired outcome.</span></div>
-            <div class="process-step"><strong>02 — Design</strong><span>Define architecture, stack, implementation strategy, and roadmap.</span></div>
-            <div class="process-step"><strong>03 — Build</strong><span>Develop the solution with strong engineering and delivery practices.</span></div>
-            <div class="process-step"><strong>04 — Automate</strong><span>Automate infrastructure, testing, deployment, and operational workflows.</span></div>
-            <div class="process-step"><strong>05 — Validate</strong><span>Test functionality, security, performance, reliability, and scalability.</span></div>
-            <div class="process-step"><strong>06 — Deploy</strong><span>Release to production infrastructure or cloud platforms.</span></div>
-            <div class="process-step"><strong>07 — Improve</strong><span>Monitor, optimize, document, and continuously improve the system.</span></div>
-          </div>
-        </div>
-
-        <div class="service-proof">
-          <h3>Why Work With Me?</h3>
-          <p>Engineering across the full technology lifecycle: Infrastructure → Cloud → Software → Data → AI → Automation → Production.</p>
-          <div class="proof-kpis">
-            <div class="proof-kpi"><strong>7+ years</strong><span>professional technology experience</span></div>
-            <div class="proof-kpi"><strong>99.9%</strong><span>infrastructure availability experience</span></div>
-            <div class="proof-kpi"><strong>45%</strong><span>manual operational work reduced through automation</span></div>
-          </div>
-          <ul class="feature-list">
-            <li>Hands-on delivery across Azure, DevOps, AI, Data, Robotics, and Software Engineering.</li>
-            <li>Ability to work from concept to production and lead projects to completion.</li>
-            <li>Strong combination of engineering execution and project leadership.</li>
-          </ul>
-        </div>
-
-        <div class="service-cta">
-          <h3>Have a technology challenge?</h3>
-          <p>Whether you need to modernize infrastructure, automate operations, develop a full-stack application, integrate AI, build a data platform, or turn an idea into a working product, let’s discuss the problem and identify the right technical solution.</p>
-          <p class="service-cta-note"><strong>Email:</strong> alimul.nabil@gmail.com · <strong>WhatsApp:</strong> +8801829687813</p>
-          <div class="service-cta-actions">
-            <a class="btn btn-primary" href="#contact">Start a Conversation</a>
-            <a class="btn btn-secondary" href="https://wa.me/8801829687813" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
-            <a class="btn btn-secondary" href="mailto:alimul.nabil@gmail.com">Send an Email</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="leadership" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Leadership</span>
-            <h2>Leadership that connects technical execution, team alignment, and business outcomes.</h2>
-          </div>
-        </div>
-        <div class="leadership-grid">
-          <div class="card">
-            <h3>Technical Direction</h3>
-            <p>I help shape solutions from idea to execution, ensuring architecture, delivery, and operations stay aligned with the company’s priorities.</p>
-          </div>
-          <div class="card">
-            <h3>Team Coordination</h3>
-            <p>I create clarity across technical and non-technical stakeholders so teams can move faster with fewer misunderstandings.</p>
-          </div>
-          <div class="card">
-            <h3>Strategic Delivery</h3>
-            <p>I evaluate feasibility, scalability, testing, and maintainability so delivery choices support long-term business value.</p>
-          </div>
-          <div class="card">
-            <h3>Product Alignment</h3>
-            <p>I connect engineering work to user value, operational impact, and product thinking rather than treating implementation as an isolated task.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="recommendations" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Recommendations</span>
-            <h2>Peer and leadership endorsements from LinkedIn.</h2>
-          </div>
-        </div>
-        <p class="section-note">10 public recommendations highlighting cross-border strategy, cloud infrastructure delivery, and collaborative leadership.</p>
-        <div class="recommendation-grid">
-          <article class="recommendation-card">
-            <p>
-              "A forward-thinking catalyst for cross-border innovation with strategic clarity and proactive leadership across international technology ecosystems."
+            <h2>Demonstrated Engineering Projects</h2>
+            <p class="section-desc">
+              Curated selection prioritizing practical AI engineering, intelligent applications, and scalable cloud systems.
             </p>
-            <span class="recommendation-meta">Douglas Amante · Entrepreneurial Diplomat · August 2026</span>
-          </article>
-          <article class="recommendation-card">
-            <p>
-              "Strong expertise in Azure cloud and infrastructure engineering with hands-on high-availability systems, Terraform, Python, PowerShell automation, and hybrid cloud delivery."
-            </p>
-            <span class="recommendation-meta">Md Fajle Rabbe · Data and Humanitarian Operations · April 2026</span>
-          </article>
-          <article class="recommendation-card">
-            <p>
-              "Productive in engineering projects, eager to explore knowledge, and actively engaged in social impact with dependable teamwork."
-            </p>
-            <span class="recommendation-meta">Sayed Bin Osman · Research and Robotics Mentor · July 2020</span>
-          </article>
-        </div>
-        <div class="recommendation-list">
-          <details>
-            <summary>View all recommendations</summary>
-            <ul>
-              <li>Douglas Amante: Recognized cross-border innovation leadership and ability to adapt high-potential technology models across Europe and LATAM markets.</li>
-              <li>Md Fajle Rabbe: Highlighted disciplined execution, real-world implementation focus, and strong cloud/infrastructure capabilities.</li>
-              <li>Anas Azmayeen Zamee: Endorsed self-driven robotics work, scratch-built projects, and practical design/controller skills.</li>
-              <li>Engr. Saeydul Amin: Noted system and network administration strength, IoT capability, and operational troubleshooting excellence.</li>
-              <li>MD Nezam: Recognized quick learning ability with professional and collaborative conduct.</li>
-              <li>Salamate Ullah: Praised data engineering fundamentals (SQL, Python, Spark, Hadoop) and strong data-driven problem solving.</li>
-              <li>Md. Asadullahil Galib: Commended critical thinking, learning commitment, leadership traits, and collaborative influence.</li>
-              <li>Abu Talha Bin Dil Chowdhury: Highlighted adaptability, communication, pressure-handling, and consistent delivery quality.</li>
-              <li>Md. Mohi Uddin: Shared professional encouragement from direct team collaboration.</li>
-              <li>Sayed Bin Osman: Endorsed productivity, technical curiosity, and active contribution to both engineering and social work.</li>
-            </ul>
-          </details>
-        </div>
-      </section>
-
-      <section id="publications" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Publications</span>
-            <h2>Applied research and implementation-focused publications.</h2>
           </div>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card">
-            <span class="tag">International Research Journal of Modernization in Engineering Technology and Science · Nov 23, 2022</span>
-            <h3>Implementation of IoT Based Notice Board</h3>
-            <p>IoT e-notice board architecture using connected display systems and remote admin control for near real-time communication.</p>
-            <ul class="feature-list">
-              <li>Focus areas: IoT communication, Raspberry Pi integration, remote content publishing, and operational messaging workflows.</li>
-              <li>Supported multi-format information flow such as text, image, PDF, and real-time communication concepts.</li>
-              <li>Keywords: IoT, Raspberry Pi, GSM, MIC, LCD monitor, smart notice board, advertising board.</li>
-              <li>Co-authors: collaborative publication team (+3).</li>
-            </ul>
+
+          <div class="projects-grid">
+            <!-- 1. Flagship AI RAG Project -->
+            <div class="card project-card featured-hero-project">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-status status-flagship">Flagship AI Engineering Project</span>
+                  <span class="tech-tag">RAG / GenAI</span>
+                </div>
+                <h3 class="project-title">LLM Enterprise RAG Knowledge Platform</h3>
+                <p class="project-desc">
+                  A production-oriented knowledge-retrieval platform built with FastAPI and PostgreSQL/pgvector. Implements hybrid retrieval (combining vector embeddings and BM25 full-text search), reciprocal rank fusion (RRF), cross-encoder reranking, strict citation validation, and tenant-isolated access controls to eliminate hallucinations and secure institutional knowledge access.
+                </p>
+                <p class="project-scope-note">
+                  Architecture includes asynchronous vector indexing, semantic chunking pipelines, and tenant security enforcement.
+                </p>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">pgvector</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">RAG</span>
+                  <span class="tech-tag">BM25</span>
+                  <span class="tech-tag">Docker</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    class="project-link-btn"
+                    href="https://github.com/alimulfazalnabil/LLM-enterprise-rag-knowledge-platform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 14.42 22 12A10 10 0 0 0 12 2z"/>
+                    </svg>
+                    View Repository
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. AI Traffic Signal Coordination - MoviSabio -->
+            <div class="card project-card">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-status">Flagship System · MoviSabio</span>
+                  <span class="tech-tag">AI & Simulation</span>
+                </div>
+                <h3 class="project-title">AI-Based Traffic Signal Coordination</h3>
+                <p class="project-desc">
+                  Core territorial intelligence initiative at MoviSabio modeling urban vehicle dynamics and intelligent traffic management. Connects simulation environments (SUMO/CARLA) with reinforcement learning and heuristic models to coordinate signals dynamically and reduce congestion.
+                </p>
+                <p class="project-scope-note">
+                  Prototype and simulation-based engineering work designed for regional urban transportation optimization.
+                </p>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">AI / Optimization</span>
+                  <span class="tech-tag">SUMO</span>
+                  <span class="tech-tag">CARLA</span>
+                  <span class="tech-tag">Simulation</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    class="project-link-btn"
+                    href="https://github.com/alimulfazalnabil/Robotics-projects"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Robotics Lab
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Autonomous Lane Detection -->
+            <div class="card project-card">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-status">Open Source</span>
+                  <span class="tech-tag">Computer Vision</span>
+                </div>
+                <h3 class="project-title">Autonomous Lane Detection System</h3>
+                <p class="project-desc">
+                  Computer vision system applying perspective transforms, color filtering, edge detection, and polynomial curve fitting to segment road boundaries and detect vehicle lane positions under variable lighting in real-time video feeds.
+                </p>
+                <p class="project-scope-note">
+                  Demonstrates classical vision algorithms alongside deep learning approaches for real-time edge processing.
+                </p>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">OpenCV</span>
+                  <span class="tech-tag">NumPy</span>
+                  <span class="tech-tag">Lane Segmentation</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    class="project-link-btn"
+                    href="https://github.com/alimulfazalnabil/Computer-Vision-Projects"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Vision Projects
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Vehicle and Pedestrian Detection -->
+            <div class="card project-card">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-status">Open Source</span>
+                  <span class="tech-tag">Deep Learning / YOLO</span>
+                </div>
+                <h3 class="project-title">Vehicle & Pedestrian Detection</h3>
+                <p class="project-desc">
+                  Real-time visual object detection pipeline utilizing YOLO architectures for urban traffic and surveillance monitoring. Evaluated on multiple road datasets for multi-class bounding box regression, tracking persistence, and latency optimization.
+                </p>
+                <p class="project-scope-note">
+                  Explores edge-hardware inference efficiency across desktop and embedded camera streams.
+                </p>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">YOLO / YOLOv8</span>
+                  <span class="tech-tag">PyTorch</span>
+                  <span class="tech-tag">OpenCV</span>
+                  <span class="tech-tag">Tracking</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    class="project-link-btn"
+                    href="https://github.com/alimulfazalnabil/YOLO_Projects"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View YOLO Repositories
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Autonomous Driving in CARLA -->
+            <div class="card project-card">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-status">Research & Simulation</span>
+                  <span class="tech-tag">ROS 2 / Robotics</span>
+                </div>
+                <h3 class="project-title">Autonomous Driving Simulation in CARLA</h3>
+                <p class="project-desc">
+                  Simulation environment configuring autonomous vehicle sensors (LiDAR, RGB cameras, IMU, GNSS) and control feedback loops in the CARLA simulator, testing navigation, perception pipelines, and waypoint tracking under complex environmental conditions.
+                </p>
+                <p class="project-scope-note">
+                  Explores integration between high-fidelity virtual simulations and ROS 2 control architectures.
+                </p>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">CARLA</span>
+                  <span class="tech-tag">ROS 2</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Sensors & SLAM</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    class="project-link-btn"
+                    href="https://github.com/alimulfazalnabil/Robotics-projects"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Robotics Lab
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Cloud Infrastructure & DevOps Foundation -->
+            <div class="card project-card">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-status">Infrastructure as Code</span>
+                  <span class="tech-tag">Cloud & DevOps</span>
+                </div>
+                <h3 class="project-title">Azure Cloud Infrastructure & CI/CD Foundation</h3>
+                <p class="project-desc">
+                  Modular Terraform codebase establishing production-ready Azure foundations: virtual networks, subnets, Network Security Groups, Azure Kubernetes Service (AKS), key vaults, container registries, and automated GitHub Actions delivery pipelines.
+                </p>
+                <p class="project-scope-note">
+                  Implements zero-trust principles, state management in encrypted storage, and automated linting.
+                </p>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">Terraform</span>
+                  <span class="tech-tag">Azure</span>
+                  <span class="tech-tag">GitHub Actions</span>
+                  <span class="tech-tag">Kubernetes</span>
+                  <span class="tech-tag">Security</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    class="project-link-btn"
+                    href="https://github.com/alimulfazalnabil/azure-terraform-cicd-foundation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Terraform Repo
+                  </a>
+                  <a
+                    class="project-link-btn"
+                    href="https://github.com/alimulfazalnabil/azure-data-ai-analytics"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Data & AI Analytics
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Projects Directory -->
+          <div class="more-projects-box">
+            <div class="more-projects-text">
+              <h4>Additional Open Source Repositories & Applied Labs</h4>
+              <p>
+                Explore codebases in Automation, Data Engineering, IoT Systems, APIs, and Machine Learning on GitHub.
+              </p>
+            </div>
             <div class="project-links">
-              <a class="project-link primary" href="https://www.irjmets.com/uploadedfiles/paper/issue_11_november_2022/31134/final/fin_irjmets1668848416.pdf" target="_blank" rel="noopener noreferrer">Read Publication</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <span class="tag">International Research Journal of Engineering and Technology · Nov 11, 2022</span>
-            <h3>Implementation of Online Shopping and Auction System (SPAROO)</h3>
-            <p>Designed an application model for online shopping and live auction workflows to reduce offline friction and improve buyer-seller interaction.</p>
-            <ul class="feature-list">
-              <li>Combined product discovery, online shopping, and auction participation inside one digital experience.</li>
-              <li>Included multi-bidder live auction flow aligned with practical marketplace scenarios.</li>
-              <li>Demonstrated system thinking across user experience, transaction flow, and scalable digital operations.</li>
-              <li>Co-authors: collaborative publication team (+4).</li>
-            </ul>
-            <div class="project-links">
-              <a class="project-link primary" href="https://www.irjet.net/archives/V9/i11/IRJET-V9I1123.pdf" target="_blank" rel="noopener noreferrer">Read Publication</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="certifications" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Certifications</span>
-            <h2>Selected certifications and professional credentials.</h2>
-          </div>
-        </div>
-        <div class="pill-row" style="margin-bottom: 1rem;">
-          <span class="pill">Micro1 Certified Infrastructure and Cloud System Engineer</span>
-          <span class="pill">AI & ML Instructor</span>
-          <span class="pill">AZ-104 / AZ-204 / AZ-305 prep</span>
-          <span class="pill">Toastmasters Public Speaking</span>
-        </div>
-        <div class="cert-grid">
-          <div class="card">
-            <h3>Cloud & Infrastructure</h3>
-            <ul class="feature-list">
-              <li>Microsoft Azure Fundamentals (AZ-900)</li>
-              <li>Azure Administrator Associate (AZ-104)</li>
-              <li>Azure Developer Associate (AZ-204)</li>
-              <li>Azure Solutions Architect Expert (AZ-305) prep</li>
-              <li>Cloud Architecture: Design Decisions</li>
-              <li>Cloud Management with Microsoft Intune</li>
-              <li>Windows Server, Active Directory, DHCP, DNS, VMware, Linux</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>AI, Data & Automation</h3>
-            <ul class="feature-list">
-              <li>Microsoft Azure AI Engineer Associate (AI-102) prep</li>
-              <li>Microsoft Azure Machine Learning Fundamentals</li>
-              <li>AI for Project Management: Managing Risk with Generative AI</li>
-              <li>Generative AI for Marketing with Microsoft 365 Copilot</li>
-              <li>Introduction to Data Engineering</li>
-              <li>edX Data Analysis: Basic Probability and Statistics</li>
-              <li>HackerRank Python, SQL, and Problem Solving basics</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>DevOps & Platform</h3>
-            <ul class="feature-list">
-              <li>Build a CI/CD Pipeline</li>
-              <li>Next-Generation Network Automation</li>
-              <li>PowerShell automation for Windows Server administration</li>
-              <li>Linux security, hardening, and system administration</li>
-              <li>Docker / Kubernetes foundations</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Communication & Leadership</h3>
-            <ul class="feature-list">
-              <li>Communicating with Confidence</li>
-              <li>Public Speaking Foundations</li>
-              <li>Writing and Delivering Speeches</li>
-              <li>Body Language for Leaders and Managers</li>
-              <li>Public Speaking Skills Professional Certificate by Toastmasters International</li>
-              <li>Tech Career Skills: Effective Technical Communication</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Specialized Credentials</h3>
-            <ul class="feature-list">
-              <li>FAA Part 107 Commercial Drone License prep</li>
-              <li>Working with Clients (British Council, B2)</li>
-              <li>Rock Your LinkedIn Profile</li>
-              <li>Generative AI for Digital Marketers</li>
-              <li>Microsoft 365 Copilot and prompt-writing courses</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Research & Foundations</h3>
-            <ul class="feature-list">
-              <li>Python 3 Programming Specialization</li>
-              <li>Python Project for Data Engineering</li>
-              <li>Introduction to Containers with Docker / Kubernetes / OpenShift</li>
-              <li>Research publications and applied engineering work</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="education" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Education</span>
-            <h2>Academic foundation in computer engineering and science.</h2>
-          </div>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card">
-            <span class="tag">2017 – 2021</span>
-            <h3>Cox's Bazar International University</h3>
-            <p>Bachelor's degree in Computer Engineering.</p>
-            <ul class="feature-list">
-              <li>Grade: 3.505 / 4.00</li>
-              <li>Received full funding for strong academic performance.</li>
-              <li>Founding member of the CBIU CSE Alumni Association.</li>
-              <li>Relevant coursework: Algorithms, Networks, Machine Learning, Cloud Computing, AI, and Software Engineering.</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <span class="tag">2013 – 2014</span>
-            <h3>Cox's Bazar Government College</h3>
-            <p>Higher Secondary School Certificate (HSC), Science.</p>
-            <ul class="feature-list">
-              <li>Grade: 78.4%</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <span class="tag">2011 – 2012</span>
-            <h3>Cox's Bazar Model High School</h3>
-            <p>Secondary School Certificate (SSC), Science.</p>
-            <ul class="feature-list">
-              <li>Grade: 93.80%</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="languages" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Languages</span>
-            <h2>Multilingual communication across technical and international environments.</h2>
-          </div>
-        </div>
-        <div class="pill-row" style="margin-bottom: 1rem;">
-          <span class="pill">Native/Bilingual: 2</span>
-          <span class="pill">Professional Working: 2</span>
-          <span class="pill">Limited Working: 2</span>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card">
-            <span class="tag">Native or bilingual proficiency</span>
-            <h3>Bangla</h3>
-            <p>Primary language for daily communication, collaboration, and documentation context.</p>
-          </article>
-          <article class="project-card">
-            <span class="tag">Native or bilingual proficiency</span>
-            <h3>Indo-Aryan Language</h3>
-            <p>Native-level communication ability in Indo-Aryan language contexts.</p>
-          </article>
-          <article class="project-card">
-            <span class="tag">Professional working proficiency</span>
-            <h3>English</h3>
-            <p>Professional communication for engineering work, documentation, and cross-functional collaboration.</p>
-            <ul class="feature-list">
-              <li>Duolingo English Test Score: 130 (Feb 2026)</li>
-            </ul>
-          </article>
-          <article class="project-card">
-            <span class="tag">Professional working proficiency</span>
-            <h3>German</h3>
-            <p>Professional-level communication for workplace collaboration and technical coordination.</p>
-          </article>
-          <article class="project-card">
-            <span class="tag">Limited working proficiency</span>
-            <h3>Arabic</h3>
-            <p>Functional communication ability for basic professional and social interactions.</p>
-          </article>
-          <article class="project-card">
-            <span class="tag">Limited working proficiency</span>
-            <h3>Hindi</h3>
-            <p>Basic working capability for conversation and contextual collaboration.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">Contact</span>
-            <h2>Let’s discuss how I can add value to your team and business.</h2>
-          </div>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-card card">
-            <h3>Value I Bring</h3>
-            <p>Cloud engineering, AI solutions, DevOps, data engineering, robotics, technical leadership, and consulting that improve outcomes.</p>
-            <div class="pill-row">
-              <a class="pill" href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-              <a class="pill" href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-              <a class="pill" href="mailto:alimul.nabil@gmail.com">Email ↗</a>
+              <a
+                class="btn btn-secondary btn-sm"
+                href="https://github.com/alimulfazalnabil/Automation-Projects"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Automation Tools
+              </a>
+              <a
+                class="btn btn-secondary btn-sm"
+                href="https://github.com/alimulfazalnabil/Data-Engineering-Projects"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Data Pipelines
+              </a>
+              <a
+                class="btn btn-secondary btn-sm"
+                href="https://github.com/alimulfazalnabil/IoT-Projects"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                IoT & Embedded
+              </a>
+              <a
+                class="btn btn-primary btn-sm"
+                href="https://github.com/alimulfazalnabil?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View All Repositories on GitHub ↗
+              </a>
             </div>
           </div>
-          <div class="contact-card card">
-            <form onsubmit="handleContactSubmit(event)">
-              <input id="contact-name" type="text" placeholder="Your Name" required />
-              <input id="contact-email" type="email" placeholder="Your Email" required />
-              <input id="contact-company" type="text" placeholder="Company or Organization" />
-              <textarea id="contact-message" placeholder="Your Message" rows="4" required></textarea>
-              <button class="btn btn-primary" type="submit" style="border: none; cursor: pointer; width: 100%;">Send Message</button>
-            </form>
+        </div>
+      </section>
+
+      <!-- Education, Certifications & Publications -->
+      <section id="education">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Credentials</span>
+            <h2>Education, Certifications & Research</h2>
+            <p class="section-desc">
+              Academic credentials, verified certifications, exam preparations, and published research.
+            </p>
+          </div>
+
+          <div class="split-grid">
+            <!-- Left: Education & Publications -->
+            <div>
+              <div class="cert-group">
+                <h4>Academic Degrees</h4>
+                <div class="card edu-card">
+                  <div class="edu-degree">Bachelor of Science in Computer Science and Engineering</div>
+                  <div class="edu-school">Cox's Bazar International University · 2017 – 2021</div>
+                  <ul class="edu-details">
+                    <li><strong>CGPA: 3.505 / 4.00</strong> — Full institutional academic scholarship awarded.</li>
+                    <li>Founding Member of the CBIU CSE Alumni Association.</li>
+                    <li>Coursework: Algorithms & Data Structures, Artificial Intelligence, Machine Learning, Computer Networks, Operating Systems, Cloud Computing, Database Management Systems.</li>
+                  </ul>
+                </div>
+
+                <div class="card edu-card">
+                  <div class="edu-degree">Higher Secondary Certificate (HSC) — Science</div>
+                  <div class="edu-school">Cox's Bazar Government College · 2013 – 2014</div>
+                  <ul class="edu-details">
+                    <li>Academic Score: 78.4% (Higher Secondary Science curriculum).</li>
+                  </ul>
+                </div>
+
+                <div class="card edu-card">
+                  <div class="edu-degree">Secondary School Certificate (SSC) — Science</div>
+                  <div class="edu-school">Cox's Bazar Model High School · 2011 – 2012</div>
+                  <ul class="edu-details">
+                    <li>Academic Score: 93.8% (Science & Mathematics focus).</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Publications -->
+              <div class="cert-group" style="margin-top: 2rem;">
+                <h4>Peer-Reviewed Publications</h4>
+                <div class="card pub-card">
+                  <div class="pub-title">Implementation of IoT Based Notice Board</div>
+                  <div class="pub-journal">
+                    International Research Journal of Modernization in Engineering Technology and Science (IRJMETS) · Nov 2022
+                  </div>
+                  <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.6rem;">
+                    Architected an IoT-enabled digital information display system integrating Raspberry Pi, GSM communication, and remote content publishing workflows.
+                  </p>
+                  <a
+                    class="project-link-btn"
+                    href="https://www.irjmets.com/uploadedfiles/paper/issue_11_november_2022/31134/final/fin_irjmets1668848416.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read Paper (PDF) ↗
+                  </a>
+                </div>
+
+                <div class="card pub-card">
+                  <div class="pub-title">Implementation of Online Shopping and Auction System (SPAROO)</div>
+                  <div class="pub-journal">
+                    International Research Journal of Engineering and Technology (IRJET) · Nov 2022
+                  </div>
+                  <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.6rem;">
+                    Engineered an online e-commerce and live bidding workflow model to optimize transaction latency and streamline buyer-seller interactions.
+                  </p>
+                  <a
+                    class="project-link-btn"
+                    href="https://www.irjet.net/archives/V9/i11/IRJET-V9I1123.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read Paper (PDF) ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Certifications & Training -->
+            <div>
+              <div class="cert-group">
+                <h4>Verified Professional Credentials</h4>
+                <div class="cert-pills">
+                  <span class="cert-pill verified">Microsoft Azure Fundamentals (AZ-900)</span>
+                  <span class="cert-pill verified">Micro1 Certified Cloud Systems Engineer</span>
+                  <span class="cert-pill verified">Duolingo English Test (Score: 130)</span>
+                  <span class="cert-pill verified">Toastmasters Public Speaking Certificate</span>
+                  <span class="cert-pill verified">Python 3 Specialization (Coursera/Univ. Michigan)</span>
+                </div>
+              </div>
+
+              <div class="cert-group">
+                <h4>Examination Preparation & Continuous Study</h4>
+                <div class="cert-pills">
+                  <span class="cert-pill">Azure Administrator Associate (AZ-104 prep)</span>
+                  <span class="cert-pill">Azure AI Engineer Associate (AI-102 prep)</span>
+                  <span class="cert-pill">Azure Developer Associate (AZ-204 prep)</span>
+                  <span class="cert-pill">Azure Solutions Architect Expert (AZ-305 prep)</span>
+                  <span class="cert-pill">FAA Part 107 Commercial Drone License prep</span>
+                </div>
+              </div>
+
+              <div class="cert-group">
+                <h4>Technical Courses & Training</h4>
+                <div class="cert-pills">
+                  <span class="cert-pill">Docker & Kubernetes Foundations</span>
+                  <span class="cert-pill">CI/CD Pipeline Automation</span>
+                  <span class="cert-pill">Linux Security & Hardening</span>
+                  <span class="cert-pill">Next-Gen Network Automation</span>
+                  <span class="cert-pill">Generative AI for Marketing & Productivity</span>
+                  <span class="cert-pill">edX Data Analysis & Statistics</span>
+                  <span class="cert-pill">PowerShell System Automation</span>
+                </div>
+              </div>
+
+              <div class="cert-group">
+                <h4>Language Proficiencies</h4>
+                <div class="card" style="padding: 1.25rem;">
+                  <ul class="edu-details">
+                    <li><strong>Bangla:</strong> Native or bilingual proficiency.</li>
+                    <li><strong>English:</strong> Professional working proficiency (Duolingo English Test score: <strong>130</strong>, February 2026).</li>
+                    <li><strong>German:</strong> Intermediate / B1 level for workplace communication.</li>
+                    <li><strong>Arabic:</strong> Elementary / limited working proficiency.</li>
+                    <li><strong>Hindi:</strong> Basic conversational understanding.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leadership, Community & Recommendations -->
+      <section id="leadership">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Leadership & Impact</span>
+            <h2>Leadership, Community & Recommendations</h2>
+            <p class="section-desc">
+              Contributions across technical instruction, community leadership, and peer endorsements.
+            </p>
+          </div>
+
+          <div class="community-grid">
+            <div class="card community-card">
+              <h4>Technical Instruction</h4>
+              <p>
+                Mentoring aspiring engineers at ReDI School of Digital Integration, translating complex AI, machine learning, and data concepts into actionable skills.
+              </p>
+            </div>
+
+            <div class="card community-card">
+              <h4>Humanitarian & Social Relief</h4>
+              <p>
+                Served as Field Supervisor for the World Food Programme (WFP) during the 2021 fire breakout emergency in Rohingya camps, coordinating food distribution and emergency logistics.
+              </p>
+            </div>
+
+            <div class="card community-card">
+              <h4>Civic Engagement & Health</h4>
+              <p>
+                Active volunteer with Rotary International and coordinator for the Cox's Bazar Blood Donor Society, organizing blood donation drives and youth education programs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Public Recommendations -->
+          <div class="recommendations-box">
+            <div class="section-header" style="margin-top: 3rem; margin-bottom: 1.5rem;">
+              <span class="eyebrow">Endorsements</span>
+              <h3>Colleague & Mentor Recommendations</h3>
+            </div>
+
+            <div class="split-grid">
+              <div class="quote-card">
+                <p class="quote-text">
+                  "A forward-thinking catalyst for cross-border innovation with strategic clarity and proactive leadership across international technology ecosystems."
+                </p>
+                <div class="quote-author">Douglas Amante</div>
+                <div class="quote-role">Entrepreneurial Diplomat · International Technology Strategy</div>
+              </div>
+
+              <div class="quote-card">
+                <p class="quote-text">
+                  "Strong expertise in Azure cloud and infrastructure engineering with hands-on high-availability systems, Terraform, Python, PowerShell automation, and hybrid cloud delivery."
+                </p>
+                <div class="quote-author">Md Fajle Rabbe</div>
+                <div class="quote-role">Data & Humanitarian Operations Lead</div>
+              </div>
+
+              <div class="quote-card">
+                <p class="quote-text">
+                  "Productive in engineering projects, eager to explore knowledge, and actively engaged in social impact with dependable teamwork."
+                </p>
+                <div class="quote-author">Sayed Bin Osman</div>
+                <div class="quote-role">Research and Robotics Mentor</div>
+              </div>
+
+              <div class="quote-card">
+                <p class="quote-text">
+                  "Commended for critical thinking, disciplined execution, self-driven robotics work, and dependable technical communication in team environments."
+                </p>
+                <div class="quote-author">Peer Engineering Network</div>
+                <div class="quote-role">Validated via LinkedIn Professional Recommendations (10 Total)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Connect</span>
+            <h2>Let’s Discuss AI & Engineering Opportunities</h2>
+            <p class="section-desc">
+              Open to conversations regarding AI solutions engineering, intelligent applications, cloud platform delivery, and technical collaboration.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info">
+              <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6;">
+                Whether you are exploring a new AI integration, building an enterprise RAG pipeline, or seeking an engineer who combines software development with production cloud discipline, feel free to reach out directly.
+              </p>
+
+              <div class="contact-links-list">
+                <!-- Email -->
+                <a class="contact-channel" href="mailto:alimul.nabil@gmail.com">
+                  <div class="channel-icon">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                  </div>
+                  <div class="channel-meta">
+                    <strong>Email Directly</strong>
+                    <span>alimul.nabil@gmail.com</span>
+                  </div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a
+                  class="contact-channel"
+                  href="https://www.linkedin.com/in/alimul-fazal-nabil/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="channel-icon">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2m1.4 9.74V9.96H5.06v8.54z"/>
+                    </svg>
+                  </div>
+                  <div class="channel-meta">
+                    <strong>LinkedIn Profile</strong>
+                    <span>linkedin.com/in/alimul-fazal-nabil</span>
+                  </div>
+                </a>
+
+                <!-- GitHub -->
+                <a
+                  class="contact-channel"
+                  href="https://github.com/alimulfazalnabil"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="channel-icon">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 14.42 22 12A10 10 0 0 0 12 2z"/>
+                    </svg>
+                  </div>
+                  <div class="channel-meta">
+                    <strong>GitHub Repositories</strong>
+                    <span>github.com/alimulfazalnabil</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="card contact-form-card">
+              <h3>Send a Direct Message</h3>
+              <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+                <div class="form-group">
+                  <label for="contactName">Your Name</label>
+                  <input type="text" id="contactName" placeholder="e.g. Sarah Jenkins" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail">Your Email</label>
+                  <input type="email" id="contactEmail" placeholder="e.g. sarah@company.com" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject">Subject / Organization</label>
+                  <input type="text" id="contactSubject" placeholder="e.g. AI Engineering Collaboration" />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactMsg">Message</label>
+                  <textarea id="contactMsg" placeholder="Describe your project, opportunity, or questions..." rows="4" required></textarea>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                  Send Message via Email
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer>
       <div class="container">
-        <div class="footer-grid">
-          <div class="footer-panel">
-            <p class="footer-brand">Alimul Fazal Nabil</p>
-            <p class="footer-role">Senior Technology Leader · Cloud, DevOps, AI, Data, Robotics</p>
-            <p class="footer-value">Building reliable platforms, automation-first operations, and intelligent systems aligned with business outcomes.</p>
-            <div class="footer-kpis">
-              <span>Cloud + Platform</span>
-              <span>AI + Data</span>
-              <span>Leadership + Delivery</span>
-            </div>
-            <p class="footer-meta">© <span id="year"></span> Alimul Fazal Nabil. All rights reserved.</p>
+        <div class="footer-inner">
+          <div>
+            <strong>Alimul Fazal Nabil</strong> · AI Solutions Engineer
+            <p style="margin-top: 0.25rem; font-size: 0.82rem;">
+              © <span id="currentYear"></span> Alimul Fazal Nabil. All rights reserved.
+            </p>
           </div>
-          <div class="footer-panel">
-            <h4>Let’s Build Something Valuable</h4>
-            <p>Open to infrastructure, platform engineering, and AI-enabled product opportunities.</p>
-            <div class="footer-actions">
-              <a class="footer-cta primary" href="#contact">Start a Conversation</a>
-              <a class="footer-cta secondary" href="mailto:alimul.nabil@gmail.com">Email Directly</a>
-            </div>
-            <div class="footer-link-list">
-              <a href="#about">About</a>
-              <a href="#projects">Projects</a>
-              <a href="#publications">Publications</a>
-              <a href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
+
+          <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <a href="https://github.com/alimulfazalnabil" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/alimul-fazal-nabil/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
       </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      // Year update
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-      // Recruiter-first section flow requested by the portfolio owner.
-      const sectionOrder = [
-        "about",
-        "expertise",
-        "experience",
-        "projects",
-        "services",
-        "leadership",
-        "publications",
-        "stack",
-        "certifications",
-        "volunteering",
-        "recommendations",
-        "languages",
-        "education",
-        "value",
-        "contact"
-      ];
+      // Theme toggle with localStorage persistence
+      const themeToggle = document.getElementById('themeToggle');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const savedTheme = localStorage.getItem('theme');
 
-      const main = document.getElementById("home");
-      const sections = Array.from(main.querySelectorAll("section[id]"));
-      const byId = new Map(sections.map((section) => [section.id, section]));
-
-      for (const id of sectionOrder) {
-        const section = byId.get(id);
-        if (section) {
-          main.appendChild(section);
-          byId.delete(id);
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
         }
       }
 
-      // Keep any future sections that are not listed above.
-      for (const section of byId.values()) {
-        main.appendChild(section);
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else if (prefersDark) {
+        setTheme('dark');
       }
 
+      themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        setTheme(isDark ? 'light' : 'dark');
+      });
+
+      // Mobile menu toggle
+      const mobileToggle = document.getElementById('mobileToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      mobileToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('mobile-open');
+        mobileToggle.setAttribute('aria-expanded', isOpen);
+      });
+
+      // Close mobile menu upon clicking links
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('mobile-open');
+          mobileToggle.setAttribute('aria-expanded', false);
+        });
+      });
+
+      // Form handler
       function handleContactSubmit(event) {
         event.preventDefault();
-        const name = document.getElementById('contact-name').value;
-        const company = document.getElementById('contact-company').value;
-        const message = document.getElementById('contact-message').value;
-        const subject = encodeURIComponent(`Portfolio Inquiry from ${name}${company ? ' (' + company + ')' : ''}`);
-        const body = encodeURIComponent(`Name: ${name}\nCompany / Organization: ${company || 'N/A'}\n\nMessage:\n${message}`);
+        const name = document.getElementById('contactName').value;
+        const email = document.getElementById('contactEmail').value;
+        const subjectField = document.getElementById('contactSubject').value;
+        const msg = document.getElementById('contactMsg').value;
+
+        const subject = encodeURIComponent(
+          subjectField ? `${subjectField} [from ${name}]` : `Inquiry from ${name}`
+        );
+        const body = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\nSubject: ${subjectField || 'N/A'}\n\nMessage:\n${msg}`
+        );
+
         window.location.href = `mailto:alimul.nabil@gmail.com?subject=${subject}&body=${body}`;
       }
     </script>

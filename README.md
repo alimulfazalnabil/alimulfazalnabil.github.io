@@ -1,9 +1,9 @@
-# alimulnabil.github.io
+# alimulfazalnabil.github.io
 
-This repository hosts the GitHub Pages website for Alimul Fazal Nabil. It is a simple static website project designed to be published and viewed directly through GitHub Pages.
+This repository hosts the GitHub Pages personal engineering portfolio for **Alimul Fazal Nabil** — AI Solutions Engineer specializing in Generative AI, machine learning, RAG, AI agents, MLOps, and cloud systems.
 
 ## Overview
-This site serves as a personal online presence where content such as introductions, projects, links, and other information can be shared in a clean and accessible format.
+This site showcases real-world AI implementations, production cloud infrastructure, research publications, and demonstrated technical projects in a minimal, high-performance static architecture.
 
 ## Ownership
 This repository and website are owned by Alimul Fazal Nabil. Any content published here is associated with the owner unless otherwise stated.
